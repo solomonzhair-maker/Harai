@@ -49,6 +49,7 @@ This is a requirements and planning document set. It is not evidence that provid
 | DOC-22 | Deployment, rollback and disaster recovery | Not started | Environments, secrets, backups and releases |
 | DOC-23 | V1 acceptance and release decision | Not started | Final acceptance and explicit release gates |
 | DOC-24 | HARAI differentiators and additional feature proposals | Proposed | Original capabilities beyond the JulyPay interface reference |
+| DOC-25 | JulyPay read-only discovery log | In progress / access blocked | Evidence-labelled inspection log and next-session checklist |
 
 ## 4. Reference boundary and product differentiation
 
@@ -98,5 +99,7 @@ JulyPay is a visual and merchant-workflow reference only. HARAI will use its own
 Changes affecting money movement, access control, tenant boundaries, balances, settlement, credential handling, provider selection or launch scope must identify affected requirement/decision IDs, evidence, security and financial impact, tests, and accountable approval. Unresolved authority or evidence gaps remain blockers.
 
 ## 9. Current gate
+
+**Discovery note (2026-10-17):** DOC-25 records that the available browser session reached the sign-in page; authenticated workflows could not be inspected. JulyPay discovery is therefore still incomplete. No credentials or financial actions were used.
 
 **G0 — Discovery and requirements: IN PROGRESS.** No production integration, live credentials, real payment action, merge of the foundation PR, or deployment is authorized by this draft.
