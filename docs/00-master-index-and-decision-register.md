@@ -49,7 +49,8 @@ This is a requirements and planning document set. It is not evidence that provid
 | DOC-22 | Deployment, rollback and disaster recovery | Not started | Environments, secrets, backups and releases |
 | DOC-23 | V1 acceptance and release decision | Not started | Final acceptance and explicit release gates |
 | DOC-24 | HARAI differentiators and additional feature proposals | Proposed | Original capabilities beyond the JulyPay interface reference |
-| DOC-25 | JulyPay read-only discovery log | In progress | Session history, remaining checklist and evidence boundary |\n| DOC-26 | Authenticated JulyPay read-only findings | Draft | Authenticated UI observations, HARAI implications and unresolved gaps |
+| DOC-25 | JulyPay read-only discovery log | In progress | Session history, remaining checklist and evidence boundary |
+| DOC-26 | Authenticated JulyPay read-only findings | Draft | Authenticated UI observations, HARAI implications and unresolved gaps |
 
 ## 4. Reference boundary and product differentiation
 
