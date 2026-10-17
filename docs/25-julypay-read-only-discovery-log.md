@@ -1,9 +1,9 @@
 # DOC-25 — JulyPay Read-Only Discovery Log
 
-**Status:** In progress — authenticated inspection blocked in this session  
+**Status:** In progress — authenticated inspection partially completed  
 **Inspection date:** 2026-10-17  
 **Reference:** https://app.julypay.net  
-**Safety boundary:** No credentials entered; no forms submitted; no financial, account-changing, export, or secret-management actions performed.
+**Safety boundary:** No credentials were entered by the assistant; no forms submitted; no financial, account-changing, export, or secret-management actions performed.
 
 ## 1. Purpose
 
@@ -11,69 +11,52 @@ Maintain an evidence-labelled record of what has actually been inspected in the 
 
 ## 2. Session/access result
 
-**Observed**
-- Opening the supplied entry URL redirected to https://app.julypay.net/login.
-- The page title was “Sign In - JulyPay”.
-- Visible fields: Email or Phone, Password, and Remember me.
-- Visible actions/links: Sign In, Forgot password, and Create one now.
-- The visible links pointed to https://app.julypay.net/forgot-password and https://app.julypay.net/register.
-- No sandbox or test-mode indicator was visible on the sign-in screen.
-- A second attempt to reuse the browser session also reached the sign-in screen; the session was not authenticated.
+### Initial attempt
+- The first browser session reached https://app.julypay.net/login.
+- The sign-in screen displayed Email or Phone, Password, Remember me, Sign In, Forgot password and registration links.
+- The session was not authenticated at that point.
 
-**Not inspected / unconfirmed**
-- Authenticated dashboard and navigation.
-- Collection/deposit and withdrawal flows.
-- Payment links and STK Push.
-- Bank/card workflows.
-- Scheduled withdrawals, refunds, reversals and payouts.
-- API-key creation, scopes, IP allowlisting, webhooks and delivery history.
-- Transaction states, validation errors, retry behavior and status-resolution flows.
-- Role/permission hints, reporting/reconciliation, verification and support screens.
-- Whether any listed feature exists in the current product version or is available to this account.
+### Authenticated attempt
+The owner then authenticated interactively in the browser preview. The subsequent read-only inspection confirmed that the authenticated dashboard was visible at https://app.julypay.net/dashboard.
 
-The earlier inventory in DOC-01 remains an initial inventory, not evidence that these authenticated screens were inspected in this session. Until access is available, keep these items labelled as previously reported/partially observed or unconfirmed according to their actual evidence, and do not upgrade their status based on this log.
+The following areas and UI controls were observed: Dashboard, Transactions, Send Money, Withdraw, Scheduled Withdrawals, Deposit, Payment Links, API Keys, Webhooks, Support and Profile. Visible details included payment-link creation field categories, scheduled-withdrawal controls, API-key controls, webhook status/event labels, deposit method options, and profile/security sections.
 
-## 3. Discovery method for the next authenticated session
+A detailed evidence-labelled record is maintained in [DOC-26 — Authenticated JulyPay Read-Only Findings](26-authenticated-julypay-read-only-findings.md).
 
-Once the owner has authenticated in the browser preview, continue read-only inspection. Do not ask for or copy passwords, OTPs, recovery codes, API secrets or private customer/transaction data. Do not create or modify settings, generate credentials, trigger payments, initiate payouts/refunds, or export records.
+## 3. Safety and privacy boundaries followed
 
-For each screen/workflow, record:
-1. Screen name and navigation path.
-2. Visible fields, controls, labels and help text.
-3. Normal sequence and required versus optional inputs, only where safely visible.
-4. Role/permission indicators and disabled/unavailable actions.
-5. Visible statuses and their explanatory text.
-6. Validation, error, timeout, retry, cancellation and recovery behavior when observable without submitting consequential actions.
-7. Environment/test-mode indicators.
-8. Evidence classification: Observed, Partially observed, Unconfirmed or Proposed.
-9. HARAI requirement IDs and open questions; do not infer hidden implementation.
+- No password, OTP, recovery code or credential was requested in chat or recorded.
+- No create/update/delete form was submitted.
+- No payment, deposit, withdrawal, refund, payout or other financial operation was triggered.
+- No API key was opened, generated, copied or deleted.
+- No webhook endpoint or secret was recorded.
+- No customer personal data, private transaction details, account-specific metrics or sensitive identifiers were copied into the repository.
+- No settings were changed and no records were exported.
 
-## 4. Discovery coverage checklist
+## 4. Remaining discovery checklist
 
-- [ ] Dashboard and navigation
-- [ ] Transactions list, details, filters and status timeline
-- [ ] Collections/deposits and provider selection
-- [ ] Hosted checkout/payment links
-- [ ] STK Push or equivalent mobile-money initiation
-- [ ] Withdrawals/payouts and scheduled operations
-- [ ] Refunds/reversals and exception handling
-- [ ] Bank/card methods, if present
-- [ ] API keys, scopes, IP allowlist and credential lifecycle
-- [ ] API documentation and error conventions
-- [ ] Webhook configuration, signing, attempts, retries and replay
+- [ ] Dashboard metric definitions and balance semantics
+- [ ] Transaction details, filters, pagination and status timeline
+- [ ] Collection initiation and provider-specific lifecycle
+- [ ] Hosted checkout and complete payment-link payer journey
+- [ ] Validation and error states without consequential submissions
+- [ ] Withdrawal authorization, limits, cancellation and reconciliation
+- [ ] Scheduled-withdrawal timezone, retry and execution behavior
+- [ ] Refund/reversal capabilities and safeguards, if available
+- [ ] Bank/card methods and supported markets, if available
+- [ ] API documentation, scopes, key rotation and IP allowlisting
+- [ ] Webhook signatures, retries, delivery history and safe replay
 - [ ] Reports, settlement and reconciliation
-- [ ] Merchant profile, verification and security
-- [ ] Team/role permissions, if present
-- [ ] Support tickets and diagnostic information
-- [ ] Empty, loading, pending, unavailable and validation-error states
+- [ ] Verification requirements and role/permission boundaries
+- [ ] Support ticket lifecycle and diagnostic access
+- [ ] Official provider documentation and authorized provider capability evidence
 
-## 5. Current conclusion
+Items above remain unconfirmed unless separately supported by evidence. Visible UI options do not prove that a backend capability, provider API, contract, or market permission exists.
 
-Only the unauthenticated entry screen is confirmed by this inspection. This is insufficient to declare JulyPay discovery complete. The next action is for the owner to authenticate through the browser preview (never share credentials in chat), then resume non-sensitive read-only inspection. If authenticated access cannot be made available, continue HARAI's independent requirements design while explicitly keeping reference-specific behavior unconfirmed.
+## 5. Discovery method
 
-## 6. Source links
+Continue with ordinary read-only pages and non-sensitive UI details. Do not submit consequential forms or inspect private customer records or secret material. Record screen purpose, visible controls, status labels, confidence, HARAI implications and open questions. Treat timeouts and untested error paths as unknown rather than assuming failure behavior.
 
-- Entry URL: https://app.julypay.net
-- Sign-in page: https://app.julypay.net/login
-- Password recovery link: https://app.julypay.net/forgot-password
-- Registration link: https://app.julypay.net/register
+## 6. Current conclusion
+
+Authenticated UI discovery is now partially completed, not complete. See DOC-26 for the detailed findings. G0 remains in progress while workflow behavior, provider capabilities, permissions, commercial access and operational details are validated. No payment-engine implementation, merge, deployment or live financial action is authorized by these observations.
