@@ -47,9 +47,14 @@ This is a requirements and planning document set. It is not evidence that provid
 | DOC-20 | Test strategy and scenario catalogue | Not started | Unit, contract, integration and recovery tests |
 | DOC-21 | Compliance and launch-readiness review | Not started | Provider, legal and operational prerequisites |
 | DOC-22 | Deployment, rollback and disaster recovery | Not started | Environments, secrets, backups and releases |
-| DOC-23 | V1 acceptance and release decision | Not started | Final acceptance and explicit release gates |\n| DOC-24 | HARAI differentiators and additional feature proposals | Proposed | Original capabilities beyond the JulyPay interface reference |
+| DOC-23 | V1 acceptance and release decision | Not started | Final acceptance and explicit release gates |
+| DOC-24 | HARAI differentiators and additional feature proposals | Proposed | Original capabilities beyond the JulyPay interface reference |
 
-## 4. Reference boundary and product differentiation\n\nJulyPay is a visual and merchant-workflow reference only. HARAI will use its own internal architecture, database, payment engine, security model, API contracts, provider adapters and original branding. DOC-24 records additional feature proposals; these remain proposals until assessed and explicitly approved. No hidden JulyPay behavior or provider capability may be inferred from a visible screen.\n\n## 5. Status vocabulary
+## 4. Reference boundary and product differentiation
+
+JulyPay is a visual and merchant-workflow reference only. HARAI will use its own internal architecture, database, payment engine, security model, API contracts, provider adapters and original branding. DOC-24 records additional feature proposals; these remain proposals until assessed and explicitly approved. No hidden JulyPay behavior or provider capability may be inferred from a visible screen.
+
+## 5. Status vocabulary
 
 - **Draft:** proposed, not approved.
 - **Under review:** being checked for completeness and consistency.
