@@ -111,6 +111,10 @@ V1 is not ready until:
 9. Staging verification uses provider-approved test environments.
 10. Production launch has explicit authorization, rollback plan and named operational owner.
 
-## 8. Open decisions
+## 8. Product differentiation proposals
+
+DOC-24 records proposed HARAI differentiators beyond the reference interface, including developer-first sandbox tooling, transaction timelines and unknown-outcome recovery, provider capability/routing controls, reconciliation and ledger visibility, granular team permissions and dual approval, safer credential/webhook operations, risk controls, accessible mobile UX, support diagnostics, trustworthy exports, recoverability and reusable integrations for multiple products. These are proposals, not automatically approved V1 scope. Evaluate each against provider feasibility, commercial/legal requirements, risk, cost and testable acceptance criteria.
+
+## 9. Open decisions
 
 Initial markets/currencies; merchant segments; custody/settlement model; V1 methods; pricing and limits; verification policy; team roles and dual control; service/recovery targets; data retention; and provider-specific acceptance/reconciliation sources. Record each in DOC-00 rather than silently assuming an answer.
