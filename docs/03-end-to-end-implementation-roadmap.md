@@ -469,6 +469,20 @@ No phase skips its exit criteria.
 
 **Exit:** operations and reconciliation are evidenced; expansion is a separate decision.
 
+## Cross-cutting differentiator work (DOC-24)
+
+These proposed capabilities are integrated into the existing phases rather than treated as unreviewed scope expansion:
+
+- **Discovery / requirements:** classify every differentiator as proposed, approved for V1, deferred or rejected; capture user value and evidence.
+- **Architecture / security:** design tenant-safe integration boundaries, credential lifecycle, event/outbox reliability, auditability, recovery and provider capability mapping.
+- **Transaction / ledger:** define unknown-outcome recovery, transaction timeline evidence, reconciliation queues and immutable correction history.
+- **Provider integration:** add only verified provider capabilities; make routing/fallback conditional on safe status resolution and explicit policy.
+- **API / developer experience:** provide sandbox/live separation, contract-driven docs, idempotency guidance, safe diagnostics and webhook testing/replay controls.
+- **Dashboard / operations:** provide permission-aware reports, support diagnostics, status timelines, operational alerts and accessible responsive layouts.
+- **Verification / launch:** test each approved feature's authorization, tenant isolation, replay/idempotency, failure recovery, audit trail and financial invariants.
+
+DOC-24 is a proposal catalogue, not authorization to build every item. V1 prioritization must be resolved in DOC-00 and reflected in approved requirements before implementation. Advanced features such as multi-currency, cards, cross-border payments, scheduled payouts, split settlements, subscriptions and automated risk scoring remain conditional until provider, legal and operational feasibility is established.
+
 ## Cross-phase artefacts
 
 Keep these current throughout:
