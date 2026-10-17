@@ -50,7 +50,7 @@ This is a requirements and planning document set. It is not evidence that provid
 | DOC-23 | V1 acceptance and release decision | Not started | Final acceptance and explicit release gates |
 | DOC-24 | HARAI differentiators and additional feature proposals | Proposed | Original capabilities beyond the JulyPay interface reference |
 | DOC-25 | JulyPay read-only discovery log | In progress | Session history, remaining checklist and evidence boundary |
-| DOC-26 | Authenticated JulyPay read-only findings | Draft | Authenticated UI observations, HARAI implications and unresolved gaps |
+| DOC-26 | Authenticated JulyPay read-only findings | Draft | Authenticated UI observations, HARAI implications and unresolved gaps |\n| DOC-27 | Public JulyPay website and commercial-positioning review | Draft | Public product positioning, onboarding, pricing, stated processing relationship and open questions |
 
 ## 4. Reference boundary and product differentiation
 
@@ -101,6 +101,6 @@ Changes affecting money movement, access control, tenant boundaries, balances, s
 
 ## 9. Current gate
 
-**Discovery note (2026-10-17):** Authenticated dashboard access was subsequently confirmed. DOC-26 records visible navigation and screen-level observations; DOC-25 records the session history and remaining checklist. UI discovery is partially complete, while workflow behavior, provider capability, permissions, commercial access and error/recovery behavior remain unconfirmed. No financial actions, settings changes, exports or secret access were performed.
+**Discovery note (2026-10-17):** Authenticated dashboard access was confirmed and recorded in DOC-26. Public product positioning, pricing, onboarding claims and the stated third-party processing relationship are recorded in DOC-27. The homepage and registration page appear to describe different eligibility scopes; this remains an unresolved public-messaging ambiguity. Provider capability, commercial access, funds-flow responsibilities, workflow behavior, permissions and error/recovery behavior remain unconfirmed. No financial actions, settings changes, exports or secret access were performed.
 
 **G0 — Discovery and requirements: IN PROGRESS.** No production integration, live credentials, real payment action, merge of the foundation PR, or deployment is authorized by this draft.
