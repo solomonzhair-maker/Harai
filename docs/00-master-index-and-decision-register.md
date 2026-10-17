@@ -47,9 +47,9 @@ This is a requirements and planning document set. It is not evidence that provid
 | DOC-20 | Test strategy and scenario catalogue | Not started | Unit, contract, integration and recovery tests |
 | DOC-21 | Compliance and launch-readiness review | Not started | Provider, legal and operational prerequisites |
 | DOC-22 | Deployment, rollback and disaster recovery | Not started | Environments, secrets, backups and releases |
-| DOC-23 | V1 acceptance and release decision | Not started | Final acceptance and explicit release gates |
+| DOC-23 | V1 acceptance and release decision | Not started | Final acceptance and explicit release gates |\n| DOC-24 | HARAI differentiators and additional feature proposals | Proposed | Original capabilities beyond the JulyPay interface reference |
 
-## 4. Status vocabulary
+## 4. Reference boundary and product differentiation\n\nJulyPay is a visual and merchant-workflow reference only. HARAI will use its own internal architecture, database, payment engine, security model, API contracts, provider adapters and original branding. DOC-24 records additional feature proposals; these remain proposals until assessed and explicitly approved. No hidden JulyPay behavior or provider capability may be inferred from a visible screen.\n\n## 5. Status vocabulary
 
 - **Draft:** proposed, not approved.
 - **Under review:** being checked for completeness and consistency.
@@ -58,7 +58,7 @@ This is a requirements and planning document set. It is not evidence that provid
 - **Unconfirmed:** not verified from available evidence.
 - **Superseded:** replaced by a newer identified decision; preserve history.
 
-## 5. Decision register
+## 6. Decision register
 
 | ID | Topic | Current position | Status | Next action |
 |---|---|---|---|---|
@@ -75,7 +75,7 @@ This is a requirements and planning document set. It is not evidence that provid
 | DEC-011 | Coding gate | No payment-engine implementation until requirements are reviewed and explicitly authorized | Approved working rule | Keep implementation behind documented gate |
 | DEC-012 | Foundation PR | Draft PR #1 stays open and unmerged during discovery | Approved working rule | Review foundation after architecture approval |
 
-## 6. Open questions and blockers
+## 7. Open questions and blockers
 
 1. Which countries, currencies and merchant types are in V1?
 2. Which MTN MoMo and Airtel Money products are accessible under authorized agreements?
@@ -88,10 +88,10 @@ This is a requirements and planning document set. It is not evidence that provid
 9. What availability, recovery-time, recovery-point and support targets are required?
 10. Which legal, regulatory, privacy, retention and contractual reviews are required?
 
-## 7. Change control
+## 8. Change control
 
 Changes affecting money movement, access control, tenant boundaries, balances, settlement, credential handling, provider selection or launch scope must identify affected requirement/decision IDs, evidence, security and financial impact, tests, and accountable approval. Unresolved authority or evidence gaps remain blockers.
 
-## 8. Current gate
+## 9. Current gate
 
 **G0 — Discovery and requirements: IN PROGRESS.** No production integration, live credentials, real payment action, merge of the foundation PR, or deployment is authorized by this draft.
