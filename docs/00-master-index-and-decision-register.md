@@ -1,12 +1,14 @@
 # HARAI — Master Index and Decision Register
 
 **Status:** Draft — discovery in progress  
-**Last reviewed:** 2026-10-17  
+**Last reviewed:** 2026-10-18  
 **Implementation gate:** This document does not authorize payment-engine implementation.
 
 ## 1. Purpose
 
-HARAI is intended to be a reusable payment gateway for the owner's current and future systems, including Shigona and Herupu. The product direction is to reproduce useful merchant-facing workflows observed in JulyPay through an original implementation, original branding, and authorized payment-provider integrations.
+HARAI is intended to be a reusable payment gateway for the owner's current and future systems, including Shigona and Herupu. Its long-term direction is to serve multiple businesses and integrated platforms through an original implementation, original branding, and authorized payment-provider integrations.
+
+The current market direction is **Uganda first**, with a **strong, comprehensive launch package** as the planning ambition—not a deliberately minimal MVP. HARAI should be designed for multiple merchant types and future regional expansion. Exact launch capabilities must still be validated against provider access, commercial agreements, legal requirements, cost, security, and operational readiness.
 
 This is a requirements and planning document set. It is not evidence that provider access, commercial agreements, legal permission, or production readiness have been completed.
 
@@ -19,6 +21,7 @@ This is a requirements and planning document set. It is not evidence that provid
 5. Never commit credentials, session data, private customer information, or real transaction details.
 6. No payment-engine coding, live financial actions, merge, or deployment may be inferred as approved merely because a document was drafted.
 7. Drafts remain proposals until explicitly approved by the product owner and relevant accountable reviewers.
+8. A comprehensive launch ambition must not be used to claim support for a method, country, currency, payout direction, or settlement model until it is verified and authorized.
 
 ## 3. Document index
 
@@ -45,12 +48,13 @@ This is a requirements and planning document set. It is not evidence that provid
 | DOC-18 | Observability and operations | Not started | Logs, metrics, alerts and incident handling |
 | DOC-19 | Requirements-to-tests traceability | Not started | Requirement verification evidence |
 | DOC-20 | Test strategy and scenario catalogue | Not started | Unit, contract, integration and recovery tests |
-| DOC-21 | Compliance and launch-readiness review | Not started | Provider, legal and operational prerequisites |
+| DOC-21 | Compliance and launch readiness | Not started | Provider, legal and operational prerequisites |
 | DOC-22 | Deployment, rollback and disaster recovery | Not started | Environments, secrets, backups and releases |
 | DOC-23 | V1 acceptance and release decision | Not started | Final acceptance and explicit release gates |
 | DOC-24 | HARAI differentiators and additional feature proposals | Proposed | Original capabilities beyond the JulyPay interface reference |
 | DOC-25 | JulyPay read-only discovery log | In progress | Session history, remaining checklist and evidence boundary |
-| DOC-26 | Authenticated JulyPay read-only findings | Draft | Authenticated UI observations, HARAI implications and unresolved gaps |\n| DOC-27 | Public JulyPay website and commercial-positioning review | Draft | Public product positioning, onboarding, pricing, stated processing relationship and open questions |
+| DOC-26 | Authenticated JulyPay read-only findings | Draft | Authenticated UI observations, HARAI implications and unresolved gaps |
+| DOC-27 | Public JulyPay website and commercial-positioning review | Draft | Public product positioning, onboarding, pricing, stated processing relationship and open questions |
 
 ## 4. Reference boundary and product differentiation
 
@@ -69,31 +73,35 @@ JulyPay is a visual and merchant-workflow reference only. HARAI will use its own
 
 | ID | Topic | Current position | Status | Next action |
 |---|---|---|---|---|
-| DEC-001 | Product direction | Reusable gateway with JulyPay-inspired workflow coverage and original code/branding | Proposed | Approve scope after discovery |
-| DEC-002 | Initial market/currency | Uganda is a likely initial context; currencies and cross-border scope are unconfirmed | Unconfirmed | Confirm market and settlement expectations |
-| DEC-003 | Payment methods | MTN MoMo and Airtel Money are priority candidates; bank/card methods require validation | Proposed | Verify authorized access, markets, fees and test environments |
-| DEC-004 | Technology stack | NestJS/TypeScript, PostgreSQL/Prisma, Redis, Next.js and pnpm workspace are candidate choices | Proposed | Evaluate against requirements before approval |
-| DEC-005 | Tenant isolation | Multi-tenant isolation is required from the beginning | Proposed — high priority | Define boundaries and negative tests |
-| DEC-006 | Financial records | Financial movements must be auditable; ledger model is not yet approved | Proposed — high priority | Specify ledger and reconciliation |
-| DEC-007 | API credentials | Scoped, revocable credentials with secure storage and rotation | Proposed | Define key lifecycle and display-once behavior |
-| DEC-008 | IP allowlisting | Optional API access restriction with safe recovery behavior | Proposed | Define trusted proxy and dynamic-IP behavior |
-| DEC-009 | Webhooks | Signed, retryable event delivery with deduplication | Proposed | Define signatures, retry schedule and replay controls |
-| DEC-010 | Reference-product evidence | Unknown features remain unconfirmed; observations must be traceable | Approved working rule | Continue read-only discovery |
-| DEC-011 | Coding gate | No payment-engine implementation until requirements are reviewed and explicitly authorized | Approved working rule | Keep implementation behind documented gate |
-| DEC-012 | Foundation PR | Draft PR #1 stays open and unmerged during discovery | Approved working rule | Review foundation after architecture approval |
+| DEC-001 | Product direction | Reusable, multi-merchant payment gateway with original code/branding and a comprehensive launch ambition | Confirmed direction; requirements still to approve | Define and validate the full launch package |
+| DEC-002 | Initial market | Uganda first; regional expansion should remain possible | Confirmed direction | Confirm currency, settlement expectations, and market-specific obligations |
+| DEC-003 | Launch ambition | Strong, comprehensive package rather than a deliberately minimal MVP | Confirmed direction | Build a complete capability catalogue and feasibility matrix; do not equate ambition with unverified provider support |
+| DEC-004 | Merchant segments | Eventually serve multiple business types, not only ISPs | Confirmed long-term direction | Define target merchant categories and onboarding/permission needs |
+| DEC-005 | Payment methods | MTN MoMo and Airtel Money are priority candidates; bank/card methods require validation | Proposed | Verify authorized access, markets, fees and test environments |
+| DEC-006 | Technology stack | NestJS/TypeScript, PostgreSQL/Prisma, Redis, Next.js and pnpm workspace are candidate choices | Proposed | Evaluate against requirements before approval |
+| DEC-007 | Tenant isolation | Multi-tenant isolation is required from the beginning | Proposed — high priority | Define boundaries and negative tests |
+| DEC-008 | Financial records | Financial movements must be auditable; ledger model is not yet approved | Proposed — high priority | Specify ledger and reconciliation |
+| DEC-009 | API credentials | Scoped, revocable credentials with secure storage and rotation | Proposed | Define key lifecycle and display-once behavior |
+| DEC-010 | IP allowlisting | Optional API access restriction with safe recovery behavior | Proposed | Define trusted proxy and dynamic-IP behavior |
+| DEC-011 | Webhooks | Signed, retryable event delivery with deduplication | Proposed | Define signatures, retry schedule and replay controls |
+| DEC-012 | Reference-product evidence | Unknown features remain unconfirmed; observations must be traceable | Approved working rule | Continue read-only discovery |
+| DEC-013 | Coding gate | No payment-engine implementation until requirements are reviewed and explicitly authorized | Approved working rule | Keep implementation behind documented gate |
+| DEC-014 | Foundation PR | Draft PR #1 stays open and unmerged during discovery | Approved working rule | Review foundation after architecture approval |
 
 ## 7. Open questions and blockers
 
-1. Which countries, currencies and merchant types are in V1?
-2. Which MTN MoMo and Airtel Money products are accessible under authorized agreements?
-3. Are cards and bank payments V1 or later?
-4. Does HARAI only route provider requests, or does it assume custody/settlement responsibilities?
-5. What collection, payout, refund, reversal, dispute and settlement capabilities exist per provider?
-6. What fees, limits, minimums, taxes and settlement timelines apply?
-7. What merchant verification and approval requirements apply before live transactions?
-8. Which roles and dual-control approvals are required for money-out operations?
-9. What availability, recovery-time, recovery-point and support targets are required?
-10. Which legal, regulatory, privacy, retention and contractual reviews are required?
+1. Which exact merchant categories must be supported at launch, and what eligibility rules apply?
+2. Which currencies are required at launch, and which settlement arrangements can be supported?
+3. Which MTN MoMo and Airtel Money products are accessible under authorized agreements?
+4. Which bank and card methods can be offered through suitable providers/acquirers?
+5. Does HARAI only route provider requests, or does it assume custody/settlement responsibilities?
+6. What collection, payout, refund, reversal, dispute and settlement capabilities exist per provider?
+7. What fees, limits, minimums, taxes and settlement timelines apply?
+8. What merchant verification and approval requirements apply before live transactions?
+9. Which roles and dual-control approvals are required for money-out operations?
+10. What availability, recovery-time, recovery-point and support targets are required?
+11. Which legal, regulatory, privacy, retention and contractual reviews are required?
+12. What launch package is commercially and operationally sustainable without promising unavailable methods or unsafe financial operations?
 
 ## 8. Change control
 
@@ -101,6 +109,6 @@ Changes affecting money movement, access control, tenant boundaries, balances, s
 
 ## 9. Current gate
 
-**Discovery note (2026-10-17):** Authenticated dashboard access was confirmed and recorded in DOC-26. Public product positioning, pricing, onboarding claims and the stated third-party processing relationship are recorded in DOC-27. The homepage and registration page appear to describe different eligibility scopes; this remains an unresolved public-messaging ambiguity. Provider capability, commercial access, funds-flow responsibilities, workflow behavior, permissions and error/recovery behavior remain unconfirmed. No financial actions, settings changes, exports or secret access were performed.
+**Discovery note (2026-10-18):** The product owner confirmed a Uganda-first direction and a preference for a strong, comprehensive launch package rather than a deliberately small initial MVP. HARAI is intended to serve multiple business types over time. This establishes product ambition, not proof that every payment method is available or authorization to implement or launch. Public JulyPay positioning, onboarding claims, pricing and its stated third-party processing relationship are recorded in DOC-27. Provider capability, commercial access, funds-flow responsibilities, currency/settlement model, workflow behavior, permissions and error/recovery behavior remain unconfirmed.
 
 **G0 — Discovery and requirements: IN PROGRESS.** No production integration, live credentials, real payment action, merge of the foundation PR, or deployment is authorized by this draft.
