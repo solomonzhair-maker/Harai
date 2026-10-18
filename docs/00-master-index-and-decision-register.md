@@ -8,7 +8,7 @@
 
 HARAI is intended to be a reusable payment gateway for the owner's current and future systems, including Shigona and Herupu. Its long-term direction is to serve multiple businesses and integrated platforms through an original implementation, original branding, and authorized payment-provider integrations.
 
-The current market direction is **Uganda first**, with a **strong, comprehensive launch package** as the planning ambition—not a deliberately minimal MVP. HARAI should be designed for multiple merchant types and future regional expansion. Exact launch capabilities must still be validated against provider access, commercial agreements, legal requirements, cost, security, and operational readiness.
+The current market direction is **Uganda first**, with a **strong, comprehensive launch package** as the planning ambition—not a deliberately minimal MVP. HARAI should be designed for multiple merchant types and future regional expansion. The planned launch package includes both **collections and money-out workflows**, alongside refunds/reversals where supported, financial controls, merchant tools, and developer integrations. Exact enabled capabilities must still be validated against provider access, commercial agreements, legal requirements, cost, security, and operational readiness.
 
 This is a requirements and planning document set. It is not evidence that provider access, commercial agreements, legal permission, or production readiness have been completed.
 
@@ -77,16 +77,17 @@ JulyPay is a visual and merchant-workflow reference only. HARAI will use its own
 | DEC-002 | Initial market | Uganda first; regional expansion should remain possible | Confirmed direction | Confirm currency, settlement expectations, and market-specific obligations |
 | DEC-003 | Launch ambition | Strong, comprehensive package rather than a deliberately minimal MVP | Confirmed direction | Build a complete capability catalogue and feasibility matrix; do not equate ambition with unverified provider support |
 | DEC-004 | Merchant segments | Eventually serve multiple business types, not only ISPs | Confirmed long-term direction | Define target merchant categories and onboarding/permission needs |
-| DEC-005 | Payment methods | MTN MoMo and Airtel Money are priority candidates; bank/card methods require validation | Proposed | Verify authorized access, markets, fees and test environments |
-| DEC-006 | Technology stack | NestJS/TypeScript, PostgreSQL/Prisma, Redis, Next.js and pnpm workspace are candidate choices | Proposed | Evaluate against requirements before approval |
-| DEC-007 | Tenant isolation | Multi-tenant isolation is required from the beginning | Proposed — high priority | Define boundaries and negative tests |
-| DEC-008 | Financial records | Financial movements must be auditable; ledger model is not yet approved | Proposed — high priority | Specify ledger and reconciliation |
-| DEC-009 | API credentials | Scoped, revocable credentials with secure storage and rotation | Proposed | Define key lifecycle and display-once behavior |
-| DEC-010 | IP allowlisting | Optional API access restriction with safe recovery behavior | Proposed | Define trusted proxy and dynamic-IP behavior |
-| DEC-011 | Webhooks | Signed, retryable event delivery with deduplication | Proposed | Define signatures, retry schedule and replay controls |
-| DEC-012 | Reference-product evidence | Unknown features remain unconfirmed; observations must be traceable | Approved working rule | Continue read-only discovery |
-| DEC-013 | Coding gate | No payment-engine implementation until requirements are reviewed and explicitly authorized | Approved working rule | Keep implementation behind documented gate |
-| DEC-014 | Foundation PR | Draft PR #1 stays open and unmerged during discovery | Approved working rule | Review foundation after architecture approval |
+| DEC-005 | Collections and money-out | Include both collections and money-out workflows in the planned launch package; include refunds/reversals where provider-supported | Confirmed product direction; provider feasibility unconfirmed | Define requirements and verify each provider's authorized capabilities |
+| DEC-006 | Payment methods | MTN MoMo and Airtel Money are priority candidates; bank/card methods require validation | Proposed | Verify authorized access, markets, fees and test environments |
+| DEC-007 | Technology stack | NestJS/TypeScript, PostgreSQL/Prisma, Redis, Next.js and pnpm workspace are candidate choices | Proposed | Evaluate against requirements before approval |
+| DEC-008 | Tenant isolation | Multi-tenant isolation is required from the beginning | Proposed — high priority | Define boundaries and negative tests |
+| DEC-009 | Financial records | Financial movements must be auditable; ledger model is not yet approved | Proposed — high priority | Specify ledger and reconciliation |
+| DEC-010 | API credentials | Scoped, revocable credentials with secure storage and rotation | Proposed | Define key lifecycle and display-once behavior |
+| DEC-011 | IP allowlisting | Optional API access restriction with safe recovery behavior | Proposed | Define trusted proxy and dynamic-IP behavior |
+| DEC-012 | Webhooks | Signed, retryable event delivery with deduplication | Proposed | Define signatures, retry schedule and replay controls |
+| DEC-013 | Reference-product evidence | Unknown features remain unconfirmed; observations must be traceable | Approved working rule | Continue read-only discovery |
+| DEC-014 | Coding gate | No payment-engine implementation until requirements are reviewed and explicitly authorized | Approved working rule | Keep implementation behind documented gate |
+| DEC-015 | Foundation PR | Draft PR #1 stays open and unmerged during discovery | Approved working rule | Review foundation after architecture approval |
 
 ## 7. Open questions and blockers
 
@@ -109,6 +110,6 @@ Changes affecting money movement, access control, tenant boundaries, balances, s
 
 ## 9. Current gate
 
-**Discovery note (2026-10-18):** The product owner confirmed a Uganda-first direction and a preference for a strong, comprehensive launch package rather than a deliberately small initial MVP. HARAI is intended to serve multiple business types over time. This establishes product ambition, not proof that every payment method is available or authorization to implement or launch. Public JulyPay positioning, onboarding claims, pricing and its stated third-party processing relationship are recorded in DOC-27. Provider capability, commercial access, funds-flow responsibilities, currency/settlement model, workflow behavior, permissions and error/recovery behavior remain unconfirmed.
+**Discovery note (2026-10-18):** The product owner confirmed a Uganda-first direction, a preference for a strong, comprehensive launch package rather than a deliberately small initial MVP, and inclusion of both collections and money-out workflows in the planned launch package. Refunds and reversals should be specified where provider-supported. HARAI is intended to serve multiple business types over time. This establishes product direction, not proof that every payment method is available or authorization to implement or launch. Public JulyPay positioning, onboarding claims, pricing and its stated third-party processing relationship are recorded in DOC-27. Provider capability, commercial access, funds-flow responsibilities, currency/settlement model, workflow behavior, permissions and error/recovery behavior remain unconfirmed.
 
 **G0 — Discovery and requirements: IN PROGRESS.** No production integration, live credentials, real payment action, merge of the foundation PR, or deployment is authorized by this draft.
