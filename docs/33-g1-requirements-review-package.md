@@ -232,4 +232,4 @@ DOC-33's decision table and hard-gate checklist cover these same major domains. 
 
 ## Supplemental requirement update (2026-10-19)
 
-DOC-39 added SUP-001–SUP-010 to DOC-31. DOC-34 now maps all 53 unique requirement IDs. This update does not mean the expanded baseline is approved: each supplemental requirement requires accountable disposition, numeric thresholds remain open where identified, proposed test IDs are not execution evidence, and G1 remains not passed.
+DOC-39 added SUP-001–SUP-010 to DOC-31. DOC-34 now maps all 54 unique requirement IDs. This update does not mean the expanded baseline is approved: each supplemental requirement requires accountable disposition, numeric thresholds remain open where identified, proposed test IDs are not execution evidence, and G1 remains not passed.
