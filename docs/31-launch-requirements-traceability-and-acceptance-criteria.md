@@ -150,4 +150,4 @@ The requirements phase is not complete until:
 - Each approved requirement has testable acceptance criteria and traceability to planned evidence.
 - Unresolved decisions and release gates are accurately reflected in DOC-00 and DOC-03.
 
-**Current disposition:** Draft baseline for review. It does not authorize production implementation, provider onboarding, live credentials, real transactions, pull-request merge or deployment.
+**Current disposition:** Product-owner defaults POD-01–POD-12 are approved, but this remains a draft requirements baseline and G1 has not passed. Provider onboarding/contact, production implementation, live credentials, real transactions, pull-request merge and deployment remain behind their separate evidence and authorization gates.
