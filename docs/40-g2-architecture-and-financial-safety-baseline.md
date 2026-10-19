@@ -2,7 +2,7 @@
 
 **Status:** Draft architecture proposal — not approved for implementation  
 **Date:** 2026-10-19  
-**Related documents:** DOC-00, DOC-02, DOC-03, DOC-28, DOC-30, DOC-31, DOC-34, DOC-38, DOC-39  
+**Related documents:** DOC-00, DOC-02, DOC-03, DOC-28, DOC-30, DOC-31, DOC-34, DOC-38, DOC-39, DOC-41, DOC-42, DOC-43  
 **Purpose:** Convert the current requirements baseline into an architecture that can be reviewed in a focused G2 decision. This proposal intentionally separates HARAI's internal orchestration and records from the external provider's money movement. It does not select a funds-flow model, authorize provider access, or authorize coding/payment-engine implementation.
 
 ## 1. Architecture principles
@@ -164,19 +164,26 @@ No model is selected by this architecture proposal. Before choosing, obtain evid
 
 G2 should not pass until accountable reviewers have recorded decisions on:
 - modular monolith versus service decomposition and candidate technology stack;
-- canonical state machine and per-provider state mapping;
-- tenant isolation and privileged support boundaries;
+- canonical state machine and per-provider state mapping (DOC-41);
+- tenant isolation and privileged support boundaries, including the threat register in DOC-43;
 - idempotency scope, storage and provider-specific retry rules;
-- ledger/accounting representation and finance invariants;
+- ledger/accounting representation, reconciliation invariants and correction policy (DOC-42);
 - inbound callback authentication, outbound webhook retries and SSRF/egress protection;
 - money-out, beneficiary, refund/reversal and approval controls;
 - data classification, retention, deletion and privacy boundaries;
 - provider adapter contracts and the still-open funds-flow model;
 - reliability targets, backup/restore, operational ownership and incident response;
-- test strategy covering concurrency, failure, recovery, cross-tenant denial and reconciliation.
+- test strategy covering concurrency, failure, recovery, cross-tenant denial and reconciliation, using DOC-41–DOC-43 as proposed scenario sources.
 
 A qualified independent security reviewer and finance/reconciliation reviewer must review their respective domains. The author's internal review is not a substitute for independent sign-off.
 
-## 12. Current disposition
+## 12. Supporting design artifacts
+
+- DOC-41 expands the proposed state machine and maps current MTN/Airtel evidence to internal handling rules. Provider finality, retry guarantees and production capability remain unconfirmed.
+- DOC-42 details immutable financial records, posting invariants, reconciliation layers and discrepancy handling. Account semantics require finance review and depend on the selected funds-flow model.
+- DOC-43 records initial trust boundaries, 20 threat scenarios, proposed controls and required validation. It is not a penetration test or independent security sign-off.
+- DOC-28 now presents Model A, Model B and conditional Model C side by side without scoring unknowns.
+
+## 13. Current disposition
 
 This proposal is ready for architecture review, not implementation. G1 remains not passed until the requirements baseline receives accountable disposition. G2 remains not approved until the design decisions and independent reviews above are recorded. No provider contact, onboarding, live credentials, real transactions, payment-engine coding, merge or deployment is authorized by DOC-40.
