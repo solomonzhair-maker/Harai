@@ -3,9 +3,9 @@
 **Status:** Product owner approved all recommended defaults on 2026-10-19; provider, legal/compliance and G1 evidence gates remain open  
 **Date:** 2026-10-19  
 **Related documents:** DOC-00, DOC-02, DOC-03, DOC-28, DOC-29, DOC-30, DOC-31, DOC-33, DOC-34, DOC-35  
-**Purpose:** Reduce repeated discussion by presenting a small set of material product choices with recommended conservative defaults. The product owner can approve the recommendations, amend them or reject them.
+**Purpose:** Record the product owner’s approved default direction for the G1 baseline and distinguish those product decisions from evidence-dependent provider, legal, commercial, and release gates.
 
-> **Decision boundary:** These are product-scope proposals only. They do not prove provider eligibility, settle legal classification, select the funds-flow/custody model, authorize provider outreach, or authorize payment-engine implementation.
+> **Decision boundary:** POD-01–POD-12 are approved product-direction defaults. They do not prove provider eligibility, settle legal classification, select the funds-flow/custody model, authorize provider outreach, or authorize payment-engine implementation.
 
 ## 1. Recommended owner decisions
 
