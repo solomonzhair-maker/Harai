@@ -68,6 +68,25 @@ HARAI may use different models for different rails or use cases if each arrangem
   - https://bou.or.ug/financial_infrastructure_innovation
 - The precise classification and permissions applicable to HARAI depend on its actual activities, contracts, and funds flow. This document is not legal advice. Obtain qualified Uganda legal/compliance advice and, where appropriate, written clarification from the relevant authority before offering regulated services.
 
+## 3A. Account-specific portal evidence (2026-10-19)
+
+This subsection supplements the public-source research above with redacted observations from owner-assisted, read-only inspection of the logged-in developer portals. Full evidence summary: [DOC-37](37-provider-portal-evidence-review-and-owner-checklist.md) and [DOC-38](38-mtn-airtel-provider-evidence-comparison.md).
+
+| Provider | Visible account state | Technical documentation observed | Remaining blockers |
+|---|---|---|---|
+| MTN MoMo Uganda | Test environment; Collections and Collection Widget subscriptions shown Active; no Disbursement subscription visible; no production approval visible | Collection Request-to-Pay/status flow; Disbursement Transfer/Deposit, balance/status and refund operations; Aggregator API `transferType`; callback and reconciliation guidance | Written HARAI multi-merchant eligibility; live approval; funds/account ownership; settlement and prefunding terms; full fees, limits and support |
+| Airtel Uganda | Authenticated Uganda developer portal; 0 live applications and 3 archived applications; no production approval visible | Collection v2.0 with enquiry and refund; Disbursement v2.0 B2B/B2C and direct merchant transfers; Merchant Collection with micro-merchant relationships; callbacks and Transactions Summary | Meaning/status of archived applications not investigated; production activation; written HARAI aggregator eligibility; funds/account ownership; settlement and payout funding; full fees, limits and support |
+
+Interpretation:
+- MTN's visible active subscriptions establish account-specific Test access only, not production eligibility or authority to process payments for unrelated merchants.
+- Airtel's published Merchant Collection operations establish a documented technical surface, not proof that HARAI is approved to register or service sub-merchants.
+- Both providers document asynchronous or ambiguous outcomes and transaction/status enquiry. HARAI requirements must preserve unknown/pending states and avoid blind retries.
+- MTN callback guidance says callbacks are sent once without retry; Airtel documentation describes an authenticated callback option using HMAC-SHA256. HARAI should require secure callback verification and independent status/reconciliation recovery, while each adapter follows the final approved provider specification.
+- The Airtel developer dashboard showed three archived applications, but no names or causes were retained and no archived app was opened. Do not infer that these applications belong to HARAI or can be reactivated.
+- The account pages inspected did not establish fees, settlement cycles, reserves, custody/control, payout prefunding, or written contractual permission.
+
+These observations refine the evidence register but do not change the hard-gate rule. Unknowns remain N/S (not scored); no funds-flow model is selected.
+
 ## 4. Provider evidence matrix (public-source review, 2026-10-19)
 
 **Evidence labels**
@@ -180,4 +199,4 @@ Any final decision remains subject to explicit product-owner approval and applic
 
 ## 10. Source limitations
 
-This is a preliminary review of public pages available on 2026-10-19. Public pages can be incomplete or change; product access, pricing, contractual rights, legal interpretation and production eligibility have not been independently confirmed. Contact providers through their official business channels to obtain current, written evidence.
+This document combines public-source research and redacted, account-specific read-only portal observations available on 2026-10-19. Public pages can be incomplete or change; product access beyond the visible Test/dashboard state, pricing, contractual rights, legal interpretation and production eligibility have not been independently confirmed. Contact providers through their official business channels to obtain current, written evidence.
