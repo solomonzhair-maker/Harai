@@ -195,3 +195,36 @@ Recommended next sequence:
 This package consolidates known product direction and unresolved requirements as of 2026-10-19. It does not assert that providers have approved HARAI, that legal review has happened, that reviewer roles are staffed, or that the funds-flow model is selected.
 
 **Current disposition: G1 NOT PASSED.** The next action is a requirements review and evidence/owner resolution, not payment-engine implementation. No provider has been contacted by this document. No live credentials, real transactions, pull-request merge or deployment are authorized.
+
+
+## 12. Cross-review against DOC-31 (2026-10-19)
+
+A document-level cross-review was performed against the current DOC-31 requirements catalogue. This is an editorial consistency check, not an independent security, finance, legal or product-owner sign-off.
+
+### 12.1 Coverage observed
+
+DOC-31 currently contains 43 distinct requirement IDs:
+- Governance, tenancy, merchant onboarding and identity/access: GOV-001, TEN-001, MER-001–MER-004, IAM-001–IAM-002.
+- Collections and payer experience: COL-001–COL-008.
+- Money-out, refunds and reversals: OUT-001–OUT-006.
+- Ledger, fees, reconciliation and reporting: FIN-001–FIN-005, REC-001–REC-002, REP-001.
+- Developer platform, security and operations: DEV-001–DEV-003, SEC-001–SEC-003, OPS-001–OPS-004.
+- Conditional extensions: EXT-001–EXT-003.
+
+DOC-33's decision table and hard-gate checklist cover these same major domains. No intentional reduction of the stated comprehensive launch ambition was introduced by this review. Provider- and market-dependent features remain gated rather than presumed available.
+
+### 12.2 Findings and required disposition
+
+| Review ID | Finding | Severity / status | Required next action |
+|---|---|---|---|
+| XRV-001 | Requirement IDs and broad domains align between DOC-31 and DOC-33, but DOC-33 is a review package and does not itself approve any individual requirement | Governance-critical; open | Product owner records accepted, amended, blocked, deferred or rejected requirement IDs |
+| XRV-002 | DOC-31 defines the fields required for traceability, but the catalogue does not yet attach named owners, concrete test IDs, reviewers and evidence references to every requirement row | G1 blocker | Build/complete a requirement-by-requirement traceability matrix after scope decisions and owner assignments |
+| XRV-003 | DOC-33 lists role-based review responsibilities, but no people have been named or confirmed as available | G1 blocker | Product owner names accountable technical, security, finance/reconciliation, operations and independent reviewers; arrange qualified Ugandan legal/compliance review |
+| XRV-004 | Provider eligibility, multi-merchant permission, money-out funding, settlement and account ownership cannot be settled by document consistency review | External evidence blocker | Obtain explicit owner authorization before provider outreach; then record written responses and qualified professional review |
+| XRV-005 | Fees, taxes, reserves, limits, service/recovery objectives and commercial viability are not yet based on approved values/evidence | Decision/evidence blocker | Keep numeric targets and prices uncommitted until provider evidence, capacity analysis and relevant review are available |
+| XRV-006 | G1 approval is distinct from implementation authorization; the current docs consistently preserve this boundary | Control verified at document level | Continue to require separate explicit authorization for implementation, merge, provider onboarding and deployment |
+
+### 12.3 Review outcome
+
+**Document consistency: adequate to proceed with owner review. G1 readiness: not achieved.** The key remaining gap is not another general narrative document; it is a decision-and-evidence record with named accountable reviewers and requirement-level traceability. No individual requirement is marked Approved, Implemented or Verified by this cross-review. No product-owner decision, independent specialist review, provider response or legal conclusion has been inferred.
+
