@@ -134,7 +134,7 @@ No requirement should be marked **Approved** merely because it is written. No re
 
 ## 6. Immediate review actions
 
-1. Product owner reviews the intended actors, launch capabilities and P0/P1/P2 classifications.
+1. Product owner has approved the DOC-36 product-direction defaults; review the detailed actors, requirement wording, and P0/P1/P2 classifications with accountable reviewers. Approval of defaults does not mark individual requirements verified.
 2. Provider inquiry responses populate the blocked dependencies in DOC-29 and DOC-28.
 3. Qualified Ugandan counsel/compliance adviser reviews DOC-30 against the actual proposed funds flows.
 4. Technical architecture maps accepted requirements to API contracts, state machines, tenant boundaries, ledger and reconciliation designs.
@@ -143,7 +143,7 @@ No requirement should be marked **Approved** merely because it is written. No re
 ## 7. Exit criteria for the requirements phase
 
 The requirements phase is not complete until:
-- Product owner explicitly approves the launch baseline and records exclusions, including the intended scope of both MTN MoMo and Airtel Money, card payments, and any other selected methods.
+- Product owner approval of the DOC-36 defaults is recorded; detailed requirement acceptance, exclusions and capability-by-capability evidence still require accountable review. Intended methods include both MTN MoMo and Airtel Money, cards through an eligible processor/acquirer, and additional suitable methods.
 - Provider-dependent requirements are either supported by current written evidence or remain explicitly blocked.
 - Funds flow, settlement, money-out funding, refund/reversal behavior and reconciliation are reviewed.
 - Security, privacy, tenant isolation, audit, failure recovery and operational requirements have named owners.
