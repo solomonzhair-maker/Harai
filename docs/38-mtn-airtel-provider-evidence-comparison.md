@@ -109,6 +109,13 @@ These observations should be reflected in requirements and later architecture re
 - Make each rail/capability unavailable for live use until provider, legal, security, funding and reconciliation gates pass.
 - Do not assume HARAI holds, pools, safeguards or owns customer funds, or operates a stored-value wallet.
 
+Relevant existing DOC-31 requirement IDs already cover the principal implications; avoid inventing duplicate IDs merely because new evidence arrived:
+- **COL-004 / OUT-002:** pending, ambiguous and unknown outcomes, status recovery and no blind retry.
+- **COL-005 / DEV-002:** callback authentication, replay/deduplication and recoverable event delivery.
+- **OUT-001 / OUT-003 / OUT-004:** provider-authorized payouts, original-transaction-linked refunds, and traceable reversals/returns.
+- **FIN-003 / REC-001 / REC-002:** explainable fees/net settlement, transaction-to-provider evidence matching, and visible discrepancy handling.
+- **MER-002 / OPS-002:** live activation and release remain gated on provider permission, compliance and operational evidence.
+
 These are planning requirements, not approved architecture or permission to code the payment engine.
 
 ## 8. Current gate and next actions
