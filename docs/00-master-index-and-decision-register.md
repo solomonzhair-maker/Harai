@@ -56,6 +56,8 @@ This is a requirements and planning document set. It is not evidence that provid
 | DOC-26 | Authenticated JulyPay read-only findings | Draft | Authenticated UI observations, HARAI implications and unresolved gaps |
 | DOC-27 | Public JulyPay website and commercial-positioning review | Draft | Public product positioning, onboarding, pricing, stated processing relationship and open questions |
 | DOC-28 | Funds-flow architecture comparison | Draft research baseline | Compare provider-managed funds, direct integrations, and conditional hybrid approach using official evidence |
+| DOC-29 | Provider verification and written inquiry pack | Draft — ready for owner review | Formal provider questions, evidence tracker, scoring method and hard gates |
+| DOC-30 | Uganda compliance and funds-flow review checklist | Draft — professional review required | Structure qualified legal/compliance review and funds-flow decision gates |
 
 ## 4. Reference boundary and product differentiation
 
@@ -89,13 +91,14 @@ JulyPay is a visual and merchant-workflow reference only. HARAI will use its own
 | DEC-013 | Reference-product evidence | Unknown features remain unconfirmed; observations must be traceable | Approved working rule | Continue read-only discovery |
 | DEC-014 | Coding gate | No payment-engine implementation until requirements are reviewed and explicitly authorized | Approved working rule | Keep implementation behind documented gate |
 | DEC-015 | Foundation PR | Draft PR #1 stays open and unmerged during discovery | Approved working rule | Review foundation after architecture approval |
-| DEC-016 | Funds-flow architecture evaluation | Compare provider-managed funds and direct provider integrations before selecting a model | Confirmed planning preference; no commercial/legal commitment or live activity authorized | DOC-28 now contains a provider-by-provider public evidence matrix, weighted criteria (scores remain N/S until evidence is received), hard gates, and a written provider inquiry checklist; next obtain official written responses and qualified Uganda compliance review |
+| DEC-016 | Funds-flow architecture evaluation | Compare provider-managed funds and direct provider integrations before selecting a model | Confirmed planning preference; no commercial/legal commitment or live activity authorized | DOC-28 compares public evidence; DOC-29 contains the written inquiry pack; obtain official responses and qualified Uganda compliance review |
+| DEC-017 | Money-out launch scope | Payouts/withdrawals are intended launch-package capabilities alongside collections; refunds/reversals where supported | Confirmed product direction; live feasibility and authorization unconfirmed | DOC-02 and DOC-03 now reflect the intended scope while retaining provider, legal, funding, reconciliation and operational gates |
 
 ## 7. Open questions and blockers
 
 1. Which exact merchant categories must be supported at launch, and what eligibility rules apply?
 2. Which currencies are required at launch, and which settlement arrangements can be supported?
-3. Which MTN MoMo and Airtel Money products are accessible under authorized agreements?
+3. Which MTN MoMo and Airtel Money products are accessible under authorized agreements, including written permission for a multi-merchant gateway?
 4. Which bank and card methods can be offered through suitable providers/acquirers?
 5. Does HARAI only route provider requests, or does it assume custody/settlement responsibilities?
 6. What collection, payout, refund, reversal, dispute and settlement capabilities exist per provider?
@@ -105,6 +108,7 @@ JulyPay is a visual and merchant-workflow reference only. HARAI will use its own
 10. What availability, recovery-time, recovery-point and support targets are required?
 11. Which legal, regulatory, privacy, retention and contractual reviews are required?
 12. What launch package is commercially and operationally sustainable without promising unavailable methods or unsafe financial operations?
+13. Which written provider confirmations and qualified Ugandan legal/compliance conclusions are required before selecting a funds-flow model?
 
 ## 8. Change control
 
