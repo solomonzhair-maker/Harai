@@ -71,6 +71,8 @@ This is a requirements and planning document set. It is not evidence that provid
 | DOC-41 | Transaction state machine and provider mapping | Draft proposal — provider finality/transition contracts unconfirmed | Review internal lifecycle, separate operation families, MTN/Airtel evidence mapping and recovery rules |
 | DOC-42 | Ledger and reconciliation design proposal | Draft proposal — finance review required | Review immutable posting invariants, settlement reconciliation, discrepancies and correction workflow |
 | DOC-43 | HARAI threat model and security controls | Draft threat model — independent security review required | Review trust boundaries, threat register, proposed controls and required validation evidence |
+| DOC-44 | G2 architecture decision and review package | Draft — G2 not approved | Consolidated architecture decisions, funds-flow decision protocol, G2 exit criteria, non-waivable blockers and reviewer roles |
+| DOC-45 | Evidence register and acceptance-test planning standard | Draft — evidence gaps open; test IDs are plans only | Evidence classes, provider evidence gaps, minimum test families, evidence acceptance rules and review workflow |
 
 ## 4. Reference boundary and product differentiation
 
