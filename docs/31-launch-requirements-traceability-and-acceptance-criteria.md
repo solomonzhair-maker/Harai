@@ -172,8 +172,22 @@ The following ten stable supplemental requirement IDs convert the high-priority 
 
 ### 8.1 Supplemental review rules
 
-1. These ten requirements are additions to the 43 previously catalogued requirements, not evidence that the gaps are implemented or verified.
-2. The requirement-level matrix in DOC-34 must be extended to all 53 IDs with role-based owner proposals, dependency links, proposed test/evidence references and gate disposition. Do not invent named people or claim tests exist.
-3. DOC-03 must map these requirements to design, implementation, verification and launch-readiness phases after the relevant gates are authorized.
+1. These ten requirements are additions to the 44 existing requirements (including EXT-004 for card payments), bringing the working catalogue to 54 unique IDs. This is not evidence that the requirements are implemented or verified.
+2. The requirement-level matrix in DOC-34 must cover all 54 IDs with role-based owner proposals, dependency links, proposed test/evidence references and gate disposition. Do not invent named people or claim tests exist.
+3. DOC-03 maps these requirements to design, implementation, verification and launch-readiness phases after the relevant gates are authorized.
 4. Numeric rate limits, expiry defaults, RTO/RPO, availability/latency targets, retention periods and accessibility support policy remain open decisions until reviewed and approved.
 5. G1 remains open until the product owner and accountable reviewers explicitly accept, amend, defer or reject each supplemental requirement and the traceability package is consistent.
+
+
+### 8.2 Architecture traceability references
+
+The following documents provide proposed design detail for later requirements-to-design and requirements-to-test mapping. They are not implementation or test evidence:
+
+| Requirement area | Design reference | Review boundary |
+|---|---|---|
+| COL-004, COL-005, OUT-002, SUP-004 — transaction states, ambiguity and recovery | DOC-41 | Provider-specific finality, retries and production access remain unconfirmed |
+| FIN-003, REC-001, REC-002, SUP-010 — financial postings, fees and reconciliation | DOC-42 | Finance/accounting review and funds-flow decision remain open |
+| IAM/SEC requirements, SUP-001, SUP-003, SUP-007, SUP-010 — abuse, trust boundaries and audit | DOC-43 | Independent security review and later authorized validation remain open |
+| EXT-004 — card processor/acquirer | DOC-40 and DOC-43 | Processor selection, written permission, data-flow and applicable security scope remain hard gates |
+
+The proposed test IDs in DOC-41–DOC-43 are planning references only. They must not be reported as existing tests, executed tests or passing evidence unless the artifacts are created and the runs are recorded.
