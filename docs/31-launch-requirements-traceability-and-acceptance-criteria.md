@@ -92,11 +92,14 @@
 | OPS-003 | P0 | Reliability targets and recovery are measurable | Availability/latency objectives, maximum acceptable pending age, alert thresholds, backup/restore objectives and recovery ownership are approved and tested; no targets are invented without owner review | Owner decisions; provider SLAs; operational capacity |
 | OPS-004 | P1 | Accessibility and responsive operation are verified | Critical dashboard and checkout journeys are keyboard operable, labeled for assistive technology, responsive at supported widths, and have understandable loading/empty/error/pending states | UI acceptance plan and accessibility review |
 
-### F. Conditional extensions
+### F. Card payments and conditional extensions
+
+Card payments are part of the intended multi-provider payment-method package, alongside both MTN MoMo and Airtel Money. Card processing remains **P1 / Blocked** until an eligible processor/acquirer, supported schemes, commercial permission, technical access, security responsibilities, settlement/funding model, fees, dispute handling and compliance requirements are evidenced. Other methods beyond the named core package remain conditional.
 
 | ID | Priority | Requirement | Acceptance criteria | Dependencies / evidence |
 |---|---|---|---|---|
-| EXT-001 | P2 / Blocked | Additional payment methods and currencies | Each method/currency has separate capability, eligibility, fee, lifecycle, settlement, compliance, reconciliation and acceptance evidence before activation | Provider contracts and legal review |
+| EXT-004 | P1 / Blocked | Card payments are available through an eligible processor/acquirer | Checkout presents card payment only when the merchant, transaction, currency and environment are eligible; authorization/capture or equivalent lifecycle, 3-D Secure/step-up where required, tokenization and card-data handling boundaries, declines, timeouts, refunds, disputes/chargebacks, fees, settlement, reconciliation and webhooks are documented and tested for the chosen processor. HARAI must not store sensitive authentication data or raw card data unless a reviewed, explicitly authorized architecture and applicable requirements permit it. | Processor/acquirer selection and written permission; PCI/security scope review; fees and settlement terms; legal/compliance review; official API and sandbox evidence |
+| EXT-001 | P2 / Blocked | Additional payment methods and currencies beyond the planned MTN MoMo, Airtel Money and card package | Each additional method/currency has separate capability, eligibility, fee, lifecycle, settlement, compliance, reconciliation and acceptance evidence before activation | Provider/processor contracts and legal review |
 | EXT-002 | P2 / Blocked | Scheduling, split settlement and marketplace payouts | Each feature has explicit timing, authorization, failure, cancellation, ledger and reconciliation behavior and is enabled only where providers and applicable rules permit | Separate product decision and feasibility review |
 | EXT-003 | P2 / Blocked | Regional expansion | Each new market has its own regulatory, provider, currency, data, support, tax and operating review before any market-specific launch claim | Country-specific professional review |
 
@@ -140,7 +143,7 @@ No requirement should be marked **Approved** merely because it is written. No re
 ## 7. Exit criteria for the requirements phase
 
 The requirements phase is not complete until:
-- Product owner explicitly approves the launch baseline and records exclusions.
+- Product owner explicitly approves the launch baseline and records exclusions, including the intended scope of both MTN MoMo and Airtel Money, card payments, and any other selected methods.
 - Provider-dependent requirements are either supported by current written evidence or remain explicitly blocked.
 - Funds flow, settlement, money-out funding, refund/reversal behavior and reconciliation are reviewed.
 - Security, privacy, tenant isolation, audit, failure recovery and operational requirements have named owners.
