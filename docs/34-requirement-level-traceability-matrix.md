@@ -20,7 +20,7 @@
 
 ## 2. Requirement-level matrix
 
-The matrix contains 43 unique requirement IDs from the current DOC-31 catalogue. All requirement criteria remain as written in DOC-31; use the requirement ID to trace to the complete acceptance criterion.
+The matrix contains 53 unique requirement IDs from the current DOC-31 catalogue, including the ten supplemental requirements SUP-001–SUP-010 added in DOC-39. All requirement criteria remain as written in DOC-31; use the requirement ID to trace to the complete acceptance criterion.
 
 | Requirement ID | Priority | Requirement | Proposed accountable role(s) | Proposed test IDs | Dependency / evidence reference from DOC-31 | Gate / disposition | Current status |
 |---|---|---|---|---|---|---|---|
@@ -67,6 +67,17 @@ The matrix contains 43 unique requirement IDs from the current DOC-31 catalogue.
 | EXT-001 | P2 / Blocked | Additional payment methods and currencies | Product owner + relevant provider/compliance reviewer (person unassigned) | T-EXT-001-ACCEPTANCE, T-EXT-001-NEGATIVE (proposed) | Provider contracts and legal review | Conditional extension; blocked until separately approved | Draft — not verified |
 | EXT-002 | P2 / Blocked | Scheduling, split settlement and marketplace payouts | Product owner + relevant provider/compliance reviewer (person unassigned) | T-EXT-002-ACCEPTANCE, T-EXT-002-NEGATIVE (proposed) | Separate product decision and feasibility review | Conditional extension; blocked until separately approved | Draft — not verified |
 | EXT-003 | P2 / Blocked | Regional expansion | Product owner + relevant provider/compliance reviewer (person unassigned) | T-EXT-003-ACCEPTANCE, T-EXT-003-NEGATIVE (proposed) | Country-specific professional review | Conditional extension; blocked until separately approved | Draft — not verified |
+
+| SUP-001 | P0 | API abuse and recovery-request rate limits are explicit | Technical lead + independent security reviewer (person unassigned) | API-RATE-001 (proposed) | DOC-31 SUP-001; threat model; provider quotas | G1 safety requirement; numeric limits require owner review | Draft — not verified |
+| SUP-002 | P0 | Payment links and checkout sessions have controlled lifecycle and usage | Collections product owner + technical lead (person unassigned) | LINK-LIFE-001 (proposed) | DOC-31 SUP-002; COL-007; state-machine design | G1 safety requirement; lifecycle and concurrency rules required | Draft — not verified |
+| SUP-003 | P0 | Beneficiary and payout-destination changes are protected | Money-out product owner + security/finance reviewers (persons unassigned) | PAYEE-CHANGE-001 (proposed) | DOC-31 SUP-003; IAM-002; provider/risk policy | G1 safety requirement; live money-out remains externally gated | Draft — not verified |
+| SUP-004 | P0 | Transaction state transitions and finality are canonical | Technical lead + finance/reconciliation reviewer (persons unassigned) | STATE-MATRIX-001 (proposed) | DOC-31 SUP-004; COL-004/005; FIN-005; provider lifecycle evidence | G1/G2 safety requirement; provider-specific evidence required | Draft — not verified |
+| SUP-005 | P1 | Disputes and complaints have owned, traceable case handling | Support/operations owner + compliance reviewer (persons unassigned) | CASE-DISPUTE-001 (proposed) | DOC-31 SUP-005; FIN-004; provider/legal obligations | G1 scope decision; case policy and deadlines to be reviewed | Draft — not verified |
+| SUP-006 | P0 | Public API contracts remain versioned and predictable | Developer-platform lead + technical lead (persons unassigned) | API-CONTRACT-001 (proposed) | DOC-31 SUP-006; DEV-003; API contract | G1 safety requirement; compatibility/error contract required | Draft — not verified |
+| SUP-007 | P0 | Browser, proxy and IP-allowlist trust boundaries are defined | Technical lead + independent security reviewer (persons unassigned) | EDGE-TRUST-001 (proposed) | DOC-31 SUP-007; SEC-003; deployment topology | G1/G2 safety requirement; security review required | Draft — not verified |
+| SUP-008 | P0 | Reliability and recovery objectives are measurable | Operations owner + technical lead (persons unassigned) | OPS-RECOVERY-001 (proposed) | DOC-31 SUP-008; OPS-003; provider SLA/capacity | G1/G2 safety requirement; numeric targets require approval | Draft — not verified |
+| SUP-009 | P1 | Critical journeys meet accessibility and responsive-use criteria | Product/design owner + operations/QA owner (persons unassigned) | UX-A11Y-001 (proposed) | DOC-31 SUP-009; OPS-004; supported-browser policy | G1 scope decision; manual and automated review required | Draft — not verified |
+| SUP-010 | P0 | Security and financial events are correlated end-to-end | Technical lead + finance/reconciliation and security reviewers (persons unassigned) | TRACE-AUDIT-001 (proposed) | DOC-31 SUP-010; FIN-002; DEV-002; OPS-001 | G1/G2 safety requirement; privacy and audit review required | Draft — not verified |
 
 ### Provider portal evidence crosswalk (2026-10-19)
 
@@ -137,4 +148,4 @@ The following are the next actions that can be completed without pretending deci
 
 ## 7. Current disposition
 
-**G1 NOT PASSED.** This matrix makes the traceability work visible but does not close external evidence gaps or replace the product owner's decisions. The immediate next action requiring owner input is a small set of product decisions and the identity/availability of reviewers; provider outreach and professional advice must not be represented as completed.
+**G1 NOT PASSED.** DOC-39 adds ten supplemental requirements; the matrix now maps 53 IDs, with role assignments and test IDs still proposed and unverified. This matrix makes the traceability work visible but does not close external evidence gaps or replace the product owner's decisions. The immediate next action requiring owner input is a small set of product decisions and the identity/availability of reviewers; provider outreach and professional advice must not be represented as completed.
