@@ -68,7 +68,50 @@ HARAI may use different models for different rails or use cases if each arrangem
   - https://bou.or.ug/financial_infrastructure_innovation
 - The precise classification and permissions applicable to HARAI depend on its actual activities, contracts, and funds flow. This document is not legal advice. Obtain qualified Uganda legal/compliance advice and, where appropriate, written clarification from the relevant authority before offering regulated services.
 
-## 4. Preliminary comparison
+## 4. Provider evidence matrix (public-source review, 2026-10-19)
+
+**Evidence labels**
+- **Publicly documented:** visible on an official public page; does not prove HARAI eligibility or a contract.
+- **Partially documented:** a related product or onboarding route is visible, but the required detail is missing.
+- **Unknown — written confirmation required:** public evidence found does not settle the question.
+- **Not assessed:** no reliable evidence collected for the specific item yet.
+
+| Provider / route | Collections | Money-out / disbursement | Merchant aggregator eligibility | Settlement / custody | Refunds / reversals | Fees / limits / service levels | Current conclusion |
+|---|---|---|---|---|---|---|---|
+| MTN MoMo API — direct | **Publicly documented:** MTN API portal lists Collection and Collection Widget products | **Publicly documented at general API level:** portal lists Disbursement; exact Uganda product conditions need confirmation | **Unknown:** public API pages do not establish HARAI's multi-merchant aggregation rights | **Partially documented:** Uganda product-specific account and liquidation/prefunding details must be checked against current official product documentation and written terms | **Unknown:** confirm API/product-level reversal/refund rules, timing and finality | **Unknown for HARAI's commercial API agreement:** obtain enterprise price sheet, limits, settlement SLA and support terms | Technically plausible candidate; access, contracts, aggregation, funds flow and economics are not verified |
+| MTN — via an authorized intermediary | Depends on intermediary's contracted MTN access | Depends on intermediary's contracted products and prefunding/settlement model | **Unknown:** intermediary must explicitly permit HARAI to onboard and service sub-merchants | **Unknown:** must map funds path, account ownership, settlement destination and liability | **Unknown:** must confirm which party can initiate and evidence reversals/refunds | Partner-specific; obtain full schedule including any pass-through fees | Candidate only if partner demonstrates rights and supplies auditable settlement data |
+| Airtel Money Enterprise — direct | **Publicly documented:** Airtel Uganda describes collections into business accounts | **Publicly documented:** Airtel Uganda describes disbursements from business accounts | **Partially documented:** Airtel Enterprise registration lists “Payment Aggregators” as an entity type; this is an onboarding category, not approval or proof of HARAI eligibility | **Partially documented:** enterprise onboarding requests settlement bank/mobile details; exact collection account, settlement cycles and funds-control model remain unknown | **Unknown:** obtain official API documentation and written confirmation of refund/reversal capabilities | **Unknown for HARAI:** obtain commercial proposal, limits, minimums, settlement SLA and incident support | Strong candidate for formal inquiry; no assumption of production API or aggregator approval |
+| Airtel — via an authorized intermediary | Depends on intermediary's contracted Airtel access | Depends on intermediary's contracted payout products | **Unknown:** intermediary must explicitly allow HARAI's multi-merchant model | **Unknown:** require signed funds-flow diagram and settlement evidence examples | **Unknown** | Partner-specific; obtain full fee and service schedule | Candidate only after legal, technical and commercial due diligence |
+| Other licensed/authorized payment partner | Must be evidenced per product | Must be evidenced per product | Must be expressly allowed in the agreement | Must be mapped end to end | Must be verified per provider and flow | Must be provided in writing | Do not shortlist on marketing claims alone; check current Bank of Uganda authorization lists and exact permitted activities |
+
+Official public references reviewed:
+- MTN MoMo API catalogue: https://momo.mtn.com/api/
+- MTN Uganda collection product details: https://momoapi.mtn.com/Uganda_Widget_productDetails
+- MTN Uganda disbursement product details: https://momoapi.mtn.com/Uganda_Disbursement_productDetails
+- Airtel Money Uganda enterprise services: https://enterprise.airtel.ug/about/at-a-glance
+- Airtel Enterprise registration (entity categories and settlement/KYC steps): https://enterprise.airtel.ug/register
+- Bank of Uganda payment-system oversight and licensed-provider directory: https://bou.or.ug/financial_infrastructure_innovation
+
+## 5. Decision evidence checklist and weighted comparison
+
+Use this scoring scale only after evidence is received: **0 = unacceptable/not supported; 1 = major gap; 2 = partial/conditional; 3 = meets minimum; 4 = strong; 5 = verified strong fit.** Every score must link to a source, written provider response, or accountable review. Unknown is **N/S (not scored)**, never zero or a guessed score.
+
+| Criterion | Weight | Evidence required | Model A score | Model B score |
+|---|---:|---|---|---|
+| Regulatory fit and responsibility clarity | 20% | Qualified Uganda legal/compliance assessment; provider/partner roles and permissions in writing | N/S | N/S |
+| Multi-merchant/aggregator authorization | 15% | Written approval for HARAI's exact intended model and sub-merchant lifecycle | N/S | N/S |
+| Funds flow and settlement transparency | 15% | Account ownership, destination, timing, reserves, prefunding, control of funds, settlement statement examples | N/S | N/S |
+| Collections and money-out coverage | 15% | Capability matrix for each required rail, direction and merchant category | N/S | N/S |
+| Reconciliation and financial evidence | 10% | Transaction-level references, settlement reports, fees, dispute process and discrepancy support | N/S | N/S |
+| Commercial viability | 10% | Written fees, minimums, volume commitments, taxes, reserves, termination and price-change terms | N/S | N/S |
+| Reliability and support | 5% | SLA, support hours, incident escalation, status API, maintenance notices and recovery process | N/S | N/S |
+| Security and data responsibilities | 5% | API authentication, callback signing, credential controls, data-processing terms, audit access | N/S | N/S |
+| Integration and operating effort | 5% | Documented API quality, sandbox, test support, operational workload and maintenance estimate | N/S | N/S |
+| **Total** | **100%** | Scores only after evidence review | **Not scored** | **Not scored** |
+
+**Hard gates override the numerical score:** do not recommend a route if its legal permission/authorization, multi-merchant permission, settlement ownership, money-out funding source, or reconciliation evidence is unresolved. A high total score cannot compensate for a hard-gate failure.
+
+## 6. Preliminary comparison
 
 | Dimension | Provider-managed funds | Direct integrations | Evidence status |
 |---|---|---|---|
@@ -85,7 +128,7 @@ HARAI may use different models for different rails or use cases if each arrangem
 | Operational complexity | Potentially lower at first, but partner dependency remains | More provider-specific integration and support work | General expectation |
 | Long-term flexibility | Depends on partner contract and portability | Potentially greater provider-level control | Not proven; assess commercially |
 
-## 5. Required evidence pack
+## 7. Required evidence pack
 
 Before recommending a model, collect and compare:
 
@@ -100,13 +143,31 @@ Before recommending a model, collect and compare:
 9. Qualified Uganda legal/compliance assessment of required licences, approvals, outsourcing/partner structure and consumer-protection obligations.
 10. A weighted comparison with explicit unknowns and evidence links; unknowns must not be scored as confirmed capabilities.
 
-## 6. Preliminary recommendation
+## 8. Preliminary recommendation
 
 **Do not select a final funds-flow model yet.** Continue with Model A and Model B evidence gathering in parallel. Keep Model C as a conditional design option only if it reduces meaningful dependency without creating unmanageable regulatory, reconciliation, or operational complexity.
 
 The architecture should isolate provider adapters from the canonical HARAI transaction model, avoid representing pending/unknown provider outcomes as final, preserve immutable audit and financial records, and reconcile provider settlements. It must not assume that HARAI itself holds customer funds or maintains a stored-value wallet.
 
-## 7. Decision gate
+
+### Provider inquiry pack (send only through official business channels)
+
+Ask MTN, Airtel, and any prospective intermediary to answer in writing:
+
+1. Can HARAI, as a gateway intending to onboard multiple independent merchants, use the product/API under consideration? If yes, what legal entity, licence, merchant category, and contractual structure are required?
+2. Is HARAI treated as a merchant, technology provider, agent, aggregator, or another category? Which party contracts with each sub-merchant and bears customer-facing payment obligations?
+3. For each flow, show the payer, provider/partner account, any prefunding or reserve account, settlement account, beneficiary, and party controlling each movement of funds.
+4. Can collection proceeds be settled directly to each approved merchant? If not, what alternative is allowed and what permissions are required?
+5. Which exact Uganda APIs support collection initiation, callback verification, status lookup, disbursement, refund, reversal, return, and statement/report download?
+6. What happens after timeout or conflicting status? Which endpoint or support process establishes finality, and what are the safe retry rules?
+7. Provide all fees, taxes, limits, minimum balances/volumes, settlement windows, prefunding, reserve, returned-payment and dispute costs.
+8. Provide sandbox access process, production approval criteria, test cases, callback security requirements, SLA, incident escalation and technical support contacts.
+9. Provide current contract templates, data-protection terms, liability allocation, termination/portability rules, and permission to use the provider's name/logo in merchant-facing claims.
+10. Confirm in writing which refunds/reversals are available, who may initiate them, the permitted time windows, and how they appear in reports.
+
+Do not send identity documents, bank details, API secrets or other sensitive data through this planning document or a public issue. Submit formal onboarding information only through verified official provider channels and after the owner has authorized that step.
+
+## 9. Decision gate
 
 A recommendation can be presented only after:
 - official provider/partner evidence is gathered;
@@ -117,6 +178,6 @@ A recommendation can be presented only after:
 
 Any final decision remains subject to explicit product-owner approval and applicable provider, legal, compliance and operational approvals. No provider onboarding, production credentials, live transactions, or payment-engine implementation is authorized by this research document.
 
-## 8. Source limitations
+## 10. Source limitations
 
 This is a preliminary review of public pages available on 2026-10-19. Public pages can be incomplete or change; product access, pricing, contractual rights, legal interpretation and production eligibility have not been independently confirmed. Contact providers through their official business channels to obtain current, written evidence.
