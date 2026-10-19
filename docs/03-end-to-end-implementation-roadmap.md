@@ -299,9 +299,10 @@ No phase skips its exit criteria.
 
 **Exit:** API/webhook contracts are verified, including replay, rotation and delivery failures.
 
-## Phase 9 — Conditional money-out and additional methods
+## Phase 9 — Planned money-out, refunds/reversals and additional methods (provider/legal gates apply)
 
 ### 9.1 Payouts / withdrawals
+Payouts/withdrawals are part of the intended comprehensive launch package, not a forgotten optional feature. They remain blocked from live implementation until provider capability, contractual permission, legal/compliance review, funds-flow and funding-source design, and operational controls are verified.
 - 9.1.1 Verify provider capability and authorization requirements.
 - 9.1.2 Validate beneficiaries, amounts and limits.
 - 9.1.3 Enforce approval/dual-control gates where required.
