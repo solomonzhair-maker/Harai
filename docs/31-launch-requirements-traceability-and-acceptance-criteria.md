@@ -33,6 +33,9 @@
 | IAM-001 | P0 | Users receive least-privilege access | Every protected operation requires an explicit permission; role changes and access revocation take effect according to a documented session/token policy and are auditable | Approved roles and permission matrix |
 | IAM-002 | P0 | Sensitive actions have appropriate approval controls | Payouts, beneficiary changes, credential changes, refunds and other designated high-risk actions enforce configured limits and independent approval/step-up controls where policy or law requires; the initiator cannot approve their own action where separation is required | Risk policy; legal/provider conditions |
 
+| MER-003 | P0 | Merchant verification evidence is handled safely | Required evidence, reviewer decision, reason, expiry/reverification and access history are recorded; evidence access is least-privilege; test data contains no real identity documents | Provider requirements; privacy review |
+| MER-004 | P1 | Merchant suspension and closure are controlled | Suspension blocks new operations according to approved policy, preserves required records, and provides a documented path for pending transactions, disputes, settlements and closure | Compliance, provider and records-retention rules |
+
 ### B. Collections and payer experience
 
 | ID | Priority | Requirement | Acceptance criteria | Dependencies / evidence |
@@ -44,6 +47,9 @@
 | COL-005 | P0 | Only verified events can change transaction state | Invalid callback signatures/authentication are rejected; duplicate, replayed, stale and out-of-order events are handled idempotently; raw sensitive payloads are not indiscriminately logged | Provider callback security specification |
 | COL-006 | P1 | Payment communications reflect verified state | Receipts and merchant/payer notifications use the authoritative transaction state, are not sent as final success before verification, and record delivery attempts/outcomes | Notification rules; privacy and message templates |
 
+| COL-007 | P1 | Payment links and collection sessions have bounded lifecycles | Expiry, cancellation, revocation and usage limits are enforced server-side; concurrent attempts cannot exceed permitted use; all terminal transitions are audited | Approved checkout/payment-link rules |
+| COL-008 | P0 | API abuse is bounded without breaking recovery | Rate limits, payload validation and abuse controls are scoped by credential, tenant and endpoint; recovery/status queries remain available under documented safe limits; limit decisions are observable | Threat model and API policy |
+
 ### C. Money-out, refunds and reversals
 
 | ID | Priority | Requirement | Acceptance criteria | Dependencies / evidence |
@@ -53,6 +59,8 @@
 | OUT-003 | P1 / Blocked | Refunds are linked to original collections | A refund references a verified original transaction, enforces remaining refundable amount and provider-specific eligibility, prevents concurrent over-refunds, and preserves the original history | Written refund support, rules, settlement and accounting review |
 | OUT-004 | P1 / Blocked | Reversals and returns are recorded without erasing history | Provider-confirmed reversals/returns create traceable state changes and appropriate compensating financial records; the original transaction and evidence remain visible to authorized reviewers | Provider lifecycle rules and ledger approval |
 | OUT-005 | P0 | High-risk financial actions are auditable | Initiator, approver where required, reason, timestamps, amount/currency, destination reference, provider reference, state transitions and resolution evidence are retained under an approved retention policy | Permission model; privacy/retention review |
+
+| OUT-006 | P1 | Beneficiary changes are controlled | Beneficiary identity/destination changes require verification, permission checks, risk-based step-up/approval and audit history; pending payouts cannot silently switch destination | Provider requirements and risk policy |
 
 ### D. Ledger, fees and reconciliation
 
@@ -65,6 +73,9 @@
 | REC-002 | P0 | Reconciliation discrepancies cannot be hidden | The system records detection time, category, financial impact where known, accountable owner, investigation notes and resolution evidence; unresolved material breaks block affected release/settlement decisions under approved policy | Operations policy; finance review |
 | REP-001 | P1 | Reports and exports are permissioned and reproducible | Reports respect tenant/role access, define date range/time zone and status inclusion, expose relevant totals and filters, and produce consistent results for the same source data and parameters | Reporting definitions and privacy review |
 
+| FIN-004 | P1 | Disputes and transaction complaints are trackable | A case links to the original transaction and evidence, records owner, deadlines, status, communications and outcome, and cannot silently modify financial records | Provider dispute/complaint obligations; support policy |
+| FIN-005 | P0 | Financial state transitions are formally specified | A reviewed state machine defines permitted transitions, terminality, provider-specific exceptions and reconciliation overrides; invalid transitions are rejected and audited | DOC-10 state-machine design; provider lifecycle evidence |
+
 ### E. Developer platform, security and operations
 
 | ID | Priority | Requirement | Acceptance criteria | Dependencies / evidence |
@@ -75,6 +86,11 @@
 | SEC-002 | P0 | Sensitive information is minimized and protected | Verification evidence, personal data, API secrets and provider payloads have defined access, encryption, logging redaction, retention and deletion/hold rules; support access is restricted and auditable | Data inventory, privacy review and provider terms |
 | OPS-001 | P0 | Failures and incidents have owned runbooks | Runbooks cover provider outage, delayed callbacks, unknown financial outcome, duplicate event, payout return, reconciliation break, credential compromise, data incident, restore and escalation; each has an accountable role | Named operational owners; provider SLA/support |
 | OPS-002 | P0 | Production release requires evidence-based gates | Release checklist includes security, finance/reconciliation, provider authorization, legal/compliance, monitoring, backup/restore, incident response, support, rollback/disablement and independent sign-off; failed hard gates block launch | DOC-03 G5–G8; independent reviewers |
+
+| DEV-003 | P1 | API behavior is versioned and diagnosable | Public contracts define versioning/deprecation, authentication, pagination, stable error codes, correlation IDs and safe request/response logging; compatibility tests cover supported versions | Approved API contract |
+| SEC-003 | P0 | Network and browser access controls are safe | CORS, CSRF protections where applicable, trusted-proxy handling, IP allowlist validation, lockout-safe recovery and administrative access are defined and tested | Threat model and deployment topology |
+| OPS-003 | P0 | Reliability targets and recovery are measurable | Availability/latency objectives, maximum acceptable pending age, alert thresholds, backup/restore objectives and recovery ownership are approved and tested; no targets are invented without owner review | Owner decisions; provider SLAs; operational capacity |
+| OPS-004 | P1 | Accessibility and responsive operation are verified | Critical dashboard and checkout journeys are keyboard operable, labeled for assistive technology, responsive at supported widths, and have understandable loading/empty/error/pending states | UI acceptance plan and accessibility review |
 
 ### F. Conditional extensions
 
