@@ -67,6 +67,7 @@ This is a requirements and planning document set. It is not evidence that provid
 | DOC-37 | Provider portal evidence review and owner checklist | Read-only MTN/Airtel portal inspection completed; written eligibility and commercial evidence pending | Account observations, official source register, safe inspection record and evidence limitations |
 | DOC-38 | MTN MoMo and Airtel Uganda provider evidence comparison | Draft evidence comparison; no provider/model selected | Consolidated portal findings, capability/access matrix, remaining hard gates and design implications |
 | DOC-39 | G1 requirements gap closure batch 1 | Draft — ten supplemental requirements added; G1 remains open | Record gap-closure work, supplemental requirement IDs, dependencies and next traceability actions |
+| DOC-40 | G2 architecture and financial-safety baseline | Draft architecture proposal — not approved for implementation | Review component boundaries, transaction state machine, idempotency, callbacks/webhooks, ledger, reconciliation, tenancy, security and funds-flow gates |
 
 ## 4. Reference boundary and product differentiation
 
