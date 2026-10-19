@@ -30,7 +30,7 @@ Exact role names and permission matrices belong in a separate access-control spe
 - Merchant onboarding and account security.
 - Collections, hosted checkout and payment links.
 - Provider adapters for supported mobile-money rails.
-- Potential bank/card methods, subject to scope and provider validation.
+- A planned multi-provider payment-method package that includes both MTN MoMo and Airtel Money, card payments through an eligible processor/acquirer, and additional suitable methods. Each integration and capability remains gated by method-specific eligibility, contracts, technical access, cost, legal/compliance review and operational readiness.
 - API credentials, IP allowlisting, rate limits and API versioning.
 - Webhook delivery, transaction states and reconciliation.
 - Ledger, fees, settlement records and financial reporting.
@@ -40,7 +40,7 @@ Exact role names and permission matrices belong in a separate access-control spe
 ### Not assumed
 - HARAI will hold or custody customer funds.
 - Every provider supports every direction, country, currency, refund or status query.
-- Card processing, cross-border settlement, escrow or stored-value wallet functionality is V1.
+- Card processing is an intended payment-method objective, but the specific processor/acquirer, card schemes, eligibility and launch availability must be verified. Cross-border settlement, escrow and stored-value wallet functionality are not assumed to be in V1.
 - API keys alone are sufficient authorization for money-out actions.
 - A provider timeout means the payment failed.
 - A dashboard balance is authoritative without a defined ledger and reconciliation model.
@@ -174,8 +174,10 @@ The following is the complete discovery baseline for the intended launch package
 - Accessible responsive dashboard and checkout states, including loading, empty, pending, failure and recovery paths.
 - Defined support ownership, escalation routes, service/recovery targets and customer complaint handling.
 
-### 9.7 Conditional additional capabilities
-Bank transfers, card acquiring, cross-border transactions, additional currencies, subscriptions, scheduled payouts, split settlements/marketplace payouts, advanced automated risk scoring and regional expansion remain conditional. Include them in launch scope only after separate requirements, provider permission, legal/compliance review, operational controls and acceptance criteria are documented.
+### 9.7 Payment-method coverage and conditional extensions
+The intended multi-provider payment-method package includes both **MTN MoMo and Airtel Money**, **card payments** through an eligible processor/acquirer, and additional suitable payment methods selected through product and feasibility review. The system must not be designed around an either/or choice between MTN and Airtel. It should support method-specific provider adapters and a capability matrix so each method can be enabled independently when its gates pass.
+
+Bank transfers, other local/international payment methods, additional currencies, cross-border transactions, subscriptions, scheduled payouts, split settlements/marketplace payouts, advanced automated risk scoring and regional expansion require method- or feature-specific requirements, provider/processor permission, legal/compliance review, operational controls and acceptance criteria. Listing a method as intended scope does not mean that a processor is selected, a contract exists, or the method is launch-ready.
 
 ## 10. Requirement priority and traceability
 
