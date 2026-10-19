@@ -73,6 +73,7 @@ This is a requirements and planning document set. It is not evidence that provid
 | DOC-43 | HARAI threat model and security controls | Draft threat model — independent security review required | Review trust boundaries, threat register, proposed controls and required validation evidence |
 | DOC-44 | G2 architecture decision and review package | Draft — G2 not approved | Consolidated architecture decisions, funds-flow decision protocol, G2 exit criteria, non-waivable blockers and reviewer roles |
 | DOC-45 | Evidence register and acceptance-test planning standard | Draft — evidence gaps open; test IDs are plans only | Evidence classes, provider evidence gaps, minimum test families, evidence acceptance rules and review workflow |
+| DOC-46 | G2 gap-closure and ownership matrix | Draft — 32 P0 requirements mapped; owners remain unassigned | Role-level closure work, evidence dependencies, G2 blockers, sequence and closure record template |
 
 ## 4. Reference boundary and product differentiation
 
