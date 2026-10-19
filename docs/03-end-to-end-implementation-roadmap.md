@@ -65,6 +65,8 @@ No phase skips its exit criteria.
 - 1.2.4 Define provider selection and capability checks.
 - 1.2.5 Define pending, success, failure and cancellation experience.
 - 1.2.6 Define merchant notification and webhook expectations.
+- 1.2.7 Specify payment-link/session expiry, revocation, cancellation and concurrent usage rules (SUP-002).
+- 1.2.8 Define canonical transaction states, allowed transitions, terminality and unknown-outcome recovery (SUP-004).
 
 ### 1.3 Money-out and refunds
 - 1.3.1 Decide which payout/withdrawal rails are in scope.
@@ -388,6 +390,8 @@ Refunds and reversals are part of the intended launch requirements where the spe
 - 11.3.2 Record test environment and evidence.
 - 11.3.3 Keep untested requirements blocked.
 - 11.3.4 Run regression and review failures before sign-off.
+- 11.3.5 Add explicit tests for SUP-001–SUP-010; map each proposed test ID to a real test case, environment, run and result only after implementation is authorized.
+- 11.3.6 Verify API throttling, payment-link concurrency, beneficiary-change controls, forbidden state transitions, stable API errors, trusted-proxy behavior, restore evidence, accessibility and audit-correlation scenarios.
 
 **Exit:** traceability is complete; no critical/high risk is left unresolved without explicit accountable acceptance.
 
