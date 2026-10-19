@@ -60,6 +60,7 @@ This is a requirements and planning document set. It is not evidence that provid
 | DOC-30 | Uganda compliance and funds-flow review checklist | Draft — professional review required | Structure qualified legal/compliance review and funds-flow decision gates |
 | DOC-31 | Launch requirements traceability and acceptance criteria | Draft — product/independent review required | Stable requirement IDs, testable acceptance criteria, dependencies, and release gates |
 | DOC-32 | Documentation consistency and requirements gap review | Draft audit — G1 not ready to pass | Cross-document consistency, missing requirements, external blockers and recommended sequence |
+| DOC-33 | G1 requirements review package | Draft — G1 not passed | Consolidated proposed launch baseline, decision owners, evidence register, hard gates and approval workflow |
 
 ## 4. Reference boundary and product differentiation
 
@@ -95,6 +96,7 @@ JulyPay is a visual and merchant-workflow reference only. HARAI will use its own
 | DEC-015 | Foundation PR | Draft PR #1 stays open and unmerged during discovery | Approved working rule | Review foundation after architecture approval |
 | DEC-016 | Funds-flow architecture evaluation | Compare provider-managed funds and direct provider integrations before selecting a model | Confirmed planning preference; no commercial/legal commitment or live activity authorized | DOC-28 compares public evidence; DOC-29 contains the written inquiry pack; obtain official responses and qualified Uganda compliance review |
 | DEC-017 | Money-out launch scope | Payouts/withdrawals are intended launch-package capabilities alongside collections; refunds/reversals where supported | Confirmed product direction; live feasibility and authorization unconfirmed | DOC-02 and DOC-03 now reflect the intended scope while retaining provider, legal, funding, reconciliation and operational gates |
+| DEC-018 | G1 requirements baseline | DOC-33 consolidates the proposed baseline, unresolved decisions, evidence requirements and G1 hard gates | Draft — product-owner and accountable reviewer decision pending | Review DOC-33 and DOC-31; assign accountable reviewers, resolve evidence blockers, and record explicit acceptance or amendments before declaring G1 passed |
 
 ## 7. Open questions and blockers
 
@@ -113,6 +115,7 @@ JulyPay is a visual and merchant-workflow reference only. HARAI will use its own
 13. Which written provider confirmations and qualified Ugandan legal/compliance conclusions are required before selecting a funds-flow model?
 14. Which requirement IDs and acceptance criteria does the product owner approve as the launch baseline (DOC-31)?
 15. Which open gaps and external blockers in DOC-32 have been resolved, explicitly deferred or accepted with documented rationale?
+16. Does the product owner approve, amend or reject the proposed G1 review baseline in DOC-33, and which named reviewers will assess its security, finance/reconciliation, technical, operational and Uganda compliance assumptions?
 
 ## 8. Change control
 
@@ -121,5 +124,7 @@ Changes affecting money movement, access control, tenant boundaries, balances, s
 ## 9. Current gate
 
 **Discovery note (2026-10-19):** The product owner confirmed a Uganda-first direction, a preference for a strong, comprehensive launch package rather than a deliberately small initial MVP, and inclusion of both collections and money-out workflows in the planned launch package. Refunds and reversals should be specified where provider-supported. HARAI is intended to serve multiple business types over time. The product owner selected **compare provider-managed funds and direct provider integrations before deciding** as the planning approach for funds flow. This is not a final legal/commercial decision and does not authorize provider onboarding, live credentials, handling real funds, payment-engine implementation, or launch. Public JulyPay positioning, onboarding claims, pricing and its stated third-party processing relationship are recorded in DOC-27. Provider capability, commercial access, funds-flow responsibilities, currency/settlement model, workflow behavior, permissions and error/recovery behavior remain unconfirmed.
+
+**G0 — Discovery and requirements: IN PROGRESS.** DOC-33 now consolidates the proposed G1 review baseline, decision table, evidence register, accountable review roles and hard exit gates. G1 remains **NOT PASSED** pending explicit product-owner decisions, named reviewers, provider evidence, qualified Ugandan legal/compliance review and resolution/disposition of critical blockers. DOC-33 does not authorize implementation or external provider contact.
 
 **G0 — Discovery and requirements: IN PROGRESS.** DEC-016 records the product owner's preference to compare provider-managed funds and direct integrations before deciding. DOC-28 captures the provider-by-provider public evidence matrix, weighted comparison criteria, hard gates, and provider inquiry checklist; no provider-specific commercial or eligibility scores are assigned without written evidence. No production integration, live credentials, real payment action, merge of the foundation PR, or deployment is authorized by this draft.
