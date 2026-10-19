@@ -14,7 +14,7 @@
 | POD-01 | Initial market | Uganda only for first launch; regional expansion requires a separate country review | Keeps regulatory, currency, provider and support assumptions bounded | Approves market scope only; not legal permission |
 | POD-02 | Merchant eligibility | Start with a defined allowlist of ordinary, verifiable businesses; prohibit or hold categories requiring specialized legal/provider review until approved | “All businesses” creates unknown onboarding, fraud, reputational and provider eligibility risks | Approves a category policy only after the owner reviews the proposed list; does not replace provider KYC/AML rules |
 | POD-03 | Launch currencies | UGX as the only planned initial currency unless a confirmed provider contract and settlement path require/permit another | Avoids premature multi-currency pricing, rounding, FX, settlement and reconciliation complexity | Approves product scope only; provider currency capability and legal/accounting treatment still need evidence |
-| POD-04 | Initial provider candidates | Investigate MTN MoMo and Airtel Money first; do not claim either is approved or guaranteed | They are locally relevant candidates in existing research; written permission and commercial access remain unverified | Authorizes neither provider contact nor integration unless owner separately says so |
+| POD-04 | Payment-method scope and providers | Plan for both MTN MoMo and Airtel Money, card payments (such as Visa/Mastercard through an eligible processor/acquirer), and additional suitable methods. Treat both mobile-money providers as intended integrations, not an either/or choice. Validate each method/provider independently before activation. | The product goal is a multi-provider gateway; method coverage, contracts, fees, eligibility, settlement and technical access differ by provider and method | Confirms product intent only; it does not prove access/approval, authorize provider contact, select a processor, or authorize integration/implementation |
 | POD-05 | Collections and money-out | Keep both in intended launch scope, but make each method/capability unavailable until provider permission, funding, legal, controls and reconciliation gates pass | Preserves the owner’s comprehensive product goal without representing unsupported operations as available | Approves product intent, not a live flow or provider-specific capability |
 | POD-06 | Refunds/reversals | Include where the exact provider product supports the operation; define separate semantics for refunds, reversals and payout returns | Prevents overpromising capabilities that differ by provider/product | Approves intended requirement; actual support remains evidence-gated |
 | POD-07 | Funds-flow model | Do not choose yet; compare provider-managed funds and direct integrations using written evidence and qualified Ugandan review | Avoids accidental custody/control assumptions and a potentially unsuitable licensing/contract model | No model is approved until evidence and review support a recommendation |
@@ -27,7 +27,7 @@
 ## 2. Decisions that cannot be settled by product preference alone
 
 Even if the product owner accepts the defaults above, these remain evidence-dependent:
-- provider contractual eligibility and permission to support multiple merchants / an aggregator-style gateway;
+- provider/processor contractual eligibility and permission to support multiple merchants / an aggregator-style gateway for each intended payment method;
 - account ownership, who controls or holds funds, settlement route and payout funding source;
 - provider-specific collection, payout, refund, reversal, return, callback, idempotency and reconciliation behavior;
 - regulatory classification, any required licenses/approvals, merchant due diligence, data obligations and contract responsibilities;
@@ -54,7 +54,7 @@ The owner can respond with only the exceptions; unmentioned items remain **propo
 - POD-01 Uganda only: Approve / Amend
 - POD-02 Merchant allowlist: Approve direction / Amend / Need proposed category list first
 - POD-03 UGX-first: Approve / Amend
-- POD-04 MTN MoMo and Airtel Money as research candidates: Approve candidates only / Amend
+- POD-04 Both MTN MoMo and Airtel Money, cards, and additional methods as intended product scope (each gated by evidence): Approve direction / Amend
 - POD-05 Collections + money-out intended launch scope with hard gates: Approve / Amend
 - POD-06 Refunds/reversals where provider-supported: Approve / Amend
 - POD-07 No funds-flow model selected yet: Approve / Amend
