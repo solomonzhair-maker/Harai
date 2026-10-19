@@ -19,7 +19,7 @@ DOC-31 now includes ten supplemental requirements, SUP-001 through SUP-010, for:
 - accessibility and responsive critical journeys;
 - end-to-end event correlation and safe audit logging.
 
-The working requirement catalogue now contains 53 unique IDs: the original 43 plus these 10 additions. The additions are Draft/In review. Proposed test identifiers are planning references only; they do not mean test files exist or have been run.
+The working requirement catalogue now contains 54 unique IDs: the original 43 plus these 10 additions. The additions are Draft/In review. Proposed test identifiers are planning references only; they do not mean test files exist or have been run.
 
 ## 2. What this unlocks
 
@@ -29,7 +29,7 @@ The team can now review these gaps as explicit requirements rather than informal
 
 | Action | Responsible role (not a named appointment) | Evidence of completion | Status |
 |---|---|---|---|
-| Extend DOC-34 requirement-level matrix from 43 to all 53 IDs | Requirements owner / technical lead | Every ID has proposed role owner, test/evidence reference, dependency and gate | Open |
+| Extend DOC-34 requirement-level matrix from 43 to all 54 IDs | Requirements owner / technical lead | Every ID has proposed role owner, test/evidence reference, dependency and gate | Open |
 | Cross-map SUP-001–SUP-010 to DOC-03 phases | Technical lead / delivery owner | Roadmap links each requirement to design, authorized implementation, verification and release gate | Open |
 | Review and disposition each supplemental requirement | Product owner and accountable reviewers | Explicit accepted/amended/deferred/rejected status with rationale | Open |
 | Set numeric rate limits, expiry behavior, RTO/RPO, reliability and retention targets | Product owner with technical, operations, risk and privacy reviewers | Recorded decisions with rationale and measurable acceptance criteria | Open |
@@ -45,3 +45,8 @@ The supplemental requirements do not require HARAI to wait for provider replies 
 **G0 remains in progress; G1 has not passed.** This batch improves completeness but does not approve the requirements baseline, select a funds-flow model, authorize implementation, authorize provider outreach, approve live credentials, permit real transactions, merge PRs or deploy.
 
 Next internal batch: update DOC-34 and DOC-03 to reflect the ten new IDs, reconcile any stale references to the old 43-ID count, and conduct a focused consistency check before presenting the expanded baseline for review.
+
+
+## Traceability correction
+
+A consistency check found that the existing EXT-004 card-payment requirement in DOC-31 had not been represented in DOC-34. The matrix now includes EXT-004 as blocked pending eligible processor/acquirer selection, written permission, security-scope review and sandbox evidence. The consistent count is therefore 54 unique IDs: 44 existing requirements including EXT-004, plus SUP-001–SUP-010.
