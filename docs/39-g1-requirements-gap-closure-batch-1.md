@@ -19,7 +19,7 @@ DOC-31 now includes ten supplemental requirements, SUP-001 through SUP-010, for:
 - accessibility and responsive critical journeys;
 - end-to-end event correlation and safe audit logging.
 
-The working requirement catalogue now contains 54 unique IDs: the original 43 plus these 10 additions. The additions are Draft/In review. Proposed test identifiers are planning references only; they do not mean test files exist or have been run.
+The working requirement catalogue now contains 54 unique IDs: the original 44 (including EXT-004 for card payments) plus these 10 additions. The additions are Draft/In review. Proposed test identifiers are planning references only; they do not mean test files exist or have been run.
 
 ## 2. What this unlocks
 
@@ -29,7 +29,7 @@ The team can now review these gaps as explicit requirements rather than informal
 
 | Action | Responsible role (not a named appointment) | Evidence of completion | Status |
 |---|---|---|---|
-| Extend DOC-34 requirement-level matrix from 43 to all 54 IDs | Requirements owner / technical lead | Every ID has proposed role owner, test/evidence reference, dependency and gate | Open |
+| Keep DOC-34 requirement-level matrix aligned to all 54 IDs | Requirements owner / technical lead | Every ID has proposed role owner, test/evidence reference, dependency and gate | Open |
 | Cross-map SUP-001–SUP-010 to DOC-03 phases | Technical lead / delivery owner | Roadmap links each requirement to design, authorized implementation, verification and release gate | Open |
 | Review and disposition each supplemental requirement | Product owner and accountable reviewers | Explicit accepted/amended/deferred/rejected status with rationale | Open |
 | Set numeric rate limits, expiry behavior, RTO/RPO, reliability and retention targets | Product owner with technical, operations, risk and privacy reviewers | Recorded decisions with rationale and measurable acceptance criteria | Open |
@@ -44,7 +44,7 @@ The supplemental requirements do not require HARAI to wait for provider replies 
 
 **G0 remains in progress; G1 has not passed.** This batch improves completeness but does not approve the requirements baseline, select a funds-flow model, authorize implementation, authorize provider outreach, approve live credentials, permit real transactions, merge PRs or deploy.
 
-Next internal batch: update DOC-34 and DOC-03 to reflect the ten new IDs, reconcile any stale references to the old 43-ID count, and conduct a focused consistency check before presenting the expanded baseline for review.
+Follow-through: keep DOC-34 and DOC-03 aligned as requirements change, conduct a focused consistency check, and prepare the expanded baseline for accountable review.
 
 
 ## Traceability correction
