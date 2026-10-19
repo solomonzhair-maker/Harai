@@ -3,7 +3,7 @@
 **Status:** Draft research baseline — not a final legal, commercial, or architecture decision.  
 **Decision link:** DEC-016 in DOC-00.  
 **Market focus:** Uganda first.  
-**Scope:** Compare provider-managed funds arrangements with direct provider integrations for collections and money-out. Refunds and reversals are included only where contractually and technically supported.
+**Scope:** Compare provider-managed funds arrangements, direct provider integrations and a conditional hybrid for collections and money-out. Refunds and reversals are included only where contractually and technically supported.
 
 ## 1. Purpose and decision rule
 
@@ -115,7 +115,7 @@ Official public references reviewed:
 
 Use this scoring scale only after evidence is received: **0 = unacceptable/not supported; 1 = major gap; 2 = partial/conditional; 3 = meets minimum; 4 = strong; 5 = verified strong fit.** Every score must link to a source, written provider response, or accountable review. Unknown is **N/S (not scored)**, never zero or a guessed score.
 
-| Criterion | Weight | Evidence required | Model A score | Model B score |
+| Criterion | Weight | Evidence required | Model A score | Model B score | Model C score |
 |---|---:|---|---|---|
 | Regulatory fit and responsibility clarity | 20% | Qualified Uganda legal/compliance assessment; provider/partner roles and permissions in writing | N/S | N/S |
 | Multi-merchant/aggregator authorization | 15% | Written approval for HARAI's exact intended model and sub-merchant lifecycle | N/S | N/S |
@@ -126,7 +126,7 @@ Use this scoring scale only after evidence is received: **0 = unacceptable/not s
 | Reliability and support | 5% | SLA, support hours, incident escalation, status API, maintenance notices and recovery process | N/S | N/S |
 | Security and data responsibilities | 5% | API authentication, callback signing, credential controls, data-processing terms, audit access | N/S | N/S |
 | Integration and operating effort | 5% | Documented API quality, sandbox, test support, operational workload and maintenance estimate | N/S | N/S |
-| **Total** | **100%** | Scores only after evidence review | **Not scored** | **Not scored** |
+| **Total** | **100%** | Scores only after evidence review | **Not scored** | **Not scored** | **Not scored** |
 
 **Hard gates override the numerical score:** do not recommend a route if its legal permission/authorization, multi-merchant permission, settlement ownership, money-out funding source, or reconciliation evidence is unresolved. A high total score cannot compensate for a hard-gate failure.
 
@@ -146,6 +146,26 @@ Use this scoring scale only after evidence is received: **0 = unacceptable/not s
 | Regulatory responsibility | Must be mapped across HARAI and partner; partnership does not automatically remove HARAI obligations | Must be assessed against HARAI's actual activities | Requires qualified review |
 | Operational complexity | Potentially lower at first, but partner dependency remains | More provider-specific integration and support work | General expectation |
 | Long-term flexibility | Depends on partner contract and portability | Potentially greater provider-level control | Not proven; assess commercially |
+
+## 6A. Three-model decision snapshot (evidence status, not scoring)
+
+The table below makes the three alternatives comparable without assigning invented numerical scores. "Potential design advantage" is a hypothesis to test, not verified HARAI evidence. Every model remains subject to the same legal, provider, settlement, funding and reconciliation hard gates.
+
+| Decision dimension | Model A — Provider-managed funds | Model B — Direct integrations | Model C — Conditional hybrid | Current evidence / decision |
+|---|---|---|---|---|
+| Contractual permission for HARAI multi-merchant model | Requires explicit intermediary/provider permission | Requires explicit provider permission for HARAI's precise role | Requires permission for each relevant relationship and clear responsibility split | Unknown for all three; hard gate |
+| Collection capability for MTN and Airtel | Depends on partner's permitted product/rail coverage | Each provider relationship and product must be approved | Each rail's contract and operating path must be approved | Technical docs exist; HARAI access/permission unconfirmed |
+| Money-out capability and funding source | Partner must document permitted payout route and source of funds | Each provider must approve payout product, funding arrangement and HARAI role | Funding, approvals and liabilities must be mapped per rail and model | Unknown; hard gate |
+| Settlement destination, control and timing | Defined by partner contract and reports | Defined separately by provider contracts | Multiple flows may create more than one settlement pattern | Unknown; no model may be selected |
+| Refund/reversal/return semantics | Depends on partner's exposed and authorized operations | Per-provider method-specific lifecycle | Requires consistent user experience over non-identical rail capabilities | Partially documented technically; contractual/product details unknown |
+| Reconciliation evidence | Depends on partner transaction and settlement reports | Requires normalized evidence from each provider | Requires matching across each provider and any intermediary | Incomplete; sample reports and discrepancy process required |
+| Fees and commercial viability | Potential partner fees plus underlying costs | Direct negotiated terms and operational costs | May combine both and add reconciliation overhead | Unknown; no rate assumptions |
+| Regulatory responsibility | Must define HARAI/partner responsibilities; partner does not automatically remove HARAI obligations | Must be assessed against HARAI's actual activity and contracts | Must assess each role and the combined flow | Qualified Ugandan review required |
+| Integration effort and operating burden | Could reduce provider-specific work if the partner truly covers required scope | More direct adapter and support work may be required | Could increase integration and operational complexity | Qualitative hypotheses only; not scored |
+| Portability and dependency | Potential intermediary dependency and contract exit risk | Direct provider dependencies | Mixed dependencies and cross-rail complexity | Contractual evidence not available |
+| Current disposition | **N/S — not scored** | **N/S — not scored** | **N/S — not scored** | No model selected; evidence and hard gates control |
+
+**No preliminary winner is recommended.** Model C is not automatically more resilient merely because it combines approaches; it should be retained only if evidence shows a concrete benefit that outweighs additional contracts, failure modes and reconciliation burden.
 
 ## 7. Required evidence pack
 
