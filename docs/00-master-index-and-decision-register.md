@@ -1,6 +1,6 @@
 # HARAI — Master Index and Decision Register
 
-**Status:** Draft — discovery in progress  
+**Status:** Draft — discovery in progress; POD-01–POD-12 product defaults approved, G1 not passed  
 **Last reviewed:** 2026-10-19  
 **Implementation gate:** This document does not authorize payment-engine implementation.
 
@@ -63,7 +63,7 @@ This is a requirements and planning document set. It is not evidence that provid
 | DOC-33 | G1 requirements review package | Draft — G1 not passed | Consolidated proposed launch baseline, decision owners, evidence register, hard gates and approval workflow |
 | DOC-34 | Requirement-level traceability matrix | Draft — 43 requirements mapped; provider evidence crosswalk added; roles and tests proposed, not verified | Per-requirement proposed role ownership, test IDs, dependencies, gates, provider evidence and review blockers |
 | DOC-35 | Internal cross-document review and corrective-action register | Draft review by ChatGPT; not external certification | Cross-document consistency findings, corrections applied and remaining work before G1/G2 |
-| DOC-36 | Product owner decision brief for G1 | Proposed decisions; owner response pending | Recommended defaults for market, merchant eligibility, currency, provider candidates, launch scope, pricing, risk and governance |
+| DOC-36 | Product owner decision brief for G1 | Owner-approved defaults POD-01–POD-12; external evidence and G1 gates remain open | Approved product direction for market, merchant eligibility, currency, methods, launch scope, pricing, risk and governance |
 | DOC-37 | Provider portal evidence review and owner checklist | Read-only MTN/Airtel portal inspection completed; written eligibility and commercial evidence pending | Account observations, official source register, safe inspection record and evidence limitations |
 | DOC-38 | MTN MoMo and Airtel Uganda provider evidence comparison | Draft evidence comparison; no provider/model selected | Consolidated portal findings, capability/access matrix, remaining hard gates and design implications |
 
@@ -104,8 +104,9 @@ JulyPay is a visual and merchant-workflow reference only. HARAI will use its own
 | DEC-018 | G1 requirements baseline | DOC-33 consolidates the proposed baseline, unresolved decisions, evidence requirements and G1 hard gates; its Section 12 records a cross-review against all 43 DOC-31 requirement IDs | Draft — product-owner and accountable reviewer decision pending | Record owner decisions and name reviewers; complete requirement-level owner/test/evidence mapping; resolve or explicitly disposition blockers before declaring G1 passed |
 | DEC-019 | Requirement-level traceability | DOC-34 maps all 43 DOC-31 requirements to proposed role owners, test IDs, dependencies and gate statuses; no names, tests or verification are claimed as complete | Draft — mapping prepared; owner assignments and evidence pending | Product owner to confirm/amend proposed responsibility split; later map proposed test IDs to actual test artefacts after architecture approval |
 | DEC-020 | Cross-document review | DOC-35 records the internal review, corrections and remaining gate boundaries; it is not external certification | Draft review completed; G1 remains not passed | Continue controlled documentation work, correct any inconsistencies found, and preserve explicit gates for owner decisions, provider evidence, professional review and implementation authorization |
-| DEC-021 | Product-owner G1 decisions | DOC-36 presents proposed defaults for key product-scope decisions; none are approved until the owner responds | Pending owner response | Record approved/amended/rejected defaults, update DOC-02/DOC-31 as needed, and keep evidence-dependent decisions blocked |
+| DEC-021 | Product-owner G1 decisions | Product owner approved all recommended defaults POD-01 through POD-12 on 2026-10-19; this is product-direction approval, not provider/legal/production approval | Approved product defaults; G1 not passed | Align DOC-02/DOC-31 and continue provider/processor evidence, qualified Uganda legal/compliance review, funds-flow analysis and independent review; preserve implementation/provider-contact/merge/deploy gates |
 | DEC-022 | Provider account evidence | DOC-37 records owner-assisted read-only portal findings; DOC-38 compares visible access and official technical documentation. No provider contact or account-changing action occurred | Portal inspection completed; written eligibility, contract, production and commercial evidence pending | Continue documentation-based comparison; keep unknowns unscored and do not infer aggregator approval from an API menu or merchant-related endpoint |
+| DEC-023 | Approved product defaults | POD-01–POD-12 are approved as the working product direction: Uganda first, controlled broad merchant eligibility, UGX first, both mobile-money providers plus cards/additional methods, collections and money-out, provider-supported refunds/reversals, no funds-flow selection yet, configurable pricing/risk controls, privacy-by-design, measurable reliability, and separate consequential-action gates | Approved product direction; capability feasibility and G1 evidence remain open | Carry approved defaults into requirements/architecture; do not treat them as provider permission, legal clearance, numeric thresholds, processor selection or implementation authorization |
 
 ## 7. Open questions and blockers
 
