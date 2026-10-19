@@ -228,3 +228,8 @@ DOC-33's decision table and hard-gate checklist cover these same major domains. 
 
 **Document consistency: adequate to proceed with owner review. G1 readiness: not achieved.** The key remaining gap is not another general narrative document; it is a decision-and-evidence record with named accountable reviewers and requirement-level traceability. No individual requirement is marked Approved, Implemented or Verified by this cross-review. No product-owner decision, independent specialist review, provider response or legal conclusion has been inferred.
 
+
+
+## Supplemental requirement update (2026-10-19)
+
+DOC-39 added SUP-001–SUP-010 to DOC-31. DOC-34 now maps all 53 unique requirement IDs. This update does not mean the expanded baseline is approved: each supplemental requirement requires accountable disposition, numeric thresholds remain open where identified, proposed test IDs are not execution evidence, and G1 remains not passed.
