@@ -159,12 +159,12 @@ All findings are limited to the pages visible during the inspection. Product pag
 
 | Evidence ID | Provider / portal | Country | Evidence type | Claim supported | Status / limitation | Related decisions |
 |---|---|---|---|---|---|---|
-| PROV-MTN-001 | MTN MoMo developer portal | Uganda | Account product list | Products visible to the logged-in account | Pending owner evidence | DEC-016, POD-04 |
-| PROV-MTN-002 | MTN account-specific terms | Uganda | Terms / approval | Eligibility for intended multi-merchant model | Pending written evidence | DEC-016 |
-| PROV-AIR-001 | Airtel developer portal | Uganda | Account product list | API products visible to the logged-in account | Pending owner evidence | DEC-016, POD-04 |
-| PROV-AIR-002 | Airtel enterprise portal | Uganda | Entity / application status | Whether aggregator application is available or approved | Pending owner evidence | DEC-016 |
-| PROV-FLOW-001 | Either provider | Uganda | Written funds-flow terms | Account ownership, settlement and payout funding | Pending written evidence | DEC-016 |
-| PROV-COM-001 | Either provider | Uganda | Commercial schedule | Fees, limits and support commitments | Pending written evidence | DEC-016 |
+| PROV-MTN-001 | MTN MoMo developer portal | Uganda | Account product/subscription list | Collections and Collection Widget shown Active in Test; no Disbursement subscription or production approval visible | Collected 2026-10-19; account-specific observation only | DEC-016, POD-04 |
+| PROV-MTN-002 | MTN account-specific terms | Uganda | Terms / approval | Eligibility for intended multi-merchant model | Pending written evidence; portal inspection did not establish permission | DEC-016 |
+| PROV-AIR-001 | Airtel developer portal | Uganda | Dashboard/application status | 0 live applications and 3 archived applications visible; no production approval shown | Collected 2026-10-19; account-specific observation only | DEC-016, POD-04 |
+| PROV-AIR-002 | Airtel enterprise portal | Uganda | Entity / application status | Whether aggregator application is available or approved | Not inspected; Airtel Money Enterprise account not registered; no registration performed | DEC-016 |
+| PROV-FLOW-001 | Either provider | Uganda | Written funds-flow terms | Account ownership, settlement and payout funding | Unknown — written confirmation required | DEC-016 |
+| PROV-COM-001 | Either provider | Uganda | Commercial schedule | Fees, limits and support commitments | Unknown — written confirmation required | DEC-016 |
 
 Do not change a status to “approved” merely because a menu item exists or an application form can be opened. Approval requires explicit account-specific evidence.
 
