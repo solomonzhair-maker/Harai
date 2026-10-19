@@ -68,6 +68,23 @@ The matrix contains 43 unique requirement IDs from the current DOC-31 catalogue.
 | EXT-002 | P2 / Blocked | Scheduling, split settlement and marketplace payouts | Product owner + relevant provider/compliance reviewer (person unassigned) | T-EXT-002-ACCEPTANCE, T-EXT-002-NEGATIVE (proposed) | Separate product decision and feasibility review | Conditional extension; blocked until separately approved | Draft — not verified |
 | EXT-003 | P2 / Blocked | Regional expansion | Product owner + relevant provider/compliance reviewer (person unassigned) | T-EXT-003-ACCEPTANCE, T-EXT-003-NEGATIVE (proposed) | Country-specific professional review | Conditional extension; blocked until separately approved | Draft — not verified |
 
+### Provider portal evidence crosswalk (2026-10-19)
+
+Read-only portal observations are recorded in [DOC-37](37-provider-portal-evidence-review-and-owner-checklist.md) and compared in [DOC-38](38-mtn-airtel-provider-evidence-comparison.md). The funds-flow comparison is updated in [DOC-28](28-funds-flow-architecture-comparison.md). These are evidence references, not verification results or provider approvals.
+
+| Existing requirement ID | Provider evidence to link | Acceptance/test implication | Current disposition |
+|---|---|---|---|
+| MER-002 | DOC-37 / DOC-38: no visible production approval for either portal | Live merchant activation must remain blocked until exact provider permission and production activation are evidenced | Draft; external evidence pending |
+| COL-004 | MTN Collection status guidance; Airtel Collection enquiry/status guidance in DOC-38 | Test pending, timeout, ambiguous, expired and late-result recovery; never assume timeout means failure | Requirement already defined; provider-specific test evidence pending |
+| COL-005 / DEV-002 | MTN callback guidance and Airtel authenticated callback documentation in DOC-37 / DOC-38 | Verify authentication/signature, deduplication, replay/out-of-order behavior and safe recovery; follow each final provider contract | Requirement already defined; detailed contract and tests pending |
+| OUT-001 / OUT-002 | MTN Disbursement docs; Airtel Disbursement docs; account access gaps in DOC-38 | Keep live payouts blocked; test insufficient funds, limit errors, duplicate IDs, ambiguous outcomes and safe status enquiry before any implementation approval | Blocked on written permission, funding model and provider-specific lifecycle |
+| OUT-003 / OUT-004 | MTN documented disbursement refunds and Airtel Collection/Merchant Collection refunds; reversal scope remains product-specific | Distinguish refund, invoice cancellation, reversal and payout return; test eligibility, original reference, limits and ledger effects only after provider rules are confirmed | Blocked on exact provider support and accounting review |
+| FIN-003 | Commercial schedules not visible in either inspected portal | No provider fee or customer price may be hard-coded from assumptions; require fee payer, taxes, rounding and effective-dated schedule | Blocked on written commercial terms and owner decision |
+| REC-001 / REC-002 | MTN daily-reconciliation guidance; Airtel Transactions Summary documentation; settlement terms still missing | Require stable provider references, transaction and settlement evidence, discrepancy queues and an owned resolution process | Blocked on reports/access and funds-flow evidence |
+| OPS-002 | No production approval visible for either account | Release gate must check provider authorization, compliance review, funding/settlement, reconciliation, security and operational readiness | Draft; release evidence not available |
+
+Do not create duplicate requirement IDs solely to represent these provider findings. If a later provider contract introduces a genuinely new capability or control, update DOC-31 first, then extend this matrix with a stable ID and test mapping. No test has been run by adding this crosswalk.
+
 ## 3. Evidence and test mapping instructions
 
 For each row, the assigned owner must add the following when known:
