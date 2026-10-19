@@ -1,9 +1,9 @@
 # DOC-37 — Provider Portal Evidence Review and Owner-Guided Checklist
 
-**Status:** Research checklist; no provider account has been accessed and no provider contacted  
+**Status:** Public research and owner-assisted read-only portal inspection completed; contractual/provider approval evidence still pending  
 **Review date:** 2026-10-19  
 **Related documents:** DOC-00, DOC-28, DOC-29, DOC-30, DOC-33, DOC-35, DOC-36  
-**Purpose:** Convert public provider research into a precise checklist for evidence the product owner may retrieve from authenticated MTN and Airtel portals. The owner performs login and any account-specific actions; ChatGPT interprets redacted evidence and updates the provider comparison.
+**Purpose:** Convert public provider research into a precise checklist for evidence the product owner may retrieve from authenticated MTN and Airtel portals. The owner logs in personally; ChatGPT may perform permitted read-only navigation in the live browser session. No applications, provider contact, credential generation, configuration changes or transactions are authorized.
 
 ## 1. Public-source findings
 
@@ -81,7 +81,81 @@ Preferred order:
 4. If a document is confidential, provide a short redacted excerpt or summary instead of uploading the complete contract. Keep unredacted contracts in controlled storage.
 5. Label each item with provider, portal, country, date viewed and whether it is public, sandbox, account-specific or contractual.
 
-## 5. Evidence register template
+## 5. Owner-assisted portal inspection results (2026-10-19)
+
+**Evidence boundary:** The following is a redacted summary of visible portal pages and official developer documentation inspected read-only on 2026-10-19. It is not a contract, production approval, provider confirmation of HARAI eligibility, or legal/compliance conclusion. No credentials or secrets were copied into this repository.
+
+### MTN MoMo developer portal — Uganda
+
+Sources:
+- Profile/subscriptions: https://momodeveloper.mtn.com/profile
+- Product catalogue: https://momodeveloper.mtn.com/Product-descriptions
+- Collections: https://momodeveloper.mtn.com/product#product=collections
+- Disbursements: https://momodeveloper.mtn.com/product#product=disbursements
+- Collection API: https://momodeveloper.mtn.com/API-collections#api=collection
+- Disbursement API: https://momodeveloper.mtn.com/API-collections#api=disbursement
+- Aggregator guidance: https://momodeveloper.mtn.com/content/html_widgets/1t1oe.html
+- Callback guidance: https://momodeveloper.mtn.com/content/html_widgets/c0m2f.html
+- Best practices: https://momodeveloper.mtn.com/content/html_widgets/xomcy.html
+- Go-Live guidance: https://momodeveloper.mtn.com/golive
+
+Observed account state:
+- Portal environment displayed as **Test**.
+- **Collections** and **Collection Widget** subscriptions were shown as Active, both started 11/12/2025.
+- No Disbursement subscription was shown.
+- Profile country and verification status were not visible; this must not be interpreted as an unverified account.
+- No production approval, live credentials or live subscription status was visible.
+
+Published technical evidence:
+- Collection Request-to-Pay is asynchronous and requires status handling rather than assuming the initial response is final.
+- Disbursement documentation includes Transfer, Deposit, balance/status and Refund operations; transfer/deposit debit the provider account. Insufficient balance and payer-limit errors are documented.
+- Aggregator documentation describes a `transferType` field. Sandbox examples include `CUSTOM_PAYMENT`, `CUSTOM_BANK_PAYMENT` and `CUSTOM_BANK_PAYMENT_FEE`; production values are described as contract/onboarding-dependent.
+- Callback guidance requires HTTPS and registered callback hosts. The guidance says callbacks are sent once without retry, making status polling and reconciliation important.
+- Best-practice guidance calls for daily reconciliation.
+- Disbursement Refund V1/V2 and refund-status operations are documented. Collection invoice cancellation is visible, but a generic Collection reversal endpoint was not identified in the inspected pages.
+- No fee schedule, settlement cadence, reserve, payout timetable, top-up terms, or written multi-merchant authorization was visible.
+
+### Airtel Uganda developer portal
+
+Sources:
+- Authenticated dashboard: https://developers.airtel.ug/developer
+- Product overview: https://developers.airtel.ug/home
+- Getting Started: https://developers.airtel.ug/documentation/getting-started/1.0
+- Collection APIs: https://developers.airtel.ug/documentation/collection-apis/2.0
+- Disbursement APIs: https://developers.airtel.ug/documentation/disbursement-apis/2.0
+- Merchant Collection: https://developers.airtel.ug/documentation/merchant-collection/1.0
+- Transactions Summary: https://developers.airtel.ug/documentation/transactions-summary-apis/1.0
+- Account API: https://developers.airtel.ug/documentation/account/2.0
+- Reverse Interops: https://developers.airtel.ug/documentation/reverse-interops/1.0
+
+Observed account state:
+- The authenticated developer portal identified Uganda.
+- Dashboard showed **0 live applications** and **3 archived applications**.
+- No verification, activation, production approval, or app-detail status was visible.
+- Documentation describes staging and production endpoints. Production credentials are described as following account activation and compliance/onboarding/approval; no production access was visible.
+
+Published technical evidence:
+- Collection API v2.0 documents payment initiation, transaction enquiry and full refund. Published states include failed, success, ambiguous, in-progress and expired; ambiguous/in-progress outcomes require enquiry/reconciliation.
+- Disbursement API v2.0 documents B2B/B2C and direct merchant transfers. Published errors include insufficient funds, daily-limit breaches, duplicate transaction IDs and timeout/ambiguous states.
+- Merchant Collection documentation describes registering micro-merchants, transfers using an aggregator-assigned merchant relationship ID, payment enquiry and refunds. A reference field is limited to 25 characters.
+- Collection callbacks can be configured in application settings. Documentation describes an unauthenticated callback form and an authenticated callback with an HMAC-SHA256 hash. No keys or settings were opened.
+- Transactions Summary exposes transaction records and service-charge fields. The Account API documents balance enquiry but no account-balance operation was called.
+- No settlement schedule, payout cadence, reserve, complete fee table, reconciliation policy, or written authorization for HARAI's intended aggregator model was visible.
+
+### Evidence interpretation and limitations
+
+| Evidence ID | Finding | Status | What it does not prove |
+|---|---|---|---|
+| PROV-MTN-PORTAL-001 | Collections and Collection Widget subscriptions visible as Active in Test environment | Account-specific observation | Production access, legal authority, multi-merchant approval |
+| PROV-MTN-PORTAL-002 | No Disbursement subscription visible | Account-specific observation | That MTN will refuse an application or that no other authorized route exists |
+| PROV-MTN-PORTAL-003 | Aggregator API, callbacks, disbursement and refund documentation visible | Official technical documentation | HARAI's contractual eligibility, fees or production capability |
+| PROV-AIR-PORTAL-001 | Uganda developer dashboard showed 0 live and 3 archived applications | Account-specific observation | Why archived applications exist or whether any can be reactivated |
+| PROV-AIR-PORTAL-002 | Collection, Disbursement, Merchant Collection, callback and transaction-reporting APIs documented | Official technical documentation | Production approval, aggregator permission, contractual funds flow |
+| PROV-FLOW-001 | Settlement timing, fee schedules, reserves and payout funding terms not found in inspected pages | Unknown — written confirmation required | Absence of such terms from provider contracts or other restricted documentation |
+
+All findings are limited to the pages visible during the inspection. Product pages may change. Public documentation and dashboard states do not establish legal status or contractual permission. Do not retain personal data, account identifiers, or secrets in this document.
+
+## 6. Evidence register template
 
 | Evidence ID | Provider / portal | Country | Evidence type | Claim supported | Status / limitation | Related decisions |
 |---|---|---|---|---|---|---|
@@ -94,7 +168,7 @@ Preferred order:
 
 Do not change a status to “approved” merely because a menu item exists or an application form can be opened. Approval requires explicit account-specific evidence.
 
-## 6. What we can decide from portal evidence
+## 7. What we can decide from portal evidence
 
 Portal evidence can establish which products and application states are visible to the owner. It may narrow the provider shortlist and help us draft an accurate question to provider support. It cannot, by itself, establish legal permission or the right to handle money for unrelated merchants.
 
@@ -109,10 +183,10 @@ Before recommending a funds-flow model, the evidence must address:
 - fees, limits, liability, support and termination;
 - required regulatory permissions and qualified legal/compliance assessment.
 
-## 7. Current conclusion and next action
+## 8. Current conclusion and next action
 
 **Provider decision remains open.** Public sources establish that MTN and Airtel have relevant business-payment offerings; they do not establish HARAI eligibility or the desired multi-merchant arrangement.
 
-If accounts already exist, the next useful owner-assisted step is a read-only inspection of the MTN Uganda developer portal and Airtel Uganda developer/enterprise portals. If no account exists, tell ChatGPT which portal is unavailable; do not create an account or submit an application just to satisfy this checklist. ChatGPT will then prepare the smallest, safest next-step plan.
+The next step is to consolidate these observations in DOC-38 and compare provider-managed funds with direct integrations in DOC-28. The remaining evidence gaps are written multi-merchant authorization, contracting route, funds ownership/control, settlement destination/timing, money-out funding/prefunding, complete fees/limits, production approval path, and qualified Ugandan legal/compliance review. Airtel Money Enterprise remains unregistered; no registration or application is authorized.
 
-No provider has been contacted by this document. No account has been logged into. No credentials have been requested or recorded. No application, live integration, real transaction, merge or deployment is authorized.
+No provider has been contacted. The owner logged into the existing developer portals and permitted read-only inspection. No credentials have been recorded, and no application, live integration, real transaction, merge or deployment is authorized.
