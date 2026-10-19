@@ -30,7 +30,7 @@ The documentation is directionally consistent on the central product intent: Uga
 
 ## 3. Missing or under-specified requirement areas
 
-The following areas need explicit requirement IDs and testable acceptance criteria, not merely a mention in prose:
+The following areas needed explicit requirement IDs and testable acceptance criteria, not merely a mention in prose. DOC-39 and the DOC-31 additions SUP-001–SUP-010 now cover these principal gaps; the additions remain Draft/In review pending accountable disposition:
 
 1. Merchant verification evidence access, re-verification and expiry; suspension and closure behavior.
 2. Payment-link/session expiry, cancellation, revocation and concurrent usage-limit enforcement.
@@ -85,3 +85,8 @@ Track these questions in DOC-00 until explicitly answered:
 The documentation is coherent enough to continue discovery but **not ready to pass G1**. The portal-inspection gap is now partially closed by DOC-37/DOC-38 and the updated DOC-28, but the principal blockers remain missing written provider evidence, product-owner decisions and qualified professional review—not a reason to reduce the user's comprehensive product ambition. Keep the ambition explicit while refusing to represent unsupported capabilities as available.
 
 No provider has been contacted by this audit. No production integration, live credential, financial action, merge or deployment is authorized.
+
+
+## 8. Supplemental requirement coverage update (2026-10-19)
+
+The ten gaps listed in Section 3 are now represented by SUP-001–SUP-010 in DOC-31. DOC-34 maps all 53 unique requirement IDs and DOC-03 includes corresponding roadmap tasks. This resolves the gap at the documentation-definition and initial traceability level only. It does not close acceptance, numeric-threshold, named-owner, test-execution, provider, legal/compliance or G1 approval gates.
