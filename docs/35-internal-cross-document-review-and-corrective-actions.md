@@ -27,7 +27,7 @@ The principal blockers are substantive, not merely editorial:
 | CR-001 | DOC-02, DOC-03, DOC-31 and DOC-33 consistently describe a comprehensive launch ambition while keeping provider-dependent operations gated | Positive control | Preserve this distinction in future edits; never convert ambition into a claim of provider support |
 | CR-002 | DOC-03 Phase 9 heading used “Planned money-out ... and additional methods,” which could be read as making refunds/money-out broadly optional despite the intended launch direction | Editorial ambiguity | Corrected Phase 9 heading to distinguish money-out/refunds from conditional additional methods; added explicit provider-specific refund/reversal limitation |
 | CR-003 | DOC-00 had a stale review date and repeated the G0 status in two separate paragraphs, making the current gate summary less clear | Editorial/status hygiene | Correct review date and consolidate current gate summary; record completion only after the index update succeeds |
-| CR-004 | DOC-31 has 44 original requirement IDs; DOC-33 cross-review and DOC-34 tracking matrix cover those 43 IDs | Coverage check | Matrix coverage is confirmed; owner, test and evidence values are still proposals and remain unverified |
+| CR-004 | DOC-31 has 44 original requirement IDs; DOC-34 now covers all 54 IDs including EXT-004 and SUP-001–SUP-010 | Coverage check | Matrix coverage is confirmed; owner, test and evidence values are still proposals and remain unverified |
 | CR-005 | DOC-34's proposed test IDs (including SUP-001–SUP-010) are not actual test cases or execution results | Evidence integrity | Keep them explicitly labelled proposed; after G1/G2 and implementation authorization, map them to actual test files, runs, commit SHAs and results |
 | CR-006 | Role-based responsibility is proposed, but the product owner has not confirmed named people, availability or independence | Governance blocker | Keep roles unassigned until confirmed; the working team can continue with ChatGPT review without inventing appointments |
 | CR-007 | DOC-28/DOC-29 public evidence and inquiry drafts cannot prove contractual eligibility, current commercial terms or production capability | External evidence blocker | Provider outreach requires explicit owner authorization; capture written responses and their limitations |
@@ -39,7 +39,7 @@ The principal blockers are substantive, not merely editorial:
 
 - Updated DOC-03 Phase 9 heading to: “Money-out, refunds/reversals and conditional additional methods (provider/legal gates apply).”
 - Added a Phase 9.2 statement that refunds/reversals belong in intended launch requirements where the specific provider flow supports them, without implying universal support.
-- DOC-33 records the cross-review of the 53 DOC-31 requirement IDs.
+- DOC-33 records the cross-review of the 54 DOC-31 requirement IDs.
 - DOC-34 provides the requirement-level tracking view, with all role assignments and test identifiers explicitly marked as proposals.
 - DOC-00 gate summary and review-date cleanup are intended corrective actions; verify the updated file revision before treating them as complete.
 
