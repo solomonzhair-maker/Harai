@@ -1,7 +1,7 @@
 # DOC-32 — Documentation Consistency and Requirements Gap Review
 
 **Status:** Draft audit record — documentation review only  
-**Reviewed baseline:** DOC-00, DOC-02, DOC-03, DOC-28, DOC-29, DOC-30 and DOC-31 on the documentation branch  
+**Reviewed baseline:** DOC-00, DOC-02, DOC-03, DOC-28, DOC-29, DOC-30, DOC-31, DOC-37 and DOC-38 on the documentation branch  
 **Purpose:** Identify contradictions and missing decision/evidence links before the requirements baseline is presented for approval. This audit is not a legal opinion, provider confirmation, architecture approval or implementation authorization.
 
 ## 1. Executive result
@@ -26,6 +26,7 @@ The documentation is directionally consistent on the central product intent: Uga
 | GAP-010 | Public-source capability evidence does not establish HARAI's own eligibility, production access or contractual permission | Hard gate | Obtain written provider and contractual evidence; keep affected capabilities blocked |
 | GAP-011 | Payouts, refunds, reversals and dispute handling depend on provider-specific lifecycle and accounting behavior | Hard gate | Document method-specific state transitions, ledger effects, finality and reconciliation before implementation approval |
 | GAP-012 | Public repository is not an appropriate place for confidential provider agreements, credentials or personal onboarding evidence | Security rule | Keep sensitive evidence in controlled storage and commit only a redacted summary/reference |
+| GAP-013 | Owner-assisted read-only portal inspections now establish limited account states and relevant documented APIs, but not production access, written aggregator permission, funds flow or commercial terms | Partially resolved discovery gap; hard gate remains | DOC-37 records the detailed observations; DOC-38 compares them; DOC-28 incorporates them without scoring unknowns. Obtain written evidence only after explicit owner authorization for provider outreach and keep legal/compliance review outstanding |
 
 ## 3. Missing or under-specified requirement areas
 
@@ -81,6 +82,6 @@ Track these questions in DOC-00 until explicitly answered:
 
 ## 7. Audit conclusion
 
-The documentation is coherent enough to continue discovery but **not ready to pass G1**. The principal blockers are missing external evidence and decisions, not a reason to reduce the user's comprehensive product ambition. Keep the ambition explicit while refusing to represent unsupported capabilities as available.
+The documentation is coherent enough to continue discovery but **not ready to pass G1**. The portal-inspection gap is now partially closed by DOC-37/DOC-38 and the updated DOC-28, but the principal blockers remain missing written provider evidence, product-owner decisions and qualified professional review—not a reason to reduce the user's comprehensive product ambition. Keep the ambition explicit while refusing to represent unsupported capabilities as available.
 
 No provider has been contacted by this audit. No production integration, live credential, financial action, merge or deployment is authorized.
