@@ -1,6 +1,6 @@
 # DOC-36 — Product Owner Decision Brief for G1
 
-**Status:** Proposed decisions for owner response; none are approved by this document  
+**Status:** Product owner approved all recommended defaults on 2026-10-19; provider, legal/compliance and G1 evidence gates remain open  
 **Date:** 2026-10-19  
 **Related documents:** DOC-00, DOC-02, DOC-03, DOC-28, DOC-29, DOC-30, DOC-31, DOC-33, DOC-34, DOC-35  
 **Purpose:** Reduce repeated discussion by presenting a small set of material product choices with recommended conservative defaults. The product owner can approve the recommendations, amend them or reject them.
@@ -9,7 +9,7 @@
 
 ## 1. Recommended owner decisions
 
-| ID | Decision | Recommended default for owner consideration | Why this is the safer starting point | What approval would and would not mean |
+| ID | Decision | Owner-approved default / direction | Why this is the safer starting point | What approval does and does not mean |
 |---|---|---|---|---|
 | POD-01 | Initial market | Uganda only for first launch; regional expansion requires a separate country review | Keeps regulatory, currency, provider and support assumptions bounded | Approves market scope only; not legal permission |
 | POD-02 | Merchant eligibility | Start with a defined allowlist of ordinary, verifiable businesses; prohibit or hold categories requiring specialized legal/provider review until approved | “All businesses” creates unknown onboarding, fraud, reputational and provider eligibility risks | Approves a category policy only after the owner reviews the proposed list; does not replace provider KYC/AML rules |
@@ -47,23 +47,12 @@ Recommended policy shape:
 
 The actual category list remains a product-owner decision informed by provider and qualified compliance review.
 
-## 4. Compact response template
+## 4. Owner decision record
 
-The owner can respond with only the exceptions; unmentioned items remain **proposed, not approved**.
+On 2026-10-19, the product owner approved all recommended defaults POD-01 through POD-12. This includes Uganda-first launch; a broad but controlled merchant eligibility policy; UGX-first launch currency; both MTN MoMo and Airtel Money plus cards through an eligible processor/acquirer and additional suitable methods; collections and money-out as intended launch capabilities; provider-supported refunds/reversals; no funds-flow model selected until evidence and qualified review; configurable pricing and risk controls with numeric values still open; privacy-by-design; measurable reliability and recovery objectives; and separate authorization gates for consequential actions.
 
-- POD-01 Uganda only: Approve / Amend
-- POD-02 Merchant allowlist: Approve direction / Amend / Need proposed category list first
-- POD-03 UGX-first: Approve / Amend
-- POD-04 Payment-method direction (both MTN MoMo and Airtel Money, cards, additional suitable methods): Confirmed by owner; amend only if the intended scope changes
-- POD-05 Collections + money-out intended launch scope with hard gates: Approve / Amend
-- POD-06 Refunds/reversals where provider-supported: Approve / Amend
-- POD-07 No funds-flow model selected yet: Approve / Amend
-- POD-08 No numeric pricing until costs/review: Approve / Amend
-- POD-09 Configurable controls; numeric risk limits remain open: Approve / Amend
-- POD-10 Data-minimization/privacy-by-design direction: Approve / Amend
-- POD-11 Set reliability objectives after analysis: Approve / Amend
-- POD-12 Separate implementation/provider-contact authorization: Approve / Amend
+Approval is of product direction and default requirements. It does not approve a specific merchant category list, provider contract, card processor, numeric fee/limit/SLO, funds-flow or custody model, legal classification, production capability, provider contact, payment-engine implementation, merge or deployment. Those remain subject to their stated evidence and authorization gates.
 
 ## 5. Status and next action
 
-**POD-04 payment-method direction is confirmed by the product owner.** The other POD decisions remain proposed until explicitly answered. DOC-00, DOC-02 and DOC-31 have been aligned to the confirmed method scope. Re-check the G1 gates as remaining decisions are resolved. Product intent does not itself satisfy provider/processor evidence or qualified Ugandan legal/compliance review.
+**POD-01 through POD-12 defaults are approved by the product owner.** DOC-00, DOC-02 and DOC-31 must reflect this approved product direction. G1 remains open until the remaining requirements review, provider/processor evidence, qualified Ugandan legal/compliance review, funds-flow analysis and accountable reviewer gates are satisfied. Product intent does not itself prove provider capability or legal permission.
