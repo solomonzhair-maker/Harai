@@ -155,7 +155,7 @@ The requirements phase is not complete until:
 
 ## 8. Supplemental requirements identified by DOC-32
 
-The following ten stable supplemental requirement IDs convert the high-priority gaps in DOC-32 into reviewable acceptance criteria. They expand the working catalogue from 43 to **53 unique requirement IDs**. They remain **Draft / In review** until the product owner and accountable reviewers accept, amend, defer or reject them. Test identifiers below are proposed evidence references, not existing tests or claimed results.
+The following ten stable supplemental requirement IDs convert the high-priority gaps in DOC-32 into reviewable acceptance criteria. They expand the working catalogue from 44 to **54 unique requirement IDs**. They remain **Draft / In review** until the product owner and accountable reviewers accept, amend, defer or reject them. Test identifiers below are proposed evidence references, not existing tests or claimed results.
 
 | ID | Priority | Requirement | Acceptance criteria | Proposed verification evidence / dependencies |
 |---|---|---|---|---|
