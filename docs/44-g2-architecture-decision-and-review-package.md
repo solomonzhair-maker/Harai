@@ -2,7 +2,7 @@
 
 **Status:** Draft for structured review — G2 not approved  
 **Date:** 2026-10-19  
-**Related documents:** DOC-00, DOC-28, DOC-30, DOC-31, DOC-33, DOC-34, DOC-37, DOC-38, DOC-40, DOC-41, DOC-42, DOC-43, DOC-45  
+**Related documents:** DOC-00, DOC-28, DOC-30, DOC-31, DOC-33, DOC-34, DOC-37, DOC-38, DOC-40, DOC-41, DOC-42, DOC-43, DOC-45, DOC-46, DOC-47  
 **Purpose:** Provide one controlled package for reviewing the proposed architecture, funds-flow options, financial safety, external dependencies, and the evidence required before G2 can pass.
 
 ## 1. Decision requested
@@ -131,3 +131,8 @@ Copy for each decision:
 ## 9. Current conclusion
 
 G2 is **not approved**. The material design proposals are now sufficiently organized for structured review, but written provider authorization, the funds-flow decision, qualified finance/legal/security review, named accountable owners, and verification evidence remain outstanding. The next work should close evidence and decision gaps before any implementation gate is requested.
+
+
+## 10. Detailed architecture review register
+
+DOC-47 records the cross-document review findings AR-001–AR-020, distinguishing confirmed inconsistencies from design gaps, unverified assumptions, external blockers, evidence gaps and decisions needed. Its findings must be dispositioned with evidence; the register does not pass G2 or authorize implementation. Use DOC-46 for P0 closure ownership/evidence tracking and DOC-45 for evidence quality and test-result discipline.
