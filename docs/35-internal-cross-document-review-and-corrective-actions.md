@@ -28,7 +28,7 @@ The principal blockers are substantive, not merely editorial:
 | CR-002 | DOC-03 Phase 9 heading used “Planned money-out ... and additional methods,” which could be read as making refunds/money-out broadly optional despite the intended launch direction | Editorial ambiguity | Corrected Phase 9 heading to distinguish money-out/refunds from conditional additional methods; added explicit provider-specific refund/reversal limitation |
 | CR-003 | DOC-00 had a stale review date and repeated the G0 status in two separate paragraphs, making the current gate summary less clear | Editorial/status hygiene | Correct review date and consolidate current gate summary; record completion only after the index update succeeds |
 | CR-004 | DOC-31 has 43 unique requirement IDs; DOC-33 cross-review and DOC-34 tracking matrix cover those 43 IDs | Coverage check | Matrix coverage is confirmed; owner, test and evidence values are still proposals and remain unverified |
-| CR-005 | DOC-34's proposed test IDs are not actual test cases or execution results | Evidence integrity | Keep them explicitly labelled proposed; after G1/G2 and implementation authorization, map them to actual test files, runs, commit SHAs and results |
+| CR-005 | DOC-34's proposed test IDs (including SUP-001–SUP-010) are not actual test cases or execution results | Evidence integrity | Keep them explicitly labelled proposed; after G1/G2 and implementation authorization, map them to actual test files, runs, commit SHAs and results |
 | CR-006 | Role-based responsibility is proposed, but the product owner has not confirmed named people, availability or independence | Governance blocker | Keep roles unassigned until confirmed; the working team can continue with ChatGPT review without inventing appointments |
 | CR-007 | DOC-28/DOC-29 public evidence and inquiry drafts cannot prove contractual eligibility, current commercial terms or production capability | External evidence blocker | Provider outreach requires explicit owner authorization; capture written responses and their limitations |
 | CR-008 | DOC-30 correctly frames Ugandan regulatory questions as a checklist rather than a legal determination | External professional dependency | Prepare accurate diagrams and questions; do not state a legal conclusion without qualified review |
@@ -39,7 +39,7 @@ The principal blockers are substantive, not merely editorial:
 
 - Updated DOC-03 Phase 9 heading to: “Money-out, refunds/reversals and conditional additional methods (provider/legal gates apply).”
 - Added a Phase 9.2 statement that refunds/reversals belong in intended launch requirements where the specific provider flow supports them, without implying universal support.
-- DOC-33 records the cross-review of the 43 DOC-31 requirement IDs.
+- DOC-33 records the cross-review of the 53 DOC-31 requirement IDs.
 - DOC-34 provides the requirement-level tracking view, with all role assignments and test identifiers explicitly marked as proposals.
 - DOC-00 gate summary and review-date cleanup are intended corrective actions; verify the updated file revision before treating them as complete.
 
@@ -76,3 +76,8 @@ To keep progress moving without silently making consequential choices:
 **G0 — Discovery: in progress. G1 — Requirements approval: not passed.** The next useful work is to complete the owner decision baseline and prepare draft G2 architecture artefacts in parallel where assumptions can be kept explicit. Any architecture element that depends on unresolved custody, account ownership, provider behavior or legal permissions must remain a decision point rather than a fabricated design fact.
 
 No provider has been contacted by this review. No legal approval, provider permission, independent external audit, implementation, merge or deployment is claimed.
+
+
+## 7. Requirements gap closure batch 1 (2026-10-19)
+
+DOC-31 now contains SUP-001–SUP-010, raising the working catalogue from 43 to 53 unique requirement IDs. DOC-34 has been extended to include each supplemental ID with a proposed accountable role, proposed test reference, dependency and gate disposition. DOC-03 maps the additions into requirements and verification work. The test references remain proposals; no tests have been implemented or executed by this documentation change. G1 remains not passed.
