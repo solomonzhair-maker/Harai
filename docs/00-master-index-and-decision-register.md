@@ -55,6 +55,7 @@ This is a requirements and planning document set. It is not evidence that provid
 | DOC-25 | JulyPay read-only discovery log | In progress | Session history, remaining checklist and evidence boundary |
 | DOC-26 | Authenticated JulyPay read-only findings | Draft | Authenticated UI observations, HARAI implications and unresolved gaps |
 | DOC-27 | Public JulyPay website and commercial-positioning review | Draft | Public product positioning, onboarding, pricing, stated processing relationship and open questions |
+| DOC-28 | Funds-flow architecture comparison | Draft research baseline | Compare provider-managed funds, direct integrations, and conditional hybrid approach using official evidence |
 
 ## 4. Reference boundary and product differentiation
 
@@ -113,4 +114,4 @@ Changes affecting money movement, access control, tenant boundaries, balances, s
 
 **Discovery note (2026-10-19):** The product owner confirmed a Uganda-first direction, a preference for a strong, comprehensive launch package rather than a deliberately small initial MVP, and inclusion of both collections and money-out workflows in the planned launch package. Refunds and reversals should be specified where provider-supported. HARAI is intended to serve multiple business types over time. The product owner selected **compare provider-managed funds and direct provider integrations before deciding** as the planning approach for funds flow. This is not a final legal/commercial decision and does not authorize provider onboarding, live credentials, handling real funds, payment-engine implementation, or launch. Public JulyPay positioning, onboarding claims, pricing and its stated third-party processing relationship are recorded in DOC-27. Provider capability, commercial access, funds-flow responsibilities, currency/settlement model, workflow behavior, permissions and error/recovery behavior remain unconfirmed.
 
-**G0 — Discovery and requirements: IN PROGRESS.** No production integration, live credentials, real payment action, merge of the foundation PR, or deployment is authorized by this draft.
+**G0 — Discovery and requirements: IN PROGRESS.** DEC-016 records the product owner's preference to compare provider-managed funds and direct integrations before deciding. DOC-28 captures preliminary public-source findings and evidence gaps. No production integration, live credentials, real payment action, merge of the foundation PR, or deployment is authorized by this draft.
