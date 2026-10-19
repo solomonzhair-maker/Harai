@@ -203,7 +203,7 @@ A document-level cross-review was performed against the current DOC-31 requireme
 
 ### 12.1 Coverage observed
 
-DOC-31 currently contains 43 distinct requirement IDs:
+DOC-31 contains 54 distinct requirement IDs: 44 existing requirements including EXT-004, plus SUP-001–SUP-010.
 - Governance, tenancy, merchant onboarding and identity/access: GOV-001, TEN-001, MER-001–MER-004, IAM-001–IAM-002.
 - Collections and payer experience: COL-001–COL-008.
 - Money-out, refunds and reversals: OUT-001–OUT-006.
