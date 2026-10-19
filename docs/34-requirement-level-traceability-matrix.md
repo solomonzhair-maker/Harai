@@ -152,3 +152,7 @@ The following are the next actions that can be completed without pretending deci
 ## 7. Current disposition
 
 **G1 NOT PASSED.** DOC-39 adds ten supplemental requirements; the matrix maps all 54 DOC-31 IDs, including EXT-004. Role assignments and test IDs remain proposed and unverified. DOC-41–DOC-43 now provide design proposals for state handling, ledger/reconciliation and threats; none constitutes implementation or test evidence. Product defaults POD-01–POD-12 are approved, but accountable requirements disposition, named reviewers, provider evidence and qualified professional review remain open. Provider outreach and professional advice must not be represented as completed.
+
+## 8.3 Detailed architecture review cross-reference
+
+DOC-47 records cross-cutting architecture findings AR-001–AR-020. These are review/closure findings, not additional requirement IDs and not proof that any requirement has passed. Use DOC-31 as the requirement source of truth, DOC-46 for P0 closure tracking, and DOC-45 for evidence-quality and test-execution rules. Close a finding only with its specified evidence and accountable review; preserve G1/G2 as open until their respective criteria are met.
