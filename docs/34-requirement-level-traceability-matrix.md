@@ -1,7 +1,7 @@
 # DOC-34 — Requirement-Level Traceability Matrix
 
 **Status:** Draft working matrix — not an approval or verification record  
-**Related documents:** DOC-00, DOC-03, DOC-31, DOC-32, DOC-33  
+**Related documents:** DOC-00, DOC-03, DOC-31, DOC-32, DOC-33, DOC-44, DOC-45, DOC-46  
 **Branch:** docs/julypay-discovery-and-requirements  
 **Purpose:** Make every current DOC-31 requirement actionable by linking it to a proposed accountable role, proposed test/evidence work, dependencies and a gate status.
 
@@ -21,6 +21,8 @@
 ## 2. Requirement-level matrix
 
 The matrix contains 54 unique requirement IDs from the current DOC-31 catalogue, including the existing EXT-004 card requirement and ten supplemental requirements SUP-001–SUP-010 added in DOC-39. All requirement criteria remain as written in DOC-31; use the requirement ID to trace to the complete acceptance criterion.
+
+DOC-46 provides a companion closure view for all 32 current P0 requirements. It assigns proposed accountable roles, evidence expectations and blocking effects; role names are not people assignments, and every item remains open until evidence and review are recorded.
 
 | Requirement ID | Priority | Requirement | Proposed accountable role(s) | Proposed test IDs | Dependency / evidence reference from DOC-31 | Gate / disposition | Current status |
 |---|---|---|---|---|---|---|---|
