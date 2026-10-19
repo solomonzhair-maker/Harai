@@ -1,11 +1,11 @@
 # DOC-02 — Product Scope and Requirements Framework
 
-**Status:** Draft — requires product-owner review  
+**Status:** Draft — product direction defaults approved; detailed requirements and G1 gates remain under review  
 **Purpose:** Define how HARAI requirements are captured and how scope is controlled before implementation.
 
 ## 1. Product statement
 
-HARAI is intended to be a reusable payment gateway for the owner's current and future systems. It should provide a consistent API, merchant dashboard, hosted checkout, event/webhook delivery, collections and a planned money-out workstream, with refunds/reversals where explicitly supported and authorized.
+HARAI is intended to be a reusable, multi-merchant payment gateway for the owner's current and future systems. The approved planning baseline is Uganda first and UGX first, with architecture designed to permit later regional and multi-currency expansion after separate review. Merchant eligibility should cover a broad range of legitimate businesses through a defined allowlist, verification and risk-based review. HARAI should provide a consistent API, merchant dashboard, hosted checkout, event/webhook delivery, collections and money-out, with refunds/reversals where explicitly supported and authorized. The intended method package includes both MTN MoMo and Airtel Money, cards through an eligible processor/acquirer, and additional suitable methods.
 
 JulyPay is a reference for discovering useful merchant workflows. HARAI must use original code and branding and authorized provider integrations. A similar screen does not prove that an underlying API, commercial permission or legal operating model is identical.
 
@@ -38,6 +38,10 @@ Exact role names and permission matrices belong in a separate access-control spe
 - Audit trails, risk controls, monitoring, support and recovery.
 
 ### Not assumed
+- Owner approval of the product defaults does not establish provider eligibility, card-processor access, legal permission, production access, or commercial terms.
+- Uganda-first and UGX-first are initial launch defaults; regional expansion and additional currencies require separate country/provider, settlement, tax and compliance review.
+- Broad merchant eligibility does not mean unrestricted onboarding: a documented supported-category allowlist, prohibited categories and manual review for uncertain/higher-risk categories are required before onboarding is opened.
+- Fees, numeric transaction/risk limits, reliability targets and funds-flow/custody choices are not fixed by the approved defaults; they require evidence, analysis and accountable approval.
 - HARAI will hold or custody customer funds.
 - Every provider supports every direction, country, currency, refund or status query.
 - Card processing is an intended payment-method objective, but the specific processor/acquirer, card schemes, eligibility and launch availability must be verified. Cross-border settlement, escrow and stored-value wallet functionality are not assumed to be in V1.
@@ -78,6 +82,8 @@ A requirement cannot be approved while a consequential ambiguity remains unresol
 - Define safe recovery after process, queue, database or provider failure.
 
 ### Security and privacy
+- Apply data minimization, least-privilege access, appropriate protection of credentials/customer information, and documented retention/deletion rules.
+- Use configurable limits, audit trails and risk-based approvals for sensitive operations; numeric thresholds remain unset until reviewed and approved.
 - Enforce tenant isolation in API queries, mutations, queues, webhooks and admin workflows.
 - Keep secrets out of source control, logs, URLs, client-side bundles and documentation.
 - Minimize personal data and define retention/deletion rules.
