@@ -67,6 +67,7 @@ No phase skips its exit criteria.
 - 1.2.6 Define merchant notification and webhook expectations.
 - 1.2.7 Specify payment-link/session expiry, revocation, cancellation and concurrent usage rules (SUP-002).
 - 1.2.8 Define canonical transaction states, allowed transitions, terminality and unknown-outcome recovery (SUP-004).
+- 1.2.9 Define API abuse limits for creation, status polling and recovery; specify per-tenant behavior and safe throttled responses (SUP-001).
 
 ### 1.3 Money-out and refunds
 - 1.3.1 Decide which payout/withdrawal rails are in scope.
@@ -75,6 +76,7 @@ No phase skips its exit criteria.
 - 1.3.4 Define scheduled execution, cancellation and timezone rules if applicable.
 - 1.3.5 Define ambiguous, failed, returned and reversed outcomes.
 - 1.3.6 Define full/partial refund behavior only where provider-supported.
+- 1.3.7 Define beneficiary-change step-up, audit, approval/cooling-off rules and handling of pending payouts (SUP-003).
 
 ### 1.4 API and event requirements
 - 1.4.1 Define API authentication, scopes and versioning.
@@ -82,7 +84,9 @@ No phase skips its exit criteria.
 - 1.4.3 Define rate limits, pagination and error taxonomy.
 - 1.4.4 Define webhook signatures, IDs, retries and replay handling.
 - 1.4.5 Define compatibility policy and developer examples.
-- 1.4.6 Define correlation IDs and redaction rules.
+- 1.4.6 Define correlation IDs and redaction rules (SUP-010).
+- 1.4.7 Define CORS, CSRF, trusted-proxy, client-IP and IP-allowlist recovery boundaries (SUP-007).
+- 1.4.8 Define stable machine-readable errors, bounded deterministic pagination, and compatibility/deprecation policy (SUP-006).
 
 ### 1.5 Financial/operational requirements
 - 1.5.1 Define transaction state machine.
@@ -91,6 +95,9 @@ No phase skips its exit criteria.
 - 1.5.4 Define audit, support access and data retention.
 - 1.5.5 Define availability, alerting and incident targets.
 - 1.5.6 Define backup, recovery and operational ownership.
+- 1.5.7 Define measurable availability/latency, pending-age, incident escalation, RTO/RPO and restore-verification objectives (SUP-008).
+- 1.5.8 Define dispute/complaint ownership, deadlines, evidence access and outcomes (SUP-005).
+- 1.5.9 Define accessibility and responsive acceptance for keyboard, focus, contrast, labels/errors, zoom/reflow and critical payer/merchant journeys (SUP-009).
 
 **Exit:** every in-scope requirement has an ID, dependencies, acceptance criteria and verification method; V1 scope is approved.
 
@@ -391,7 +398,8 @@ Refunds and reversals are part of the intended launch requirements where the spe
 - 11.3.3 Keep untested requirements blocked.
 - 11.3.4 Run regression and review failures before sign-off.
 - 11.3.5 Add explicit tests for SUP-001–SUP-010; map each proposed test ID to a real test case, environment, run and result only after implementation is authorized.
-- 11.3.6 Verify API throttling, payment-link concurrency, beneficiary-change controls, forbidden state transitions, stable API errors, trusted-proxy behavior, restore evidence, accessibility and audit-correlation scenarios.
+- 11.3.6 Verify API throttling, payment-link concurrency, beneficiary-change controls, forbidden state transitions, stable API errors, trusted-proxy behavior, restore evidence, accessibility, dispute-case access and audit-correlation scenarios.
+- 11.3.7 Include the EXT-004 card-processor contract and security tests only after an eligible processor/acquirer, written permission, applicable data-security scope and sandbox access are confirmed.
 
 **Exit:** traceability is complete; no critical/high risk is left unresolved without explicit accountable acceptance.
 
