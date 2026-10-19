@@ -59,6 +59,7 @@ This is a requirements and planning document set. It is not evidence that provid
 | DOC-29 | Provider verification and written inquiry pack | Draft — ready for owner review | Formal provider questions, evidence tracker, scoring method and hard gates |
 | DOC-30 | Uganda compliance and funds-flow review checklist | Draft — professional review required | Structure qualified legal/compliance review and funds-flow decision gates |
 | DOC-31 | Launch requirements traceability and acceptance criteria | Draft — product/independent review required | Stable requirement IDs, testable acceptance criteria, dependencies, and release gates |
+| DOC-32 | Documentation consistency and requirements gap review | Draft audit — G1 not ready to pass | Cross-document consistency, missing requirements, external blockers and recommended sequence |
 
 ## 4. Reference boundary and product differentiation
 
@@ -111,6 +112,7 @@ JulyPay is a visual and merchant-workflow reference only. HARAI will use its own
 12. What launch package is commercially and operationally sustainable without promising unavailable methods or unsafe financial operations?
 13. Which written provider confirmations and qualified Ugandan legal/compliance conclusions are required before selecting a funds-flow model?
 14. Which requirement IDs and acceptance criteria does the product owner approve as the launch baseline (DOC-31)?
+15. Which open gaps and external blockers in DOC-32 have been resolved, explicitly deferred or accepted with documented rationale?
 
 ## 8. Change control
 
