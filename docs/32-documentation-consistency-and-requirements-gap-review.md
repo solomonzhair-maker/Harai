@@ -89,4 +89,4 @@ No provider has been contacted by this audit. No production integration, live cr
 
 ## 8. Supplemental requirement coverage update (2026-10-19)
 
-The ten gaps listed in Section 3 are now represented by SUP-001–SUP-010 in DOC-31. DOC-34 maps all 53 unique requirement IDs and DOC-03 includes corresponding roadmap tasks. This resolves the gap at the documentation-definition and initial traceability level only. It does not close acceptance, numeric-threshold, named-owner, test-execution, provider, legal/compliance or G1 approval gates.
+The ten gaps listed in Section 3 are now represented by SUP-001–SUP-010 in DOC-31. DOC-34 maps all 54 unique requirement IDs and DOC-03 includes corresponding roadmap tasks. This resolves the gap at the documentation-definition and initial traceability level only. It does not close acceptance, numeric-threshold, named-owner, test-execution, provider, legal/compliance or G1 approval gates.
