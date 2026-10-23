@@ -1,7 +1,7 @@
 # DOC-34 — Requirement-Level Traceability Matrix
 
 **Status:** Draft working matrix — not an approval or verification record  
-**Related documents:** DOC-00, DOC-03, DOC-10, DOC-11, DOC-12, DOC-16, DOC-17, DOC-31, DOC-32, DOC-33, DOC-40, DOC-41, DOC-42, DOC-43, DOC-44, DOC-45, DOC-46, DOC-48, DOC-49, DOC-50, DOC-52, DOC-54, DOC-55, DOC-56  
+**Related documents:** DOC-00, DOC-03, DOC-10, DOC-11, DOC-12, DOC-16, DOC-17, DOC-31, DOC-32, DOC-33, DOC-40, DOC-41, DOC-42, DOC-43, DOC-44, DOC-45, DOC-46, DOC-48, DOC-49, DOC-50, DOC-52, DOC-54, DOC-55, DOC-56, DOC-60, DOC-61  
 **Branch:** docs/julypay-discovery-and-requirements  
 **Purpose:** Make every current DOC-31 requirement actionable by linking it to a proposed accountable role, proposed test/evidence work, dependencies and a gate status.
 
@@ -161,3 +161,11 @@ DOC-47 records cross-cutting architecture findings AR-001–AR-020. These are re
 ## 8.3 Detailed architecture review cross-reference
 
 DOC-47 records cross-cutting architecture findings AR-001–AR-020. These are review/closure findings, not additional requirement IDs and not proof that any requirement has passed. Use DOC-31 as the requirement source of truth, DOC-46 for P0 closure tracking, and DOC-45 for evidence-quality and test-execution rules. Close a finding only with its specified evidence and accountable review; preserve G1/G2 as open until their respective criteria are met.
+
+## 8.4 Security reconciliation cross-reference
+
+DOC-61 provides a cross-source reconciliation and closure register for the security assurance plan. DOC-31 remains authoritative for requirement wording; DOC-43 for threat identifiers; DOC-47 for architecture finding status; DOC-45 for evidence rules; and DOC-60 for the threat-to-control/evidence plan. DOC-61 does not replace the 54 requirement rows in this matrix and does not close any requirement, threat or architecture finding.
+
+Threat/finding links that are not confirmed against their source remain open. The DOC-60 rows SEC-E01–SEC-E16 are planning records with evidence absent by default. Role labels are not named-person assignments, planned test IDs are not executed tests, and the existence of a mapped row is not proof of implementation or verification.
+
+**G1 remains NOT PASSED. G2 remains NOT APPROVED.** No implementation, test execution, provider contact, production credentials, real financial activity, merge or deployment is authorized by DOC-61.
