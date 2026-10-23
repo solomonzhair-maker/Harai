@@ -171,3 +171,14 @@ DOC-60 has been expanded from 16 to 21 proposed control/evidence rows. The addit
 These are proposed coverage improvements, not verified mitigations. DOC-60 labels several requirement references as candidate linkages pending exact DOC-31/DOC-34 review; that review must confirm whether existing acceptance criteria actually cover each security behavior or whether a requirements change is needed. The DOC-60 rows SEC-E01–SEC-E21 remain planning records with evidence absent by default. Role labels are not named-person assignments, planned test IDs are not executed tests, and the existence of a mapped row is not proof of implementation or verification.
 
 **G1 remains NOT PASSED. G2 remains NOT APPROVED.** No implementation, test execution, provider contact, production credentials, real financial activity, merge or deployment is authorized by this reconciliation.
+## 8.5 Security requirement coverage disposition (DOC-31 / DOC-60 / DOC-61)
+
+DOC-60 references all DOC-43 threat IDs across 21 proposed control/evidence rows. DOC-61 compares them against the exact DOC-31 acceptance criteria and separates substantive existing coverage from partial coverage and proposed requirement changes. A threat-to-control row does not itself establish complete requirement coverage.
+
+Existing criteria substantively cover tenant isolation (TEN-001), browser/proxy controls (SEC-001, SEC-003, SUP-007), credential lifecycle and webhook authentication (DEV-001, DEV-002, COL-005), idempotency and unknown outcomes (COL-003, COL-004, OUT-002, FIN-002), beneficiary changes (SUP-003, OUT-006, IAM-002), incident/restore responsibilities (OPS-001, OPS-003), reconciliation discrepancies (REC-001/REC-002), and card-data boundaries (EXT-004/SEC-002). DOC-61 records the exact mapping and limitations.
+
+**Potential gaps requiring owner disposition, not silent edits:** SSRF-resistant outbound webhook destination handling (TH-07); reconciliation import identity/source integrity and replay protection (TH-11); screenshots, fixtures, analytics, offline caches and support exports in data-protection criteria (TH-12); post-restore consistency checks and consequential-job pause before replay (TH-15/TH-16); and dependency/CI/deployment identity security (TH-17). Endpoint ownership/dispatch-time tenant revalidation (TH-18) and diagnostic/card-data surfaces (TH-20) also need explicit decisions. DOC-31 remains unchanged pending owner review and decision-register disposition.
+
+DOC-31 remains authoritative for requirement text; DOC-34 remains a draft tracker. Role assignments are not named-person appointments, test IDs are not executed tests, and mappings do not verify implementation.
+
+**G1 remains NOT PASSED. G2 remains NOT APPROVED.** No implementation, test execution, provider contact, production credentials, real financial activity, merge or deployment is authorized by DOC-61.
