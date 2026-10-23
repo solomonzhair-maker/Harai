@@ -106,37 +106,36 @@ This is a source-text mapping for review, not closure. A threat may relate to mu
 1. SEC-E05's citation is corrected to TH-06 only; TH-14 maps to browser/session controls.
 2. DOC-60 has 21 proposed rows and references all 20 threats, but row existence does not prove complete requirement coverage.
 3. Keep exact existing DOC-31 links where criteria substantively support the control; mark indirect/incomplete mappings as partial.
-4. Propose, do not silently add, criteria for SSRF-resistant webhook destinations, reconciliation-import integrity, safe restore/job replay, and dependency/CI/deployment identity; consider diagnostic/offline artefact and card-data evidence wording.
-5. Decide whether endpoint ownership/dispatch-time tenant binding and manual discrepancy-resolution authority need explicit criteria.
+4. RCP-01–RCP-08 are approved and incorporated into DOC-31; reconcile evidence rows and acceptance plans to the final wording, while keeping all evidence and control statuses open.
+5. Endpoint ownership/dispatch-time tenant binding and manual discrepancy-resolution authority are now explicit in DOC-31; implementation design, policy details and evidence remain to be reviewed.
 6. Review DOC-47 AR-001–AR-020 using source-supported links only. No finding is closed by this audit.
 7. Name accountable owners/reviewers before requesting acceptance evidence. Tests and implementation remain unauthorized.
-## 4C. Requirement-coverage disposition and proposed requirement changes
+## 4C. Requirement-coverage disposition after approved changes
 
-This section records the disposition of security coverage after product-owner approval of RCP-01–RCP-08. DOC-31 was updated on 2026-10-23; the coverage table below is a tracking view, not proof of implementation or verification.
+The product owner approved RCP-01–RCP-08 on 2026-10-23, and the associated criteria are now incorporated into DOC-31. The table below records normative coverage only. Every associated implementation/control and evidence item remains unverified.
 
-| Threat / row | Existing DOC-31 coverage | Assessment | Proposed disposition (not approved) |
-|---|---|---|---|
-| TH-01 / SEC-E04 | TEN-001; IAM-001; SEC-002; REP-001 where applicable | Substantive: TEN-001 expressly includes APIs, jobs, reports, support tools and callbacks | Keep mappings; map exact evidence in DOC-34 |
-| TH-02 / SEC-E01–E02 | DEV-001; IAM-001; IAM-002; SEC-001 | Substantive for credential lifecycle, least privilege and sensitive approvals | Keep; separate key scope, dashboard identity and money-out authorization evidence |
-| TH-03 / SEC-E08 | COL-005; FIN-005; DEV-002 | Substantive for inbound callback authenticity/state changes and outbound event signatures/dedupe | Keep inbound and outbound evidence distinct; provider-specific details remain open |
-| TH-04–TH-05 / SEC-E09 | COL-003; COL-004; OUT-002; FIN-002; FIN-005 | Substantive for idempotency, unknown outcomes and financial integrity | Keep; future authorized evidence must include concurrency/replay cases |
-| TH-06 / SEC-E05–E06 | SEC-003; SUP-007 | Explicit for trusted proxies, forwarded headers, allowlist changes and recovery | Keep corrected mapping; no addition indicated |
-| TH-07 / SEC-E17 | DEV-002; SEC-002 | Missing: neither criterion requires SSRF-safe DNS resolution, redirect revalidation or egress restrictions | Propose criterion under DEV-002 or a new stable ID after owner review; cover URL validation, DNS rebinding, redirects and egress |
-| TH-08 / SEC-E08 | DEV-001; DEV-002; COL-005 | Substantive for secrets, signatures/timestamps, retries and dedupe; verify rotation overlap/retirement details | Keep; add evidence detail; propose wording if owner finds lifecycle semantics insufficient |
-| TH-09 / SEC-E15 | SUP-003; OUT-006; IAM-002; OUT-005 | Substantive for step-up, verification, approval, pending-payout safety and audit | Keep; cooling-off/notification remains a policy decision |
-| TH-10 / SEC-E11 | TEN-001; IAM-001; IAM-002; SEC-002; GOV-001; SUP-010 | Substantive for support tenant isolation, least privilege and auditable restricted access | Keep; JIT/case scoping may be an architecture/policy choice |
-| TH-11 / SEC-E09, E12, E20 | FIN-002; REC-001; REC-002; OUT-005 | Partial: discrepancy and correction handling exist; import identity/source integrity and same-ID altered-content rejection do not | Propose criterion under REC-001/REC-002 or new stable ID; cover unique import identity, source integrity, replay rejection and linked correction |
-| TH-12 / SEC-E07, E12, E16, E21 | SEC-002; DEV-001; DEV-003; SUP-010; EXT-004 | Partial: safe logs/secrets/card boundary exist; screenshots, fixtures, analytics, offline caches and support exports are not enumerated | Consider examples in SEC-002/DEV-003 after owner review; preserve no-private-evidence offline-cache constraint |
-| TH-13 / SEC-E10 | SUP-001; COL-008; SEC-001 | Substantive for scoped limits, abuse and brute-force protection | Keep; numeric thresholds remain owner decisions |
-| TH-14 / SEC-E03, E05–E06 | SEC-001; SEC-003; SUP-007 | Explicit for sessions, CORS/CSRF, trusted proxy and recovery | Keep browser/session mapping distinct from IP spoofing |
-| TH-15–TH-16 / SEC-E09, E13, E18 | OPS-001; OPS-003; SEC-002; FIN-002 | Partial: restore runbooks/objectives and ledger integrity exist; backup identity/encryption and pausing consequential jobs until post-restore checks are incomplete | Propose criteria under OPS-001/OPS-003 for protected backup access, verified restore, reconciliation and worker/queue pause before replay |
-| TH-17 / SEC-E07, E11, E14 | OPS-002; DEV-001; SEC-002 | Partial: release gates and credential controls exist; dependency provenance, CI permissions, protected branches and deployment identity are not explicit | Propose criterion under OPS-002 or new stable ID after owner review; cover least-privilege CI, dependency review, secret scanning, deploy permissions and rollback evidence |
-| TH-18 / SEC-E19 | TEN-001; DEV-002; REP-001 | Substantive for tenant isolation, callbacks/webhooks and reports; endpoint ownership/dispatch-time revalidation detail is not explicit | Keep core mapping; decide whether to add endpoint ownership and tenant-recheck criteria |
-| TH-19 / SEC-E20 | REC-001; REC-002; FIN-002; FIN-005; IAM-002; OUT-005 | Substantive for discrepancy evidence, corrections, state transitions and sensitive approvals | Keep; clarify independent approval for consequential manual resolutions and preserve source evidence |
-| TH-20 / SEC-E21 | EXT-004; SEC-002; DEV-001 | Substantive for card-data boundary and sensitive-data protection; diagnostic surface examples are partial | Consider enumerating logs, analytics, fixtures, screenshots and support exports after owner review |
+| Threat / row | DOC-31 coverage after approved update | Current disposition |
+|---|---|---|
+| TH-01 / SEC-E04 | TEN-001; IAM-001; SEC-002; REP-001 where applicable | Tenant isolation criteria exist; cross-tenant evidence absent. |
+| TH-02 / SEC-E01–E02 | DEV-001; IAM-001; IAM-002; SEC-001 | Credential lifecycle, least privilege and approval criteria exist; evidence absent. |
+| TH-03 / SEC-E08 | COL-005; FIN-005; DEV-002 | Callback authenticity, state validation, signatures and deduplication criteria exist; provider-specific evidence absent. |
+| TH-04–TH-05 / SEC-E09 | COL-003; COL-004; OUT-002; FIN-002; FIN-005 | Idempotency, unknown outcomes and financial history criteria exist; execution evidence absent. |
+| TH-06 / SEC-E05–E06 | SEC-003; SUP-007 | Trusted-proxy and allowlist trust-boundary criteria exist; deployment configuration/evidence absent. |
+| TH-07 / SEC-E17 | DEV-002; SEC-002 | Approved criteria now cover SSRF-safe destination policy, DNS/redirect validation and egress restrictions; evidence absent. |
+| TH-08 / SEC-E08 | DEV-001; DEV-002; COL-005 | Secret lifecycle, signatures/timestamps, retries and dedupe are covered; provider-specific key lifecycle evidence remains open. |
+| TH-09 / SEC-E15 | SUP-003; OUT-006; IAM-002; OUT-005 | Beneficiary verification, approval and audit criteria exist; detailed risk-policy choices remain open. |
+| TH-10 / SEC-E11 | TEN-001; IAM-001; IAM-002; SEC-002; GOV-001; SUP-010 | Support isolation, least privilege and restricted/auditable access are covered; named owners and evidence remain open. |
+| TH-11 / SEC-E09, E12, E20 | FIN-002; REC-001; REC-002; OUT-005 | Approved criteria now cover import identity/integrity, altered-content replay handling, provenance and correction history; evidence absent. |
+| TH-12 / SEC-E07, E12, E16, E21 | SEC-002; DEV-001; DEV-003; SUP-010; EXT-004 | Approved criteria now enumerate sensitive diagnostic, offline and support artefact surfaces; evidence absent. |
+| TH-13 / SEC-E10 | SUP-001; COL-008; SEC-001 | Abuse and brute-force criteria exist; numeric limits require separate owner/technical decision. |
+| TH-14 / SEC-E03, E05–E06 | SEC-001; SEC-003; SUP-007 | Browser/session/CORS/CSRF controls remain distinct from forwarded-IP/proxy threats; evidence absent. |
+| TH-15–TH-16 / SEC-E09, E13, E18 | OPS-001; OPS-003; SEC-002; FIN-002 | Approved criteria now cover post-restore worker pause, integrity/reconciliation gates, authorized resume and backup protection; restore evidence absent. |
+| TH-17 / SEC-E07, E11, E14 | OPS-002; DEV-001; SEC-002 | Approved criteria now cover CI/deployment identity, dependency provenance, protected release configuration and audit trail; evidence absent. |
+| TH-18 / SEC-E19 | TEN-001; DEV-002; REP-001 | Approved criteria now cover server-derived tenant ownership and dispatch-time revalidation; endpoint policy implementation and evidence remain open. |
+| TH-19 / SEC-E20 | REC-001; REC-002; FIN-002; FIN-005; IAM-002; OUT-005 | Approved criteria now cover preservation of conflicting evidence, authorized resolution and linked corrections; policy and evidence remain open. |
+| TH-20 / SEC-E21 | EXT-004; SEC-002; DEV-001 | Approved criteria now enumerate prohibited card-data capture surfaces and retain the processor/scope enablement gate; qualified review and evidence remain open. |
 
-**Change-control rule:** RCP-01–RCP-08 are approved and incorporated into DOC-31; DOC-00 records the decision. Future changes must be recorded before the normative catalogue is amended. A requirement is not implemented or verified merely because it is approved.
-
+**Coverage conclusion:** The previously identified normative wording gaps have been addressed by the approved RCP-01–RCP-08 changes. This does not establish complete design coverage, implementation or control effectiveness. All 20 threats remain Open, all 21 DOC-60 rows remain Draft — evidence absent, and G1/G2 remain open.
 
 ## 4D. Product-owner-approved requirements change set (approved 2026-10-23)
 
