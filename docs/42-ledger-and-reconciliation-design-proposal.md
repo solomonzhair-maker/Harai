@@ -86,7 +86,7 @@ Create cases for missing provider reference, missing settlement, duplicate, amou
 
 ## 7. Proposed data constraints
 
-- Unique idempotency scope: tenant + actor/credential + operation class + idempotency key.
+- Proposed idempotency scope: tenant + environment + operation class + idempotency key, with endpoint compatibility rules documented explicitly. Treat actor/credential as audit attributes, not automatically as uniqueness boundaries: otherwise the same tenant operation retried through a rotated or alternate credential could bypass deduplication. The final scope, key-retention window, request-fingerprint rules, conflict response and restore/replay horizon remain architecture decisions and must be consistent with DOC-49 and provider-specific idempotency limits.
 - Unique provider event receipt key where provider event identity is available; otherwise use a documented deduplication fingerprint with collision-safe review.
 - Unique ledger posting identity per normalized financial event and posting purpose.
 - Check constraints: positive/non-negative amount as appropriate per operation, supported currency/precision, allowed direction/type, balanced posting group and valid reference links.
