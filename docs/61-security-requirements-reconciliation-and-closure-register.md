@@ -67,6 +67,42 @@ Reconcile DOC-60 security assurance rows against the normative requirements in D
 | SEC-E15 | Unauthorized sensitive configuration change | IAM-002, OUT-005, OUT-006, SUP-003, SUP-010 | Approved action-to-role matrix and attributable audit trail |
 | SEC-E16 | Error-response information leakage | DEV-003, SEC-002 | Sanitized external errors and redacted, access-controlled diagnostic logs |
 
+## 4A. Direct threat-ID reconciliation (DOC-43 → DOC-60)
+
+This is a source-text mapping for review, not closure. A threat may relate to multiple rows and a row may address only part of a threat. All DOC-43 threats remain Open; all DOC-60 rows remain Draft — evidence absent.
+
+| DOC-43 threat | Directly related DOC-60 row(s) | Reconciliation note |
+|---|---|---|
+| TH-01 tenant IDOR/BOLA | SEC-E04, SEC-E11, SEC-E15 | Direct mapping for cross-tenant access; privileged support and sensitive-change coverage is partial and needs its own authorization evidence. |
+| TH-02 stolen/over-scoped API key | SEC-E01, SEC-E02, SEC-E15 | Direct key theft/scope mapping; key changes also need attributable privileged-change evidence. |
+| TH-03 forged/replayed provider callback | SEC-E08 | Direct mapping. |
+| TH-04 timeout followed by blind retry | SEC-E09, SEC-E13 | Direct mapping for duplicate effects and investigation of uncertain outcomes. |
+| TH-05 race-created duplicate operations/postings | SEC-E09 | Partial mapping; DOC-60 must explicitly include concurrency and atomicity evidence. |
+| TH-06 forwarded-header/IP allowlist abuse | SEC-E05, SEC-E06 | Direct mapping. DOC-60 currently cites TH-06/TH-14 for SEC-E05; TH-14 is a browser CSRF/CORS/session threat, not the forwarded-IP threat. Correct SEC-E05's source citation to TH-06 only, and assess browser-session risk under SEC-E03 or a separate control. |
+| TH-07 webhook destination SSRF | No dedicated row | Coverage gap: DOC-60 does not have a dedicated row for merchant webhook URL validation, DNS rebinding, redirects and egress restrictions. Add this to the existing matrix in the next consolidated security update; do not treat SEC-E08 as sufficient. |
+| TH-08 merchant webhook signing-secret exposure/replay | SEC-E07, SEC-E08 (partial) | Coverage gap/partial: provider callback authentication is not the same as outbound merchant-webhook signing, replay and rotation. Track outbound webhook controls explicitly. |
+| TH-09 beneficiary change/payout diversion | SEC-E11, SEC-E15 (partial) | Partial mapping; beneficiary-change authorization, step-up, notification, cooling-off and pending-payout recheck need explicit evidence and finance review. |
+| TH-10 privileged support misuse | SEC-E11, SEC-E15 | Direct/partial mapping; require just-in-time scope, case/reason, separation of duties and audit evidence. |
+| TH-11 reconciliation import/manual adjustment replay | SEC-E09, SEC-E12, SEC-E13 (partial) | Partial mapping; unique import identity, source integrity and compensating-correction evidence are not explicit enough in the current security matrix. |
+| TH-12 secrets/personal data in logs/errors/offline cache | SEC-E07, SEC-E12, SEC-E16 | Direct cross-row mapping; include screenshots, fixtures, exports and offline caches in the evidence review. |
+| TH-13 API abuse/resource exhaustion | SEC-E10 | Direct mapping. |
+| TH-14 CSRF/CORS/session weaknesses | SEC-E03, SEC-E16 (partial) | Direct session mapping to SEC-E03; SEC-E16 covers disclosure, not CSRF/CORS. Explicit origin/CSRF policy and evidence must remain visible in the control plan. |
+| TH-15 worker/job replay after restore/outage | SEC-E09, SEC-E13, SEC-E14 (partial) | Partial mapping; durable job identity, replay after restore and post-restore reconciliation need explicit evidence. |
+| TH-16 backup compromise/incomplete restore | No dedicated row | Coverage gap: DOC-60 has no dedicated backup access, restore-integrity, safe worker pause/replay and recovery evidence row. |
+| TH-17 dependency/CI/deploy identity compromise | SEC-E07, SEC-E14 (partial) | Partial mapping; provider secret/environment rows do not fully cover dependency provenance, CI permissions, protected branches and deploy identity. |
+| TH-18 misrouted cross-tenant webhook/report | SEC-E04, SEC-E12 (partial) | Partial mapping; tenant isolation should explicitly cover event subscriptions, endpoint ownership and per-tenant delivery records. |
+| TH-19 unauthorized resolution of contradictory provider evidence | SEC-E09, SEC-E13 (partial) | Partial mapping; discrepancy case ownership, retained evidence and independent correction approval need explicit closure evidence. |
+| TH-20 accidental card-data capture | SEC-E07 (partial) | Coverage gap/partial: secret handling is not a card-data boundary assessment. Confirm processor-hosted/tokenized design, data-flow and security scope before any card capability is considered. |
+
+**Audit result:** the existing 16-row DOC-60 matrix does not yet demonstrate complete coverage of the 20-threat DOC-43 model. The clearest missing dedicated rows are TH-07 (outbound webhook SSRF) and TH-16 (backup/restore). TH-08, TH-09, TH-11, TH-15, TH-17, TH-18, TH-19 and TH-20 also require more explicit controls/evidence than generic related rows currently provide. This is a documentation coverage finding, not evidence of an implemented vulnerability or a passed/failed security test.
+
+## 4B. Consolidated corrective actions
+
+1. Correct the SEC-E05 source citation: remove TH-14 as a forwarded-IP threat reference; retain TH-06. Keep TH-14 mapped to browser CSRF/CORS/session controls.
+2. Expand DOC-60 in one consolidated update to address TH-07 and TH-16 explicitly and strengthen coverage for TH-08, TH-09, TH-11, TH-15, TH-17, TH-18, TH-19 and TH-20.
+3. Verify every DOC-60 requirement reference against the exact DOC-31 requirement text and DOC-34 row before calling the mapping confirmed. Broad labels such as “security requirements” are not exact traceability.
+4. Revisit DOC-47 AR-001–AR-020 and retain only source-supported links. No finding is closed by this audit.
+5. Name accountable owners/reviewers and obtain required policy decisions before any acceptance evidence is requested. Tests and implementation remain unauthorized.
 ## 5. Architecture findings and discrepancy handling
 
 DOC-47 contains AR-001–AR-020. Review every finding and classify its relationship to this register as **applicable**, **partially applicable**, **not applicable** or **unclear**. Record the source section and rationale. AR-001 explicitly warns that traceability coverage is not requirement acceptance or verification. Keep each finding's source status unchanged unless DOC-47 is updated through its own closure process.
