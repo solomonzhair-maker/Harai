@@ -87,3 +87,17 @@ Before G2 approval:
 ## 6. Current disposition
 
 This initial threat model identifies principal risks and proposed controls. It is not exhaustive and does not claim code review, test execution, penetration testing, certification, legal approval or G2 passage. Independent review and implementation evidence remain outstanding.
+
+
+## 7. Tenant-isolation abuse cases — review extension (2026-10-23)
+
+The existing TH-01, TH-10, TH-15 and TH-18 risks overlap but test different trust boundaries. Their future validation should explicitly include:
+
+- **Forged context:** caller changes tenant/project/environment IDs in body, path, query, headers or idempotency metadata while presenting a valid credential for another tenant.
+- **Async context drift:** a job is queued under one tenant and later altered, replayed, run after membership/key revocation, or points to a child record owned by another tenant.
+- **Callback misbinding:** callback contains a forged tenant/reference, collides with another tenant's provider reference, or cannot be uniquely matched to a previously persisted provider attempt.
+- **Derived-data leakage:** tenant/environment omitted from cache keys, search indexes, report filters, export artifacts, object-storage policy or download authorization.
+- **Privileged access misuse:** support agent can browse arbitrary tenants without a case/reason, continues after access expiry, or can change a financial state outside the canonical correction path.
+- **Restore/replay:** recovered queues, outbox rows, caches or export links revive stale authorization or duplicate an operation.
+
+Required future evidence is a threat-linked negative-test matrix, actual execution artifacts for each applicable path, access-policy/configuration review for the selected storage and deployment architecture, and disposition of all findings by the accountable authority. This extension is documentation-only; no tests were executed and no control is marked verified.
