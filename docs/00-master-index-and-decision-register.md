@@ -75,6 +75,7 @@ This is a requirements and planning document set. It is not evidence that provid
 | DOC-45 | Evidence register and acceptance-test planning standard | Draft — evidence gaps open; test IDs are plans only | Evidence classes, provider evidence gaps, minimum test families, evidence acceptance rules and review workflow |
 | DOC-46 | G2 gap-closure and ownership matrix | Draft — 32 P0 requirements mapped; owners remain unassigned | Role-level closure work, evidence dependencies, G2 blockers, sequence and closure record template |
 | DOC-47 | Detailed architecture review and contradiction register | Draft internal review — G1/G2 remain open; findings are not independent certification | Cross-document architecture findings, severity, closure actions, evidence requirements and approval impact |
+| DOC-48 | Provider adapter contract and operation capability matrix | Draft contract — provider authority and live capability remain unconfirmed | Provider-neutral adapter boundary, operation capability evidence, normalized results, retry safety and conformance-test plan |
 
 ## 4. Reference boundary and product differentiation
 
