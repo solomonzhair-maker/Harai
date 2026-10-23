@@ -2,12 +2,14 @@
 
 **Status:** Draft architecture contract — not approved for implementation or live use  
 **Date:** 2026-10-23  
-**Related documents:** DOC-00, DOC-28, DOC-31, DOC-34, DOC-37, DOC-38, DOC-40–DOC-47  
+**Related documents:** DOC-00, DOC-28, DOC-31, DOC-34, DOC-37, DOC-38, DOC-40–DOC-47, DOC-49  
 **Purpose:** Define the provider-neutral boundary HARAI expects and record which MTN MoMo Uganda and Airtel Uganda capabilities are documented, observed, unknown or blocked.
 
 > Public API documentation and read-only portal observations are not contractual authorization. This is a design proposal, not a provider contract or claim of runtime verification. No provider settings, credentials, API calls, applications or transactions were used to produce this document.
 
 ## 1. Decision summary
+
+DOC-49 proposes the merchant-facing API contract that will call into the internal operation boundary described here. Its endpoint, authentication, idempotency and webhook proposals must be reconciled with this adapter contract during G1/G2 review; neither document authorizes implementation or provider dispatch.
 
 1. HARAI should expose a provider-neutral operation contract to the core while preserving provider-native statuses, response codes, identifiers, callback payloads and evidence.
 2. Capabilities must be recorded per provider, product/version, operation, merchant relationship, environment and currency—not as a provider-wide boolean.
