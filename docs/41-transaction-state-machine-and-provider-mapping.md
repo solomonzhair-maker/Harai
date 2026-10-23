@@ -1,7 +1,8 @@
 # DOC-41 — Transaction State Machine and Provider Mapping
 
 **Status:** Draft design proposal — provider-specific finality and transitions unapproved  
-**Date:** 2026-10-19  
+**Initial date:** 2026-10-19  
+**Review update:** 2026-10-23  
 **Related:** DOC-31, DOC-34, DOC-38, DOC-40, DOC-42, DOC-43  
 **Purpose:** Turn the generic lifecycle in DOC-40 into a reviewable state model and explicitly distinguish observed provider documentation from HARAI's proposed internal states. This is not a provider contract or authorization to implement.
 
@@ -67,6 +68,25 @@ This table distinguishes current documented/observed facts from internal behavio
 - **Contradictory evidence:** freeze automated financial side effects for that operation, open a discrepancy case and require accountable resolution.
 - **Expiry/cancellation racing with dispatch:** serialize decisions at the operation boundary; if provider dispatch may have occurred, continue recovery and do not represent cancellation as proof of no payment.
 - **Unknown outcome beyond target age:** alert and create/retain an owned case; the numeric target remains a product/operations decision.
+
+
+## 5A. Transition guards, precedence and late-event handling — proposed canonical rules
+
+The following rules are proposed to make the state table implementable without treating intent status as proof that every provider attempt has stopped. They remain design proposals until the accountable architecture decision is recorded and provider-specific evidence is available.
+
+1. **Separate intent and attempt state.** Keep the customer-facing PaymentIntent lifecycle distinct from each ProviderAttempt lifecycle. An intent may be cancelled or expired for *new initiation* while a previously dispatched or possibly dispatched attempt remains PENDING/UNKNOWN and subject to recovery. Do not use one terminal intent flag to suppress reconciliation of an attempt.
+2. **Establish a durable dispatch boundary.** Before network dispatch, atomically persist the operation, idempotency reservation and attempt/outbox record. A worker may dispatch only from an eligible, durably claimed attempt. If cancellation wins before the dispatch claim, mark the attempt as not dispatched and prevent sending. If dispatch may already have begun, record the race as uncertain and reconcile; do not assert that cancellation prevented payment.
+3. **Serialize competing decisions.** State transitions must use an atomic compare-and-set/version guard or equivalent transactional serialization. Concurrent cancel, expiry, dispatch, callback, enquiry and retry decisions must not independently create multiple provider submissions or financial postings.
+4. **Late success after cancel/expiry.** Preserve the intent's cancellation/expiry history and record the authoritative success against the provider attempt. Open a late-success/discrepancy case and notify the responsible operational path. Do not silently rewrite the intent history, discard the success, or issue an automatic refund unless a separately approved, provider-supported policy explicitly authorizes that action.
+5. **Conflicting evidence.** Authenticate and persist each event before applying it. Deduplicate using provider event identity where available; otherwise use a documented collision-aware fingerprint. When callback, status enquiry and settlement evidence conflict, retain all source evidence, stop automatic financial side effects for the disputed operation, and route to an owned reconciliation case. No single source wins universally: precedence must be specified per provider product, operation and lifecycle phase.
+6. **Terminal states are not erasers.** A later event must not destructively regress a final state. If later authoritative evidence proves the prior mapping was wrong or a later reversal/return occurred, record a new linked event/operation or correction case under the approved financial policy.
+7. **Retry eligibility is attempt-specific.** A new provider attempt is permitted only when the prior attempt is authoritatively final/non-submitted or when the provider's documented idempotency/retry contract explicitly makes the retry safe. A timeout, worker crash, missing callback or merchant retry is not sufficient evidence.
+8. **Tenant context survives asynchronous work.** Persist immutable tenant/merchant ownership on the operation and attempt; derive it at initial authorization and carry it through outbox messages, callbacks, enquiry, reconciliation, exports and support cases. A provider reference or callback field alone must never select a tenant without a verified binding to the stored attempt.
+
+### Required scenario coverage (planned, not executed)
+
+Extend the future state/contract test plan to cover: cancel before dispatch claim; cancel concurrent with claim; worker crash after durable claim but before/after network send; timeout followed by late success; expiry followed by successful provider enquiry; duplicate/out-of-order callback; callback conflicting with enquiry or settlement; credential rotation with same tenant idempotency key; cross-tenant callback/reference substitution; restore while attempts/jobs are pending; and one authorized manual correction with full audit history. Each scenario must assert both persisted state and whether any ledger posting or outbound merchant event is permitted.
+
 
 ## 6. Minimum acceptance scenarios (proposed IDs, not existing tests)
 
