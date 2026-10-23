@@ -77,6 +77,7 @@ This is a requirements and planning document set. It is not evidence that provid
 | DOC-47 | Detailed architecture review and contradiction register | Draft internal review — G1/G2 remain open; findings are not independent certification | Cross-document architecture findings, severity, closure actions, evidence requirements and approval impact |
 | DOC-48 | Provider adapter contract and operation capability matrix | Draft contract — provider authority and live capability remain unconfirmed | Provider-neutral adapter boundary, operation capability evidence, normalized results, retry safety and conformance-test plan |
 | DOC-49 | Merchant API specification and developer integration guide | Draft proposal — not implemented or approved | Proposed merchant-server API, authentication/tenant controls, payment-intent contract, idempotency/errors, signed merchant webhooks, sandbox onboarding and open decisions |
+| DOC-50 | Merchant onboarding, verification and activation lifecycle | Draft operating/product proposal — policy and G1/G2 approvals open | Proposed application, verification, sandbox, capability-level production activation, periodic review, suspension, reinstatement, closure, evidence and separation-of-duties controls |
 
 ## 4. Reference boundary and product differentiation
 
