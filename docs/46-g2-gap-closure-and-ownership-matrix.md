@@ -86,6 +86,46 @@ The following rows cover all 32 P0 requirement IDs currently listed in DOC-31. U
 | Operations and resilience | DOC-45, DOC-31, DOC-03 | E4 runbooks, later E5/E6 exercises | No production readiness |
 | Independent review | DOC-44, DOC-45 | E7 named reviewer outcome | Relevant gate remains open |
 
+
+## 4A. Consolidated G1/G2 review checklist — current blockers
+
+This checklist consolidates the next gate-review work; it is not a calendar, gate approval, or assignment of named people. All role labels remain **unassigned** until the product owner records names, qualifications, scope, availability and conflicts. Keep status **Open / Blocked** until evidence is received and accepted. A document or planned test alone is not closure evidence.
+
+### G1 — requirements approval
+
+| Check | Accountable role to assign | Minimum decision/evidence required | Current status and blocking effect |
+|---|---|---|---|
+| G1-01 — Baseline and requirement disposition | Product owner + requirements steward + independent requirements reviewer | Review all 54 DOC-31 IDs, priorities, acceptance criteria, dependencies, exclusions and requirement-to-evidence mappings; record disposition and dissent | Open; G1 cannot pass while requirements are undisposed or material conflicts remain |
+| G1-02 — Approved security wording incorporated | Requirements steward + independent security reviewer | Confirm RCP-01–RCP-08 are present in DOC-31 and mapped consistently in DOC-34, DOC-60 and DOC-61; approval covers wording only | Wording recorded as approved on 2026-10-23; independent confirmation and design/evidence remain open |
+| G1-03 — Provider eligibility and capability | Provider/commercial owner + product owner | Written, applicable evidence for multi-merchant/aggregator eligibility, method-by-method access, merchant/KYC restrictions, production access, callbacks/status/retry behavior, fees, settlement and support | Blocked on written evidence; affected methods cannot be claimed available or enabled |
+| G1-04 — Funds flow and Uganda obligations | Product owner + qualified Uganda legal/compliance adviser + finance/accounting reviewer | Evidence-backed comparison of DOC-28 models, who receives/controls/pays out funds, contractual permission, regulatory role, tax/accounting and complaint responsibilities | Blocked; no funds-flow model selected and no live financial operation |
+| G1-05 — Named reviewers and authority | Product owner | Name qualified technical, security, finance/accounting, legal/compliance, privacy and operations reviewers; record independence/conflicts and decision authority | Open; role labels are not appointments, and author self-review is not independent sign-off |
+| G1-06 — Launch claims and method scope | Product owner + provider/compliance reviewers | Distinguish intended product scope from verified, contractually permitted capabilities; keep each unsupported method/operation explicitly disabled | Open; no claim of operational availability based on product intent alone |
+
+### G2 — architecture and financial-safety approval
+
+| Check | Accountable role to assign | Minimum decision/evidence required | Current status and blocking effect |
+|---|---|---|---|
+| G2-01 — Architecture decisions | Technical architecture owner + independent architecture reviewer | Disposition G2-DEC-01–12 and DOC-47 AR-001–AR-020; document alternatives, consequences, evidence, unresolved risks and reviewer outcome | Open; topology and material design decisions remain proposals |
+| G2-02 — Provider lifecycle and safe recovery | Payments technical lead + provider integration owner + finance reviewer | Provider-evidenced state/finality, UNKNOWN outcomes, idempotency, callback/replay, cancellation/late-event races, refund/return and money-out semantics | Blocked where authoritative provider evidence is absent; no safe live processing for affected capability |
+| G2-03 — Ledger and reconciliation | Finance/accounting reviewer + reconciliation/operations owner | Approved posting/correction semantics, fee and settlement calculations, stable source identity/content integrity, discrepancy authority, evidence provenance and matching sources | Open/blocked; no live posting or settlement based on unreviewed semantics |
+| G2-04 — Tenant isolation and dispatch-time authorization | Technical owner + independent security reviewer | Design and later authorized negative-test evidence that server-derived tenant ownership is revalidated for API, jobs, callbacks, webhook delivery/retry/replay, reports and exports | Open; live-operation hard gate until verified |
+| G2-05 — Outbound webhook SSRF | Security/platform owner + independent security reviewer | Review approved HTTPS/URL policy, IPv4/IPv6 private/reserved/loopback/link-local/metadata blocks, DNS and rebinding defenses, redirect revalidation, egress restrictions and no credential forwarding; later authorized tests | Open; outbound delivery to untrusted destinations cannot be enabled before design and verification |
+| G2-06 — Restore and replay safety | Operations owner + technical owner + finance reviewer | Backup access/encryption/key/retention/integrity policy; post-restore worker/replay pause; database/ledger/queue/provider-reference validation, reconciliation and auditable authorized resume; later restore exercise | Open; consequential workers/replay remain disabled after restore until all checks pass |
+| G2-07 — CI/deployment identity and artifacts | Platform/release owner + security reviewer | Attributable least-privilege identities, environment-scoped credentials, secret protection, dependency provenance/review and auditable release artifacts | Open; no production release until reviewed and verified |
+| G2-08 — Sensitive-data lifecycle | Privacy/data owner + security reviewer + qualified compliance adviser | Inventory and minimize/redact traces, analytics, screenshots, fixtures, offline caches, support exports, diagnostics, build artifacts and backups; approve access/retention controls; do not offline-cache private verification evidence | Open; data processing and live launch remain gated |
+| G2-09 — Contradictory provider evidence | Finance/reconciliation owner + authorized risk/operations role + independent approver where policy requires | Explicit resolution authority, source evidence/provenance, rationale, audit history and linked correction; no unauthorized override or silent overwrite | Open; disputed consequential financial state must remain unresolved pending authorized evidence-based resolution |
+| G2-10 — Card-data boundary | Card/processor owner + security reviewer + qualified compliance adviser | Confirm processor permission, data flow, applicable reviewed security scope and explicit enablement gate; ensure prohibited sensitive card data is not copied into HARAI-controlled systems | Open; card path stays disabled pending required authority and review |
+| G2-11 — P0 control ownership and evidence | Each assigned control owner + relevant independent reviewer | For all 32 current P0 IDs, record proposed design/control, owner, dependencies, evidence class, verification approach and unresolved risk; later attach authorized reproducible results where required | Open; no P0 requirement is declared passed by this checklist |
+| G2-12 — Operations, incidents and release boundary | Operations owner + release owner + security/finance reviewers | Named discrepancy/incident ownership, runbooks, measurable owner-approved objectives, restore/reconciliation readiness, dated review outcomes and a separate release decision | Open; G2 does not itself authorize implementation or production release |
+
+### Gate decision rule
+
+- **G1 passes only** after the product owner and required independent reviewers record the reviewed requirements baseline and the applicable external/provider/legal dependencies are resolved or explicitly scoped as blockers to individual capabilities.
+- **G2 passes only** after material architecture decisions, every applicable P0 design/control, funds-flow and financial semantics, security review, named accountability and required evidence are accepted with no unresolved non-waivable blocker.
+- **Neither gate can be passed by this checklist alone.** Tests, implementation, provider contact, production credentials, real financial activity, merge and deployment remain separately unauthorized unless explicitly approved.
+- Until names are recorded, report the next action as **“product owner to appoint reviewer/owner”**, not as though a person has accepted responsibility.
+
 ## 5. Priority sequence
 
 This sequence is a dependency order, not a calendar or a claim that staffing/duration is known.
