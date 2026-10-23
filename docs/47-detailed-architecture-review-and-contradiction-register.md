@@ -3,7 +3,7 @@
 **Status:** Internal architecture review in progress — sole internal reviewer appointed; findings are not independent certification; G1/G2 remain open  
 **Initial review date:** 2026-10-19  
 **Review updated:** 2026-10-23  
-**Scope reviewed:** DOC-00, DOC-28, DOC-31, DOC-34, DOC-35, DOC-40–DOC-46  
+**Scope reviewed:** DOC-00, DOC-28, DOC-31, DOC-34, DOC-35, DOC-40–DOC-49  
 **Purpose:** Compare the current architecture proposals and evidence/ownership trackers against the 54-requirement working catalogue, identify confirmed inconsistencies separately from unresolved design questions, and define closure evidence before any implementation gate is requested.
 
 > This is a document-level review of the current repository artifacts. It is not a source-code audit, provider approval, legal opinion, accounting opinion, penetration test, independent sign-off, or test execution. A design gap can be recorded even when no contradictory statement exists.
