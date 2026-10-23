@@ -1,7 +1,7 @@
 # HARAI — Master Index and Decision Register
 
 **Status:** Draft — discovery in progress; POD-01–POD-12 product defaults approved, G1 not passed  
-**Last reviewed:** 2026-10-19  
+**Last reviewed:** 2026-10-23  
 **Implementation gate:** This document does not authorize payment-engine implementation.
 
 ## 1. Purpose
@@ -76,8 +76,8 @@ This is a requirements and planning document set. It is not evidence that provid
 | DOC-46 | G2 gap-closure and ownership matrix | Draft — 32 P0 requirements mapped; owners remain unassigned | Role-level closure work, evidence dependencies, G2 blockers, sequence and closure record template |
 | DOC-47 | Detailed architecture review and contradiction register | Draft internal review — G1/G2 remain open; findings are not independent certification | Cross-document architecture findings, severity, closure actions, evidence requirements and approval impact |
 | DOC-48 | Provider adapter contract and operation capability matrix | Draft contract — provider authority and live capability remain unconfirmed | Provider-neutral adapter boundary, operation capability evidence, normalized results, retry safety and conformance-test plan |
-| DOC-49 | Merchant API specification and developer integration guide | Draft proposal — not implemented or approved | Proposed merchant-server API, authentication/tenant controls, payment-intent contract, idempotency/errors, signed merchant webhooks, sandbox onboarding and open decisions |
-| DOC-50 | Merchant onboarding, verification and activation lifecycle | Draft operating/product proposal — policy and G1/G2 approvals open | Proposed application, verification, sandbox, capability-level production activation, periodic review, suspension, reinstatement, closure, evidence and separation-of-duties controls |
+| DOC-49 | Merchant API specification and developer integration guide | Draft proposal — not implemented or approved | Proposed merchant-server API, authentication/tenant controls, payment-intent contract, idempotency/errors, signed merchant webhooks, production-first developer onboarding with optional sandbox, and open decisions |
+| DOC-50 | Merchant onboarding, verification and activation lifecycle | Draft operating/product proposal — policy and G1/G2 approvals open | Proposed low-friction application and verification, direct production-access assessment, optional sandbox, capability-level activation, periodic review, suspension, reinstatement, closure, evidence and separation-of-duties controls |
 
 ## 4. Reference boundary and product differentiation
 
@@ -119,6 +119,7 @@ JulyPay is a visual and merchant-workflow reference only. HARAI will use its own
 | DEC-021 | Product-owner G1 decisions | Product owner approved all recommended defaults POD-01 through POD-12 on 2026-10-19; this is product-direction approval, not provider/legal/production approval | Approved product defaults; G1 not passed | DOC-02/DOC-31 are aligned; continue provider/processor evidence, qualified Uganda legal/compliance review, funds-flow analysis, detailed requirement review and independent review; preserve implementation/provider-contact/merge/deploy gates |
 | DEC-022 | Provider account evidence | DOC-37 records owner-assisted read-only portal findings; DOC-38 compares visible access and official technical documentation. No provider contact or account-changing action occurred | Portal inspection completed; written eligibility, contract, production and commercial evidence pending | Continue documentation-based comparison; keep unknowns unscored and do not infer aggregator approval from an API menu or merchant-related endpoint |
 | DEC-023 | Approved product defaults | POD-01–POD-12 are approved as the working product direction: Uganda first, controlled broad merchant eligibility, UGX first, both mobile-money providers plus cards/additional methods, collections and money-out, provider-supported refunds/reversals, no funds-flow selection yet, configurable pricing/risk controls, privacy-by-design, measurable reliability, and separate consequential-action gates | Approved product direction; capability feasibility and G1 evidence remain open | Carry approved defaults into requirements/architecture; do not treat them as provider permission, legal clearance, numeric thresholds, processor selection or implementation authorization |
+| DEC-024 | Production-first developer onboarding | Owner direction on 2026-10-23: remove mandatory sandbox as a prerequisite; allow developers/businesses to access documentation, create projects and request direct production assessment, with sandbox retained only as an optional testing tool | Product direction accepted for documentation; detailed policy and G1/G2 review remain open | Update DOC-49/DOC-50 and downstream UX/requirements. Keep provider/processor approval, business verification, legal/compliance, finance, security, operations and release controls for real-money capabilities. This decision does not authorize provider contact, implementation, live credentials, transactions, merge or deployment. |
 
 ## 7. Open questions and blockers
 
