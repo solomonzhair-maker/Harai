@@ -119,6 +119,12 @@ This checklist consolidates the next gate-review work; it is not a calendar, gat
 | G2-11 — P0 control ownership and evidence | Each assigned control owner + relevant independent reviewer | For all 32 current P0 IDs, record proposed design/control, owner, dependencies, evidence class, verification approach and unresolved risk; later attach authorized reproducible results where required | Open; no P0 requirement is declared passed by this checklist |
 | G2-12 — Operations, incidents and release boundary | Operations owner + release owner + security/finance reviewers | Named discrepancy/incident ownership, runbooks, measurable owner-approved objectives, restore/reconciliation readiness, dated review outcomes and a separate release decision | Open; G2 does not itself authorize implementation or production release |
 
+### Review appointment and independence boundary — 2026-10-23
+
+The product owner has designated ChatGPT as the sole reviewer for the current internal documentation and proposed-design review. ChatGPT will perform the consolidated review of requirements traceability, architecture consistency, payment lifecycle/finality, ledger/reconciliation, tenant isolation, security-control design, operational recovery and cross-document contradictions; record findings and recommendations; and verify that document changes address the findings.
+
+**Review status and limits:** this appointment is not an independent third-party review, a professional certification, or evidence that controls have been implemented or tested. ChatGPT must not mark a control as verified solely because it proposed or documented that control. Written provider permissions/contracts, qualified Uganda legal/compliance advice, finance/accounting acceptance where needed, and authorized execution evidence remain external or real-world dependencies. Where the gate criteria require genuinely independent review, that criterion remains unmet unless the product owner later appoints a separately accountable reviewer. G1 remains NOT PASSED and G2 remains NOT APPROVED until their respective evidence-based criteria are met. This appointment does not authorize tests, implementation, provider contact, production credentials, real financial activity, merge or deployment.
+
 ### Gate decision rule
 
 - **G1 passes only** after the product owner and required independent reviewers record the reviewed requirements baseline and the applicable external/provider/legal dependencies are resolved or explicitly scoped as blockers to individual capabilities.
