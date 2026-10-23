@@ -15,7 +15,7 @@
 - Idempotent requests and safe handling of timeouts/unknown outcomes.
 - Consistent request/response schemas, errors, pagination and versioning.
 - Proposed HARAI-to-merchant webhook events and verification.
-- Sandbox onboarding, integration guidance and conformance-test planning.
+- Low-friction developer onboarding, direct production-access requests and optional sandbox integration/conformance-test planning.
 
 ### Out of scope pending separate decisions
 - Final funds-flow model, settlement/custody responsibilities, provider permissions, pricing or fees.
@@ -280,19 +280,21 @@ Never include webhook secrets in event payloads or URLs. Provide a controlled se
 - Define webhook events for refund status separately if refunds are approved. Money-out events require separate permission and scope.
 - Event names such as `payment.status_updated` are draft examples, not approved event taxonomy.
 
-## 11. Sandbox and developer onboarding
+## 11. Production-first developer onboarding; optional sandbox
+
+HARAI should let legitimate developers register, create projects, access API documentation and request production access without being forced through sandbox integration first. Sandbox is optional, useful for developers who want to test, and must not be represented as a prerequisite for production review.
 
 Proposed onboarding sequence:
-1. Create a merchant developer workspace and verify the account/organization under approved onboarding policy.
-2. Create a sandbox merchant and issue sandbox-only credentials through the approved secure display/rotation flow.
-3. Review API schemas, error semantics, idempotency, state lifecycle and webhook verification examples.
-4. Configure an HTTPS test webhook endpoint; validate ownership and destination safety before sending test events.
-5. Use simulated payment outcomes or provider sandbox integrations only where authorized and available. Mark simulations unmistakably and isolate them from real money, production reports and live ledger entries.
-6. Run documented API/webhook conformance tests and record actual results with environment, build, timestamp and evidence under DOC-45.
-7. Request production access only after merchant verification, provider permission, commercial/legal/security review, operational readiness and explicit release approval.
-8. Issue separate production credentials only after approvals, and document key custody, rotation, incident response and revocation.
+1. Create a developer workspace and project with proportionate account-abuse controls; provide API documentation and integration requirements.
+2. Let the business begin verification and request production access directly, without a mandatory sandbox merchant or sandbox test completion.
+3. Offer optional sandbox credentials through the approved secure display/rotation flow for developers who choose to test.
+4. Explain API schemas, error semantics, idempotency, transaction states, webhook verification, timeout recovery and reconciliation requirements.
+5. Validate HTTPS webhook ownership and destination safety before sending events in whichever environment is used.
+6. Where sandbox is used, clearly mark simulated outcomes and isolate them from real money, production reports and live ledger entries. Record any tests actually run with environment, build, timestamp and evidence under DOC-45.
+7. Assess production access using business verification, provider/processor permission, legal/compliance, commercial, finance, security and operations evidence. Sandbox completion is not a substitute for, or universal prerequisite to, those gates.
+8. Issue separate production credentials only after required approvals; document key custody, rotation, incident response and revocation. Never place production secrets in client-side code, chat, tickets or source control.
 
-Sandbox success does not prove provider production access, aggregator permission, settlement readiness or live-money capability. Do not fabricate provider responses as if they came from a real provider. Simulation records must be clearly distinguishable from real provider records.
+Sandbox success does not prove provider production access, aggregator permission, settlement readiness or live-money capability; skipping sandbox proves none of these either. Do not fabricate provider responses as if they came from a real provider. Simulation records must be clearly distinguishable from real provider records.
 
 ## 12. Rate limits, privacy and operational controls
 
@@ -363,6 +365,6 @@ Evidence for executed tests must include the actual test file/case, commit/build
 
 ## 16. Current disposition
 
-DOC-49 proposes a merchant-facing API and developer integration contract for future review. Endpoint names, authentication, schemas, webhook behavior, rate limits and lifecycle details are not yet approved or implemented. No live API is claimed to exist. Provider authority, funds-flow, legal/compliance, finance, independent security and operational evidence remain separate hard gates.
+DOC-49 proposes a merchant-facing API and developer integration contract for future review. It adopts a production-first onboarding direction: sandbox is optional and is not a universal prerequisite to requesting production access. Endpoint names, authentication, schemas, webhook behavior, rate limits and lifecycle details are not yet approved or implemented. No live API is claimed to exist. Provider authority, funds-flow, legal/compliance, finance, independent security and operational evidence remain separate hard gates.
 
 **G0 remains IN PROGRESS. G1 is NOT PASSED. G2 is NOT APPROVED.** No tests are claimed as run. This document does not authorize provider contact, onboarding, implementation, merge, deployment or live financial activity.
