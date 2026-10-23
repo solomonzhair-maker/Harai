@@ -119,6 +119,15 @@ A bare success boolean is insufficient for a money-moving operation. The adapter
 
 Provider-specific mapping requires evidence for the exact product and version. The adapter reports facts; the core validates transitions.
 
+
+### 4.1 Correlation, tenant binding and evidence precedence
+
+A callback must be correlated to a previously persisted provider attempt through a provider/product-specific identifier or a separately verified binding. Do not trust a tenant ID, merchant reference, amount, status or operation ID supplied only by the callback to establish ownership. Resolve the callback to the stored attempt, then validate the expected provider/product, environment, merchant relationship, amount/currency and allowed state transition. If correlation is ambiguous, preserve a sanitized receipt and route it for investigation; do not guess the tenant or apply a financial effect.
+
+For each provider product and operation, the approved contract must state which evidence is authoritative at each phase (initiation, pending recovery, final status and settlement), whether status enquiry can supersede an earlier callback, how event timestamps/sequence are interpreted, and what to do when evidence conflicts. There is no global callback-over-enquiry or enquiry-over-callback rule. Preserve all authenticated source evidence with receipt time, provider-reported time, event/reference identifiers, mapping version and redaction metadata. Settlement data may be authoritative for settlement matching without necessarily being the authority for real-time customer-facing payment state.
+
+Dispatch and cancellation must follow DOC-41 §5A: the adapter must expose whether a request was definitely not sent, was accepted with a provider reference, or may have been sent with an ambiguous outcome. If the adapter cannot prove “not sent,” the core must preserve UNKNOWN and recover using documented provider-safe methods. The adapter does not independently cancel an in-flight payment, issue an automatic refund, choose a tenant, or post to the ledger.
+
 ## 5. Operation capability matrix — evidence snapshot
 
 The following reflects evidence recorded in DOC-37/DOC-38 and the provider review for 2026-10-19. It is not a live status check as of this document's date and must be refreshed before implementation decisions.
