@@ -135,4 +135,4 @@ G2 is **not approved**. The material design proposals are now sufficiently organ
 
 ## 10. Detailed architecture review register
 
-DOC-47 records the cross-document review findings AR-001–AR-020, distinguishing confirmed inconsistencies from design gaps, unverified assumptions, external blockers, evidence gaps and decisions needed. Its findings must be dispositioned with evidence; the register does not pass G2 or authorize implementation. Use DOC-46 for P0 closure ownership/evidence tracking and DOC-45 for evidence quality and test-result discipline.
+DOC-47 records the cross-document review findings AR-001–AR-021, distinguishing confirmed inconsistencies from design gaps, unverified assumptions, external blockers, evidence gaps and decisions needed. AR-019 is closed only for the index/cross-link task; AR-021 remains open for idempotency-scope alignment. Its findings must be dispositioned with evidence; the register does not pass G2 or authorize implementation. Use DOC-46 for P0 closure ownership/evidence tracking and DOC-45 for evidence quality and test-result discipline.
