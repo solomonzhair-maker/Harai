@@ -3,14 +3,14 @@
 **Status:** Draft operating/product proposal — policy, legal/compliance review and G1/G2 approval remain open  
 **Date:** 2026-10-23  
 **Related documents:** DOC-00, DOC-03, DOC-30, DOC-31, DOC-34, DOC-43, DOC-45, DOC-46, DOC-48, DOC-49  
-**Purpose:** Define a controlled lifecycle for a business applying to use HARAI, from initial registration through verification, sandbox use, production activation, review, suspension and closure.
+**Purpose:** Define a controlled lifecycle for a business applying to use HARAI, from low-friction registration and verification through direct production-access assessment, optional sandbox use, capability activation, review, suspension and closure.
 
 > **Authority boundary:** This is a proposed lifecycle, not a legal/KYC determination or approved operating procedure. It does not establish that HARAI may aggregate payments for other businesses, handle funds, or activate any provider capability. Provider contracts, qualified Uganda legal/compliance advice, privacy review, named accountable operators and explicit product-owner approval are still required. No provider contact, applications, live credentials, implementation, merge, deployment or real financial activity is authorized by this document.
 
 ## 1. Objectives and non-negotiable principles
 
 1. Make merchant identity, organization, ownership/control, eligibility and approval status explicit and auditable.
-2. Separate account registration, identity verification, risk review, sandbox access, provider capability approval and production activation.
+2. Separate account registration, identity verification, risk review, optional sandbox access, provider capability approval and production activation; sandbox completion is not a universal prerequisite for live access.
 3. Default-deny production access and every money-moving capability until all applicable evidence and approvals are recorded.
 4. Enforce tenant isolation across merchant users, credentials, API resources, webhook destinations, support cases, reports and audit trails.
 5. Use risk-based, proportionate verification and data minimization; collect only what is necessary for a documented purpose and lawful basis.
@@ -25,7 +25,7 @@
 - Business workspace and initial application.
 - Proposed verification evidence, review queues, risk assessment and decision recording.
 - Merchant users, roles, credential issuance and tenant boundaries.
-- Sandbox enablement and integration readiness.
+- Optional sandbox enablement and integration readiness; do not make it a universal production gate.
 - Capability-by-capability production activation.
 - Periodic review, material-change review, suspension, reinstatement and closure.
 - Appeals/escalation, record retention, privacy controls and audit evidence.
@@ -52,7 +52,7 @@ The following states are proposed. Final names, transitions and permissions requ
 | `UNDER_REVIEW` | Evidence and eligibility checks are in progress | No production access |
 | `REVIEW_ESCALATED` | Specialist, compliance or authority decision is required | No production access; escalation queue only |
 | `VERIFIED_PENDING_APPROVAL` | Verification checks have evidence, but final internal approval is outstanding | No production access |
-| `APPROVED_SANDBOX` | Approved for isolated sandbox access only | Sandbox resources and credentials only |
+| `APPROVED_SANDBOX` | Optional isolated sandbox access approved | Sandbox resources and credentials only; this state is not required before production review |
 | `PRODUCTION_PENDING` | Internal review is complete; external/provider/legal/operational gates remain | No production credential or live transaction access |
 | `ACTIVE_RESTRICTED` | Production account active with a restricted, explicitly approved capability set | Only listed enabled capabilities |
 | `ACTIVE` | Production merchant approved for its explicit capability set | Approved capabilities only |
@@ -104,7 +104,7 @@ A proposed workflow should separate checks into categories and record each as `N
 | Sanctions/adverse-risk screening | Only if legally appropriate and operationally approved | Qualified compliance review, false-positive handling and documented escalation |
 | Settlement/funding details | Verify only when the approved funds-flow model requires them | Never collect or activate money-out destinations without stronger controls |
 | Provider eligibility | Record written provider permission and merchant-specific prerequisites | Public API docs or portal visibility are not permission |
-| Security/integration | Review webhook destination, credential custody and integration readiness | Sandbox first; do not request production secrets in chat or tickets |
+| Security/integration | Review webhook destination, credential custody and integration readiness | Use sandbox when useful; never request production secrets in chat or tickets |
 | Privacy/terms | Record applicable notices, consent/acknowledgement where required and policy version | Legal basis and retention must be reviewed |
 | Risk review | Assess unusual patterns and exceptions under approved policy | No invented numeric score/threshold; human escalation where required |
 
@@ -127,7 +127,7 @@ A reviewer must record the result and evidence reference, not copy full sensitiv
 All role assignments remain unassigned until named people are explicitly appointed.
 
 ### 6.2 Decision outcomes
-- **Approve for sandbox:** only after minimum application and account-security requirements are met.
+- **Approve optional sandbox access:** after minimum account-security and anti-abuse requirements are met; this decision does not gate production review.
 - **Request information:** list each missing item, why it is needed, who can provide it and a review target if policy defines one.
 - **Escalate:** preserve the unresolved issue, assign a qualified reviewer and block consequential activation.
 - **Approve with restrictions:** state the precise allowed methods, currencies, capabilities, limits, expiry/review date and rationale; restrictions must be enforceable by the system.
@@ -152,22 +152,41 @@ Each check/decision should record:
 
 Evidence storage must be access-controlled and separated from public documentation. Audit records should be tamper-evident and retain only necessary metadata. Avoid duplicating personal information into every event. Define retention/deletion, legal hold and access-request processes with qualified privacy/legal review.
 
-## 8. Sandbox access and developer readiness
+## 8. Optional sandbox access and production-first developer onboarding
 
-Sandbox approval is separate from business verification and production activation.
+Sandbox is an optional developer tool, not a mandatory stage before production review or activation. HARAI should minimize unnecessary friction for legitimate businesses and developers while preserving provider, legal/compliance, security, finance and operational gates for real-money activity.
 
-Before sandbox access:
-1. Establish a secure merchant workspace and administrator identity.
-2. Apply minimum anti-abuse and acceptable-use controls.
-3. Issue environment-specific sandbox credentials through the approved secret-display flow.
-4. Require least-privilege scopes and support revocation/rotation.
-5. Document that sandbox outcomes are simulated or test-environment outcomes and are not real settlement.
-6. Require merchant-server handling of credentials; no secret keys in browser/mobile code.
-7. Validate webhook destination ownership and safety before sending events.
-8. Provide integration guidance consistent with DOC-49 and test scenarios.
-9. Ensure sandbox data, logs, webhook secrets and simulated transactions cannot enter production ledgers or reports.
+### 8.1 Developer access without a sandbox prerequisite
 
-Sandbox enablement does not mean that the merchant is verified for production, that a provider has approved the merchant, or that HARAI is authorized to aggregate payments.
+1. Allow account creation, project setup, API documentation access and integration planning under proportionate account-abuse controls.
+2. Do not require a developer to complete a sandbox integration merely to register, create a project, read documentation or request production access.
+3. Offer sandbox credentials and simulated outcomes as an optional tool for developers who want to test before going live.
+4. Clearly label test data and simulated outcomes. Never represent simulations as provider-confirmed transactions or real settlement.
+5. Keep test and production credentials, webhook secrets, routing, records and ledgers strictly isolated. Credentials for one environment must never work in the other.
+6. Provide production integration guidance, webhook ownership validation, secure credential handling, idempotency and recovery requirements whether or not the developer used sandbox.
+7. Do not put secrets in browser/mobile code, chat, support tickets or repository content.
+
+### 8.2 Direct production-access assessment
+
+An eligible business may request production access without completing sandbox tests. Production activation still requires, as applicable:
+
+1. Verified business identity and representative authority under the approved policy.
+2. Risk and restricted-category assessment, including any required enhanced review.
+3. Evidence that HARAI has the legal, contractual and provider authority for the proposed merchant/funds-flow model.
+4. Required provider/acquirer approvals and merchant/provider relationships for each requested capability.
+5. Approved commercial terms, fee disclosure, settlement/funding arrangements and reconciliation ownership.
+6. Security review of credential custody, authentication, callback/webhook handling, tenant isolation and recovery controls.
+7. Operations readiness, incident handling, monitoring and auditable financial controls.
+8. Required independent approvals and explicit release authorization under the approved governance model.
+9. Capability-specific approval and credential issuance using secure, environment-specific procedures.
+
+Sandbox success cannot replace any of these gates, and sandbox failure should not automatically block a production review if the relevant risk can be assessed through other reliable evidence. Conversely, skipping sandbox does not waive a required production gate.
+
+### 8.3 User-facing states and next actions
+
+The dashboard should explain the actual state and next required action in plain language. Examples include `Verification required`, `Under review`, `Production access review`, `Provider approval pending`, `Security action required`, `Active for collections`, `Money-out not enabled` and `Suspended`. Do not imply that all capabilities are active when only one is approved.
+
+Sandbox availability is optional and must not be presented as a mandatory checklist item for live activation.
 
 ## 9. Production activation gates
 
@@ -188,13 +207,13 @@ Production activation must be an explicit, evidence-backed decision. The propose
 | Independent review | Required independent sign-off recorded | Block |
 | Release authorization | Explicit approval by the accountable release authority | Block |
 
-The gate is not passed merely because a portal account exists, API documentation is public, a sandbox request succeeds, a document has been written or a developer says a test should pass.
+The gate is not passed merely because a portal account exists, API documentation is public, a sandbox request succeeds or is skipped, a document has been written or a developer says a test should pass.
 
 ### 9.1 Capability-level activation
 Maintain an explicit capability record for each merchant, including:
 - Capability name and provider/method.
 - Environment and market/currency scope.
-- Status: requested, blocked, sandbox-enabled, production-pending, enabled, restricted, suspended or revoked.
+- Status: requested, blocked, optional-sandbox-enabled, production-pending, enabled, restricted, suspended or revoked. Sandbox status is informational and is not a prerequisite for production assessment.
 - Required evidence and decision references.
 - Approved limits/policies only after they are explicitly set.
 - Activation approver, timestamp, expiry/review date and revocation reason.
@@ -298,7 +317,7 @@ These identifiers are planning proposals only. No test is claimed to exist, have
 | ONBOARD-004 | Evidence is expired or reviewer outcome missing | Production activation remains blocked |
 | ONBOARD-005 | Reviewer requests more information | Status and request are audited; only authorized fields are exposed |
 | ONBOARD-006 | Conflicting identity/activity evidence | Escalation required; no silent auto-approval |
-| ONBOARD-007 | Sandbox merchant tries production credential/API | Denied; environment isolation enforced |
+| ONBOARD-007 | Test/sandbox credential used against production API | Denied; environment isolation enforced |
 | ONBOARD-008 | Active collection merchant requests money-out | Money-out remains blocked until separate capability gates pass |
 | ONBOARD-009 | Provider approval evidence absent | Production capability activation denied |
 | ONBOARD-010 | Merchant suspended while jobs are queued | New work blocked; in-flight/unknown operations handled safely |
@@ -323,7 +342,7 @@ Executed evidence must identify the actual test file/case, commit/build, environ
 - **DOC-45:** evidence standards; decisions, checks and tests require reviewable records.
 - **DOC-46:** G2 gap closure; assign named accountable people and closure evidence.
 - **DOC-48:** provider-specific capabilities and evidence levels; portal/API documentation alone is not written permission.
-- **DOC-49:** merchant API authentication, tenant scoping, idempotency, webhooks and API errors; lifecycle state must be enforced consistently by every endpoint and worker.
+- **DOC-49:** merchant API authentication, tenant scoping, idempotency, webhooks and API errors; developer access is production-first with optional sandbox; lifecycle state must be enforced consistently by every endpoint and worker.
 - **DOC-30:** qualified Uganda legal/compliance review; this document does not determine statutory obligations.
 
 ## 18. Open decisions and blockers
