@@ -50,7 +50,7 @@
 2. DOC-34 must contain the current control/evidence relationship for every requirement claimed as satisfied. A candidate linkage in DOC-60 is not an approved traceability mapping: confirm each requirement's exact wording and acceptance criteria in DOC-31 and its row in DOC-34. Where coverage is indirect or absent, record an open mapping/gap rather than imply that the requirement fully covers the threat; do not invent a new ID.
 3. DOC-43 is authoritative for threat identifiers and threat-model rationale. Confirm each exact ID against the current source before using it in a formal review; the references above are navigational pointers, not a claim that the source model is closed.
 4. DOC-45 defines evidence quality and test-execution rules. Store only redacted evidence references in this repository; secrets, provider contracts and sensitive records belong in appropriately controlled systems.
-5. DOC-47 tracks architecture findings AR-001–AR-020. Security findings must be linked to those findings when applicable, but this matrix does not close them automatically.
+5. DOC-47 tracks architecture findings AR-001–AR-021. Security findings must be linked to those findings when applicable, but this matrix does not close them automatically.
 6. DOC-59 describes proposed security policies. A policy statement does not prove that a control is implemented or effective.
 7. Preserve explicit status distinctions: planned control, approved design, implemented control, executed evidence, independently reviewed result and accepted residual risk are different states.
 
