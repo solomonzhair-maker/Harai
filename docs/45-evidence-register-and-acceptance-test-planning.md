@@ -143,3 +143,8 @@ A failed test is useful evidence but does not satisfy the acceptance criterion. 
 ## 8. Current conclusion
 
 This document establishes an evidence standard and records the currently known provider and professional-review gaps. It does not close them. G2 remains open, the funds-flow model remains unselected, and all proposed test IDs remain plans until execution evidence is attached.
+
+
+## 9. Provider adapter evidence cross-reference
+
+Use DOC-48 for the proposed provider capability descriptor and adapter conformance-test plan. Every capability assertion must retain its evidence class and source; public documentation and account observations do not prove HARAI's contractual authority. DOC-48 test IDs are planning references until actual run evidence is recorded under this document's acceptance rules.
