@@ -84,7 +84,7 @@ DOC-46 provides a companion closure view for all 32 current P0 requirements. DOC
 
 ### Provider portal evidence crosswalk (2026-10-19)
 
-Read-only portal observations are recorded in [DOC-37](37-provider-portal-evidence-review-and-owner-checklist.md) and compared in [DOC-38](38-mtn-airtel-provider-evidence-comparison.md). The funds-flow comparison is updated in [DOC-28](28-funds-flow-architecture-comparison.md). These are evidence references, not verification results or provider approvals.
+Read-only portal observations are recorded in [DOC-37](37-provider-portal-evidence-review-and-owner-checklist.md) and compared in [DOC-38](38-mtn-airtel-provider-evidence-comparison.md). The funds-flow comparison is updated in [DOC-28](28-funds-flow-architecture-comparison.md). These are evidence references, not verification results or provider approvals. The proposed dashboard, role and permission model is documented in [DOC-51](51-merchant-dashboard-roles-and-permissions-matrix.md); its proposed IAM test IDs must be mapped to stable DOC-31 requirement IDs before implementation.
 
 | Existing requirement ID | Provider evidence to link | Acceptance/test implication | Current disposition |
 |---|---|---|---|
