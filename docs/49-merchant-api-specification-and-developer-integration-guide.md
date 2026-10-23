@@ -169,7 +169,7 @@ The status and HTTP code above demonstrate a possible accepted-for-processing re
 
 Idempotency is mandatory for payment-creating and other money-moving requests.
 
-- The client sends an `Idempotency-Key` for each logical operation. Keys are scoped to the authenticated merchant, environment and operation/endpoint, under a documented retention policy.
+- The client sends an `Idempotency-Key` for each logical operation. Proposed scope is authenticated tenant/merchant + environment + operation class, with endpoint compatibility rules explicit and consistent across API routes. Credential rotation or use of another credential for the same tenant must not silently bypass deduplication. Exact scope, canonical request fingerprint, retention window, provider-reference retention and post-restore replay horizon require one approved cross-document contract with DOC-42 and DOC-48.
 - The server atomically reserves the key with a canonical request fingerprint before any external side effect.
 - Repeating the same key and equivalent request returns the original logical operation/result; it must not create a second operation.
 - Reusing a key with a materially different request returns a stable conflict error and must not dispatch.
