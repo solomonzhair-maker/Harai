@@ -9,7 +9,7 @@ Reconcile DOC-60 security assurance rows against the normative requirements in D
 
 - DOC-31 owns requirement IDs, wording, priority and acceptance criteria.
 - DOC-43 owns threat identifiers TH-01–TH-20 and threat rationale.
-- DOC-47 owns architecture findings AR-001–AR-021 and their closure status.
+- DOC-47 owns architecture findings AR-001–AR-021 and their closure status; AR-019 is closed for the index/cross-link task only, while AR-021 remains open.
 - DOC-34 tracks all 54 requirement IDs; it is not an approval or verification record.
 - DOC-59 is a policy proposal. DOC-60 is an evidence-planning matrix. Neither proves a control exists or works.
 - Where mappings differ or remain uncertain, record the discrepancy; do not silently resolve it or infer closure.
