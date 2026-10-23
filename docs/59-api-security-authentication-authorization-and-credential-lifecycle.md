@@ -211,3 +211,18 @@ Do not silently fill these gaps with arbitrary numeric defaults or assume that a
 DOC-59 is a draft security-policy proposal. It does not constitute a completed security review, approved cryptographic design, provider authorization or implementation plan approval.
 
 **G1 remains NOT PASSED. G2 remains NOT APPROVED.** No payment-engine implementation, test execution, provider contact, credential generation, live financial activity, merge or deployment is authorized by this document. Those activities require the relevant gates and separate explicit authorization.
+
+## 16. Tenant-context and authorization decision rules — proposed clarification
+
+For architecture and eventual acceptance criteria, interpret the isolation requirements as follows:
+
+1. **Trusted tenant resolution:** authenticate the credential/session and resolve current tenant membership, project and environment from server-side records before accessing merchant data. A tenant ID in a request, URL, callback, webhook, queue payload or support search is only an untrusted selector until independently authorized.
+2. **Resource-level authorization:** authorize every requested object against its stored owner and parent relationship, not merely against a route-level role or caller-selected tenant. Denials must not disclose another tenant's existence or sensitive metadata.
+3. **Async revalidation:** background work stores stable resource references and expected ownership metadata; workers reload the authoritative resource and reject mismatches, revoked credentials/capabilities, invalid lifecycle state or incompatible environment before any side effect.
+4. **Callback ownership:** validate the provider-specific protocol, correlate the callback to a persisted attempt, then derive tenant and operation through that attempt. Unmatched/conflicting callbacks are quarantined and cannot select a tenant or directly post a ledger effect.
+5. **Derived-data isolation:** include tenant/environment/resource scope in cache and read-model keys, report/export jobs, object-storage authorization, webhook delivery selection, idempotency scope and audit views. Reauthorize artifact downloads; public URLs are not access control.
+6. **Privileged support:** require a distinct permission, stated purpose/case, target tenant/resource, time-bounded access where feasible, audit trail and narrowly scoped actions. Financial state changes use the canonical state/correction workflow and any separately approved dual-control rule.
+7. **Fail closed:** absent, stale or contradictory ownership data blocks the action and creates a safe investigation/audit record. Do not silently infer ownership from a provider reference, tenant name, merchant-supplied value or cached authorization.
+8. **Revocation and cache invalidation:** define and verify how membership, session, key, project, provider capability and support grants become ineffective across API nodes, caches, workers and long-running jobs. Until a concrete propagation/consistency policy is approved, do not claim immediate revocation as a verified property.
+
+These are design requirements, not an approved implementation or chosen technology. The corresponding negative tests, evidence artifacts and independent/specialist review remain outstanding.
