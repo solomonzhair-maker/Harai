@@ -303,3 +303,17 @@ Each eventual test must map to a stable requirement ID and record environment, c
 This document is a conceptual design proposal only. It does not approve a funds-flow model, provider integration, database schema, endpoint contract, deployment topology, live capability, payment-engine implementation, tests, provider outreach, credential creation, real transactions, pull-request merge or deployment.
 
 **G1 remains NOT PASSED. G2 remains NOT APPROVED.** Continue with review, evidence gathering and decision recording. Any implementation, tests, provider contact, production credentials, financial activity, merge or deployment requires its own explicit authorization and all relevant provider, legal/compliance, security, finance and operational gates.
+
+## 20. Tenant context across synchronous and asynchronous boundaries — proposed clarification
+
+Apply one consistent tenant-binding rule across the data-flow diagrams:
+
+- **Inbound merchant API/dashboard:** authenticate first; resolve tenant membership, project and environment from trusted server-side state; authorize the requested action against the target resource's stored owner. Do not accept caller-supplied tenant context as proof.
+- **Callback ingress:** validate provider-specific authentication and schema; correlate against a persisted provider-attempt identifier/reference; derive the tenant through the stored attempt-to-operation relationship. Callback-supplied tenant or merchant fields are comparison data only, never routing authority. Unmatched/ambiguous events are durably quarantined for investigation.
+- **Outbox, queues and scheduled jobs:** commit a stable internal operation/event identity with the source change; enqueue only a reference plus expected ownership/environment and correlation metadata. The worker reloads authoritative state and checks owner consistency, current permissions/capability, operation state and idempotency before side effects. A mismatch is a hard stop with an audit record, not an automatic rebind.
+- **Merchant webhooks and exports:** select endpoint/subscription and payload from the authorized tenant-bound event, not from free-form job fields. Revalidate endpoint version and delivery eligibility. Exports must bind the query and artifact to the requester/tenant, enforce authorization again at download, and expire/revoke access as policy requires.
+- **Support/admin operations:** use a separate privileged authorization decision, case/reason, target scope and actor audit. Read access does not imply mutation permission; support tooling cannot directly force a payment state or bypass the canonical transition/correction workflow.
+- **Cache, object storage and read models:** tenant/environment/resource scope must be part of every relevant key and access policy. Derived data must retain source ownership and rebuild rules. Private evidence and exports must not use public URLs as their authorization mechanism.
+- **Recovery and replay:** after restore or queue redrive, keep consequential workers paused until ownership, idempotency, provider-attempt state and pending-operation reconciliation checks are complete. Replayed work re-enters the same authorization and idempotency gates.
+
+The above are proposed requirements for later architecture decisions and tests, not claims that the current system implements them. Database row-level security, specific queue products, storage paths and deployment topology remain unresolved. G1 remains NOT PASSED; G2 remains NOT APPROVED.
