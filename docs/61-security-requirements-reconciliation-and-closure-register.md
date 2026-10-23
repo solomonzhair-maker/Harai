@@ -9,7 +9,7 @@ Reconcile DOC-60 security assurance rows against the normative requirements in D
 
 - DOC-31 owns requirement IDs, wording, priority and acceptance criteria.
 - DOC-43 owns threat identifiers TH-01–TH-20 and threat rationale.
-- DOC-47 owns architecture findings AR-001–AR-020 and their closure status.
+- DOC-47 owns architecture findings AR-001–AR-021 and their closure status.
 - DOC-34 tracks all 54 requirement IDs; it is not an approval or verification record.
 - DOC-59 is a policy proposal. DOC-60 is an evidence-planning matrix. Neither proves a control exists or works.
 - Where mappings differ or remain uncertain, record the discrepancy; do not silently resolve it or infer closure.
@@ -23,7 +23,7 @@ Reconcile DOC-60 security assurance rows against the normative requirements in D
 | DOC-31 | 54 unique requirement IDs, including SUP-001–SUP-010 and EXT-004 | Confirm exact wording and acceptance criteria; keep proposed new criteria separate until an accountable owner approves a DOC-31 change | Open |
 | DOC-43 | 20 threat IDs, TH-01–TH-20 | Confirm every threat ID and the actual coverage/limitations of linked control rows | Open |
 | DOC-34 | Requirement-level matrix covers all 54 IDs; role assignments are proposals | Record explicit, partial and missing acceptance-criteria coverage for each DOC-60 row | Open |
-| DOC-47 | 20 architecture findings, AR-001–AR-020 | Review source findings; link only source-supported relationships and do not close findings here | Open |
+| DOC-47 | 21 architecture findings, AR-001–AR-021; AR-019 closed for index/cross-link only, AR-021 open | Review source findings; link only source-supported relationships and do not close findings here | Open |
 | DOC-60 | 21 rows SEC-E01–SEC-E21; evidence absent by default | Confirm exact requirement mappings, retain gaps, assign named owners/reviewers and collect evidence only after authorization | Draft — evidence absent |
 | Accountability | Roles proposed; named individual owners/reviewers not established | Product owner assigns named control owners and independent security reviewer, plus relevant finance/privacy/operations reviewers | Blocked |
 | Security policy | Key lifecycle, identity/session, proxy trust, allowlist defaults, rate limits, secret management and callback verification remain proposals/open choices | Record each accountable decision, rationale and affected IDs in DOC-00 | Open |
@@ -32,7 +32,7 @@ Reconcile DOC-60 security assurance rows against the normative requirements in D
 
 | Control family | DOC-31 requirements to review | DOC-60 rows | Threat mapping status | Architecture linkage | Minimum closure evidence |
 |---|---|---|---|---|---|
-| Tenant isolation and object authorization | TEN-001, IAM-001, MER-002, SEC-002 | SEC-E04 | Exact TH IDs must be reconciled against DOC-43 | Review AR-001–AR-020; link only supported findings | Approved tenant boundary and negative evidence for API, dashboard, jobs, exports and support paths |
+| Tenant isolation and object authorization | TEN-001, IAM-001, MER-002, SEC-002 | SEC-E04 | Exact TH IDs must be reconciled against DOC-43 | Review AR-001–AR-021; link only supported findings | Approved tenant boundary and negative evidence for API, dashboard, jobs, exports and support paths |
 | API keys, scopes and revocation | DEV-001, IAM-001, IAM-002, SUP-003 | SEC-E01, SEC-E02, SEC-E15 | Exact TH IDs must be reconciled | Review source findings on authorization/credential boundaries | Approved lifecycle/scope policy, denied-operation evidence, revocation results and audit trail |
 | Dashboard identity, sessions and recovery | SEC-001, IAM-001, IAM-002 | SEC-E03 | Exact TH IDs must be reconciled | Link applicable source findings only | Approved identity/session/recovery policy and normal, privileged and recovery-path evidence |
 | Proxy trust and IP allowlisting | SEC-003, SUP-007 | SEC-E05, SEC-E06 | SEC-E05 maps to TH-06 only; TH-14 maps to browser CSRF/CORS/session controls | Link applicable source findings only | Approved trusted-proxy design, spoofed-header evidence, allowlist policy and lockout-safe recovery; authentication remains required |
@@ -108,7 +108,7 @@ This is a source-text mapping for review, not closure. A threat may relate to mu
 3. Keep exact existing DOC-31 links where criteria substantively support the control; mark indirect/incomplete mappings as partial.
 4. RCP-01–RCP-08 are approved and incorporated into DOC-31; reconcile evidence rows and acceptance plans to the final wording, while keeping all evidence and control statuses open.
 5. Endpoint ownership/dispatch-time tenant binding and manual discrepancy-resolution authority are now explicit in DOC-31; implementation design, policy details and evidence remain to be reviewed.
-6. Review DOC-47 AR-001–AR-020 using source-supported links only. No finding is closed by this audit.
+6. Review DOC-47 AR-001–AR-021 using source-supported links only. No finding is closed by this audit.
 7. Name accountable owners/reviewers before requesting acceptance evidence. Tests and implementation remain unauthorized.
 ## 4C. Requirement-coverage disposition after approved changes
 
@@ -163,7 +163,7 @@ The product owner explicitly approved RCP-01 through RCP-08 on 2026-10-23. The c
 
 ## 5. Architecture findings and discrepancy handling
 
-DOC-47 contains AR-001–AR-020. Review every finding and classify its relationship to this register as **applicable**, **partially applicable**, **not applicable** or **unclear**. Record the source section and rationale. AR-001 explicitly warns that traceability coverage is not requirement acceptance or verification. Keep each finding's source status unchanged unless DOC-47 is updated through its own closure process.
+DOC-47 contains AR-001–AR-021. Review every finding and classify its relationship to this register as **applicable**, **partially applicable**, **not applicable** or **unclear**. Record the source section and rationale. AR-001 explicitly warns that traceability coverage is not requirement acceptance or verification. Keep each finding's source status unchanged unless DOC-47 is updated through its own closure process.
 
 For each mismatch among DOC-31, DOC-34, DOC-43, DOC-47, DOC-59 and DOC-60, record: source IDs and sections; what differs or is missing; consequence; proposed owner role; decision required; evidence needed; and status. Keep unknown mappings open rather than inventing threat IDs.
 
@@ -171,7 +171,7 @@ For each mismatch among DOC-31, DOC-34, DOC-43, DOC-47, DOC-59 and DOC-60, recor
 
 1. Confirm current versions of all source documents and inventory exact requirement, threat and finding IDs.
 2. Reconcile every SEC-E row to DOC-43 and DOC-31; confirm requirement links against DOC-34. Mark each mapping confirmed, partial, missing, conflicting or not applicable, with rationale.
-3. Inspect AR-001–AR-020; keep only source-supported links and preserve the source finding's status.
+3. Inspect AR-001–AR-021; keep only source-supported links and preserve the source finding's status.
 4. Assign named control owners and an independent reviewer. Role labels alone are not sufficient for closure.
 5. Record approved control decisions in DOC-00; leave external authority and evidence blockers explicit.
 6. Define evidence under DOC-45: version, environment, method, expected/actual result, negative/failure paths, redaction review and residual risk.
