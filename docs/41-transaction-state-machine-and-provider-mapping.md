@@ -97,3 +97,8 @@ These IDs are proposed test-planning references. They are not evidence that code
 ## 8. Current disposition
 
 DOC-41 is a design proposal for review. It does not claim provider contract confirmation, implementation, executed tests, G1/G2 approval, or production eligibility. Provider unknowns remain explicitly unconfirmed.
+
+
+## 9. Provider adapter contract cross-reference
+
+DOC-48 defines the proposed provider-neutral adapter boundary, capability evidence vocabulary, normalized result, retry taxonomy and conformance-test plan. DOC-41 remains the canonical state-machine proposal; provider-specific finality and transition rules must be evidenced per product/version before implementation. DOC-48 does not replace provider authorization or G1/G2 approval.
