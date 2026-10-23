@@ -76,6 +76,7 @@ This is a requirements and planning document set. It is not evidence that provid
 | DOC-46 | G2 gap-closure and ownership matrix | Draft — 32 P0 requirements mapped; owners remain unassigned | Role-level closure work, evidence dependencies, G2 blockers, sequence and closure record template |
 | DOC-47 | Detailed architecture review and contradiction register | Draft internal review — G1/G2 remain open; findings are not independent certification | Cross-document architecture findings, severity, closure actions, evidence requirements and approval impact |
 | DOC-48 | Provider adapter contract and operation capability matrix | Draft contract — provider authority and live capability remain unconfirmed | Provider-neutral adapter boundary, operation capability evidence, normalized results, retry safety and conformance-test plan |
+| DOC-49 | Merchant API specification and developer integration guide | Draft proposal — not implemented or approved | Proposed merchant-server API, authentication/tenant controls, payment-intent contract, idempotency/errors, signed merchant webhooks, sandbox onboarding and open decisions |
 
 ## 4. Reference boundary and product differentiation
 
