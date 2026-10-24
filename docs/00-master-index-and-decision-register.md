@@ -56,7 +56,7 @@ This is a requirements and planning document set. It is not evidence that provid
 | DOC-26 | Authenticated JulyPay read-only findings | Draft | Authenticated UI observations, HARAI implications and unresolved gaps |
 | DOC-27 | Public JulyPay website and commercial-positioning review | Draft | Public product positioning, onboarding, pricing, stated processing relationship and open questions |
 | DOC-28 | Funds-flow architecture comparison | Draft research baseline updated with read-only portal observations; no model selected | Compare provider-managed funds, direct integrations, and conditional hybrid approach using official and account-specific evidence |
-| DOC-29 | Provider verification and written inquiry pack | Draft — ready for owner review | Formal provider questions, evidence tracker, scoring method and hard gates |
+| DOC-29 | Provider verification and written inquiry pack | Reusable inquiry/evidence pack; initial non-binding inquiries reported sent 2026-10-24; no replies recorded | Formal provider questions, evidence register, scoring method and hard gates; initial send status in DEC-049/DOC-62 §8 |
 | DOC-30 | Uganda compliance and funds-flow review checklist | Draft — professional review required | Structure qualified legal/compliance review and funds-flow decision gates |
 | DOC-31 | Launch requirements traceability and acceptance criteria | Draft — product/independent review required | Stable requirement IDs, testable acceptance criteria, dependencies, and release gates |
 | DOC-32 | Documentation consistency and requirements gap review | Draft audit updated; G1 not ready to pass | Cross-document consistency, missing requirements, external blockers and recommended sequence |
