@@ -1,8 +1,10 @@
 # DOC-31 — Launch Requirements Traceability and Acceptance Criteria
 
-**Status:** Draft working baseline — product-owner and independent review required  
+**Status:** Draft working baseline — 54-ID scope dispositions recorded 2026-10-24; product, specialist and independent review plus G1/G2 evidence gates remain open  
 **Parent documents:** DOC-02 (product scope), DOC-03 (roadmap), DOC-28 (funds-flow comparison), DOC-29 (provider inquiry), DOC-30 (Uganda compliance review)  
 **Purpose:** Turn the broad launch ambition into traceable requirements that can later be reviewed, estimated, designed and tested without silently assuming missing provider or legal capabilities.
+
+> **Accountable scope disposition record — 2026-10-24:** The designated accountable requirements reviewer approved the 54-ID disposition batch recorded in DOC-34 §8.7: 51 requirements accepted for retention in the intended launch requirements baseline; EXT-001, EXT-002 and EXT-003 deferred from core launch as conditional future scope. All 32 P0 requirements are among the 51 accepted requirements. This records scope decisions only; normative criteria are unchanged, and P0 closure evidence, specialist reviews, G1 and G2 remain open. Externally blocked capabilities remain disabled until their own gates are satisfied.
 
 ## 1. Interpretation rules
 
