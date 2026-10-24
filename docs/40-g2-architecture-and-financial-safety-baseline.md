@@ -60,7 +60,7 @@ Additional rules:
 ## 4. Idempotency and safe retries
 
 For any API operation that can create or move money:
-1. Require an idempotency key scoped to tenant, credential/actor and operation class.
+1. Require an idempotency key scoped to the authenticated tenant/merchant + environment + operation class, with endpoint-compatibility rules defined in one canonical contract. Treat actor/credential as audit attributes, not automatic uniqueness boundaries, unless an approved architecture decision documents a specific exception.
 2. Persist a canonical request hash and the original result; the same key with the same request returns the original operation, while a conflicting payload returns a stable conflict error.
 3. Enforce uniqueness atomically at the database boundary, not only in application memory.
 4. Persist the intent and an outbox command in one database transaction before dispatching provider work.
