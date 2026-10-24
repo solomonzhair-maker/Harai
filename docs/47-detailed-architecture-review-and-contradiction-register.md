@@ -95,7 +95,7 @@ The following are consistent across the reviewed proposals and should be preserv
 
 ## 6. Current disposition
 
-**DOC-47 is a review register, not a closure certificate.** Twenty-one findings are recorded: 16 P0 and 5 P1; categories include design gaps, decisions, external blockers, evidence gaps and one index/governance integrity item. Twenty substantive findings remain open. AR-019 is closed for the index/cross-link task only: DOC-47 is indexed in DOC-00 and linked from DOC-34 and DOC-44, with branch content fetched to verify the links. AR-021 identifies the idempotency-scope alignment issue and remains open until the single contract is reconciled across DOC-42, DOC-49 and DOC-48.
+**DOC-47 is a review register, not a closure certificate.** Twenty-one findings are recorded: 16 P0 and 5 P1; categories include design gaps, decisions, external blockers, evidence gaps and one index/governance integrity item. Twenty substantive findings remain open. AR-019 is closed for the index/cross-link task only: DOC-47 is indexed in DOC-00 and linked from DOC-34 and DOC-44, with branch content fetched to verify the links. AR-021 remains open because the canonical idempotency contract is incomplete across API requests, provider attempts, callbacks, ledger postings, reconciliation imports and restore/replay; DOC-42 and DOC-49 align on the proposed tenant/merchant, environment and operation-class scope, while DOC-48 still needs the cross-layer contract.
 
 **G0 remains in progress. G1 is NOT PASSED. G2 is NOT APPROVED.** No implementation, provider outreach, onboarding, merge, deployment or live financial activity was performed or authorized by this review.
 ## 7. Sole internal reviewer appointment and current review update — 2026-10-23
