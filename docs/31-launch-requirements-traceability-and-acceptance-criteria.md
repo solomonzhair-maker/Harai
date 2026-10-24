@@ -157,7 +157,7 @@ The requirements phase is not complete until:
 
 ## 8. Supplemental requirements identified by DOC-32
 
-The following ten stable supplemental requirement IDs convert the high-priority gaps in DOC-32 into reviewable acceptance criteria. They expand the working catalogue from 44 to **54 unique requirement IDs**. They remain **Draft / In review** until the product owner and accountable reviewers accept, amend, defer or reject them. Test identifiers below are proposed evidence references, not existing tests or claimed results.
+The following ten stable supplemental requirement IDs convert the high-priority gaps in DOC-32 into reviewable acceptance criteria. They expand the working catalogue from 44 to **54 unique requirement IDs**. The accountable requirements reviewer recorded the 2026-10-24 scope disposition in DOC-34 §8.7: SUP-001–SUP-010 are accepted for retention in the intended launch baseline. This scope decision does not approve unresolved numeric parameters, specialist reviews, implementation or verification. Test identifiers below are proposed evidence references, not existing tests or claimed results.
 
 | ID | Priority | Requirement | Acceptance criteria | Proposed verification evidence / dependencies |
 |---|---|---|---|---|
@@ -178,7 +178,7 @@ The following ten stable supplemental requirement IDs convert the high-priority 
 2. The requirement-level matrix in DOC-34 must cover all 54 IDs with role-based owner proposals, dependency links, proposed test/evidence references and gate disposition. Do not invent named people or claim tests exist.
 3. DOC-03 maps these requirements to design, implementation, verification and launch-readiness phases after the relevant gates are authorized.
 4. Numeric rate limits, expiry defaults, RTO/RPO, availability/latency targets, retention periods and accessibility support policy remain open decisions until reviewed and approved.
-5. G1 remains open until the product owner and accountable reviewers explicitly accept, amend, defer or reject each supplemental requirement and the traceability package is consistent.
+5. The scope disposition for SUP-001–SUP-010 is recorded in DOC-34 §8.7. G1 remains open until cross-document traceability is consistent and all other applicable evidence, ownership, specialist-review and gate criteria are satisfied.
 
 
 ### 8.2 Architecture traceability references
