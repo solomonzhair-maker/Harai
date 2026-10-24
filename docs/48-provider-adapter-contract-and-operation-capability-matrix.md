@@ -256,11 +256,11 @@ Executed tests must link commit/build, environment, command/run ID, result, time
 
 | ID | Question | Closure evidence | Status |
 |---|---|---|---|
-| AD-01 | Which provider products and merchant relationship may HARAI use? | Written permission and qualified legal/compliance review | Open — external blocker |
+| AD-01 | Which provider products and merchant relationship may HARAI use? | Provider account/subscription configuration, applicable terms and capability evidence; explicit written confirmation for unclear or contractually material multi-merchant/gateway entitlement; qualified legal/compliance review | Open — external blocker |
 | AD-02 | Which funds-flow model applies and who holds/settles funds? | Product decision plus qualified finance/legal review | Open |
 | AD-03 | Which statuses are final and what evidence takes precedence? | Versioned product contract matrix | Open |
 | AD-04 | What idempotency guarantees and reference-retention periods apply? | Provider contract plus approved HARAI policy | Open |
-| AD-05 | Which refunds, returns, disputes and money-out operations are authorized? | Capability matrix, written permission and accounting treatment | Open |
+| AD-05 | Which refunds, returns, disputes and money-out operations are enabled for the relevant account and environment? | Capability matrix based on provider account/subscription status, credential scope, applicable terms and reliable capability evidence; explicit written confirmation where unclear or required; accounting treatment | Open |
 | AD-06 | What polling, callback retry, webhook retry and reconciliation cadence is safe? | Published limits/contracts plus operations approval | Open |
 | AD-07 | What does each callback authenticate and how are keys registered/rotated? | Product-specific documentation and secure account evidence | Open |
 | AD-08 | Which settlement sources are authoritative and who owns discrepancies? | Provider/contract evidence and named reconciliation owner | Open |
@@ -269,6 +269,6 @@ Executed tests must link commit/build, environment, command/run ID, result, time
 
 ## 12. Current disposition
 
-DOC-48 defines a proposed adapter boundary and an evidence-aware capability matrix. It does not certify provider availability or permission and does not select the funds-flow model. Provider-dependent live capabilities remain blocked until the relevant written authority, contract, security, finance, legal/compliance and operational prerequisites are satisfied.
+DOC-48 defines a proposed adapter boundary and an evidence-aware capability matrix. It does not certify provider availability or permission and does not select the funds-flow model. Provider-dependent live capabilities remain blocked until the relevant entitlement is established from appropriate provider/account evidence and applicable terms, and security, finance, legal/compliance and operational prerequisites are satisfied. Explicit written confirmation remains appropriate where scope is unclear, contractually required or material multi-merchant authority is not otherwise established.
 
 **G0 remains in progress. G1 is NOT PASSED. G2 is NOT APPROVED.** No provider contact, onboarding, credentials, API calls, payment-engine implementation, merge, deployment or live financial activity was performed or authorized by this document.
