@@ -509,3 +509,9 @@ The feature-level boundary remains: 51 accepted requirements and only EXT-001–
 - Recorded explicit capability blockers: payout entitlement/funding/settlement and operational authority; method-specific refund support and accounting; provider-specific reversal/return finality and ledger treatment; beneficiary verification/change controls; card processor/acquirer permission and security scope; and unresolved case deadlines, ownership, reassignment and retention.
 - DOC-64 is acknowledged as a draft case-lifecycle proposal, not a closed gap. AR-022 remains OPEN. Money-out/refunds/reversals remain disabled; cards remain blocked pending processor/acquirer evidence. Case records do not authorize or execute financial operations.
 - No requirement was marked Approved, Implemented or Verified; no tests were run. G1 NOT PASSED; G2 NOT APPROVED. No implementation, provider contact, credentials, live financial activity, merge or deployment authorized.
+
+
+### DOC-34 AR-022 narrative reconciliation (2026-10-24)
+
+- Updated the two stale DOC-34 §8.3 cross-reference statements so they acknowledge that DOC-64 now contains a draft case-lifecycle proposal while FIN-004/SUP-005 and AR-022 remain open pending specialist review and evidence.
+- This is wording consistency only; no architecture finding was closed, no requirement status changed, and no tests or implementation were performed.
