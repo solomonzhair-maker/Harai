@@ -1,7 +1,7 @@
 # HARAI — Master Index and Decision Register
 
 **Status:** Draft — discovery in progress; POD-01–POD-12 product defaults approved, G1 not passed  
-**Last reviewed:** 2026-10-23  
+**Last reviewed:** 2026-10-24  
 **Implementation gate:** This document does not authorize payment-engine implementation.
 
 ## 1. Purpose
@@ -144,6 +144,9 @@ JulyPay is a visual and merchant-workflow reference only. HARAI will use its own
 | DEC-035 | Security requirements reconciliation and closure register | DOC-61 reconciles all 21 DOC-60 rows and all 20 DOC-43 threats against DOC-31/DOC-34; product owner approved RCP-01–RCP-08 on 2026-10-23 and the acceptance criteria were incorporated into DOC-31 | Approved requirement wording; implementation, evidence and named independent reviewers remain outstanding | Approval applies to the eight requirement wording changes only. Maintain evidence-based closure for all threats/controls, reconcile future design/test plans to the approved criteria, assign named owners/reviewers, and keep G1/G2 open. No tests, implementation, provider contact, production credentials, real financial activity, merge or deployment are authorized by this decision. |
 | DEC-036 | Consolidated G1/G2 review checklist and product-owner review appointment | DOC-46 Section 4A consolidates G1 requirements review and G2 architecture/financial-safety review into explicit checks with minimum evidence and blocking effects. On 2026-10-23, the product owner designated ChatGPT as the sole reviewer for the current internal documentation/design review. | Review appointment recorded; internal review in progress. This is not independent third-party review or professional certification. Provider/legal/compliance evidence and authorized verification evidence remain outstanding; G1 not passed and G2 not approved. | ChatGPT will review requirements traceability, architecture consistency, lifecycle/finality, ledger/reconciliation, tenant isolation, security design, recovery and cross-document contradictions, record findings and verify documentary corrections. Do not claim self-review as independent sign-off or controls as verified without evidence. This does not authorize tests, implementation, provider contact, production credentials, real financial activity, merge or deployment. |
 
+
+| DEC-037 | Cross-layer idempotency and duplicate-prevention contract | DOC-42 §7.2 consolidates proposed defaults for merchant-key scope, endpoint compatibility, versioned semantic fingerprints, atomic reservation, provider event/reference identities, ledger posting purpose, reconciliation source/hash identity, stable outbound event IDs, coordinated retention/tombstones and restore-resume checks. DOC-41 §5C, DOC-48 §4.3, DOC-49 §7.1, DOC-46 G2-01 and DOC-47 AR-005/AR-021 defer to that package. | Draft decision package — NOT APPROVED; AR-005/AR-021 open, G2-01 open | Assign accountable named people for Product/API, Technical Architecture, Provider Integration, Finance/Accounting, Reconciliation/Operations and privacy/compliance roles. Answer the exact questions in DOC-42 §7.2; document compatible endpoint pairs, canonicalization/version migration, provider-specific key/event guarantees, lawful retention/tombstone periods, posting/source taxonomy and restore-resume authority. Do not invent provider guarantees or arbitrary durations. Reconcile DOC-40/41/42/48/49; later authorized implementation and verification are separate gates. No coding, tests, provider contact, credentials, live financial activity, merge or deployment is authorized. |
+
 ## 7. Open questions and blockers
 
 1. Which exact merchant categories must be supported at launch, and what eligibility rules apply?
@@ -163,6 +166,7 @@ JulyPay is a visual and merchant-workflow reference only. HARAI will use its own
 15. Which open gaps and external blockers in DOC-32 have been resolved, explicitly deferred or accepted with documented rationale?
 16. Does the product owner approve, amend or reject the proposed G1 review baseline in DOC-33, and which named reviewers will assess its security, finance/reconciliation, technical, operational and Uganda compliance assumptions?
 17. Which named people, if any, are available to fill the technical lead, independent security reviewer, finance/reconciliation reviewer, operations owner and independent requirements reviewer roles listed in DOC-34? If none are appointed yet, leave them unassigned and identify the plan to recruit/engage them.
+18. Which named people are assigned as Product/API owner, Technical Architecture owner, Provider Integration owner, Finance/Accounting reviewer, Reconciliation/Operations owner and privacy/compliance adviser for DEC-037/DOC-42 §7.2, and when will each decision be recorded? Until assigned, retain role-level ownership without inventing names.
 
 ## 8. Change control
 
