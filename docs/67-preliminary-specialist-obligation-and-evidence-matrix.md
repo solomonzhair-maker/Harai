@@ -134,3 +134,20 @@ The user's earlier informational inquiries (recorded in DOC-62/DEC-049) are not 
 - Funds-flow models remain unselected; G1 **NOT PASSED**; G2 **NOT APPROVED**.
 - No legal qualification, provider entitlement, production access, accounting policy, named operational route or deadline has been established by this research.
 - No tests, implementation, provider outreach, credentials, financial activity, merge or deployment are authorized.
+
+
+## 10. Source-validation addendum — NPS consumer-protection instruments
+
+The first pass identified an important additional primary source: the **National Payment Systems (Consumer Protection) Regulations, 2022 (S.I. 103 of 2022)**. The ULII source lists provisions on a licensee's consumer-protection policy, board and management responsibilities, consumer information, protection of consumer information/assets, complaints, inquiry handling and redress. Regulation 6 states that a licensee must, within 15 days from the last day of each month, submit to the Central Bank information about consumer complaints received, categorized and including remedial measures. This is a **monthly regulatory-reporting deadline for a covered licensee**, not a generic deadline for answering or resolving an individual complaint and not an automatic obligation for an entity whose licensed status is not established.
+
+Primary source: https://ulii.org/en/akn/ug/act/si/2022/103/eng%402022-09-09
+
+The 2021 National Payment Systems Regulations page also explicitly notes that amendments remain unapplied in the consolidated view. The 2022 National Payment Systems (Amendment) Regulations should therefore be reconciled against the 2021 text before describing the operative instrument as fully consolidated: https://ulii.org/en/akn/ug/act/si/2022/102/eng%402022-09-09. The 2021 Regulations' public text includes, among other things, a PSP management-information-system audit-trail requirement, personal-data duties tied to the DPPA, outsourcing controls and restrictions on cross-border payment services. Exact applicability must be assessed against the current amended text and HARAI's actual legal role.
+
+### New deadline-registry candidate
+
+| Rule candidate | Trigger and timing | Applicability | Required evidence / safe disposition |
+|---|---|---|---|
+| Monthly complaint report to BoU | Within 15 days from the last day of each month, under NPS (Consumer Protection) Regulations, 2022, reg. 6 | Only if the entity is a licensee covered by the Regulations; definitions, current directions and reporting format/channel must be confirmed | Keep BLOCKED pending qualified Ugandan counsel's applicability decision and current reporting instructions. If applicable, retain categorized complaint data, remedial measures, reviewer approval and submission receipt. Do not treat it as an individual case-resolution SLA. |
+
+This finding should be carried into the legal obligation register and deadline registry only after the entity's licensing/applicability analysis. No regulatory report has been prepared or submitted, and this note does not authorize provider or regulator contact.
