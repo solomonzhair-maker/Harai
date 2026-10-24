@@ -246,3 +246,18 @@ The sources consistently distinguish cancellation of a HARAI intent from cancell
 
 **Disposition:** DEC-041 records the decision-ready comparison. AR-020 and G2-DEC-01 remain OPEN pending technical architecture and operations/platform evaluation plus independent security review. G1 remains NOT PASSED and G2 remains NOT APPROVED. No tests, implementation, provider contact, credentials, live financial activity, merge or deployment were performed or authorized.
 
+
+
+## 22. Merchant onboarding lifecycle and traceability review (2026-10-24)
+
+**Scope:** documentation-only review of DOC-50 §§5, 9 and 17; DOC-34 §8.6; DOC-31 merchant requirements; and DEC-024's production-first developer onboarding direction.
+
+**Clarifications recorded:**
+- DOC-50 continues to define a proposed merchant lifecycle from application through verification, capability-specific activation, ongoing review, suspension, reinstatement and closure. Its state names, verification policy, named authority, retention periods and operational rules are not approved policy.
+- Provider-authority wording now follows the evidence-proportionality rule: use applicable account/subscription state, configured credential scope, current terms and reliable capability evidence as normal evidence; require explicit written confirmation when scope is unclear, the provider/contract requires it, or a material entitlement such as multi-merchant gateway authority is not otherwise established. A credential or visible API is not blanket permission.
+- DOC-34 §8.6 now maps all 20 DOC-50 ONBOARD-* planning scenarios to existing DOC-31 requirement IDs. These are proposed many-to-many traceability links only. They do not replace the normative requirements, create executed-test evidence, or imply that every scenario has an implementation-ready test specification.
+- The optional-sandbox direction remains aligned with DEC-024: sandbox is not a universal prerequisite to production-access assessment; all applicable merchant, provider, legal/compliance, finance, security, operations and release gates still apply to real-money capabilities.
+
+**Still unresolved:** approved merchant eligibility/restricted-category policy; exact verification evidence and lawful basis; named reviewers and delegated approval authority; provider and processor capability evidence; selected funds-flow model; legal/privacy/retention decisions; final capability/limit matrix; synchronization of merchant/capability status with credentials, webhooks and queued work; approved exception/appeal policy; independent reviews; and actual implementation/test evidence after separate authorization.
+
+**Disposition:** DOC-50/DOC-34 traceability is more explicit, and the provider-evidence wording is aligned with the existing project rule. This does not close G1, G2, AR-001 or any external evidence blocker. G0 remains IN PROGRESS, G1 remains NOT PASSED and G2 remains NOT APPROVED. No tests, implementation, provider contact, credentials, live financial activity, merge or deployment were performed or authorized.
