@@ -123,3 +123,14 @@ The ten gaps listed in Section 3 are now represented by SUP-001–SUP-010 in DOC
 **Still unresolved:** DOC-48 and the wider architecture set still need one approved cross-layer contract for API requests, provider attempts, callbacks/events, ledger postings, reconciliation imports and restore/replay. Canonical request fingerprinting, same-key/different-payload behavior, atomic reservation/concurrency, retention horizon, provider-specific constraints, reference uniqueness and restore/replay safety need accountable decisions and eventual authorized verification. AR-021 remains OPEN.
 
 **Gate result:** G1 remains NOT PASSED; G2 remains NOT APPROVED. No tests, implementation, provider contact, credentials, live financial activity, merge or deployment were performed or authorized by this audit batch.
+
+
+## 11. Product-decision propagation and G1 consistency review (2026-10-24)
+
+**Scope:** documentation-only comparison of DOC-36 approved product defaults against the master decision register (DOC-00), product scope (DOC-02), launch requirements (DOC-31), G1 review package (DOC-33) and requirement traceability (DOC-34).
+
+**Result:** the inspected sources consistently record Uganda-first/UGX-first direction, both MTN MoMo and Airtel Money, cards through an eligible processor/acquirer, collections and money-out as intended scope, provider-supported refunds/reversals, and no funds-flow model selected yet. DOC-31 and DOC-34 continue to contain 54 unique requirement IDs; the 32 P0 mappings remain traceability/planning records, not accepted or verified controls. No conflicting product decision or evidence claim was found in this bounded pass.
+
+**Clarification applied:** DOC-33 previously described MTN/Airtel as candidates and bank/card methods as subject to verification without stating in that passage that both mobile-money providers and cards are already approved product intent. DOC-33 now separates intended method scope from provider/processor eligibility, contractual permission, integration status and production readiness. The clarification does not change requirement priorities or mark a capability approved for use.
+
+**Open gates:** G1 remains NOT PASSED. Detailed requirement dispositions, written provider/processor evidence, qualified Ugandan legal/compliance review, funds-flow selection, finance/accounting review and accountable reviewer evidence remain open. G2 remains NOT APPROVED. No tests, implementation, provider contact, credentials, live financial activity, merge or deployment were performed or authorized by this audit batch.
