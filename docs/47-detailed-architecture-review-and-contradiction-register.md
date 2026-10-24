@@ -137,3 +137,20 @@ This review batch (2026-10-23) adds proposed tenant-context enforcement clarific
 2. **Authority boundaries should remain explicit:** DOC-31 normative requirements; DOC-00 decision state/index; DOC-34 requirement traceability; DOC-43 threat model; DOC-47 architecture findings; DOC-49 public API/event contract; DOC-56 conceptual data ownership; DOC-57 logical service/data flow; DOC-58 internal-operation contract planning; DOC-59 security policy proposal; DOC-60/61 security evidence planning/reconciliation; DOC-62 repository remediation.
 3. **The branch-alignment action is governance-only at this point.** The discovery/remediation branch is the canonical active working branch. PR #1 was retargeted to it but remains draft/unmerged; PR #2 remains draft/unmerged to main. The foundation integration must not be merged merely to make the tree appear unified; DOC-62 requires review and acceptance evidence.
 4. **Gates remain unchanged:** G1 NOT PASSED; G2 NOT APPROVED. AR-001–AR-021 statuses are not automatically changed by this supplement. Any closure requires the evidence and reviewer conditions already stated in the findings register.
+
+## Approved finding-status treatment and AR-008 evidence check — 2026-10-24
+
+The accountable requirements reviewer approved the proposed status treatment recorded in DOC-62:
+
+- AR-001–AR-018 and AR-020–AR-021 remain **OPEN**. Existing row notes may describe clarified proposals or evidence needs, but do not imply closure.
+- AR-019 remains **CLOSED only for its narrow document-indexing/cross-link verification task**. This is not closure of a payment, security, financial, provider or operational risk.
+- AR-003, AR-007, AR-008 and AR-013 remain explicit capability blockers. This status decision is not architecture approval, implementation authorization, G1 passage or G2 approval.
+
+### AR-008 targeted cross-document check
+
+A targeted read-only comparison of DOC-31 (OUT-001/002/003/004/005/006, SUP-003, FIN-002, REC-001/002), DOC-40, DOC-41, DOC-42, DOC-46 (G2-D04 and G2-02), and provider evidence summaries DOC-37/DOC-38 found no demonstrable contradiction in the documented requirements and proposed controls. Coverage includes eligible merchant/beneficiary checks, provider and method permission, approved funding, limits/fees, required approvals, protected beneficiary changes, ambiguous-outcome recovery, append-only financial history and reconciliation.
+
+This is **not evidence that money-out is supported or authorized**. The reviewed evidence summaries do not establish written multi-merchant authority, production entitlement, funding/prefunding terms, complete fees/limits, settlement timing or applicable operating terms. The reviewed portal observations are bounded snapshots, not proof of provider refusal or current account status. Money-out remains disabled/blocked until the specific provider, funds-flow, finance/accounting, legal/compliance and operational evidence is obtained and reviewed by accountable roles.
+
+No provider contact, credential use, live financial action, implementation, test execution, merge or deployment occurred in this review.
+
