@@ -87,12 +87,28 @@ Create cases for missing provider reference, missing settlement, duplicate, amou
 ## 7. Proposed data constraints
 
 - Proposed idempotency scope: tenant + environment + operation class + idempotency key, with endpoint compatibility rules documented explicitly. Treat actor/credential as audit attributes, not automatically as uniqueness boundaries: otherwise the same tenant operation retried through a rotated or alternate credential could bypass deduplication. The final scope, key-retention window, request-fingerprint rules, conflict response and restore/replay horizon remain architecture decisions and must be consistent with DOC-49 and provider-specific idempotency limits.
-- Unique provider event receipt key where provider event identity is available; otherwise use a documented deduplication fingerprint with collision-safe review.
-- Unique ledger posting identity per normalized financial event and posting purpose.
+- Unique provider event receipt key scoped by provider/account/product/environment where provider event identity is available; otherwise use a versioned, documented deduplication fingerprint over authenticated source identity and normalized immutable event fields. Potential fingerprint collisions or missing correlation go to review, not silent suppression.
+- Unique ledger posting identity per normalized financial source event + posting purpose, enforced at the database boundary. A retry, callback, reconciliation import, compensation worker or restore replay must resolve to the same posting identity when it represents the same intended effect.
 - Check constraints: positive/non-negative amount as appropriate per operation, supported currency/precision, allowed direction/type, balanced posting group and valid reference links.
-- Database transactions atomically persist the financial event, posting group, outbox event and idempotency result where they form one business commit.
+- Database transactions atomically persist the financial event, posting group, outbox event and idempotency result where they form one business commit. Where external systems prevent one transaction, use durable outbox/inbox records and explicit recovery states; do not claim distributed atomicity.
 - Do not use Redis/cache as the authoritative source for idempotency or financial posting uniqueness.
 - Schema changes require reviewed migrations, backfill plan, rollback/forward-fix strategy and reconciliation checks.
+
+### 7.1 Cross-layer identity and replay contract — proposed, not approved
+
+The following is a consolidated proposal to reconcile with DOC-41, DOC-48 and DOC-49; it is not an approved architecture decision or evidence of implementation.
+
+- Merchant idempotency is scoped to authenticated tenant/merchant + environment + operation class + key, with an explicit endpoint-compatibility class. Actor/credential remains audit context, not a uniqueness boundary by default.
+- Canonicalize and fingerprint the semantically relevant request fields using a versioned algorithm. Same key + equivalent canonical request returns the existing logical operation; same key + different canonical request returns a stable conflict and cannot dispatch.
+- Reserve the key atomically before any external side effect. Database uniqueness is authoritative under concurrency; cache/queue locks alone are insufficient.
+- Keep logical operation IDs, provider-attempt IDs, provider-native idempotency keys/references, callback receipt IDs, ledger posting IDs, reconciliation source identities and outbound event IDs distinct but linked. Apply uniqueness at each boundary using the strongest documented stable identity available.
+- If provider event identity is unavailable, use a versioned collision-aware fingerprint. If report/source identity repeats with identical content, treat it as a no-op; if the same identity has changed content, preserve both hashes and open a discrepancy.
+- Postings are unique per normalized source event and posting purpose. Refunds/returns and payouts are separate linked operations, not mutation or reuse of the original collection's key/posting identity.
+- Retention periods, tombstone lifetime, provider-reference expiry, client retry horizon and post-restore replay horizon must be decided together. Do not expire the only uniqueness evidence while a retry, provider callback, settlement report or restore could legitimately reintroduce the same operation.
+- After restore, pause consequential dispatch/replay until durable operation, provider-attempt, callback receipt, ledger, outbox and reconciliation identities are checked and unresolved records reconciled. Do not infer that a missing queue item means a provider request was never sent.
+- Stable outbound event IDs survive retry/replay. Transport retries must not trigger a second financial effect.
+
+**Open decisions:** canonicalization details/version migration; endpoint compatibility rules; exact retention/tombstone periods; provider-native reference scope and retention per rail; callback fingerprint fields and collision handling; import identity/hash policy; ledger source/posting-purpose schema; restore acceptance evidence and resume authority. AR-005 remains OPEN until accountable owners approve the complete contract and authorized verification later demonstrates the required behavior.
 
 ## 8. Reconciliation cadence and operational controls
 
