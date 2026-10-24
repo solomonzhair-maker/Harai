@@ -87,6 +87,8 @@
 
 **Contradiction check:** No direct contradiction was established in the inspected sections. The key gap is absence of a dispute/complaint workflow, not an asserted conflict. Deferred scope remains outside core launch as already approved.
 
+**Architecture finding link:** DOC-47 now records this accepted-requirement design gap as AR-022 (P1, open); DOC-00, DOC-34 and DOC-46 have been reconciled to reference it. This links the finding to the requirement baseline without closing either FIN-004 or SUP-005.
+
 **Disposition and gates:** 54 unique IDs, 32 P0, 51 Accept / 3 Defer unchanged. G1 NOT PASSED; G2 NOT APPROVED. No tests or implementation were run or authorized.
 
 
