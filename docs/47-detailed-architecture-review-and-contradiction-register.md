@@ -81,7 +81,7 @@ The following are consistent across the reviewed proposals and should be preserv
 
 1. Add DOC-47 to the DOC-00 index and link it from DOC-34 and DOC-44.
 2. Keep the working catalogue at 54 unique requirement IDs and preserve the 32 currently identified P0 rows until an accountable review changes classifications.
-3. Add AR-001–AR-021 to the review/closure workflow; do not silently change source requirements or mark any finding closed by creating this register.
+3. Add AR-001–AR-022 to the review/closure workflow; do not silently change source requirements or mark any finding closed by creating this register.
 4. For every closed finding, record the exact evidence reference, responsible named person, closure date, reviewer where required, and any residual risk.
 5. Where a finding needs external permission or professional judgment, a prose change alone cannot close it.
 6. Where a finding requires testing, close it only with actual reproducible execution evidence and the required independent review—not with a proposed test ID.
