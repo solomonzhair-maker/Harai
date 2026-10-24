@@ -141,6 +141,19 @@ Dispatch and cancellation must follow DOC-41 §5A: the adapter must expose wheth
 - Retry after possible dispatch is governed by DOC-41 and the provider-specific idempotency contract. If the adapter cannot establish that the request was not sent, preserve UNKNOWN and reconcile first; never create a new provider attempt merely because a merchant retry or worker redelivery occurred.
 - Provider idempotency/reference retention, event identity reliability and replay limits are method-specific. Unknown values remain explicitly UNKNOWN and block unsafe assumptions.
 
+
+
+### 4.3 Shared identity and replay contract — proposed, not approved
+
+Use DOC-42 §7.2 as the cross-layer decision package; the adapter must not invent provider guarantees to fill gaps.
+
+- The adapter receives a persisted HARAI logical operation and attempt identity. It does not create a new logical operation from a queue redelivery, merchant retry, duplicate callback or status poll.
+- A provider-native idempotency key/reference is distinct from HARAI's merchant key. Its generation, reuse, namespace, validity and retention are defined only by evidence for the exact provider account/product/API version/operation/environment. Unknown behavior remains UNKNOWN and blocks unsafe retry.
+- A provider reference collision is quarantined unless the documented provider namespace and stored attempt binding prove the match. Never attach by amount, timestamp or merchant reference alone.
+- Event identity prefers a documented stable provider event ID scoped to the actual namespace. If unavailable, use the reviewed versioned fingerprint in DOC-42 §7.2; ambiguous or conflicting matches preserve both receipts and go to reconciliation.
+- Adapter callbacks, polls and retry results must return evidence to the core. The adapter cannot independently post ledger entries, declare a disputed outcome final, or bypass the core's durable transition/idempotency boundary.
+- Provider-specific idempotency, event identity, status freshness, callback delivery and retention must be recorded in the capability/evidence matrix with source date, scope, owner, reviewer and revalidation trigger. No generic rule in this document is proof that MTN, Airtel or a future card processor implements it.
+
 ## 5. Operation capability matrix — evidence snapshot
 
 The following reflects evidence recorded in DOC-37/DOC-38 and the provider review for 2026-10-19. It is not a live status check as of this document's date and must be refreshed before implementation decisions.
