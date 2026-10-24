@@ -3,7 +3,7 @@
 **Status:** Reusable inquiry/evidence pack — initial non-binding inquiries were separately reported sent by the owner on 2026-10-24; this template is not the exact sent message and no provider reply is recorded  
 **Market focus:** Uganda first  
 **Purpose:** Obtain authoritative, written evidence needed to compare provider-managed funds, direct integrations and any evidence-supported hybrid model.  
-**Decision boundary:** This document does not authorize contacting providers, submitting onboarding applications, signing agreements, receiving credentials or initiating financial activity.
+**Decision boundary:** The initial informational inquiries are recorded in DOC-00 DEC-049 and DOC-62 §8. This pack does not authorize follow-up provider contact, onboarding applications, signing agreements, credential receipt/use or financial activity.
 
 ## 1. How to use this pack
 
