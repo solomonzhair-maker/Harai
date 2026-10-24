@@ -330,3 +330,12 @@ The product owner confirmed that the two non-binding inquiries were manually sen
 **Finding:** Security and operational controls remain proposals and have no attributable verification evidence. Credential/session/MFA policy, retention/deletion/legal hold, backup/key handling, outbound destination protections, named runbook owners, numeric SLO/RTO/RPO, provider support/SLA and restore-resume authorization remain unresolved. DOC-49 and DOC-40/DOC-48 are directionally compatible on webhook security, but the canonical signing/destination/retry policy remains open. No row was upgraded to verified/closed; no direct contradiction was established in this bounded batch.
 
 **Scope/gate boundary:** 54 unique IDs, all 32 P0 IDs, and 51 Accept / 3 Defer remain unchanged. G1 NOT PASSED; G2 NOT APPROVED. No tests, implementation, provider outreach, credentials, financial activity, merge or deployment were performed or authorized.
+
+
+### DOC-63 detailed criterion review — Batch 6 (2026-10-24)
+
+**Completed — documentation-only, bounded review.** Reviewed REP-001, DEV-003, SEC-003, OPS-004 and EXT-004 against DOC-28, DOC-30, DOC-40, DOC-43, DOC-45, DOC-48, DOC-49, DOC-51, DOC-52, DOC-53, DOC-55, DOC-56, DOC-57 and DOC-59. Refined mappings for tenant-safe report/export dispatch, API compatibility/error semantics, trusted proxy/IP policy, accessibility evidence and card-provider/legal prerequisites.
+
+**Finding:** Report/export reproducibility and dispatch-time tenant enforcement remain unverified; API compatibility rules remain draft without final schemas/tests; network trust and allowlist controls remain unverified against deployment settings; accessibility criteria exist but manual keyboard/screen-reader review is absent; card processing remains blocked pending processor selection, written eligibility, security/PCI scope and qualified review. No row was upgraded to verified/closed, and no direct contradiction was established in this bounded batch.
+
+**Scope/gate boundary:** 54 unique IDs, all 32 P0 IDs, and 51 Accept / 3 Defer remain unchanged. G1 NOT PASSED; G2 NOT APPROVED. No tests, implementation, provider outreach, credentials, financial activity, merge or deployment were performed or authorized.
