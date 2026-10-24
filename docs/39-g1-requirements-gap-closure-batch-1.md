@@ -19,7 +19,7 @@ DOC-31 now includes ten supplemental requirements, SUP-001 through SUP-010, for:
 - accessibility and responsive critical journeys;
 - end-to-end event correlation and safe audit logging.
 
-The working requirement catalogue now contains 54 unique IDs: the original 44 (including EXT-004 for card payments) plus these 10 additions. The additions are Draft/In review. Proposed test identifiers are planning references only; they do not mean test files exist or have been run.
+The working requirement catalogue now contains 54 unique IDs: the original 44 (including EXT-004 for card payments) plus these 10 additions. The accountable requirements reviewer recorded acceptance of SUP-001–SUP-010 for retention in the intended launch baseline on 2026-10-24; this is a scope disposition only. The detailed criteria remain draft proposals pending applicable product, specialist and architecture review, and are not implemented or verified. Proposed test identifiers are planning references only; they do not mean test files exist or have been run.
 
 ## 2. What this unlocks
 
@@ -42,7 +42,7 @@ The supplemental requirements do not require HARAI to wait for provider replies 
 
 ## 5. Gate decision
 
-**G0 remains in progress; G1 has not passed.** This batch improves completeness but does not approve the requirements baseline, select a funds-flow model, authorize implementation, authorize provider outreach, approve live credentials, permit real transactions, merge PRs or deploy.
+**G0 remains in progress; G1 has not passed.** This batch improves completeness and records the 54-ID scope disposition (51 Accept / 3 Defer), but does not constitute G1 passage, approve final design or release readiness, select a funds-flow model, or authorize implementation, further provider outreach, live credentials, real transactions, merge or deployment.
 
 Follow-through: keep DOC-34 and DOC-03 aligned as requirements change, conduct a focused consistency check, and prepare the expanded baseline for accountable review.
 
