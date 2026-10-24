@@ -236,3 +236,13 @@ The sources consistently distinguish cancellation of a HARAI intent from cancell
 
 **Disposition:** DEC-040 records the approved product direction. AR-010 and G2-04 remain OPEN until named technical/security owners decide concrete enforcement, required independent review occurs, and separately authorized negative tests later provide evidence. G1 remains NOT PASSED and G2 remains NOT APPROVED. No tests, implementation, provider contact, credentials, live financial activity, merge or deployment were performed or authorized.
 
+## 21. Deployment topology decision readiness review (2026-10-24)
+
+**Scope:** documentation-only review of DOC-40 §9, DOC-44 G2-DEC-01, DOC-57 §15 and DOC-47 AR-020.
+
+**Clarification:** DOC-57 §15.1 now compares three options: a modular application with a separately deployable worker (recommended candidate for review), independently deployed services, and a single-process development shape. It records candidate principles of authoritative transactional state, durable outbox/inbox and managed secrets, while keeping Redis non-authoritative for financial state, idempotency and durable work.
+
+**Still unresolved:** actual workload/provider quotas, transaction boundaries, failure isolation, staffing/on-call capability, deployment/rollback, recovery objectives, service identities, cost and security review. The candidate is not an approved topology, and no queue/cache/database product is selected by this review.
+
+**Disposition:** DEC-041 records the decision-ready comparison. AR-020 and G2-DEC-01 remain OPEN pending technical architecture and operations/platform evaluation plus independent security review. G1 remains NOT PASSED and G2 remains NOT APPROVED. No tests, implementation, provider contact, credentials, live financial activity, merge or deployment were performed or authorized.
+
