@@ -167,6 +167,41 @@ The table below makes the three alternatives comparable without assigning invent
 
 **No preliminary winner is recommended.** Model C is not automatically more resilient merely because it combines approaches; it should be retained only if evidence shows a concrete benefit that outweighs additional contracts, failure modes and reconciliation burden.
 
+
+## 6B. Decision boundary: model-independent controls vs model-specific obligations
+
+This section separates controls that can be designed consistently across all candidate models from obligations that must not be decided until the actual funds flow is evidenced and reviewed. It does **not** select Model A, B or C, and it is not a legal or accounting conclusion.
+
+| Topic | Model-independent direction suitable for continued design | Must remain open until the model and evidence are reviewed |
+|---|---|---|
+| Financial truth and audit | Preserve source evidence, immutable event history, linked corrections and traceable operation/provider references; never turn an unknown outcome into success or failure by assumption | Which party's records are authoritative for each event, settlement, return or balance; evidentiary precedence under each contract |
+| Funds ownership and control | Never infer legal ownership, custody or control from the existence of a HARAI ledger, API, provider balance response or dashboard | Who receives, holds, controls, pools, directs or settles funds at every stage; whether HARAI has any regulated role or custody obligation |
+| Merchant settlement | Represent settlement as a distinct evidenced process, not as a synonym for provider API success | Settlement counterparty, account owner, destination, timing, reserves, holds, deductions, failed settlement handling and liability |
+| Money-out | Keep money-out disabled until the actual capability, authorized funding source, beneficiary controls, approval authority and recovery rules are evidenced | Prefunding/reserve/available-funds model, who may instruct the provider, balance authority, limits, fees, returned-payment treatment and who bears loss |
+| Refunds, reversals and returns | Model each as a separate linked operation; preserve the original transaction and the reason/evidence for corrections | Which party can initiate each operation, eligibility/window, funding/accounting effect, finality, fees and dispute responsibility |
+| Ledger and reconciliation | Keep technical records, provider events, settlement evidence and accounting decisions distinct; route missing/conflicting evidence to an owned exception | Account chart/posting schedule, fee/tax/rounding treatment, merchant payable/receivable semantics, reserve/clearing accounts, report sources and close rules |
+| Merchant and provider authority | Apply capability-specific default-deny and verify actual scope before activation | Exact merchant/provider contracting relationship, sub-merchant permissions, production access and legal/regulatory prerequisites |
+| Hybrid route | Require the same per-flow evidence and control gates as a single-model route | Whether a hybrid creates a concrete benefit that outweighs multiple contracts, inconsistent rail behavior and additional reconciliation/operational burden |
+
+### Current decision disposition
+
+**What can proceed now:** retain the cross-model safety requirements above as design constraints; keep provider adapters and HARAI's internal transaction records conceptually separate; document payer, merchant, provider/partner, funding, settlement and beneficiary roles explicitly in future flow diagrams; and keep every unverified capability blocked.
+
+**What cannot be selected from current evidence:** the final operating/funds-flow model; account and settlement ownership; custody or safeguarding responsibilities; direct versus intermediary contracting; provider/merchant-of-record roles; money-out funding and available-balance authority; accounting/posting examples; legal classification; pricing, reserves, liability and settlement SLAs.
+
+### Evidence and decision ownership
+
+Before a recommendation is submitted, the evidence pack in §7 must be reviewed together by:
+- the product owner, to confirm the intended commercial/product role;
+- a qualified Uganda legal/compliance adviser, to assess the actual activity and contractual structure;
+- a qualified finance/accounting reviewer, to approve model-specific account semantics and postings;
+- the provider-integration owner, to establish actual provider/partner capability and contractual scope;
+- an operations/reconciliation owner, to confirm evidence availability, exception handling and supportability.
+
+These are role requirements, not appointments of named people. Provider outreach remains subject to separate explicit authorization. Where an evidence source or role owner is missing, record the gap; do not score the model favorably or substitute a generic architecture pattern for the missing decision.
+
+**Gate effect:** AR-002 remains OPEN. G2 and affected money-moving capabilities remain blocked until the model-specific flow and posting schedule are reviewed with the required evidence. G1 remains NOT PASSED; G2 remains NOT APPROVED.
+
 ## 7. Required evidence pack
 
 Before recommending a model, collect and compare:
