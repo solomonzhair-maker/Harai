@@ -357,3 +357,14 @@ The product owner confirmed that the two non-binding inquiries were manually sen
 **Finding:** Numeric API limits/recovery budgets, approved currency precision, financial audit retention/authority and attributable evidence remain open. FIN-004 and SUP-005 remain explicit MISSING design gaps: reconciliation exceptions do not constitute a full dispute/complaint case lifecycle with owner, deadlines, communications, escalation, retention and outcome. EXT-001–EXT-003 remain deferred and not ready for reconsideration without method/country-specific evidence and review. No row was upgraded to verified/closed; no direct contradiction was established in this bounded batch.
 
 **Scope/gate boundary:** 54 unique IDs, all 32 P0 IDs, and 51 Accept / 3 Defer remain unchanged. G1 NOT PASSED; G2 NOT APPROVED. No tests, implementation, provider outreach, credentials, financial activity, merge or deployment were performed or authorized.
+
+
+### DOC-63 final criterion review and architecture-register reconciliation — 2026-10-24
+
+**Completed — documentation-only.** The detailed criterion review covered all 54 unique DOC-31 requirement IDs in eight recorded batches. Structural verification confirmed DOC-31, DOC-34 and DOC-63 have the same 54-ID set; all 32 P0 rows remain present; dispositions remain 51 Accept and 3 Defer (EXT-001–EXT-003). DOC-63 is indexed in DOC-00, and every row has a preliminary content-coverage status. The two explicit design gaps FIN-004 and SUP-005 remain MISSING; draft design references and planned test IDs are not verification evidence.
+
+**Architecture finding added:** AR-022 (P1, open) was added to DOC-47 because the accepted FIN-004/SUP-005 criteria have no complete dispute/complaint case lifecycle. DOC-00, DOC-34, DOC-46, DOC-47 and DOC-63 now cross-reference the gap. Reconciliation exception handling is not equivalent to complaint/dispute case management. Closure requires a defined lifecycle, transaction/evidence linkage, owner, deadlines/escalation, communications, access controls, retention/outcome rules and relevant support/compliance/finance review.
+
+**Reconciliation status:** DOC-47 now contains 22 findings (16 P0, 6 P1); AR-019 remains closed only for its narrow index/cross-link verification task. AR-022 is open and newly recorded; no prior finding was silently closed. G1 remains NOT PASSED; G2 remains NOT APPROVED. No tests, implementation, provider outreach, credentials, financial activity, merge or deployment were performed or authorized.
+
+**Next action:** Continue with the remaining evidence and architecture-decision closure work in DOC-62 Stage B/C only as evidence arrives and approvals are recorded. Do not treat the completed documentation audit as permission to begin Stage C-04/G3 or engineering.
