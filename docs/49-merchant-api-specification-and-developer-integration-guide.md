@@ -186,6 +186,21 @@ Idempotency is mandatory for payment-creating and other money-moving requests.
 - After restore, pause consequential workers and replay until operation/idempotency records, provider attempts/references, event receipts, ledger postings, outbox records and import identities are cross-checked and unresolved items reconciled. Rebuild derived queues only from durable records; a missing queue item is not proof that provider dispatch never occurred. Resume requires an approved restore procedure and authorization.
 - Idempotency does not replace tenant authorization, provider-specific retry rules, database uniqueness or ledger uniqueness.
 
+
+
+### 7.1 Cross-endpoint replay and fingerprint decision rules — proposed, not approved
+
+DOC-42 §7.2 is the consolidated decision package; this API document must not define a separate idempotency policy.
+
+- **Compatibility rule:** API routes or versions share a key reservation only when an explicitly documented compatibility class says they represent the same logical operation and semantic fields. A changed route/version must not create a second operation for the same tenant request. If the server cannot safely resolve compatibility, it must not dispatch a second operation; return a stable conflict or direct the client to retrieve the existing operation.
+- **Fingerprint rule:** store the canonicalization version with the reservation. Compare retries using the stored version and an approved migration/dual-read rule; never silently treat a key as new because canonicalization changed during deployment. Include validated financial meaning (operation class, amount, currency and applicable payer/beneficiary references); exclude secrets and transport-only fields. The exact field list and version migration remain owner decisions.
+- **Credential rotation:** a credential change does not create a new uniqueness scope for the same authenticated tenant/merchant and operation class. Authorization is still evaluated on every request; idempotency is not an authorization bypass.
+- **Response-loss rule:** return the existing logical operation for an equivalent retry. If the operation is unresolved, expose its current safe state and retrieval path; do not create a new provider attempt merely because the caller did not receive the first response.
+- **Retention rule:** no universal duration is fixed here. The approved retry promise, provider key/reference/event horizons, reconciliation import window, dispute/correction needs and restore/replay horizon must be reconciled before records or tombstones can expire.
+- **Recovery rule:** after restore, the API must not make an unresolved operation appear new because a derived queue or cache is missing. Consequential work remains paused until DOC-42 §7.2's restore checks and authorization are satisfied.
+
+**Unresolved owner decisions:** Product/API owner and technical architecture owner must approve route compatibility and semantic fingerprint fields; technical architecture owner must approve canonicalization migration; provider integration owner must evidence provider-specific key/reference/event guarantees; Operations and Finance/reconciliation must approve retry, import and restore horizons. These remain blockers to G2 and are not implementation or test claims.
+
 ## 8. Error response contract
 
 Proposed error envelope:
