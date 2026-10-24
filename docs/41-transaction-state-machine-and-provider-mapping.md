@@ -83,6 +83,14 @@ The following rules are proposed to make the state table implementable without t
 7. **Retry eligibility is attempt-specific.** A new provider attempt is permitted only when the prior attempt is authoritatively final/non-submitted or when the provider's documented idempotency/retry contract explicitly makes the retry safe. A timeout, worker crash, missing callback or merchant retry is not sufficient evidence.
 8. **Tenant context survives asynchronous work.** Persist immutable tenant/merchant ownership on the operation and attempt; derive it at initial authorization and carry it through outbox messages, callbacks, enquiry, reconciliation, exports and support cases. A provider reference or callback field alone must never select a tenant without a verified binding to the stored attempt.
 
+### 5B. Cross-layer deduplication and replay — proposed, not approved
+
+- Treat the merchant idempotency reservation as the entry-point identity for one logical operation, not as a universal identifier for provider attempts, callbacks, ledger postings or webhooks. Persist explicit links among these identities.
+- Same key + same canonical request resolves to the existing operation. Same key + materially different canonical request is a conflict and cannot cause dispatch. The canonical fingerprint rules and compatibility classes must be shared with DOC-49 and DOC-42.
+- Use database-enforced uniqueness/transactional reservation for concurrent requests and posting effects. A queue lock, cache entry or worker-local state is not authoritative.
+- Deduplicate provider events by provider-issued identity when available; otherwise use a versioned fingerprint and preserve ambiguous/colliding evidence for reconciliation. Out-of-order or duplicate receipt must not produce a second financial side effect.
+- Restore/replay must preserve the original operation, attempt, event, posting, import and outbound-event identities. A missing queue record is not proof that dispatch did not occur. Pause consequential work until durable records are validated and outstanding UNKNOWN operations are reconciled under an approved restore procedure.
+
 ### Required scenario coverage (planned, not executed)
 
 Extend the future state/contract test plan to cover: cancel before dispatch claim; cancel concurrent with claim; worker crash after durable claim but before/after network send; timeout followed by late success; expiry followed by successful provider enquiry; duplicate/out-of-order callback; callback conflicting with enquiry or settlement; credential rotation with same tenant idempotency key; cross-tenant callback/reference substitution; restore while attempts/jobs are pending; and one authorized manual correction with full audit history. Each scenario must assert both persisted state and whether any ledger posting or outbound merchant event is permitted.
