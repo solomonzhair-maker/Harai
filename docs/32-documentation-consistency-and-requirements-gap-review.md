@@ -206,3 +206,13 @@ The sources consistently distinguish cancellation of a HARAI intent from cancell
 
 **Disposition:** The product-owner-approved internal defaults are recorded in DOC-42 §7.2 and DOC-00 DEC-037. AR-005 and AR-021 remain OPEN pending named accountable roles, their outstanding technical/finance/operations/privacy decisions, provider-specific evidence and later authorized verification. G2-01 remains open; G2-02/G2-03 remain open or blocked where provider evidence and finance/accounting treatment are prerequisites. G1 remains NOT PASSED and G2 remains NOT APPROVED. No tests, implementation, provider contact, credentials, live financial activity, merge or deployment were performed or authorized by this review.
 
+## 18. Merchant API and outbound event contract consolidation (2026-10-24)
+
+**Scope:** documentation-only review of DOC-49, DOC-58, DOC-41, DOC-42, DOC-43, DOC-45 and DOC-48 against AR-016.
+
+**Clarification:** DOC-49 §14.1 now consolidates the product-owner-approved direction for public API/event contracts: explicit versioning; stable request/response schemas and error categories; truthful pending/unknown/final lifecycle semantics; bounded cursor pagination; durable event identity; signing and at-least-once delivery; audited replay; and data minimization. DOC-58 §10.1 identifies DOC-49 as the public wire-contract source while keeping internal operation/task envelopes separate.
+
+**Still unresolved:** exact routes and schemas; final error codes and HTTP mapping; cursor integrity/limits; API/event compatibility, deprecation and rolling migration; task-envelope compatibility; webhook signature canonicalization and test vectors; key rotation; delivery retry/expiry/alerting; replay authorization; and mapping to exact DOC-31/DOC-34 requirements. The product-owner direction does not settle technical or security mechanisms, establish provider behavior, or authorize tests.
+
+**Disposition:** AR-016 remains OPEN until accountable technical/API, security and operations owners are assigned, exact decisions and requirement traceability are recorded, required reviewers disposition the contract, and later separately authorized verification provides evidence. G1 remains NOT PASSED and G2 remains NOT APPROVED. No tests, implementation, provider contact, credentials, live financial activity, merge or deployment were performed or authorized.
+
