@@ -128,6 +128,15 @@ For each provider product and operation, the approved contract must state which 
 
 Dispatch and cancellation must follow DOC-41 §5A: the adapter must expose whether a request was definitely not sent, was accepted with a provider reference, or may have been sent with an ambiguous outcome. If the adapter cannot prove “not sent,” the core must preserve UNKNOWN and recover using documented provider-safe methods. The adapter does not independently cancel an in-flight payment, issue an automatic refund, choose a tenant, or post to the ledger.
 
+### 4.2 Provider-attempt and event deduplication — proposed, not approved
+
+- A provider attempt is a child of exactly one persisted HARAI logical operation. Persist the attempt identity and dispatch boundary before sending a request; provider-native keys/references remain separate from the merchant idempotency key.
+- Provider reference uniqueness must be scoped using the actual provider contract (for example account/product/environment and reference namespace). Do not assume a provider reference is globally unique if the contract does not say so. A collision across operations or tenants is quarantined and reconciled, never auto-associated.
+- Persist an authenticated callback/event receipt before asynchronous processing. Prefer the provider's stable event ID, scoped by provider/account/product/environment. If none exists, use a versioned fingerprint over authenticated source identity and normalized immutable fields; ambiguous collisions require review. Deduplication must not discard conflicting evidence that matters to lifecycle precedence.
+- A duplicate callback, poll result, worker delivery or reconciliation-derived event may append receipt/diagnostic evidence but must not repeat a state transition, ledger posting or outbound financial event.
+- Retry after possible dispatch is governed by DOC-41 and the provider-specific idempotency contract. If the adapter cannot establish that the request was not sent, preserve UNKNOWN and reconcile first; never create a new provider attempt merely because a merchant retry or worker redelivery occurred.
+- Provider idempotency/reference retention, event identity reliability and replay limits are method-specific. Unknown values remain explicitly UNKNOWN and block unsafe assumptions.
+
 ## 5. Operation capability matrix — evidence snapshot
 
 The following reflects evidence recorded in DOC-37/DOC-38 and the provider review for 2026-10-19. It is not a live status check as of this document's date and must be refreshed before implementation decisions.
