@@ -3,7 +3,7 @@
 **Status:** Draft corrective-action plan from a read-only repository inventory; not an implementation authorization.  
 **Review date:** 2026-10-24  
 **Reviewed ref:** docs/julypay-discovery-and-requirements  
-**Review boundary:** The reviewed tree contains README.md and 42 Markdown documents under docs/. It contains no application source, package manifests, lockfiles, tests, CI workflows, deployment configuration, database migrations, or .env.example files. This is therefore a repository/documentation audit and readiness gap assessment—not a source-code audit, security test, provider verification, or proof that software behavior works.
+**Review boundary:** Read-only inventory covered the three active working refs: main, feat/initial-foundation, and docs/julypay-discovery-and-requirements. main contains README.md and one DOC-47 file; the documentation branch contains README.md and 42 Markdown documents under docs/; the foundation branch contains a root package.json, pnpm-workspace.yaml, turbo.json, .gitignore, .env.example, app/package placeholder READMEs and two short docs. Across these refs there is no actual application source, no workspace-level package.json files, no lockfile, no tests, no CI workflow, no database schema/migrations, and no deployment configuration. This is a cross-branch repository inventory and readiness assessment—not a source-code audit, security test, provider verification, or proof that software behavior works.
 
 **Gate status:** G1 requirements approval NOT PASSED. G2 architecture/security approval NOT APPROVED. This document authorizes no implementation, tests, provider contact, credential generation, live financial activity, merge, or deployment.
 
@@ -15,30 +15,31 @@ Every corrective action must record a stable ID, exact file/deliverable, account
 
 ## 2. Repository inventory
 
-Present on the reviewed ref:
-- README.md
-- DOC-00 through DOC-03
-- DOC-24 through DOC-61 (42 Markdown documents in docs/)
+### 2.1 Branch-by-branch inventory
+
+- **main:** README.md plus docs/47-detailed-architecture-review-and-contradiction-register.md. It does not contain the current discovery document set or the foundation scaffold.
+- **docs/julypay-discovery-and-requirements:** README.md plus 42 Markdown files under docs/ (DOC-00–DOC-03 and DOC-24–DOC-61). This is the current discovery/documentation branch. It contains no app source or engineering scaffold.
+- **feat/initial-foundation:** root package.json, pnpm-workspace.yaml, turbo.json, .gitignore, .env.example, README.md; apps/api, apps/checkout, apps/dashboard and packages/database, packages/payment-core, packages/provider-sdk directories containing only placeholder README files; docs/architecture.md and docs/development.md. PR #1 is open/draft/unmerged. It is a scaffold, not a working payment gateway.
 
 The numbering gap from DOC-03 to DOC-24 is real. DOC-00 still lists DOC-04 through DOC-23 as “Not started”, although later documents cover overlapping topics. The index must distinguish legacy planned IDs, superseded plans, current source-of-truth documents, and work genuinely not started. Do not create duplicate documents just to fill numbering gaps.
 
-Absent from the reviewed ref:
-- Application source and package/workspace configuration
-- Dependency lockfile and pinned runtime/toolchain
-- Tests and test harness
-- CI workflow and automated quality/security checks
-- Database schema and migrations
-- Runtime/deployment configuration and environment templates
+### 2.2 Confirmed engineering gaps across branches
 
-README.md describes a proposed stack (NestJS, TypeScript, PostgreSQL, Prisma, Redis, Next.js, pnpm workspaces and GitHub Actions) as “Initial architecture” and refers to provided .env.example files, but those implementation artifacts are absent. The README must describe the stack as proposed and the repository as documentation-only until those artifacts actually exist.
+- No actual application source files are present in the app or package directories; they contain README placeholders only.
+- The root package.json defines build/dev/lint/test/typecheck scripts, but the workspace directories have no package.json files implementing those scripts. There is no pnpm-lock.yaml, so dependency installation is not reproducible from the repository as currently shaped.
+- No test suite, test harness, CI workflow, database schema/migrations, or deployment configuration is present.
+- .env.example exists only on feat/initial-foundation, not on main or the documentation branch. The shared README refers to it as if it is available from all refs.
+- .env.example uses local-development database credentials in its sample URL. Keep these explicitly local-only and never reuse them for shared/staging/production environments.
+
+README.md describes a proposed stack (NestJS, TypeScript, PostgreSQL, Prisma, Redis, Next.js, pnpm workspaces and GitHub Actions) as “Initial architecture” and refers to environment templates. Label this as a proposal, explain the branch differences and current placeholder-only status, and do not claim the platform or CI exists.
 
 ## 3. Findings register
 
 | ID | Priority | Finding | Required correction | Acceptance evidence | Gate |
 |---|---|---|---|---|---|
-| RR-001 | P0 | No executable implementation or engineering foundation exists on the reviewed ref. | Keep this ref documentation-only until G1/G2 pass. After separate authorization, prepare a foundation PR with manifests, lockfile, source structure, migrations, test harness and CI. Do not invent these artifacts in this pass. | Tree inventory; later foundation PR and reproducible CI evidence only after authorization. | G3 blocked |
-| RR-002 | P0 | README can imply an existing stack and environment templates that are absent. | State documentation-only status, label the stack proposed/not implemented, remove the claim that .env.example files are already provided, and link this plan and current gates. | README checked against actual tree; no false implementation claims. | Repository integrity |
-| RR-003 | P0 | DOC-00 says DOC-04–DOC-23 are “Not started” despite later documents covering many of those subjects. | Reconcile every legacy row to current source documents; mark covered, superseded/retired, or genuinely not started. Preserve legacy IDs and cross-links. | DOC-00 contains an explicit mapping and one authority per topic. | G0/G1 |
+| RR-001 | P0 | No executable application exists across the reviewed refs; feat/initial-foundation is only a scaffold. | Keep the documentation branch documentation-only until G1/G2 pass. After separate authorization, turn the foundation branch into a real, reviewable implementation with source structure, valid workspace manifests, lockfile, migrations, tests and CI. | Tree inventory; later foundation PR and reproducible CI evidence only after authorization. | G3 blocked |
+| RR-002 | P0 | README is identical across branches and overstates implementation maturity; .env.example exists only on the foundation branch. | State the stack is proposed, the app/package folders are placeholders, and the repo has no working app/CI. Explain where the environment template exists and link this plan/current gates. | README checked against all three refs; no false implementation claims. | Repository integrity |
+| RR-003 | P0 | main lacks the current discovery set, while DOC-00 on the documentation branch says DOC-04–DOC-23 are “Not started” despite later docs covering overlapping subjects. | Reconcile legacy IDs, then define the reviewed/approved path for bringing the current document set into main. Do not merge automatically; PR #2 remains draft pending gates/review. | DOC-00 maps each topic to one authority and branch integration is separately reviewed. | G0/G1 |
 | RR-004 | P0 | DOC-03 contains a stale instruction to keep foundation PR #1 open during discovery; current work is on the documentation branch/PR #2. | Replace PR-number-specific roadmap instructions with durable branch/review/gate policy. Keep current PR state in a dated status record, not permanent roadmap text. | DOC-03 and DOC-00 agree; no stale PR instruction. | Governance |
 | RR-005 | P0 | DOC-32 opening scope/status is stale compared with its later sections: its reviewed-baseline list names only early documents and its opening emphasizes G0 while later material tracks G1/G2. | Update header and executive summary with exact ref/date, scope, audit limitations and current gates. Preserve historical findings; do not silently erase history. | DOC-32 opening summary agrees with its latest sections and DOC-00. | G0/G1 |
 | RR-006 | P1 | DOC-47 scope omits newer DOC-50–DOC-61, which affect onboarding, UI/API boundaries, domain ownership and security assurance. | Add a dated supplemental review of DOC-50–DOC-61. Identify affected AR findings; do not claim the earlier review covered documents outside its original scope. | Supplemental review gives disposition per relevant document family; DOC-47 remains the authority for AR status. | G1/G2 |
@@ -50,17 +51,23 @@ README.md describes a proposed stack (NestJS, TypeScript, PostgreSQL, Prisma, Re
 | RR-012 | P1 | Document growth risks stale links, duplicate authority and status drift. | Add a manual change checklist for index, source-of-truth, IDs/counts, status/date/scope, cross-links, proposal-versus-decision labels and test/implementation claims. Consider automation only after an authorized engineering foundation exists. | Recorded checklist result for every changed document; links resolve or are marked planned. | Documentation quality |
 | RR-013 | P1 | No CI or automated quality/security evidence exists on this ref. | Do not invent green checks. After G1/G2 and separate implementation authorization, add deterministic install, formatting/lint, typecheck/build, tests, migration checks, dependency scan and secret scan in stages. | Actual workflow files and run results/URLs; failures fixed or explicitly dispositioned. | G3+ |
 | RR-014 | P0 | There is no approved implementation-ready baseline while G1/G2 remain open. | Do not begin payment-engine implementation, provider integration or live configuration from this plan. Close required decisions and reviews first; then seek separate G3 authorization. | DOC-00 records evidence-backed G1/G2 decisions and explicit G3 authorization. | G1/G2 |
+| RR-015 | P0 | Root scripts reference build/dev/lint/test/typecheck, but workspace folders contain no package manifests or executable source and no lockfile exists. | Add a package.json to each real workspace only when its intended runtime/toolchain is approved; define truthful scripts/dependencies and generate/commit a compatible pnpm lockfile under authorized engineering work. Do not claim scripts work until actual CI proves it. | Clean checkout install and each declared command succeed in a documented environment; actual CI evidence is linked. | G3 |
+| RR-016 | P0 | No tests or CI workflows exist, so no automated quality or security status can be asserted. | After authorization, introduce CI in staged gates and ensure failures block merging; never fabricate passing checks or add tests that are claimed to run without execution. | Workflow files and successful run links with test logs; independent review of security-critical coverage. | G3+ |
+| RR-017 | P0 | Branch drift is material: main has only README and DOC-47; PR #1 holds the foundation scaffold; PR #2 holds the expanded discovery documentation. Both PRs are draft/unmerged. | Keep the PRs separate. Define merge ordering and conflict resolution after gate decisions; do not merge the foundation or docs branch simply to synchronize files. Reconcile README and document ownership across branches. | Reviewed branch/PR plan with base/head, dependencies, gates and independent reviews; no accidental merge. | Governance/G1/G2 |
+| RR-018 | P1 | The foundation .env.example includes local database credentials and API_PORT despite no runtime validation. | Label values local-development-only, validate configuration in the eventual app, use placeholders/secret manager for shared environments, and ensure no real credentials or production data enter Git. | Reviewed sample and future config validation; secret scan results after CI exists. | G3/security |
 
 ## 4. Strict execution sequence
 
 ### Stage A — Repository truth and document authority
 
-1. **A-01:** Fix README truthfulness (RR-002).
-2. **A-02:** Reconcile DOC-00 index and authority map (RR-003, RR-008).
+1. **A-01:** Fix README truthfulness on all working branches (RR-002).
+2. **A-02:** Reconcile DOC-00 index/authority map and the planned relationship of PR #2 to main (RR-003, RR-008, RR-017).
 3. **A-03:** Remove stale PR-specific roadmap instructions from DOC-03 (RR-004).
 4. **A-04:** Refresh DOC-32 scope, summary and gate status (RR-005).
 5. **A-05:** Add dated supplemental DOC-47 review of DOC-50–DOC-61 (RR-006).
-6. **A-06:** Run a manual consistency pass: all IDs exist; counts match; links resolve; proposals are not called approvals; no tests or implementation are claimed without evidence (RR-012).
+6. **A-06:** Run the manual consistency pass: IDs, counts, links, proposal/approval labels, and claims about tests or implementation (RR-012).
+7. **A-07:** Record the foundation scaffold gaps and define package/lockfile/CI completion criteria without claiming current scripts work (RR-015, RR-016).
+8. **A-08:** Record cross-branch integration/dependency order for PR #1 and PR #2; keep both unmerged until their independent acceptance conditions are met (RR-017).
 
 **Stage A exit:** DOC-00, DOC-03, DOC-32 and DOC-47 agree on scope, authority, governance and gates. G1/G2 are not presumed passed.
 
@@ -112,7 +119,7 @@ README.md describes a proposed stack (NestJS, TypeScript, PostgreSQL, Prisma, Re
 - All 54 requirement dispositions remain pending unless a later explicit accountable decision is recorded.
 - Provider multi-merchant authority, production access, product entitlements, funds-flow model, settlement/account ownership, money-out funding authority and method-specific finality evidence are not established here.
 - Named technical, independent security, finance/accounting, operations/reconciliation and independent requirements reviewers remain unassigned unless formally recorded.
-- No executable code, tests, CI, migrations or runtime configuration were present on the reviewed ref; no software behavior was verified.
+- No executable app source, tests, CI, migrations or runtime configuration were present on any reviewed ref; the foundation branch contains only root workspace configuration and placeholder READMEs. No software behavior was verified.
 
 ## 7. Completion and change-control rule
 
