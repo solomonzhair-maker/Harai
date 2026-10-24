@@ -321,3 +321,12 @@ The product owner confirmed that the two non-binding inquiries were manually sen
 **Finding:** Payouts, refunds and reversals/returns remain externally blocked by missing permission/capability evidence, unselected funds-flow/funding/settlement authority and required finance/accounting/legal review. Proposed linked-operation/compensating-entry patterns do not prove provider support or approved accounting treatment. Beneficiary changes remain partial/blocked pending identity, risk, cooling-off/approval and pending-payout rules. FIN-003 remains blocked without an approved fee schedule, fee-payer, rounding/tax treatment and accounting sign-off. No row was upgraded to verified/closed; no direct contradiction was established in this bounded batch.
 
 **Scope/gate boundary:** 54 unique IDs, all 32 P0 IDs, and 51 Accept / 3 Defer remain unchanged. G1 NOT PASSED; G2 NOT APPROVED. No tests, implementation, provider outreach, credentials, financial activity, merge or deployment were performed or authorized.
+
+
+### DOC-63 detailed criterion review — Batch 5 (2026-10-24)
+
+**Completed — documentation-only, bounded review.** Reviewed DEV-001, DEV-002, SEC-001, SEC-002, OPS-001, OPS-002 and OPS-003 against DOC-03, DOC-40, DOC-42, DOC-43, DOC-44, DOC-45, DOC-48, DOC-49, DOC-50, DOC-51, DOC-56, DOC-57 and DOC-59. Refined mappings for credential lifecycle/compromise response, webhook destination security, account recovery, privacy/backup controls, restore-resume controls, release gates and reliability objectives.
+
+**Finding:** Security and operational controls remain proposals and have no attributable verification evidence. Credential/session/MFA policy, retention/deletion/legal hold, backup/key handling, outbound destination protections, named runbook owners, numeric SLO/RTO/RPO, provider support/SLA and restore-resume authorization remain unresolved. DOC-49 and DOC-40/DOC-48 are directionally compatible on webhook security, but the canonical signing/destination/retry policy remains open. No row was upgraded to verified/closed; no direct contradiction was established in this bounded batch.
+
+**Scope/gate boundary:** 54 unique IDs, all 32 P0 IDs, and 51 Accept / 3 Defer remain unchanged. G1 NOT PASSED; G2 NOT APPROVED. No tests, implementation, provider outreach, credentials, financial activity, merge or deployment were performed or authorized.
