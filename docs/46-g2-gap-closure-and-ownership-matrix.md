@@ -162,4 +162,4 @@ For each item, record:
 
 ## 7. Current assessment
 
-The immediate internal work is to assign roles, review and reconcile the design proposals, and prepare synthetic test specifications. External authority, qualified professional reviews and executed verification evidence are not replaceable by further prose. No named reviewer has been assigned in this tracker, no P0 item is declared passed, no funds-flow model is selected, and G2 remains open.
+The immediate internal work is to assign roles, review and reconcile the design proposals, and prepare synthetic test specifications. External authority, qualified professional reviews and executed verification evidence are not replaceable by further prose. No named specialist or independent gate reviewer has been assigned; ChatGPT is appointed only for the internal documentation/design review. No P0 item is declared passed, no funds-flow model is selected, and G2 remains open.
