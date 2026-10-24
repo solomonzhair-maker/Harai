@@ -41,6 +41,21 @@ PR #1 (`feat/initial-foundation`) has been retargeted to this canonical branch a
 
 **Target state:** one canonical active working branch; keep `main` unchanged; retain PR #1 and PR #2 as separate draft review boundaries until their acceptance conditions and applicable reviews are met. This is an alignment decision, not a claim that the branch contents have already been merged. Do not create another long-lived working branch unless a concrete technical reason is recorded.
 
+## 2.4 Stage A execution log — 2026-10-24
+
+| Action | Status | Evidence / remaining condition |
+|---|---|---|
+| A-01 README truthfulness | **In progress** | README was corrected on the canonical discovery branch and foundation branch to describe the stack as proposed, identify the scaffold as incomplete, state G1/G2 status and link to the current source documents. `main` intentionally remains unchanged until PR #2 passes its review/gate conditions. |
+| A-02 DOC-00 index and authority reconciliation | **Applied; validation pending** | Legacy DOC-04–DOC-23 rows now identify current source documents and distinguish covered/partial areas from remaining gaps. DEC-043 records canonical-branch governance; DEC-044 records the legacy crosswalk. Verify every mapping and source-of-truth boundary before marking complete. |
+| A-03 DOC-03 stale PR-specific instruction | **Applied; verification pending** | The instruction naming PR #1 was replaced with durable integration-review and acceptance-condition wording. DEC-015 was aligned with that governance. |
+| A-04 DOC-32 audit scope/status | **Applied; verification pending** | The header now records the initial scope, supplemental sections through DOC-61, DOC-62's separate repository inventory, audit limits and current G0/G1/G2 state. |
+| A-05 DOC-47 supplemental review | **Applied; verification pending** | Added a dated cross-document review of DOC-50–DOC-62, clarifying authority boundaries and preserving open findings/gates. |
+| A-06 Manual consistency pass | **Open** | Re-fetch and verify exact IDs/counts, links, current statuses, branch refs and proposal-versus-approval wording across the changed documents. |
+| A-07 Foundation scaffold criteria | **Open** | RR-015/RR-016/RR-018 capture missing workspace manifests/lockfile, absent CI/tests and local-only environment sample constraints. Keep as future engineering work; no implementation is authorized. |
+| A-08 Branch integration order | **Decision recorded; integration pending review** | `docs/julypay-discovery-and-requirements` is the canonical active branch. PR #1 was retargeted to it and remains draft/unmerged; PR #2 remains draft/unmerged to `main`. GitHub rejected a merge attempt because PR #1 remains a draft, and DOC-62 requires review before integration. No PR was merged and `main` is unchanged. |
+
+This log records progress, not completion of Stage A. Do not advance to implementation. The remaining manual validation and review conditions still apply.
+
 ## 3. Findings register
 
 | ID | Priority | Finding | Required correction | Acceptance evidence | Gate |
