@@ -255,3 +255,29 @@ Any final decision remains subject to explicit product-owner approval and applic
 ## 10. Source limitations
 
 This document combines public-source research and redacted, account-specific read-only portal observations available on 2026-10-19. Public pages can be incomplete or change; product access beyond the visible Test/dashboard state, pricing, contractual rights, legal interpretation and production eligibility have not been independently confirmed. Contact providers through their official business channels to obtain current, written evidence.
+
+
+## 11. Preliminary evidence scorecard — 2026-10-24 (not a model selection)
+
+**Status: decision blocked; no option selected.** This is an internal, read-only comparison of evidence already recorded in DOC-28 and the linked provider summaries DOC-37/DOC-38. It does not refresh provider account state, establish current terms, or substitute for written provider/legal/finance evidence.
+
+| Decision criterion (DOC-44 §4) | Model A — provider-managed funds | Model B — direct provider integrations | Model C — conditional hybrid | Evidence / limitation |
+|---|---|---|---|---|
+| 1. Legal recipient, control and payout roles | Unknown | Unknown | Unknown | No reviewed evidence establishes HARAI's exact legal role or the account/settlement roles for the intended multi-merchant flow. |
+| 2. Explicit multi-merchant/aggregator permission | Unknown — critical blocker | Unknown — critical blocker | Unknown — critical blocker | DOC-37/DOC-38 record no written permission for HARAI's intended model. Public product documentation is not contractual authorization. |
+| 3. Merchant onboarding, eligibility and scope | Unknown | Partially supported technically; permission unknown | Unknown | API/merchant relationship surfaces are documented, but HARAI eligibility, prohibited categories and account responsibilities are not confirmed. |
+| 4. Collections, money-out, refunds, reversals and disputes | Unknown for any proposed partner | Partially supported at documentation level; HARAI entitlement unknown | Unknown per selected rail/partner | Public/portal materials describe some relevant APIs; they do not establish production entitlement, supported contractual flows or finality for HARAI. |
+| 5. Settlement, funding, prefunding, reserves and returns | Unknown — critical blocker | Unknown — critical blocker | Unknown — critical blocker | Account ownership, destination, settlement timing, payout funding and reserve terms remain unconfirmed. |
+| 6. Complete fees, limits, tax and net settlement | Unknown | Unknown | Unknown | No complete, current, account-specific commercial schedule or qualified tax/accounting treatment is recorded. |
+| 7. Reconciliation data, support and exception handling | Unknown for proposed partner | Partially supported at documentation level; operating terms unknown | Unknown | Technical reports/status surfaces are described, but actual access, identifiers, cadence, support SLA and named operating ownership are not confirmed. |
+| 8. Privacy, security, audit and regulatory obligations | Unknown pending qualified review | Unknown pending qualified review | Unknown pending qualified review | DOC-30 and DOC-44 require qualified Uganda legal/compliance and specialist security review; no conclusion is inferred. |
+| 9. Commercial viability, workload and portability | Not comparable yet | Not comparable yet | Not comparable yet | Comparable fees, settlement terms, support commitments and operating costs are absent. |
+| 10. Implementation complexity and recovery | Not comparable yet | Not comparable yet | Not comparable yet | Provider-specific finality, retry, callback, restore/replay and reconciliation contracts remain incomplete. |
+
+### Interpretation and required disposition
+
+- **No numeric ranking is defensible yet.** The models do not have equivalent evidence, and missing commercial/legal facts must not be scored as favorable or converted to assumed zero-cost values.
+- **All three models remain blocked from selection.** Critical permission, legal-role, account/settlement and funding evidence is absent. Model C cannot bypass a blocker by combining unverified rails.
+- **Safe interim boundary:** retain the approved product ambition as planning scope, but keep money-out, unapproved refund/reversal paths, card processing and any provider/merchant flow without verified authorization disabled. Do not imply production readiness.
+- **Next evidence needed:** current attributable written responses/contracts from each relevant provider or authorized partner; exact contracting entity and merchant model; product-specific production entitlements; account ownership and settlement destination; funding/prefunding/reserve and return terms; full fees/limits/timing/support; and qualified Uganda legal/compliance plus finance/accounting review.
+- **Authority boundary:** this scorecard is a preliminary internal assessment, not a provider contact, legal opinion, accounting approval, model selection, G1/G2 pass or implementation authorization. Any provider outreach still requires separate explicit owner authorization.
