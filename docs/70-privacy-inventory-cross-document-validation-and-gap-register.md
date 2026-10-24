@@ -54,7 +54,7 @@ The following rules should be preserved across DOC-69 and any later revised inve
 
 ## 4. Recommended completion sequence
 
-1. Reconcile DOC-69's candidate rows with the conceptual entities in DOC-56 and processing flows in DOC-57/DOC-58.
+1. **Completed as a documentation pass:** DOC-69 now contains explicit candidate rows for all 12 gap categories and a row-level completion crosswalk. This does not verify that any category exists or is in scope; evidence and scope disposition remain outstanding.
 2. Confirm which workflows and operation families are actually in the intended product scope; mark other categories OUT OF SCOPE with rationale rather than keeping them as implicit requirements.
 3. For each in-scope category, identify the real UI/API/provider/source fields, system of record, data subjects, purpose, recipients, data roles, locations, access roles and copies.
 4. Review retention, deletion, legal hold, backup propagation and restoration behavior with qualified privacy/legal and finance/accounting reviewers.
@@ -64,7 +64,7 @@ The following rules should be preserved across DOC-69 and any later revised inve
 
 ## 5. Current disposition and gates
 
-- DOC-69 remains preliminary; the gaps above are documentation findings, not proof of production processing or a confirmed defect in a running system.
+- DOC-69 was expanded after this audit to represent all 12 gap categories as candidate rows and to require row-level evidence/scope dispositions. This closes the documentation-representation step only; it does not close the underlying evidence gaps or verify production processing.
 - No physical schema, provider payload, hosting location, subprocessor, retention period, legal basis, privacy notice, registration status or cross-border decision has been verified by this review.
 - DOC-64 remains a draft; FIN-004 and SUP-005 remain unverified/open for specialist review; AR-022 remains open.
 - G1 remains **NOT PASSED** and G2 remains **NOT APPROVED**. The funds-flow model remains unselected.
