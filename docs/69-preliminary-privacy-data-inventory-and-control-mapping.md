@@ -3,7 +3,7 @@
 **Status:** Preliminary design/evidence worksheet — not approved, not legally validated, not a verified inventory of production processing.  
 **Created:** 2026-10-24  
 **Canonical branch:** `docs/julypay-discovery-and-requirements`  
-**Related documents:** DOC-47 (architecture review and contradiction register), DOC-51/DOC-56/DOC-59 (security/access-control materials as cross-referenced by DOC-64), DOC-62 (remediation plan), DOC-64 (draft complaint/dispute case-management proposal), DOC-66 (specialist research programme), DOC-67 (preliminary obligation/evidence matrix), DOC-68 (qualified reviewer question pack).  
+**Related documents:** DOC-47 (architecture review and contradiction register), DOC-51/DOC-56/DOC-59 (security/access-control materials as cross-referenced by DOC-64), DOC-62 (remediation plan), DOC-64 (draft complaint/dispute case-management proposal), DOC-66 (specialist research programme), DOC-67 (preliminary obligation/evidence matrix), DOC-68 (qualified reviewer question pack), DOC-70 (cross-document validation and gap register).  
 **Purpose:** Convert the known proposed HARAI gateway and complaint-case workflows into a reviewable data-inventory worksheet, identify privacy/security control questions, and list the evidence needed before a privacy design or retention policy can be approved.
 
 > This document does not claim that every listed data category is currently collected, that HARAI has a particular legal role or registration status, or that a given legal basis/retention period has been selected. Entries are candidate categories inferred from the documented proposed workflows and must be confirmed against actual UI fields, API contracts, provider messages, hosting, logs, contracts and operational procedures. Do not treat a candidate as a requirement to collect the data.
@@ -101,7 +101,11 @@ The following must be supplied before this inventory can be marked verified:
 
 Each item stays **UNVERIFIED** until evidence is attached and the accountable reviewer accepts it. A blank template or proposed control is not proof of implementation.
 
-## 7. Current disposition
+## 7. Cross-document validation pointer
+
+DOC-70 compares this preliminary inventory with DOC-41, DOC-42, DOC-43, DOC-49, DOC-56, DOC-57, DOC-58, DOC-59 and DOC-64. It records candidate gaps and evidence needed before any row is treated as in scope. DOC-70 does not authorize adding fields or collecting data; keep unknown processing, locations, recipients and retention marked UNVERIFIED.
+
+## 8. Current disposition
 
 - This document is a candidate inventory and evidence checklist only.
 - No actual production data flows or deployment locations were independently inspected.
