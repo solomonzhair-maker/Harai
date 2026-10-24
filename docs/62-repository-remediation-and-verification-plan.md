@@ -415,3 +415,12 @@ Reviewed the official August 2025 National Payment Systems Oversight Policy Fram
 - Added a mandatory reconciliation question: 2011 six-monthly reporting versus 2022 NPS Consumer Protection Regulations monthly reporting. No assumption that one replaces the other.
 - Located the 10-page January 2024 BoU Financial Reporting & External Auditor Guidelines PDF URL, but text extraction returned no body and download into the local analysis environment failed. Marked clauses as not reviewed; comparison with November 2023 remains open.
 - Gates remain unchanged: AR-022 OPEN; G1 NOT PASSED; G2 NOT APPROVED; no implementation, tests, provider/regulator outreach, reporting submission, credentials, live financial activity, merge or deployment authorized.
+
+
+## Research log — January 2024 financial reporting guidelines reviewed (2026-10-24)
+
+- Visually reviewed all rendered pages of the 10-page January 2024 BoU Guidelines on Financial Reporting and External Auditors for PSPs, PSOs and Issuers of Payment Instruments.
+- Confirmed the document states commencement 1 December 2023 and applies to BoU-regulated PSPs/PSOs/issuers; quarterly unverified statements due day 15 after quarter-end and external-auditor-verified statements by day 30; annual IFRS/ICPAU statements with January–December year, draft audited statements/management letter by 31 March, BoU approval before publication, extracts published by 30 April and website publication; auditor prequalification/approval and quarterly review requirements. See DOC-67 §16.
+- The current BoU page lists a November 2023 version as well, but that PDF has not yet been obtained for comparison. Do not claim supersession or a complete version reconciliation. All obligations remain conditional on HARAI's legal category and current licence/coverage status.
+- Next source task: retrieve the November 2023 financial reporting PDF and compare it with January 2024; then obtain a qualified accountant's review of applicability and map the actual funds-flow to reporting-template categories.
+- Gates unchanged: AR-022 OPEN; G1 NOT PASSED; G2 NOT APPROVED; no implementation, tests, provider/regulator outreach, reporting submission, credentials, live financial activity, merge or deployment authorized.
