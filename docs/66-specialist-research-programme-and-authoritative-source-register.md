@@ -186,3 +186,13 @@ These are study references, not substitutes for current primary sources or profe
 This research programme authorizes reading, analysis and documentation only. It does not authorize provider follow-up, applications, contracts, credential use, access to restricted portals beyond existing authorized read-only access, live transactions, financial commitments, tests, implementation, merge or deployment. No funds-flow model is selected by this document. No provider eligibility, licence, production entitlement, legal deadline, retention period, accounting treatment, staffing appointment or approval is inferred.
 
 **Current disposition:** research baseline started; authoritative-source validation and specialist review remain in progress. DOC-64 remains a draft proposal, AR-022 remains open, G1 NOT PASSED, and G2 NOT APPROVED.
+
+
+## Source-validation update — 2026-10-24
+
+The next source pass identified two instruments that must be treated as explicit inputs rather than left implicit:
+
+- **National Payment Systems (Consumer Protection) Regulations, 2022 (S.I. 103 of 2022):** https://ulii.org/en/akn/ug/act/si/2022/103/eng%402022-09-09. The public text covers licensee consumer-protection policy and governance, information/disclosure, protection of consumer assets and information, complaints, inquiry handling and redress. Regulation 6 states a covered licensee submits categorized complaint information and remedial measures to the Central Bank within 15 days from the last day of each month. This is a regulatory reporting deadline only if the entity is within scope; it is not an individual customer complaint response SLA.
+- **National Payment Systems (Amendment) Regulations, 2022 (S.I. 102 of 2022):** https://ulii.org/en/akn/ug/act/si/2022/102/eng%402022-09-09. ULII's 2021 NPS Regulations page notes amendments remain unapplied in the consolidated view. Reconcile the 2021 text with the 2022 amendment and any later instruments before relying on a provision as current.
+
+This materially strengthens the legal research track but does not resolve HARAI's licensing status, product role, the applicability of the monthly reporting duty, or any provider/API dispute SLA. These require a fact-specific review by qualified Ugandan counsel and current official/provider evidence. See DOC-67 for the preliminary obligation matrix and the conditional deadline entry.
