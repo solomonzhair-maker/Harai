@@ -116,7 +116,7 @@ A proposed test ID is not a test result. An API mock is not evidence that a prov
 
 ## 4. Current cross-cutting blockers
 
-- **Dispute/complaint case handling:** FIN-004 and SUP-005 are accepted in the intended launch baseline, but the DOC-63 criterion review found no complete case lifecycle with owner, deadlines, evidence, communication history, escalation, retention and outcome. Reconciliation exception handling does not satisfy these requirements; AR-022 remains open.
+- **Dispute/complaint case handling:** FIN-004 and SUP-005 are accepted in the intended launch baseline. DOC-64 now proposes a case lifecycle, ownership, deadline provenance, evidence, communications, escalation, access controls, resolution and financial-operation separation; DOC-65's review finds this is preliminary partial design coverage only. Provider/legal duties and deadlines, approved routing/retention rules, named owners, specialist review and execution evidence remain open. Reconciliation exception handling is not a substitute for case management; AR-022 remains open.
 
 - **People and accountability:** product owner must assign named technical, security, finance/reconciliation, operations and independent reviewers; qualified Ugandan legal/compliance review is still needed.
 - **Provider eligibility:** written evidence is needed for multi-merchant/aggregator permission, supported methods, payout capabilities, refunds/reversals, fees, limits, settlement and support.
