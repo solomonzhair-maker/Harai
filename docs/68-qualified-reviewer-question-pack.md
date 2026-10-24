@@ -115,7 +115,7 @@ Add the 2011 Guidelines PDF to the review evidence pack with a source-status not
 ## 10. Additional financial reporting questions after visual review of the January 2024 BoU guidelines
 
 1. Confirm whether HARAI's actual entity and licensed role, if any, fall within clause 2 of the January 2024 guidelines. Do not treat a gateway label or planned integration as proof of PSP/PSO/issuer status.
-2. Obtain and compare the November 2023 and January 2024 PDFs clause-by-clause; confirm whether the January version supersedes, corrects or republishes the November version and identify any transitional rule.
+2. Review DOC-67 §17.1's documented comparison and confirm which version legally controls, whether any transitional rule or subsequent direction applies, and whether the differences alter the filing/publication/auditor process for the actual covered entity.
 3. If applicable, validate quarterly reporting deadlines (unverified statements by day 15; external-auditor-verified statements by day 30 after quarter-end), standard template, filing channel and treatment of weekends/holidays.
 4. If applicable, validate the January–December financial year, IFRS as adopted by ICPAU, draft audited statements/management letter by 31 March, BoU written approval before finalization/publication, newspaper publication by 30 April and website publication requirements.
 5. Confirm the BoU prequalified auditor selection and approval process, annual audit/quarterly review scope, three-year continuous appointment limit, and prior written approval required before changing auditors.
