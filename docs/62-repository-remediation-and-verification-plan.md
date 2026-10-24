@@ -406,3 +406,12 @@ Reviewed the official August 2025 National Payment Systems Oversight Policy Fram
 - Verified the published 2021 NPS Regulations and 2022 amendment: the identified 2022 instrument substitutes Schedules 3 and 4; ULII still flags outstanding amendments. Counsel must complete the current-law reconciliation.
 - Retrieval gaps remain: full standalone BoU Consumer Protection Guidelines PDF and January 2024 PSP/PSO financial-reporting/external-auditor PDF not reviewed clause-by-clause. No claims of detailed compliance or legal classification are made.
 - Gates unchanged: AR-022 OPEN; G1 NOT PASSED; G2 NOT APPROVED; funds-flow model unselected. No tests, implementation, provider/regulator outreach, credentials, reporting submission, financial activity, merge or deployment authorized.
+
+
+## Research log — BoU consumer-protection guideline text located (2026-10-24)
+
+- Located and reviewed the full 18-page 2011 BoU Financial Consumer Protection Guidelines PDF hosted on the legacy BoU website. Captured para. 9 complaint handling: documented procedures, prompt written acknowledgement except accepted resolution within 3 business days, final response by end of two weeks with a defined consumer-delay exclusion, six-monthly BoU reporting due within one month after each half-year, and systemic root-cause remediation.
+- Recorded a material applicability caveat: the guideline defines covered financial services provider categories (banks, credit institutions, MDIs, forex bureaus and money-remittance companies). It must not automatically be treated as directly applicable to a standalone payment gateway/PSP/PSO or as a provider SLA without counsel's current-law review.
+- Added a mandatory reconciliation question: 2011 six-monthly reporting versus 2022 NPS Consumer Protection Regulations monthly reporting. No assumption that one replaces the other.
+- Located the 10-page January 2024 BoU Financial Reporting & External Auditor Guidelines PDF URL, but text extraction returned no body and download into the local analysis environment failed. Marked clauses as not reviewed; comparison with November 2023 remains open.
+- Gates remain unchanged: AR-022 OPEN; G1 NOT PASSED; G2 NOT APPROVED; no implementation, tests, provider/regulator outreach, reporting submission, credentials, live financial activity, merge or deployment authorized.
