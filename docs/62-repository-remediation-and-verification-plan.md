@@ -68,6 +68,17 @@ This log records completion of the canonical-branch documentation consistency wo
 | B-05 Resolve or retain external blockers | **Not started — sequenced after B-04** | Provider authority, funds flow, qualified Uganda legal/compliance, finance/accounting, operations/reconciliation and independent review remain open; unsupported capabilities stay blocked. |
 
 
+
+### AR-008 targeted source audit — 2026-10-24
+
+**Result: requirement/design references are materially aligned; the finding remains open and money-out remains blocked.** The review compared DOC-47 AR-008 with DOC-31 OUT-001/OUT-002/OUT-005/OUT-006, SUP-003, FIN-002, REC-001/REC-002; DOC-40; DOC-41; DOC-42; DOC-46 G2-D04/G2-02; and the provider evidence summaries in DOC-37/DOC-38.
+
+- **Coverage alignment:** the requirement set addresses eligible merchant and verified beneficiary, approved funding, provider/method eligibility, limits/fees, required approvals, auditable actions, beneficiary-change/pending-payout safety, ambiguous-outcome recovery, append-only financial history and provider/settlement reconciliation.
+- **Gate alignment:** DOC-40 and DOC-41 keep money-out disabled until applicable provider, legal, funds-flow, account/contract and operational gates pass. DOC-46 G2-D04 calls for account approval, production access, funding source, limits and operating terms; G2-02 keeps provider lifecycle/recovery blocked where authoritative evidence is absent.
+- **Evidence remains insufficient:** DOC-37/DOC-38 record that the reviewed MTN portal showed no visible Disbursement subscription or production approval, and Airtel showed no visible production approval; written multi-merchant authority, funding/prefunding terms, settlement timing, full fees/limits and support terms remain unconfirmed. These observations are bounded to the read-only review and are not proof of provider refusal or current account status.
+- **No demonstrable contradiction found in this targeted pass.** Do not weaken the requirements or infer authority from published API documentation. Keep AR-008 open and money-out disabled until the specific missing provider, funds-flow, finance/accounting, legal/compliance and operations evidence is available and reviewed.
+- **Not performed:** no provider contact, credential use, live financial action, implementation, tests, merge or deployment.
+
 ### B-03 preliminary architecture-finding disposition recommendations — 2026-10-24
 
 These are proposed status treatments for accountable review, not new architecture approvals. DOC-47 remains the authority for finding status. The recorded requirement-scope decision does not close design, external-evidence, specialist-review or verification findings.
@@ -148,9 +159,9 @@ Stage A records preparation and validation of the remediation plan. The Stage B 
 
 ### Stage B — Requirements and decisions
 
-7. **B-01:** Product owner plus assigned requirements reviewer disposition every one of the 54 DOC-31 IDs. The proposed 51-retain/3-defer split in DOC-34 is only a recommendation until recorded as a decision.
-8. **B-02:** Reconcile all 32 P0 requirements across DOC-31, DOC-34, DOC-39 and DOC-46.
-9. **B-03:** Close or explicitly retain each DOC-47 architecture finding using source-backed evidence and accountable roles. Adding prose alone does not close a finding.
+7. **B-01:** The accountable requirements reviewer recorded the 54-ID decision on 2026-10-24: 51 Accept and EXT-001–EXT-003 Defer. Keep the decision reconciled across DOC-00, DOC-31, DOC-34, DOC-39, DOC-46 and DOC-47; the decision is not implementation or verification evidence.
+8. **B-02:** Completed on 2026-10-24: DOC-31, DOC-34 and DOC-46 have identical 32-ID P0 sets; DOC-39 supplemental requirement dispositions are reflected in the decision record. P0 closure evidence and gates remain open.
+9. **B-03:** The accountable reviewer approved retaining AR-001–AR-018 and AR-020–AR-021 as open and preserving AR-019's narrow indexing/cross-link closure. DOC-47/DOC-00 status reconciliation is still pending; do not treat the approval itself as closure evidence or architecture approval.
 10. **B-04:** Complete DOC-43/DOC-60/DOC-61 security traceability against DOC-31 and DOC-34 (RR-009).
 11. **B-05:** Resolve or explicitly retain external blockers (RR-010, RR-011): funds-flow model, provider terms/entitlement, qualified Uganda legal/compliance, finance/accounting, reconciliation/operations and independent security/requirements review. If evidence is unavailable, keep affected capability blocked.
 
