@@ -33,6 +33,14 @@ The numbering gap from DOC-03 to DOC-24 is real. DOC-00 still lists DOC-04 throu
 
 README.md describes a proposed stack (NestJS, TypeScript, PostgreSQL, Prisma, Redis, Next.js, pnpm workspaces and GitHub Actions) as “Initial architecture” and refers to environment templates. Label this as a proposal, explain the branch differences and current placeholder-only status, and do not claim the platform or CI exists.
 
+## 2.3 Branch-alignment disposition (2026-10-24)
+
+**Canonical active working branch for DOC-62:** `docs/julypay-discovery-and-requirements`. Continue documentation remediation and decisions here so active work does not split across the foundation and discovery branches.
+
+PR #1 (`feat/initial-foundation`) has been retargeted to this canonical branch as an integration proposal. It remains **open, draft, and unmerged**. A merge attempt was rejected by GitHub because the PR is still a draft; it must not be promoted and merged merely to force alignment. The foundation files are only a scaffold, and DOC-62 requires review of the integration before it is accepted. PR #2 remains the draft proposal from the canonical branch to `main`.
+
+**Target state:** one canonical active working branch; keep `main` unchanged; retain PR #1 and PR #2 as separate draft review boundaries until their acceptance conditions and applicable reviews are met. This is an alignment decision, not a claim that the branch contents have already been merged. Do not create another long-lived working branch unless a concrete technical reason is recorded.
+
 ## 3. Findings register
 
 | ID | Priority | Finding | Required correction | Acceptance evidence | Gate |
