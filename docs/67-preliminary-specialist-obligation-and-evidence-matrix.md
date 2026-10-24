@@ -228,3 +228,29 @@ The 2021 Regulations text includes regulation 11(2)(d) describing a third-party 
 - Retrieved: official BoU 2025 NPS Oversight Policy Framework PDF and reviewed relevant sections; official ULII 2021 NPS Regulations text; official 2022 NPS Amendment instrument; official 2022 NPS Consumer Protection Regulations text; PDPO annual compliance report guidance and current Knowledge Center notice.
 - Not retrieved/reviewed clause-by-clause: standalone full current BoU Consumer Protection Guidelines PDF; full January 2024 PSP/PSO Financial Reporting and External Auditor Guidelines PDF; a formal redline or counsel-confirmed complete consolidated current NPS instrument; a full specialist review of all DPPA Regulations, 2021 provisions relevant to HARAI's actual processing.
 - Consequently, do not claim those missing documents have been fully reviewed. Public page listings prove publication only, not detailed obligations.
+
+
+## 15. BoU Financial Consumer Protection Guidelines, 2011 — full text retrieved; current applicability unresolved
+
+**Source reviewed:** Bank of Uganda, *Financial Consumer Protection Guidelines, 2011*, PDF hosted on the legacy BoU website: https://bouganda.com/bouwebsite/bouwebsitecontent/Financial_Literacy/Guidelines/2011/Jun/Consumer_Protection_Guidelines_June_2011.pdf. The current BoU financial-inclusion page continues to list a Consumer Protection Guidelines resource and describes disclosure, fair marketing, customer-data protection and complaint/dispute handling, but its modern page renderer did not expose the download URL. The 2011 PDF is therefore a retrieved published version, not proof that no later instrument or direction modifies it.
+
+Relevant text in the retrieved 2011 PDF:
+- Paragraph 1: effective 1 June 2011.
+- Paragraph 2: application to BoU-regulated financial-services providers and their agents for business in Uganda.
+- Paragraph 3 defines “financial services provider” as a bank, credit institution, microfinance deposit-taking institution, forex bureau or money-remittance company regulated by BoU. This definition matters: do not automatically extend the guideline's provisions to a standalone PSP/PSO or technology gateway without counsel mapping the relevant definitions and later NPS instruments.
+- Paragraph 9(2)–(4): covered providers should have documented effective complaint procedures, make them available through communication channels, and investigate/determine complaints competently, promptly and impartially, provide appropriate redress and explain decisions clearly.
+- Paragraph 9(5): prompt written acknowledgement on receipt, except where the complaint is resolved within three business days; “resolved” depends on the complainant accepting the response.
+- Paragraph 9(6): final response by the end of two weeks after receipt, with additional time beyond a week excluded where the complainant takes more than a week to answer a written request for information.
+- Paragraph 9(8): six-monthly complaint-handling reports to BoU, covering each half-year and due within one month after the relevant period, subject to the paragraph's stated exclusion for complaints resolved by the end of the business day after receipt.
+- Paragraph 9(7): identify and remedy recurring/systemic complaint causes.
+
+**Critical reconciliation:** the 2022 NPS (Consumer Protection) Regulations have a separate monthly complaint reporting rule for licensees within their scope. Do not silently assume the 2011 six-monthly report applies to HARAI, that the 2022 rule supersedes it for every institution, or that one reporting requirement replaces the other. Qualified counsel must identify the covered entity class, later amendments/directions, interaction between instruments and exact current deadlines. The two-week final-response rule is a candidate from the 2011 guideline for the entities/relationships to which it applies; it is not a universal HARAI or provider SLA and must not be hard-coded as such before legal validation.
+
+| Candidate requirement | Source text | Status for HARAI | Design implication |
+|---|---|---|---|
+| Complaint acknowledgement | 2011 Guidelines para. 9(5): prompt written acknowledgement, exception if accepted resolution within 3 business days | Applicability unresolved; definition of provider and subsequent instruments require counsel review | Support configurable acknowledgement targets and record acknowledgement evidence; do not label the target as universally statutory |
+| Final response | 2011 Guidelines para. 9(6): end of two weeks, with stated pause/exclusion for delayed consumer response | Applicability unresolved; interpret calendar/business-day calculation and relationship with NPS Regulations with counsel | Model clock start, pause evidence and deadline provenance; keep legal deadline configurable until approved |
+| Complaint reporting | 2011 Guidelines para. 9(8): six-monthly report due within one month after each half-year, subject to stated exclusion | Applicability and interaction with NPS 2022 monthly reporting unresolved | Keep reporting rules separate by authority, licence/category and reporting period; never merge into one generic “regulatory report” |
+| Systemic complaint analysis | 2011 Guidelines para. 9(7) | Conditional on applicability | Preserve complaint categorization/root-cause trends and evidence of corrective actions |
+
+Source evidence is reproduced only as summarized findings, not as a legal opinion. The source PDF is an archived/legacy BoU-hosted URL; counsel should confirm current status, applicability and any superseding circulars/guidelines before relying on it.
