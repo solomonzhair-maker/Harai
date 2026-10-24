@@ -261,3 +261,14 @@ The sources consistently distinguish cancellation of a HARAI intent from cancell
 **Still unresolved:** approved merchant eligibility/restricted-category policy; exact verification evidence and lawful basis; named reviewers and delegated approval authority; provider and processor capability evidence; selected funds-flow model; legal/privacy/retention decisions; final capability/limit matrix; synchronization of merchant/capability status with credentials, webhooks and queued work; approved exception/appeal policy; independent reviews; and actual implementation/test evidence after separate authorization.
 
 **Disposition:** DOC-50/DOC-34 traceability is more explicit, and the provider-evidence wording is aligned with the existing project rule. This does not close G1, G2, AR-001 or any external evidence blocker. G0 remains IN PROGRESS, G1 remains NOT PASSED and G2 remains NOT APPROVED. No tests, implementation, provider contact, credentials, live financial activity, merge or deployment were performed or authorized.
+
+
+## 23. Funds-flow model decision-boundary review (2026-10-24)
+
+**Scope:** documentation-only review of DOC-28 §§6A–7, DOC-30 §§3–6, DOC-40 §10, DOC-42 and DOC-47 AR-002.
+
+**Clarification:** DOC-28 §6B now distinguishes model-independent safety constraints from obligations that depend on the selected funds-flow model. Design can continue on evidence preservation, unknown-outcome handling, linked financial history, separate settlement evidence, capability-specific default-deny, and separation of provider events from accounting decisions. None of those controls establishes who legally owns or controls funds.
+
+**Still blocked:** selecting provider-managed funds, direct integrations or a hybrid; assigning custody/safeguarding or merchant-settlement responsibilities; selecting funding and available-balance authority for money-out; defining model-specific ledger accounts/postings, fees/tax/rounding, reserves, liabilities or settlement SLAs; and making a legal/regulatory classification. Those require actual end-to-end flow diagrams and provider/partner terms, qualified Uganda legal/compliance review, qualified finance/accounting review, and accountable operations/reconciliation ownership. The conditional hybrid remains an option only if evidence shows a concrete benefit that outweighs its added contracts and operating complexity.
+
+**Disposition:** DOC-28 is more decision-ready about what can be designed without guessing, but no funds-flow model or accounting treatment is selected. AR-002 remains OPEN; G2 and affected money-moving capabilities remain blocked. G0 remains IN PROGRESS, G1 remains NOT PASSED and G2 remains NOT APPROVED. Provider outreach still requires separate explicit authorization. No tests, implementation, provider contact, credentials, live financial activity, merge or deployment were performed or authorized.
