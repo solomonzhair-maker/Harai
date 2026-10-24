@@ -95,7 +95,7 @@ For each proposed provider/product/contracting route, obtain or formally disposi
 7. Callback authentication, idempotency/duplicate protection, retry/polling behavior, status finality and support/SLA commitments.
 8. Qualified Ugandan legal/compliance assessment of the actual operating and funds-flow model, including required permissions, privacy and contractual responsibilities.
 
-Provider outreach is not authorized by this document. DOC-29 is a draft inquiry pack that may be used only after the product owner explicitly authorizes external contact.
+DOC-29 is a reusable inquiry pack, not a record of the exact messages sent. The product owner reported sending initial non-binding informational inquiries on 2026-10-24 (DOC-00 DEC-049 / DOC-62 §8); this does not establish delivery, provider receipt or any permission. This document does not authorize follow-up outreach, applications, onboarding, credentials or financial activity.
 
 ## 7. Requirements implications (design guidance only)
 
