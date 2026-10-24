@@ -515,3 +515,9 @@ The feature-level boundary remains: 51 accepted requirements and only EXT-001–
 
 - Updated the two stale DOC-34 §8.3 cross-reference statements so they acknowledge that DOC-64 now contains a draft case-lifecycle proposal while FIN-004/SUP-005 and AR-022 remain open pending specialist review and evidence.
 - This is wording consistency only; no architecture finding was closed, no requirement status changed, and no tests or implementation were performed.
+
+
+### DOC-63 non-P0 review-status reconciliation (2026-10-24)
+
+- Updated DOC-63's audit finding to reflect that the 22 non-P0 requirements have now received detailed internal reviews in Batches 8–11, replacing the stale statement that those rows still awaited that review.
+- Remaining work is not described as complete: source validation, approved design decisions, contradiction disposition, specialist and independent review, and evidence remain open. No requirement status or gate changed.
