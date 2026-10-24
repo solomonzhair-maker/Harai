@@ -339,3 +339,12 @@ The product owner confirmed that the two non-binding inquiries were manually sen
 **Finding:** Report/export reproducibility and dispatch-time tenant enforcement remain unverified; API compatibility rules remain draft without final schemas/tests; network trust and allowlist controls remain unverified against deployment settings; accessibility criteria exist but manual keyboard/screen-reader review is absent; card processing remains blocked pending processor selection, written eligibility, security/PCI scope and qualified review. No row was upgraded to verified/closed, and no direct contradiction was established in this bounded batch.
 
 **Scope/gate boundary:** 54 unique IDs, all 32 P0 IDs, and 51 Accept / 3 Defer remain unchanged. G1 NOT PASSED; G2 NOT APPROVED. No tests, implementation, provider outreach, credentials, financial activity, merge or deployment were performed or authorized.
+
+
+### DOC-63 detailed criterion review — Batch 7 (2026-10-24)
+
+**Completed — documentation-only, bounded review.** Reviewed SUP-001, SUP-003, SUP-004, SUP-006, SUP-007, SUP-009 and SUP-010 against the full DOC-31 §8 criteria and relevant API, state, security, accessibility and audit proposals. SUP-002 was reviewed in Batch 3; SUP-005 remains explicitly missing; SUP-008 was reviewed with OPS-003 in Batch 5. DOC-63 mappings now point to the more specific rate-limit, beneficiary, shared identity/state, API compatibility, trusted-proxy, accessibility-evidence and audit/correlation sections.
+
+**Finding:** Numeric rate-limit/recovery limits, beneficiary cooling-off/approval and money-out authority, provider-specific state/finality mapping, final API compatibility contracts, deployment-specific edge trust configuration, manual accessibility review, and end-to-end audit/retention evidence remain open. No row was upgraded to verified/closed; no direct contradiction was established in the bounded sections.
+
+**Scope/gate boundary:** 54 unique IDs, all 32 P0 IDs, and 51 Accept / 3 Defer remain unchanged. G1 NOT PASSED; G2 NOT APPROVED. No tests, implementation, provider outreach, credentials, financial activity, merge or deployment were performed or authorized.
