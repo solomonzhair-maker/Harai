@@ -101,3 +101,10 @@ The existing TH-01, TH-10, TH-15 and TH-18 risks overlap but test different trus
 - **Restore/replay:** recovered queues, outbox rows, caches or export links revive stale authorization or duplicate an operation.
 
 Required future evidence is a threat-linked negative-test matrix, actual execution artifacts for each applicable path, access-policy/configuration review for the selected storage and deployment architecture, and disposition of all findings by the accountable authority. This extension is documentation-only; no tests were executed and no control is marked verified.
+
+## 8. Tenant-isolation decision package alignment (2026-10-24)
+
+DOC-56 §15 is the consolidated tenant-isolation decision package. The product owner approved the internal control direction: trusted server-derived authority, persisted ownership checks, revalidation at consequential boundaries, fail-closed mismatch handling, tenant-scoped derived artifacts, callback-to-attempt binding, constrained privileged support and authorization-aware restore/replay. DOC-57 §20 and DOC-59 §16 defer to the same direction.
+
+Threat scenarios in this document remain planned validation targets, not executed tests. The selected database enforcement strategy, queue/task fencing, cache and object-storage policies, revocation propagation, support-elevation controls and incident response must be decided and reviewed by accountable technical/security owners. Independent security review and later authorized negative-test evidence remain required. No control is marked implemented or verified by this alignment.
+
