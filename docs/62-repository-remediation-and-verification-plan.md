@@ -303,3 +303,12 @@ The product owner confirmed that the two non-binding inquiries were manually sen
 **Finding:** Onboarding and access-control designs remain proposals. Exact lifecycle transition permissions and audit-event completeness are not independently verified; live activation is blocked pending provider authority/capability evidence; MFA/session/revocation parameters and sensitive-action limits remain open; privacy/retention/expiry/reverification decisions remain open; and merchant suspension/closure cannot yet demonstrate complete handling for pending transactions, disputes, complaints and settlements. DOC-50's optional sandbox path is consistent with DOC-48's separate provider-entitlement gate. No row was upgraded to verified/closed.
 
 **Scope/gate boundary:** 54 unique IDs, all 32 P0 IDs, and 51 Accept / 3 Defer remain unchanged. G1 NOT PASSED; G2 NOT APPROVED. No tests, implementation, provider outreach, credentials, financial activity, merge or deployment were performed or authorized.
+
+
+### DOC-63 detailed criterion review — Batch 3 (2026-10-24)
+
+**Completed — documentation-only, bounded review.** Compared COL-001, COL-002, COL-006, COL-007 and SUP-002 against DOC-41, DOC-48, DOC-49, DOC-52, DOC-57 and DOC-58. Expanded DOC-63's source mappings to cover request validation/idempotency/errors, provider capability gates, outbound event delivery, link/session lifecycle, amount/currency validation and concurrency behavior.
+
+**Finding:** Relevant behavior is described only in draft contracts and UX/data-flow proposals. Final schemas and method/currency allowlists, hosted-checkout journey and provider-specific availability, notification delivery/outcome semantics and templates, and payment-link expiry/cancellation/usage/concurrency rules remain unapproved or unverified. Production-first onboarding and optional sandbox do not imply provider production eligibility. No row was upgraded to verified/closed; no direct contradiction was established in the inspected sections.
+
+**Scope/gate boundary:** 54 unique IDs, all 32 P0 IDs, and 51 Accept / 3 Defer remain unchanged. G1 NOT PASSED; G2 NOT APPROVED. No tests, implementation, provider outreach, credentials, financial activity, merge or deployment were performed or authorized.
