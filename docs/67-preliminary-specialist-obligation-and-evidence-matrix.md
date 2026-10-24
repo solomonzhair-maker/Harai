@@ -254,3 +254,27 @@ Relevant text in the retrieved 2011 PDF:
 | Systemic complaint analysis | 2011 Guidelines para. 9(7) | Conditional on applicability | Preserve complaint categorization/root-cause trends and evidence of corrective actions |
 
 Source evidence is reproduced only as summarized findings, not as a legal opinion. The source PDF is an archived/legacy BoU-hosted URL; counsel should confirm current status, applicability and any superseding circulars/guidelines before relying on it.
+
+
+## 16. January 2024 BoU Financial Reporting and External Auditor Guidelines — text visually reviewed
+
+**Source:** Bank of Uganda Guidelines on Financial Reporting and External Auditors for Payment Service Providers, Payment System Operators and Issuers of Payment Instruments, 10-page PDF hosted on the legacy BoU website: https://bouganda.com/bouwebsite/bouwebsitecontent/PaymentSystems/Legal-Frameworks/Financial-Reporting-and-External-Auditor-Guidelines-for-PSPs-and-PSOs-Issued-January-2024.pdf. The PDF text was reviewed via its rendered pages. The guidelines state that they commence on 1 December 2023 (clause 1(b)) and apply to all PSPs, PSOs and issuers of payment instruments regulated by BoU in respect of business transacted in Uganda (clause 2). This is a conditional regime: HARAI's category/licence status has not been established.
+
+### Requirements stated in the January 2024 PDF
+- **Quarterly financial statements (clause 4(a)):** income statement and statement of financial position; unverified statements due to BoU by the 15th day of the month following quarter-end; statements verified by the external auditor and submitted under cover letter by the 30th day of the month following quarter-end; standard Appendix 1 template.
+- **Annual financial statements (clause 4(b)):** use IFRS as adopted by the Institute of Certified Public Accountants of Uganda; align financial year to January–December; draft audited financial statements and management letter to BoU for review by 31 March after year-end, after Board consideration; BoU reviews and gives written approval before finalization/publication; extracts from signed audited statements published in a newspaper of wide circulation by 30 April; audited statements displayed on the licensee's website.
+- **External auditor (clauses 5–6):** appoint an auditor from BoU's prequalified list; annual audit plus quarterly review; continuous appointment not exceeding three years; seek BoU approval before appointment and do not change auditors without prior written BoU approval.
+- **Audit/reporting responsibilities (clauses 7–10):** auditor reports on compliance with NPS law/regulations and other listed laws/standards; assesses internal controls, risk management, information systems and report reliability; verifies periodic returns; has access to books, management information systems and records; draft audited statements and management letter must be submitted to BoU for review by 31 March each year. The Central Bank may reject work and call for a fresh audit at the licensee's expense.
+- **Appendix 1:** quarterly template includes income, direct operating costs, operating expenses, trust-account management costs, assets, trust account balances, liabilities and electronic-money deposits among other categories. These are source template labels, not a determination that each category is applicable to HARAI.
+
+### Applicability and version caution
+The BoU current public page lists a January 2024 version and a November 2023 version. The retrieved January 2024 PDF says commencement was 1 December 2023, but the November 2023 file was not yet obtained and compared. Do not infer whether the January file is a reissue, correction or substantive replacement until the two documents are compared. The published guidelines apply to regulated PSPs, PSOs and issuers; they do not by themselves classify HARAI or prove that HARAI is licensed/covered. A qualified accountant and payments counsel must confirm current version, applicability, reporting calendar, audit requirements and any later directions before creating a live compliance calendar or reporting policy.
+
+| Candidate obligation | Source | Status for HARAI | Required next evidence |
+|---|---|---|---|
+| Quarterly unverified statements by day 15 after quarter end | Jan 2024 Guidelines cl. 4(a)(ii) | Conditional on regulated PSP/PSO/issuer status; not assumed | Counsel confirms category/current version; accountant confirms calendar and template |
+| Auditor-verified quarterly statements by day 30 after quarter end | cl. 4(a)(ii) | Conditional | Confirm applicable audit/review scope, submission method and due-date calculation |
+| Annual statements and management letter by 31 March | cl. 4(b)(iii) and cl. 9(a) | Conditional | Confirm reporting period, Board approval sequence and exact filing package |
+| BoU written approval before finalization/publication; newspaper extract by 30 April; website publication | cl. 4(b)(iv)–(v) | Conditional | Confirm current wording, approval procedure and publication requirements with accountant/counsel |
+| Auditor prequalification, prior approval, quarterly review and three-year limit | cls. 5–6 | Conditional | Verify current BoU approved list/process and any subsequent circulars |
+| January 2024 vs November 2023 version relationship | BoU current page lists both versions | UNRESOLVED | Retrieve November 2023 PDF and compare clause-by-clause |
