@@ -279,3 +279,60 @@ The BoU current public page lists a January 2024 version and a November 2023 ver
 | BoU written approval before finalization/publication; newspaper extract by 30 April; website publication | cl. 4(b)(iv)–(v) | Conditional | Confirm current wording, approval procedure and publication requirements with accountant/counsel |
 | Auditor prequalification, prior approval, quarterly review and three-year limit | cls. 5–6 | Conditional | Verify current BoU approved list/process and any subsequent circulars |
 | January 2024 vs November 2023 version relationship | BoU current page lists both versions | UNRESOLVED | Retrieve November 2023 PDF and compare clause-by-clause |
+
+
+## 17. Updated source comparison and targeted DPPA review — 2026-10-24
+
+### 17.1 BoU financial reporting versions
+
+The official BoU page lists both documents:
+- [November 2023 PDF](https://bou.or.ug/uploads/Financial_Reporting_and_External_Auditor_Guidelines_for_PS_Ps_and_PS_Os_Issued_November_2023_cb4924312f.pdf) (11 pages).
+- [January 2024 PDF](https://bou.or.ug/uploads/Financial_Reporting_and_External_Auditor_Guidelines_for_PS_Ps_and_PS_Os_Issued_January_2024_b1fe168e0e.pdf) (10 pages).
+- [Official BoU listing](https://bou.or.ug/financial_infrastructure_innovation).
+
+Both copies state commencement on 1 December 2023 and cover BoU-regulated PSPs, PSOs and issuers of payment instruments for Uganda business. The visible rendered-page comparison established these differences:
+
+| Topic | November 2023 copy | January 2024 copy | Status / consequence |
+|---|---|---|---|
+| Annual newspaper publication, cl. 4(b)(iv) | Extracts of signed audited statements in **at least two** newspapers of wide circulation by 30 April | Extracts in **a newspaper** of wide circulation by 30 April | Wording changes the stated count from at least two to one; obtain confirmation of controlling version before relying on either. |
+| Website publication, cl. 4(b) | No separate website-display clause in the corresponding annual-statement text inspected | Expressly requires audited statements to be displayed on the licensee's website, cl. 4(b)(v) | Additional express publication requirement in January text. |
+| Auditor appointment/approval | Clause 5 covers appointment from prequalified list, three-year continuous limit and selection criteria; inspected sequence proceeds to cl. 7 | Adds cl. 5(d) annual BoU bid call and cl. 5(e) auditor-firm written application deadline of 30 September; adds new cl. 6 approval regime | January expressly adds BoU prior approval of nominated auditor, approval/conditional approval/decline, withdrawal for sufficient cause, and prior written approval before auditor change. |
+| Auditor annual reporting package, cl. 9(a) | Refers to audit report and management letter with the related financial statements by 31 March | Refers to draft audited financial statements and management letter for BoU review with related statements by 31 March | Wording/process difference; accountant/counsel must confirm exact package and whether other provisions still require the audit report. |
+| Auditor duties, cl. 7(a) | Lists frameworks with an explicit Companies Act reference and a different formulation of standards | Explicitly mentions IFRS as adopted by ICPAU and refers to other relevant laws/regulations in a different formulation | Scope wording differs; reconcile against current applicable law and auditor engagement. |
+| Shared core | Quarterly statements (unverified by day 15; verified by day 30), annual IFRS/ICPAU framework, January–December year, draft annual statements/management letter by 31 March, publication by 30 April, three-year continuous auditor limit and audit/access/supervisory duties | Same overall framework, with differences above | Core reporting architecture appears shared; not a legal conclusion about supersession. |
+
+**Version conclusion:** neither PDF states in the reviewed text that the January copy expressly repeals or supersedes the November copy. Both state the same commencement date. The official page lists both, so mark “controlling/current wording” **UNVERIFIED — SPECIALIST CONFIRMATION REQUIRED**. Do not turn differences into an implemented policy or calendar. Applicability is conditional on HARAI's actual regulated role, which is not established.
+
+### 17.2 Privacy obligations and evidence map
+
+Primary sources: [PDPO official Regulations PDF](https://pdpo.go.ug/media/2022/03/Data_Protection_and_Privacy_Regulations-2021.pdf), [ULII Regulations record](https://ulii.org/en/akn/ug/act/si/2021/21/eng%402021-03-12), [DPPA consolidated Act](https://ulii.org/en/akn/ug/act/2019/9/eng%402023-12-31), [PDPO annual report guidance](https://pdpo.go.ug/media/2024/01/Guidance-Note-on-Completion-of-the-Annual-DPP-Compliance-Report.pdf).
+
+| Candidate obligation | Source | Status for HARAI | Evidence/action needed before closure |
+|---|---|---|---|
+| Registration and any exemption | DPPA Regulations 2021 regs. 13–15 | Applicability/status unknown | Confirm entity, data collector/controller/processor roles, registration record, renewal status and any valid exemption with privacy counsel/DPO/PDPO evidence. |
+| Security practices and security measures | Regulations regs. 31–32; DPPA security duties | Conditional on actual processing role; design not verified | Data inventory, risk assessment, technical/organisational control evidence, accountable owner and independent review. |
+| Breach notification | DPPA s.23; Regulations reg. 33(1)–(3) | Conditional; incident workflow not legally validated | Confirm “immediately” trigger and all recipients/notices with counsel; maintain breach type/data/categories and approximate data-subject counts, consequences, remedies and DPO/contact details; Form 7 source. |
+| Data-subject complaint handling | Regulations reg. 40; complaints to Office under reg. 41 | Conditional; distinct from payment complaint workflow | Document accessible privacy complaint intake, case ownership, response/evidence and escalation, with counsel-approved clocks. |
+| Cross-border processing/transfer | DPPA s.19; Regulations reg. 30 | Actual locations/subprocessors unknown | Inventory primary hosting, backups, logs, support access and subprocessors; document legal basis/adequacy/consent and onward-transfer analysis. |
+| Retention/deletion | DPPA s.18 and relevant sector/contract rules | No universal duration established | Per-data-category purpose, trigger, source of legal/contractual retention, legal hold, deletion/de-identification and verification evidence. |
+| Annual PDPO compliance report | Regulations reg. 50; PDPO guidance | Conditional on registered role; no filing status assumed | Confirm registration, reporting period/template/channel and due date with current PDPO guidance. Guidance states 90 days after Government FY (1 July–30 June); report includes complaint status and breaches/actions. |
+
+This is a targeted source review, not a claim that every provision of the Regulations has been exhaustively audited or that HARAI is registered/covered.
+
+### 17.3 Complaint reporting: do not merge obligations
+
+| Regime | Reporting clock / recipient | What it covers | Important distinction |
+|---|---|---|---|
+| BoU Financial Consumer Protection Guidelines 2011, para. 9(8) | Six-monthly; due within one month after each half-year to BoU, with stated next-business-day resolution exclusion | Complaints within the guideline's defined provider/agent scope | Scope is not automatically every PSP/PSO/gateway; current status requires counsel confirmation. |
+| NPS Consumer Protection Regulations 2022, reg. 6 | Monthly; within 15 days after month-end to Central Bank | Complaints by consumers, categorized by category and agent location, including remedial measures | Regulatory reporting deadline, **not** an individual resolution SLA. |
+| DPPA Regulations 2021, reg. 50 | Annual; within 90 days after Government FY to PDPO | Privacy complaints/status and personal-data breaches/actions | Different regulator, period, data fields and legal trigger; separate from NPS reporting. |
+
+**No replacement or equivalence assumed.** Counsel must determine whether multiple duties apply concurrently, whether any later instrument modifies the 2011 guideline, and what is applicable to the actual HARAI entity/activity.
+
+### 17.4 Remaining open evidence and gates
+
+- No formal regulator confirmation of which BoU guideline version controls has been obtained.
+- No qualified Ugandan legal opinion or accountant review has been obtained.
+- HARAI's licence/legal category, data registration status, funds flow, provider contract terms and cross-border data locations remain unverified.
+- No operational compliance calendar or filing package is approved.
+- DOC-64 remains a draft proposal; DOC-65 remains preliminary; AR-022 remains open; FIN-004/SUP-005 remain unverified; G1 NOT PASSED; G2 NOT APPROVED.
