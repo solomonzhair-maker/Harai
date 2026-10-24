@@ -120,3 +120,29 @@ Add the 2011 Guidelines PDF to the review evidence pack with a source-status not
 4. If applicable, validate the January–December financial year, IFRS as adopted by ICPAU, draft audited statements/management letter by 31 March, BoU written approval before finalization/publication, newspaper publication by 30 April and website publication requirements.
 5. Confirm the BoU prequalified auditor selection and approval process, annual audit/quarterly review scope, three-year continuous appointment limit, and prior written approval required before changing auditors.
 6. Map each quarterly-template category (including trust-account balances and electronic-money deposits) to the actual approved funds-flow and legal role; identify not-applicable categories with a reason rather than fabricating balances or assuming customer funds are HARAI assets/liabilities.
+
+
+## 11. Follow-up questions after the 2023/2024 BoU comparison and targeted DPPA review
+
+These questions supersede any earlier wording that treated retrieval/comparison as still outstanding. They do not authorize outreach or establish that any rule applies to HARAI.
+
+### Payments counsel and practising accountant
+
+1. Confirm which of the two BoU financial-reporting PDFs is legally controlling/current, whether the January 2024 copy repeals, amends, replaces or republishes the November 2023 copy, and whether any circular or transition provision affects the differences recorded in DOC-67 §17.1.
+2. Confirm the exact annual publication rule: November says at least two newspapers; January says a newspaper and expressly adds website display. Which obligations currently apply, and is any additional publication required by another instrument or licence condition?
+3. Confirm the auditor appointment process: prequalified list, annual bid call, 30 September application date, prior approval of appointment, conditions/decline/withdrawal, prior written approval for auditor change, and three-year maximum. Which requirements apply to the covered entity and what evidence must be retained?
+4. Confirm the exact 31 March annual submission package given the different clause 9(a) wording (audit report and management letter in November; draft audited statements and management letter for review in January), including Board consideration, auditor deliverables, filing channel and deadline calculation.
+5. Confirm whether the 2011 Financial Consumer Protection Guidelines remain in force and apply to the proposed legal role, including para. 9(5)–(8). Explain its interaction with NPS Consumer Protection Regulations 2022 reg. 6 and any subsequent BoU direction. State separately which complaint resolution, acknowledgment, appeal and regulatory-reporting clocks apply.
+6. For each applicable reporting duty, provide the exact source/clause/version, covered entity/role, reporting period, trigger, calendar/business-day rules, exclusions, recipient/channel, required fields, accountable owner, submission evidence, late-filing consequences and reviewer sign-off.
+
+### Privacy counsel / DPO
+
+7. Confirm HARAI's data collector/controller/processor roles, registration/renewal status, and any valid exemption under DPPA Regulations 2021 regs. 13–15. Do not infer this from being a software platform.
+8. Confirm breach-notification duties under DPPA s.23 and Regulations reg. 33, including the meaning of “immediately,” notification recipients, required Form 7 fields, and any additional data-subject communication requirements.
+9. Confirm minimum requirements for security practices/measures (regs. 31–32), privacy complaint handling (reg. 40), complaints to the Office (reg. 41), cross-border processing (DPPA s.19 / reg. 30), and any required DPO designation.
+10. Confirm the Annual Data Protection and Privacy Compliance Report under reg. 50: current template, whether HARAI must file, Government financial-year period, exact deadline and submission channel, and how privacy complaints and breach reports are reconciled without duplicating or omitting records.
+11. For every data category in the proposed complaint/transaction workflow, approve the purpose, lawful basis, access, retention trigger/duration, legal-hold exceptions, cross-border location and deletion evidence. Identify any statutory or contractual retention rule before any system TTL is selected.
+
+### Evidence acceptance criteria
+
+A specialist answer is not considered closed merely because an email or meeting exists. Record the reviewer's name/qualification and date, source version and clause, applicability facts, reasoned conclusion, conditions/limitations, required operational control, accountable owner, and approval/evidence artifact. Unanswered or conflicting items remain UNVERIFIED and block the affected decision.
