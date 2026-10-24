@@ -157,3 +157,14 @@ This is **not evidence that money-out is supported or authorized**. The reviewed
 
 No provider contact, credential use, live financial action, implementation, test execution, merge or deployment occurred in this review.
 
+## 11. V1 feature-scope reconciliation addendum — 2026-10-24
+
+DOC-34 §8.8 is the canonical mapping from the 54 requirement IDs to intended V1 feature groups and enablement gates. This records scope alignment, not technical or external readiness:
+- The only deferred IDs remain EXT-001, EXT-002 and EXT-003.
+- EXT-004 cards remain accepted but blocked pending eligible processor/acquirer evidence.
+- Money-out, refunds, reversals and beneficiary controls remain accepted intended scope, but disabled until provider/funds-flow/funding/accounting/legal/security/operations gates are met.
+- Collections remain intended V1 scope, but no method is presumed authorized or production-ready.
+- FIN-004/SUP-005 complaints/disputes remain in scope; AR-022 remains open until DOC-64/65 are reconciled and reviewed by appropriate specialists.
+- All 32 P0 requirements remain retained and unverified; complete requirement mapping is not proof of implementation, testing or release readiness.
+
+This reconciliation does not close AR-001 or any other architecture finding, pass G1/G2, or authorize implementation, tests, credentials, provider outreach, live financial activity, merge or deployment.
