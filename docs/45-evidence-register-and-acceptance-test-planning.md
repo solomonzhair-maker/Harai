@@ -56,7 +56,7 @@ Never put API secrets, passwords, access tokens, OTPs, session cookies, private 
 | EV-SEC-01 | Independent threat-model/security review | Missing | Named review with findings, severity, remediation and retest requirements | G2 security sign-off |
 | EV-OPS-01 | Operations and reconciliation ownership | Not assigned | Named accountable owners, escalation coverage, runbooks and sample evidence | Operational readiness |
 
-These records summarize the existing project notes and are not proof that a provider has denied or granted access. Portal state may change and must be rechecked before consequential decisions.
+These rows are summary-level evidence dispositions, not complete accepted evidence records. The current table does not itself provide every required capture date, stable source/artifact location, evidence owner, reviewer outcome, retention location or revalidation trigger for each observation. Complete those fields from the actual source records before relying on an account observation for a consequential decision; do not invent missing dates or artifacts. These summaries are not proof that a provider has denied or granted access. Portal state may change and must be rechecked before consequential decisions.
 
 ## 4. Acceptance-test planning rules
 
