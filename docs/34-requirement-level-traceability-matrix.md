@@ -162,7 +162,7 @@ DOC-47 records cross-cutting architecture findings AR-001–AR-022, including AR
 
 ## 8.3 Detailed architecture review cross-reference
 
-DOC-47 records cross-cutting architecture findings AR-001–AR-021. These are review/closure findings, not additional requirement IDs and not proof that any requirement has passed. Use DOC-31 as the requirement source of truth, DOC-46 for P0 closure tracking, and DOC-45 for evidence-quality and test-execution rules. Close a finding only with its specified evidence and accountable review; preserve G1/G2 as open until their respective criteria are met.
+DOC-47 records cross-cutting architecture findings AR-001–AR-022, including AR-022 for the missing dispute/complaint case lifecycle under accepted requirements FIN-004/SUP-005. These are review/closure findings, not additional requirement IDs and not proof that any requirement has passed. Use DOC-31 as the requirement source of truth, DOC-46 for P0 closure tracking, and DOC-45 for evidence-quality and test-execution rules. Close a finding only with its specified evidence and accountable review; preserve G1/G2 as open until their respective criteria are met.
 
 ## 8.4 Security reconciliation cross-reference
 
