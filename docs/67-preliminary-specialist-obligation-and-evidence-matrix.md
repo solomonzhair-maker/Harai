@@ -226,7 +226,8 @@ The 2021 Regulations text includes regulation 11(2)(d) describing a third-party 
 ## 14. Reviewer-pack research status and remaining retrieval gaps
 
 - Retrieved: official BoU 2025 NPS Oversight Policy Framework PDF and reviewed relevant sections; official ULII 2021 NPS Regulations text; official 2022 NPS Amendment instrument; official 2022 NPS Consumer Protection Regulations text; PDPO annual compliance report guidance and current Knowledge Center notice.
-- Not retrieved/reviewed clause-by-clause: standalone full current BoU Consumer Protection Guidelines PDF; full January 2024 PSP/PSO Financial Reporting and External Auditor Guidelines PDF; a formal redline or counsel-confirmed complete consolidated current NPS instrument; a full specialist review of all DPPA Regulations, 2021 provisions relevant to HARAI's actual processing.
+- Retrieved and reviewed: the full 2011 BoU Financial Consumer Protection Guidelines PDF (legacy BoU-hosted copy; current status/applicability still requires counsel confirmation) and the January 2024 PSP/PSO financial reporting and external auditor guidelines via rendered PDF pages.
+- Still not completed: retrieval and clause-by-clause comparison of the November 2023 financial reporting guidelines; a formal redline or counsel-confirmed complete consolidated current NPS instrument; a full specialist review of all DPPA Regulations, 2021 provisions relevant to HARAI's actual processing.
 - Consequently, do not claim those missing documents have been fully reviewed. Public page listings prove publication only, not detailed obligations.
 
 
