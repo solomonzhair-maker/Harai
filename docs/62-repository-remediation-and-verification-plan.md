@@ -435,3 +435,7 @@ Reviewed the official August 2025 National Payment Systems Oversight Policy Fram
 - Updated DOC-68 with the outstanding qualified counsel/accountant/privacy reviewer questions and evidence acceptance criteria.
 - Scope limitation: this was a targeted document review based on official PDFs, rendered pages and official PDPO guidance, not a formal legal opinion, exhaustive clause-by-clause audit of every provision, or confirmation of HARAI's legal/regulatory/data-protection status. HARAI's role, licensing, provider contracts, data locations and PDPO registration remain unverified.
 - Gates unchanged: DOC-64 remains draft; DOC-65 preliminary; AR-022 OPEN; FIN-004/SUP-005 unverified; G1 NOT PASSED; G2 NOT APPROVED. No implementation, tests, provider/regulator outreach, filing/submission, credential use, live financial activity, merge or deployment authorized.
+
+
+- Follow-up targeted privacy pass added to DOC-66 §17 and DOC-67 §17.2: DPPA ss. 12–15 on lawful/specific purpose, pre-collection notice, minimization and accuracy; DPPA s.16 / Regulations reg. 29 on correction/deletion requests, including a written decision within seven days under reg. 29(2); and registration lifecycle provisions in Regulations regs. 15–27. These are source-led candidate controls, not approved HARAI SLAs or an exhaustive legal audit.
+- Updated DOC-68 with specific questions for privacy notice, field minimization, accuracy/correction, data-rights deadlines and registration lifecycle evidence.
