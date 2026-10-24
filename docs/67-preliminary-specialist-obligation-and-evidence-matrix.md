@@ -194,3 +194,37 @@ The BoU page lists a January 2024 document titled “Financial Reporting and Ext
 | The January 2024 PSP/PSO financial reporting guideline is listed but its full text was not reviewed. | No claim of compliance and no final accounting/reporting design based on the listing alone. | Official PDF plus practising accountant's documented applicability and accounting-framework review. |
 
 This addendum supersedes any implication elsewhere in DOC-67 that the detailed 2025 oversight framework or January 2024 reporting guideline had already been reviewed clause-by-clause. All conclusions remain preliminary and role-dependent.
+
+
+## 12. Additional source-validation addendum — PDPO annual compliance report
+
+**Official sources reviewed on 2026-10-24:**
+- PDPO, Guidance Note on Completion of the Annual Data Protection and Privacy Compliance Report: https://pdpo.go.ug/media/2024/01/Guidance-Note-on-Completion-of-the-Annual-DPP-Compliance-Report.pdf
+- PDPO Knowledge Center, current notices: https://pdpo.go.ug/knowledge-center
+
+The PDPO guidance note states that regulation 50 of the Data Protection and Privacy Regulations, 2021 requires each registered data collector, controller and processor to submit a summary within 90 days after the end of each financial year. The report covers complaints and their status, plus data breaches and actions taken. The same guidance says the PDPO expanded the report's scope using regulation 4(b). The PDPO Knowledge Center currently lists a notice updated 25 August 2026 requiring registered data controllers, collectors and processors to submit annual compliance reports by **23 November 2026**.
+
+**Applicability warning:** this is a current public notice, not evidence that HARAI is registered, that its reporting status is known, or that a particular report is due from it. The applicability of regulation 50, the current notice, reporting period, template, filing channel, and the effect of the stated scope expansion must be confirmed against the notice itself and the organization's registration/status by the DPO/privacy counsel. Do not submit anything or contact PDPO based on this research note alone.
+
+| Candidate obligation | Timing / content | Applicability / status | Safe design consequence |
+|---|---|---|---|
+| PDPO Annual Data Protection and Privacy Compliance Report | Regulation 50 guidance describes submission within 90 days after financial year end; report includes complaints/status and breaches/actions. Current PDPO Knowledge Center notice lists 23 November 2026. | **CONDITIONAL — NOT YET DETERMINED**. Must verify whether HARAI is a registered data collector/controller/processor and whether the current notice applies to its reporting cycle. | Add to compliance calendar only after status, reporting period, current notice and required format are confirmed. Keep complaint and breach records exportable with data minimization and access control. Preserve submission receipt if later applicable. |
+
+This item is separate from the NPS (Consumer Protection) Regulations, 2022 monthly complaint report. The PDPO annual report is a data-protection compliance report for covered registered organisations; the BoU monthly complaint report is conditional on being a licensee covered by the NPS consumer-protection instrument. They must not be conflated.
+
+## 13. National Payment Systems amendment reconciliation — scope verified
+
+The official ULII page identifies the 2022 National Payment Systems (Amendment) Regulations (S.I. 102 of 2022) as amending the 2021 Regulations. The published amendment text states that it substitutes Schedules 3 and 4 (fees and minimum capital requirements). It does not, in that instrument, replace the main body of the 2021 Regulations wholesale. The ULII consolidated 2021 Regulations page continues to warn that outstanding amendments have not been applied in the consolidated view.
+
+Sources:
+- 2021 Regulations: https://ulii.org/en/akn/ug/act/si/2021/18/eng%402021-03-05
+- 2022 Amendment Regulations: https://ulii.org/en/akn/ug/act/si/2022/102/eng%402022-09-09
+- Official published amendment PDF: https://media.ulii.org/media/legislation/74618/source_file/611d937d3b6fefb1/ug-act-si-2022-102-publication-document.pdf
+
+The 2021 Regulations text includes regulation 11(2)(d) describing a third-party systems class including an aggregator, integrator or gateway facilitating electronic payments without first setting up a merchant account; regulation 25 requires a PSP's management information system to support audit trails and personal-data handling in accordance with the DPPA; regulation 28 addresses outsourcing of licensed services, core payment-system operations or technical personnel and written BoU approval; regulation 29 addresses prior written BoU approval for cross-border payment services. These are **source-text findings, not a conclusion that any specific provision applies to HARAI**. Counsel must check all later instruments, circulars, licence conditions, amendments and current official directions before final legal mapping.
+
+## 14. Reviewer-pack research status and remaining retrieval gaps
+
+- Retrieved: official BoU 2025 NPS Oversight Policy Framework PDF and reviewed relevant sections; official ULII 2021 NPS Regulations text; official 2022 NPS Amendment instrument; official 2022 NPS Consumer Protection Regulations text; PDPO annual compliance report guidance and current Knowledge Center notice.
+- Not retrieved/reviewed clause-by-clause: standalone full current BoU Consumer Protection Guidelines PDF; full January 2024 PSP/PSO Financial Reporting and External Auditor Guidelines PDF; a formal redline or counsel-confirmed complete consolidated current NPS instrument; a full specialist review of all DPPA Regulations, 2021 provisions relevant to HARAI's actual processing.
+- Consequently, do not claim those missing documents have been fully reviewed. Public page listings prove publication only, not detailed obligations.
