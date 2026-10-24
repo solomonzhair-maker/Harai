@@ -5,7 +5,7 @@
 **Reviewed ref:** docs/julypay-discovery-and-requirements  
 **Review boundary:** Read-only inventory covered the three active working refs: main, feat/initial-foundation, and docs/julypay-discovery-and-requirements. main contains README.md and one DOC-47 file; the documentation branch contains README.md and 42 Markdown documents under docs/; the foundation branch contains a root package.json, pnpm-workspace.yaml, turbo.json, .gitignore, .env.example, app/package placeholder READMEs and two short docs. Across these refs there is no actual application source, no workspace-level package.json files, no lockfile, no tests, no CI workflow, no database schema/migrations, and no deployment configuration. This is a cross-branch repository inventory and readiness assessment—not a source-code audit, security test, provider verification, or proof that software behavior works.
 
-**Gate status:** G1 requirements approval NOT PASSED. G2 architecture/security approval NOT APPROVED. This document authorizes no implementation, tests, provider contact, credential generation, live financial activity, merge, or deployment.
+**Gate status:** G1 requirements approval NOT PASSED. G2 architecture/security approval NOT APPROVED. Only the initial non-binding informational inquiries recorded in DEC-049/DOC-62 §8 were authorized and reported sent; this document authorizes no further provider contact, implementation, tests, credential generation, live financial activity, merge, or deployment.
 
 ## 1. Binding remediation rule
 
