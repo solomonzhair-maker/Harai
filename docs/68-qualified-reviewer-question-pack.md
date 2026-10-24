@@ -100,3 +100,13 @@ Keep these categories distinct:
 - No legal classification, provider entitlement, accounting policy, named operational route, or provider-specific deadline has been established by this pack.
 - No external contact, regulatory submission, credential use, implementation, tests, live financial activity, merge or deployment is authorized.
 - This pack becomes decision evidence only after attributable qualified reviewers complete and sign their scoped conclusions and the accountable product owner/reviewer explicitly accepts the resulting decisions.
+
+
+## 9. Additional questions after locating the 2011 BoU Financial Consumer Protection Guidelines
+
+1. Confirm whether the 2011 Guidelines remain in force in whole or part, whether any current BoU guideline/circular supersedes or modifies paragraph 9, and whether their defined “financial services provider” categories cover the actual HARAI legal entity or its intended relationship with a licensed provider.
+2. If applicable, confirm the meaning/calculation of “prompt” acknowledgement, the exception where a complaint is resolved within three business days, the “end of two weeks” final-response deadline, and the pause/exclusion for a complainant's delayed response to a written information request.
+3. Determine whether paragraph 9(8)'s six-monthly BoU complaint report applies to the proposed entity, and reconcile its scope, reportable cases and calendar with regulation 6 of the 2022 NPS Consumer Protection Regulations (monthly report within 15 days after month end for covered licensees). State explicitly whether both, either or neither apply to the proposed model and cite the legal basis.
+4. Confirm the complaint-handling provisions' interaction with provider contracts, including any stricter contractual deadlines, and separate the platform's internal service target from an externally enforceable statutory requirement.
+
+Add the 2011 Guidelines PDF to the review evidence pack with a source-status note that it is hosted on a legacy BoU domain; obtain counsel confirmation of current status before operational reliance.
