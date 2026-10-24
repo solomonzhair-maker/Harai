@@ -151,3 +151,46 @@ The 2021 National Payment Systems Regulations page also explicitly notes that am
 | Monthly complaint report to BoU | Within 15 days from the last day of each month, under NPS (Consumer Protection) Regulations, 2022, reg. 6 | Only if the entity is a licensee covered by the Regulations; definitions, current directions and reporting format/channel must be confirmed | Keep BLOCKED pending qualified Ugandan counsel's applicability decision and current reporting instructions. If applicable, retain categorized complaint data, remedial measures, reviewer approval and submission receipt. Do not treat it as an individual case-resolution SLA. |
 
 This finding should be carried into the legal obligation register and deadline registry only after the entity's licensing/applicability analysis. No regulatory report has been prepared or submitted, and this note does not authorize provider or regulator contact.
+
+
+## 11. Source-validation addendum — Bank of Uganda 2025 framework and reporting materials
+
+### 11.1 Revised National Payment Systems Oversight Policy Framework (August 2025)
+
+Official PDF: https://bou.or.ug/uploads/Revised_BOU_National_Payment_Systems_Oversight_Framework_2025_698b3e9745.pdf
+
+The current official PDF was retrieved and reviewed. Key findings relevant to classification and design:
+
+- The framework states that the National Payment Systems Act and implementing regulations form the legal basis for oversight and identifies related laws including the Electronic Transactions Act, Computer Misuse Act, Contracts Act, Electronic Signatures Act, Data Protection and Privacy Act and Anti-Money Laundering Act (PDF pp. 4–5).
+- It states that PSPs and PSOs must be licensed by BoU to operate in Uganda, subject to the Act and applicable exceptions (pp. 5–6).
+- The framework distinguishes PSPs that deal directly with merchants/consumers and handle funds/acquire transactions from PSOs that process transfers, aggregation or enabling technology without consumer-facing services (pp. 8–10). This is a regulator's framework description, not a determination of HARAI's classification.
+- It says a PSP needs explicit approval for additional services such as cross-border transfers and product partnerships with other licensed entities (p. 9).
+- It says PSPs/PSOs retain full responsibility for material activities even where third-party providers are contracted, including robust third-party risk management and governance (pp. 9–10).
+- The framework lists domestic money transfer/remittance services, including payment gateway services, and merchant acquisition among eligible payment services/activities; it states cross-border transfer/remittance requires prior BoU approval/licence (p. 16).
+
+**Design consequence:** HARAI must not assume that being a software platform or relying on MTN/Airtel removes licensing or oversight questions. A qualified Ugandan payments lawyer must map the intended legal entity, customer-facing role, aggregation, transaction processing, funds handling, merchant acquisition, settlement and cross-border plans against the Act, regulations and framework. No legal classification is concluded here.
+
+### 11.2 Consumer-protection guidelines — source status
+
+Official BoU page: https://bou.or.ug/financial_inclusion_and_consumer_protection
+
+The current page describes the Consumer Protection Guidelines as addressing fair and transparent treatment, product terms/cost disclosure, fair marketing, customer-data protection and effective complaint/dispute handling. The linked guideline document itself was not retrievable as a standalone authoritative PDF in this pass. Therefore the exact operative provisions, covered institution types, complaint timelines, and relationship to the 2022 NPS Consumer Protection Regulations remain **not verified clause-by-clause**. Do not derive a numeric complaint SLA from this landing page. The 2022 NPS Consumer Protection Regulations remain the more directly identified primary source for covered licensees, subject to counsel's applicability review.
+
+### 11.3 Financial Reporting and External Auditor Guidelines for PSPs and PSOs — source status
+
+Official BoU infrastructure page: https://bou.or.ug/financial_infrastructure_innovation
+
+The BoU page lists a January 2024 document titled “Financial Reporting and External Auditor Guidelines for PSPs and PSOs.” The page establishes that the publication exists, but the complete January 2024 PDF was not successfully retrieved and reviewed clause-by-clause in this pass. Do not represent the guideline's detailed reporting requirements as verified from its title alone. The 2025 framework confirms that regulatory requirements vary with activity/risk and that covered PSPs/PSOs are subject to oversight, but does not substitute for the financial-reporting guideline.
+
+**Required next step:** obtain the official January 2024 PDF, verify whether it supersedes or supplements the November 2023 version, record its effective date and covered licence categories, then have a practising Ugandan accountant and payments counsel assess applicability. Do not use the guide to generate journal entries or reporting returns before that review.
+
+### 11.4 Revised legal applicability and routing controls
+
+| Finding | Consequence | Required reviewer/evidence |
+|---|---|---|
+| A payments platform/aggregator or enabling technology may fall within the framework's PSO/PSP descriptions depending on its actual activities and role. | Licensing classification remains a pre-design gate, not a late launch checklist. | Written counsel memo using actual funds-flow diagram, customer contracts, provider contracts and service scope. |
+| Outsourcing critical technical or aggregation work does not by itself transfer away a covered PSP/PSO's material operational responsibility. | If HARAI is a covered regulated entity, provider/processor due diligence, contractual allocation, monitoring, incident escalation and continuity need review. | Counsel/compliance review of applicable outsourcing rules and all relevant contracts. |
+| BoU's guideline page provides broad principles but the detailed guideline PDF was not verified. | Do not hardcode unverified complaint SLAs or claim clause-level compliance. | Obtain and archive the actual guideline with version/effective date and extract relevant clauses. |
+| The January 2024 PSP/PSO financial reporting guideline is listed but its full text was not reviewed. | No claim of compliance and no final accounting/reporting design based on the listing alone. | Official PDF plus practising accountant's documented applicability and accounting-framework review. |
+
+This addendum supersedes any implication elsewhere in DOC-67 that the detailed 2025 oversight framework or January 2024 reporting guideline had already been reviewed clause-by-clause. All conclusions remain preliminary and role-dependent.
