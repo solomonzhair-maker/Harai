@@ -180,9 +180,9 @@ The current page describes the Consumer Protection Guidelines as addressing fair
 
 Official BoU infrastructure page: https://bou.or.ug/financial_infrastructure_innovation
 
-The BoU page lists a January 2024 document titled “Financial Reporting and External Auditor Guidelines for PSPs and PSOs.” The page establishes that the publication exists, but the complete January 2024 PDF was not successfully retrieved and reviewed clause-by-clause in this pass. Do not represent the guideline's detailed reporting requirements as verified from its title alone. The 2025 framework confirms that regulatory requirements vary with activity/risk and that covered PSPs/PSOs are subject to oversight, but does not substitute for the financial-reporting guideline.
+Historical note from the initial retrieval pass. Both official November 2023 and January 2024 PDFs were subsequently inspected via rendered pages; see §17 for the comparison and the remaining legal-version/applicability limitations. The 2025 framework does not substitute for the financial-reporting guideline.
 
-**Required next step:** obtain the official January 2024 PDF, verify whether it supersedes or supplements the November 2023 version, record its effective date and covered licence categories, then have a practising Ugandan accountant and payments counsel assess applicability. Do not use the guide to generate journal entries or reporting returns before that review.
+**Required next step:** obtain qualified confirmation of which guideline version controls, whether any transition/circular changes the wording, and whether HARAI's actual legal role falls within the covered categories. See §17. Do not use either PDF to generate live reporting returns before that review.
 
 ### 11.4 Revised legal applicability and routing controls
 
@@ -227,7 +227,7 @@ The 2021 Regulations text includes regulation 11(2)(d) describing a third-party 
 
 - Retrieved: official BoU 2025 NPS Oversight Policy Framework PDF and reviewed relevant sections; official ULII 2021 NPS Regulations text; official 2022 NPS Amendment instrument; official 2022 NPS Consumer Protection Regulations text; PDPO annual compliance report guidance and current Knowledge Center notice.
 - Retrieved and reviewed: the full 2011 BoU Financial Consumer Protection Guidelines PDF (legacy BoU-hosted copy; current status/applicability still requires counsel confirmation) and the January 2024 PSP/PSO financial reporting and external auditor guidelines via rendered PDF pages.
-- Still not completed: retrieval and clause-by-clause comparison of the November 2023 financial reporting guidelines; a formal redline or counsel-confirmed complete consolidated current NPS instrument; a full specialist review of all DPPA Regulations, 2021 provisions relevant to HARAI's actual processing.
+- Still not completed: formal counsel-confirmed current NPS instrument/version analysis; exhaustive specialist review of all DPPA Regulations, 2021 provisions against HARAI's actual processing. The November/January financial-reporting comparison and targeted DPPA review were added later in §17; see the explicit scope limitation there.
 - Consequently, do not claim those missing documents have been fully reviewed. Public page listings prove publication only, not detailed obligations.
 
 
@@ -278,7 +278,7 @@ The BoU current public page lists a January 2024 version and a November 2023 ver
 | Annual statements and management letter by 31 March | cl. 4(b)(iii) and cl. 9(a) | Conditional | Confirm reporting period, Board approval sequence and exact filing package |
 | BoU written approval before finalization/publication; newspaper extract by 30 April; website publication | cl. 4(b)(iv)–(v) | Conditional | Confirm current wording, approval procedure and publication requirements with accountant/counsel |
 | Auditor prequalification, prior approval, quarterly review and three-year limit | cls. 5–6 | Conditional | Verify current BoU approved list/process and any subsequent circulars |
-| January 2024 vs November 2023 version relationship | BoU current page lists both versions | UNRESOLVED | Retrieve November 2023 PDF and compare clause-by-clause |
+| January 2024 vs November 2023 version relationship | Official BoU page lists both; rendered-page comparison recorded in §17.1 | UNRESOLVED — legal effect/current wording not established | Qualified counsel/accountant to confirm controlling version, later directions and applicability |
 
 
 ## 17. Updated source comparison and targeted DPPA review — 2026-10-24
