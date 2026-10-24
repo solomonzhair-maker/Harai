@@ -23,7 +23,7 @@ No phase skips its exit criteria.
 - 0.1.1 Maintain master index and decision register.
 - 0.1.2 Assign stable requirement, decision, risk and test IDs.
 - 0.1.3 Define statuses, source-of-truth and change-control rules.
-- 0.1.4 Keep foundation PR #1 open and unmerged during discovery.
+- 0.1.4 Keep foundation integration unmerged until DOC-62's branch-integration review and applicable acceptance conditions are met. Branch names and PR numbers are operational status, not permanent roadmap requirements.
 - 0.1.5 Identify who can approve product, technical, security and production decisions.
 
 ### 0.2 Reference-product discovery
