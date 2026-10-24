@@ -227,7 +227,7 @@ The ONBOARD-* rows are scenario identifiers, not replacements for DOC-31 require
 
 **Purpose:** accelerate AR-001 by making a proposed disposition visible for every normative DOC-31 requirement. These are recommendations for accountable review, not approval. No requirement becomes accepted merely because it appears below. The product owner and assigned requirements reviewer must explicitly accept, amend, defer or reject each ID, record rationale and dissent, and preserve evidence/gate conditions. No person has been assigned by this section.
 
-| Requirement ID | Priority | Requirement summary | Proposed disposition for review | Rationale / boundary |
+| Requirement ID | Priority | Requirement summary | Accountable disposition (2026-10-24) | Rationale / boundary |
 |---|---|---|---|---|
 | GOV-001 | P0 | Decisions and scope are controlled | Retain in the intended launch requirements baseline | Consistent with the approved broad product direction or a necessary safety/governance control; acceptance, amendment and evidence gates remain outstanding |
 | TEN-001 | P0 | All merchant data is tenant-isolated | Retain in the intended launch requirements baseline | Consistent with the approved broad product direction or a necessary safety/governance control; acceptance, amendment and evidence gates remain outstanding |
