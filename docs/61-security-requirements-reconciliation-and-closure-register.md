@@ -66,11 +66,11 @@ Reconcile DOC-60 security assurance rows against the normative requirements in D
 | SEC-E14 | Cross-environment credentials/data | DEV-001, SEC-002, OPS-002 | Wrong-environment use is rejected and evidenced |
 | SEC-E15 | Unauthorized sensitive configuration change | IAM-002, OUT-005, OUT-006, SUP-003, SUP-010 | Approved action-to-role matrix and attributable audit trail |
 | SEC-E16 | Error-response information leakage | DEV-003, SEC-002, TEN-001 | Sanitized external errors and redacted, access-controlled diagnostic logs |
-| SEC-E17 | Outbound webhook SSRF | DEV-002 and SEC-002 are candidate links only; neither explicitly requires SSRF-safe DNS/redirect/egress handling | DOC-31 acceptance-criteria gap; owner decision needed before adding explicit criterion |
-| SEC-E18 | Backup/restore compromise, integrity and replay | OPS-001, OPS-003, SEC-002, FIN-002 partly support restore, protection and ledger integrity; safe worker pause/replay is not explicit | Partial coverage; add explicit post-restore integrity and consequential-job replay criterion only after owner approval |
-| SEC-E19 | Cross-tenant webhook/report delivery | TEN-001, DEV-002, REP-001 directly cover tenant isolation, webhooks and reports; endpoint ownership/dispatch-time revalidation detail is not explicit | Core coverage exists; decide whether endpoint ownership and dispatch-time tenant recheck need explicit wording |
-| SEC-E20 | Unauthorized resolution of contradictory provider evidence | REC-001, REC-002, FIN-002, FIN-005, IAM-002 and OUT-005 cover matching, discrepancies, corrections, state rules, approvals and audit | Core coverage exists; confirm independent approval for consequential manual resolution and preservation of source evidence |
-| SEC-E21 | Accidental card-data capture | EXT-004 and SEC-002 address card-data boundaries and sensitive-data protection; screenshots, fixtures, analytics and support exports are not all named | Partial coverage; decide whether evidence surfaces should be enumerated in EXT-004/SEC-002 |
+| SEC-E17 | Outbound webhook SSRF | DEV-002 and SEC-002; RCP-01 approved and incorporated into DOC-31 | Normative criteria now cover prohibited IPv4/IPv6 destinations, redirect and DNS revalidation, DNS-rebinding/mixed-answer defenses and egress restrictions; implementation, policy review and evidence remain open |
+| SEC-E18 | Backup/restore compromise, integrity and replay | OPS-001, OPS-003, SEC-002 and FIN-002; RCP-03 approved and incorporated into DOC-31 | Normative criteria now require consequential jobs to remain paused until restored-state validation and required reconciliation, with authorized resume; restore/replay implementation evidence and approved recovery targets remain open |
+| SEC-E19 | Cross-tenant webhook/report delivery | TEN-001, DEV-002 and REP-001; RCP-06 approved and incorporated into DOC-31 | Normative criteria now require trusted server-derived tenant ownership and dispatch/execution-time revalidation for delivery, retries, replay, reports and exports; implementation evidence and detailed endpoint-policy review remain open |
+| SEC-E20 | Unauthorized resolution of contradictory provider evidence | REC-001, REC-002, FIN-002, FIN-005, IAM-002 and OUT-005; RCP-07 approved and incorporated into DOC-31 | Normative criteria now require preserving conflicting evidence, recording actor/authority/rationale/time and linked corrections, with independent approval where risk policy requires it; the detailed authority matrix, policy review and evidence remain open |
+| SEC-E21 | Accidental card-data capture | EXT-004 and SEC-002, with DEV-001/SUP-010 for relevant secret and diagnostic surfaces; RCP-05 and RCP-08 approved and incorporated into DOC-31 | Normative criteria now enumerate logs, traces, analytics, screenshots, fixtures, offline caches, support exports and related storage surfaces and retain the processor/data-scope enablement gate; qualified review and evidence remain open |
 
 ## 4A. Direct threat-ID reconciliation (DOC-43 → DOC-60)
 
@@ -160,6 +160,14 @@ The product owner explicitly approved RCP-01 through RCP-08 on 2026-10-23. The c
 4. Any later amendment, deferral or exception requires a recorded decision, rationale, risk owner and compensating control; do not imply the corresponding threat is closed.
 5. The approved criteria still require technical/security and relevant finance, operations or privacy review. No evidence collection, tests or implementation is authorized by this requirements approval.
 
+
+
+
+### Security traceability cross-check — 2026-10-24
+
+A read-only consistency check re-fetched DOC-31, DOC-34, DOC-43, DOC-60 and this register. DOC-43, DOC-60 and DOC-61 each reference the complete TH-01–TH-20 set. DOC-60 contains 21 SEC-E01–SEC-E21 rows; DOC-61 has a corresponding checklist entry for all 21. Every DOC-60 requirement ID referenced in those 21 rows exists in both DOC-31 and DOC-34. This confirms identifier presence and basic cross-document traceability only; it does not by itself prove that each control fully satisfies every linked requirement or that a control is implemented.
+
+The five checklist rows SEC-E17–SEC-E21 above were reconciled to the already approved RCP-01–RCP-08 wording in DOC-31. Earlier gap statements in these rows are historical assessments superseded by those approved changes. Remaining design decisions, qualified reviews, accountable owners and implementation/evidence work stay open. All 20 threats remain OPEN; all 21 controls remain Draft — evidence absent. No security test, implementation or independent security sign-off was performed.
 
 ## 5. Architecture findings and discrepancy handling
 
