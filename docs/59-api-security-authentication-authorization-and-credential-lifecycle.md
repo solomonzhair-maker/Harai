@@ -226,3 +226,8 @@ For architecture and eventual acceptance criteria, interpret the isolation requi
 8. **Revocation and cache invalidation:** define and verify how membership, session, key, project, provider capability and support grants become ineffective across API nodes, caches, workers and long-running jobs. Until a concrete propagation/consistency policy is approved, do not claim immediate revocation as a verified property.
 
 These are design requirements, not an approved implementation or chosen technology. The corresponding negative tests, evidence artifacts and independent/specialist review remain outstanding.
+
+### 16.1 Tenant-isolation decision reference
+
+DOC-56 §15 is the consolidated decision package for tenant ownership and enforcement choices. This security specification defines the identity, credential, revocation and privileged-access implications; DOC-57 §20 describes the synchronous/asynchronous data-flow boundaries, and DOC-43 records the threat model. The product-owner-approved direction is to derive authority from trusted records, revalidate at consequential boundaries and fail closed. Exact database/queue/cache/storage controls, revocation consistency, support elevation and negative-test evidence still require technical/security review. No specific mechanism or control is claimed as implemented.
+
