@@ -101,6 +101,19 @@ The following rules are proposed to make the state table implementable without t
 Extend the future state/contract test plan to cover: cancel before dispatch claim; cancel concurrent with claim; worker crash after durable claim but before/after network send; timeout followed by late success; expiry followed by successful provider enquiry; duplicate/out-of-order callback; callback conflicting with enquiry or settlement; credential rotation with same tenant idempotency key; cross-tenant callback/reference substitution; restore while attempts/jobs are pending; and one authorized manual correction with full audit history. Each scenario must assert both persisted state and whether any ledger posting or outbound merchant event is permitted.
 
 
+
+
+### 5C. Canonical identity contract dependency — proposed, not approved
+
+DOC-42 §7.2 is the consolidated cross-layer decision package for identity, deduplication, retention and restore/replay. This state-machine document must not introduce an independent key scope or retry rule.
+
+- One merchant key reservation identifies one logical operation within authenticated tenant/merchant + environment + operation class; credential/actor is audit context, not a uniqueness boundary by default.
+- Equivalent retries resolve to the same logical operation. Same-key requests with different semantic intent conflict and never dispatch.
+- Every provider attempt, callback/event receipt, ledger posting, reconciliation import and outbound event has its own durable identity linked to the logical operation; one layer's identifier must not be reused as another layer's uniqueness key.
+- A duplicate or replay may add diagnostic evidence, but cannot repeat a transition, provider submission, ledger posting or financial outbound effect.
+- Unknown dispatch outcomes remain UNKNOWN until evidence resolves them; idempotency does not prove a provider accepted, rejected or completed an operation.
+- Canonicalization/version migration, exact retention/tombstones, provider-specific guarantees, import identity and restore-resume authority remain owner decisions listed in DOC-42 §7.2. Until decided and verified, these are design constraints, not claimed controls.
+
 ## 6. Minimum acceptance scenarios (proposed IDs, not existing tests)
 
 | Test ID | Scenario | Expected invariant |
