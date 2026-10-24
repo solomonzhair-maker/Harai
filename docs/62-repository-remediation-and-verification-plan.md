@@ -478,3 +478,10 @@ Reviewed the official August 2025 National Payment Systems Oversight Policy Fram
 ### Intended V1 feature-level disposition reconciliation (2026-10-24)
 
 DOC-34 §8.8 maps the full 54-ID requirements baseline into intended V1 feature groups, conditional/blocked capabilities and the three explicitly deferred IDs. DOC-39, DOC-46 and DOC-47 carry the same boundary: only EXT-001–EXT-003 are deferred; EXT-004 cards are accepted but blocked pending processor/acquirer evidence; money-out/refunds/reversals are accepted but disabled pending provider/funds-flow and specialist gates; complaints/disputes remain in scope with AR-022 open. This is a documentation reconciliation only. No implementation, tests, provider contact, credentials, live financial activity, merge or deployment is authorized; G1 remains NOT PASSED and G2 NOT APPROVED.
+
+
+### DOC-34 §8.8 requirement-to-feature coverage audit — 2026-10-24
+
+**Documentation-only cross-check completed.** Parsed the normative requirement IDs in DOC-31 and compared them with the intended-V1 feature disposition in DOC-34 §8.8, expanding compact ID ranges (for example, COL-001–COL-008 and OUT-001–OUT-006). Result: **54/54 unique requirement IDs covered; no missing or extra IDs** in the scope mapping. This confirms traceability coverage only; it does not validate the adequacy of each acceptance criterion, external feasibility, legal applicability, implementation, or test evidence.
+
+The feature-level boundary remains: 51 accepted requirements and only EXT-001–EXT-003 deferred; EXT-004 card payments are accepted but blocked pending processor/acquirer evidence; collection methods remain individually gated; OUT-001–OUT-006 and SUP-003 remain accepted intended scope but disabled pending provider authority, approved funds-flow/funding/settlement design and required specialist/operational gates; FIN-004/SUP-005 remain in scope with AR-022 open. All 32 P0 requirements remain retained and unverified. G1 remains NOT PASSED; G2 remains NOT APPROVED. No implementation, tests, provider contact, credentials, live financial activity, merge or deployment was performed or authorized by this audit.
