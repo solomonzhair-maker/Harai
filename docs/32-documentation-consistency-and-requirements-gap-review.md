@@ -216,3 +216,13 @@ The sources consistently distinguish cancellation of a HARAI intent from cancell
 
 **Disposition:** AR-016 remains OPEN until accountable technical/API, security and operations owners are assigned, exact decisions and requirement traceability are recorded, required reviewers disposition the contract, and later separately authorized verification provides evidence. G1 remains NOT PASSED and G2 remains NOT APPROVED. No tests, implementation, provider contact, credentials, live financial activity, merge or deployment were performed or authorized.
 
+## 19. Reconciliation controls and evidence ownership review (2026-10-24)
+
+**Scope:** documentation-only review of DOC-42 §§5–11, DOC-45, DOC-46 and DOC-47 AR-017.
+
+**Clarification:** DOC-42 §8.1 now records the product-owner-approved internal control direction: reconciliation is layered, evidence-led, idempotent, owned and auditable; missing or disputed financial evidence cannot be silently discarded, rewritten or balanced with unexplained adjustments. It also enumerates per-flow decisions for authoritative sources, source completeness/provenance, report/line identity and amendments, matching rules, run cadence/recovery, discrepancy ownership, stop conditions, correction authority, monitoring and later authorized drills.
+
+**Still unresolved:** selected funds-flow model; authoritative source availability and settlement meaning per provider/product; report IDs and amended-file behavior; finance-approved posting/fee/tax/rounding rules; cadence, completeness criteria, SLAs and numeric thresholds; named case owners and correction approvers; lawful evidence retention; and exact stop conditions for dispatch, payout, settlement and ledger close. These cannot be inferred from generic documentation or public API descriptions alone.
+
+**Disposition:** DEC-039 records product direction. AR-017 and G2-03 remain OPEN/blocked until accountable finance, provider-integration and operations owners resolve the per-flow decisions with current evidence. No production SLA, automated matching capability, live posting or settlement is claimed. G1 remains NOT PASSED and G2 remains NOT APPROVED. No tests, implementation, provider contact, credentials, live financial activity, merge or deployment were performed or authorized.
+
