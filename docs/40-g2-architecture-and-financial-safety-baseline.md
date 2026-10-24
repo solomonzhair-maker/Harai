@@ -70,6 +70,10 @@ For any API operation that can create or move money:
 
 Provider idempotency support and retention windows are not assumed; adapter contracts must state what is known, unknown and safe for each method.
 
+
+
+**Cross-layer decision reference:** DOC-42 §7.2 is the single decision-ready proposal for endpoint compatibility, semantic fingerprint fields and canonicalizer-version migration, distinct provider/event/ledger/import/outbound identities, coordinated retention/tombstones and restore-resume authority. DOC-41 §5C, DOC-48 §4.3 and DOC-49 §7.1 defer to that contract. The details remain proposed and require accountable approval; do not set an arbitrary retention duration or assume a provider's key/reference/event guarantees without evidence for the exact product and operation. If fingerprint version comparison or endpoint compatibility is uncertain, fail closed rather than treating the request as new.
+
 ## 5. Callback and outbound webhook design
 
 ### Inbound provider callbacks
