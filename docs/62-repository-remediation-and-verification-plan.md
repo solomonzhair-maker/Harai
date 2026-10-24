@@ -312,3 +312,12 @@ The product owner confirmed that the two non-binding inquiries were manually sen
 **Finding:** Relevant behavior is described only in draft contracts and UX/data-flow proposals. Final schemas and method/currency allowlists, hosted-checkout journey and provider-specific availability, notification delivery/outcome semantics and templates, and payment-link expiry/cancellation/usage/concurrency rules remain unapproved or unverified. Production-first onboarding and optional sandbox do not imply provider production eligibility. No row was upgraded to verified/closed; no direct contradiction was established in the inspected sections.
 
 **Scope/gate boundary:** 54 unique IDs, all 32 P0 IDs, and 51 Accept / 3 Defer remain unchanged. G1 NOT PASSED; G2 NOT APPROVED. No tests, implementation, provider outreach, credentials, financial activity, merge or deployment were performed or authorized.
+
+
+### DOC-63 detailed criterion review — Batch 4 (2026-10-24)
+
+**Completed — documentation-only, bounded review.** Reviewed OUT-001, OUT-003, OUT-004, OUT-006 and FIN-003, with adjacent FIN-001/OUT-005 mapping consistency, against DOC-28, DOC-30, DOC-41, DOC-42, DOC-48, DOC-50, DOC-51 and DOC-59. Expanded mappings for money-out activation, linked refund/reversal accounting patterns, beneficiary credential/approval controls, and qualified Uganda review/provider evidence dependencies.
+
+**Finding:** Payouts, refunds and reversals/returns remain externally blocked by missing permission/capability evidence, unselected funds-flow/funding/settlement authority and required finance/accounting/legal review. Proposed linked-operation/compensating-entry patterns do not prove provider support or approved accounting treatment. Beneficiary changes remain partial/blocked pending identity, risk, cooling-off/approval and pending-payout rules. FIN-003 remains blocked without an approved fee schedule, fee-payer, rounding/tax treatment and accounting sign-off. No row was upgraded to verified/closed; no direct contradiction was established in this bounded batch.
+
+**Scope/gate boundary:** 54 unique IDs, all 32 P0 IDs, and 51 Accept / 3 Defer remain unchanged. G1 NOT PASSED; G2 NOT APPROVED. No tests, implementation, provider outreach, credentials, financial activity, merge or deployment were performed or authorized.
