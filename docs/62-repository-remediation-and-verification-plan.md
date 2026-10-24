@@ -521,3 +521,8 @@ The feature-level boundary remains: 51 accepted requirements and only EXT-001–
 
 - Updated DOC-63's audit finding to reflect that the 22 non-P0 requirements have now received detailed internal reviews in Batches 8–11, replacing the stale statement that those rows still awaited that review.
 - Remaining work is not described as complete: source validation, approved design decisions, contradiction disposition, specialist and independent review, and evidence remain open. No requirement status or gate changed.
+
+### DOC-63 stale case-management reference correction — 2026-10-24
+
+- Cross-checked DOC-63's MER-004 row against the current case-management artifacts and corrected its stale statement that the dispute/complaint workflow was wholly `MISSING`. DOC-64 now contains a draft case-lifecycle proposal and DOC-65 a preliminary review; the crosswalk now states that these are proposals only and that case ownership, deadline provenance, reassignment, retention and specialist approval remain unresolved under AR-022.
+- Re-fetched DOC-63 after the edit and confirmed the updated wording is present and the stale phrase is absent. This corrects a document-status inconsistency only; it does not close AR-022, approve DOC-64/65, change FIN-004/SUP-005 disposition, or pass G1/G2. No tests or implementation were performed or authorized.
