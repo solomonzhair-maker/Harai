@@ -246,6 +246,24 @@ Before selecting topology, compare:
 
 Any topology must preserve the same externally observable financial invariants and recovery behavior. Database, queue, cache, deployment platform, outbox mechanism and service split remain open pending G2 review.
 
+
+
+### 15.1 Topology comparison and recommended candidate — not approved
+
+**Recommended candidate for technical review:** a modular application with clear domain boundaries, a separately deployable worker process, PostgreSQL as the authoritative transactional store, a durable database outbox/inbox pattern for asynchronous work, and managed secret storage. Redis may be used only for approved non-authoritative purposes such as cache/rate limiting/ephemeral coordination; it must not be the sole source of financial state, idempotency reservations or durable money-moving work.
+
+This candidate is preferred for evaluation—not automatically selected—because it can preserve transactional consistency across operation state, ledger and outbox without requiring premature distributed-service coordination. Separate worker deployment allows asynchronous load and restart behavior to be managed independently while retaining a clear source of truth. It does not imply that API and worker must share one process, database role or unrestricted permissions.
+
+| Option | Advantages | Risks/costs | Evidence that would favor it |
+|---|---|---|---|
+| Modular application + separate worker process (candidate) | Simpler transactional boundaries; fewer network hops; clear domain modules; independent worker scaling/deployment | Module boundaries can erode; shared failure domain; database can become bottleneck | Early workload is moderate, team is small, and transactional consistency/operational simplicity dominate |
+| Multiple independently deployed services | Stronger isolation and independent scaling/release for selected domains | Distributed transactions/retries, more network failure modes, operational and observability burden, wider security surface | Measured throughput, availability or isolation needs justify the additional complexity and teams can operate it |
+| Single application process including worker loops | Lowest initial deployment complexity | API and jobs compete for resources; restart/deploy couples all work; worker isolation weaker | Only a temporary development/local arrangement, not assumed as production topology without explicit risk acceptance |
+
+**Minimum decision evidence:** forecast workload and provider quotas; expected burst and queue backlog; domain transaction boundaries; failure-isolation requirements; staffing/on-call capability; deployment and rollback strategy; migration/restore plan; secret and service-identity boundaries; cost; and required availability/recovery objectives.
+
+**Decision owner:** technical architecture owner, with Operations/platform and independent security review. Record chosen option, rejected alternatives, assumptions, failure scenarios, service/database identities, outbox/inbox and worker fencing strategy, and migration/rollback plan in DOC-44/DOC-46. Do not choose microservices or a specific queue/cache product from the conceptual domain list alone. Until approved, the candidate is not a deployment decision and G2 remains open.
+
 ## 16. Decisions still required
 
 1. Approve the API/authentication/session architecture and exact tenant-context propagation.
