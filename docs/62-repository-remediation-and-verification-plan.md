@@ -501,3 +501,11 @@ The feature-level boundary remains: 51 accepted requirements and only EXT-001–
 - Recorded gaps in DOC-63: reproducible report/export definitions and tenant-safe dispatch; approved credential storage and attributable CI/deployment identity controls; complete outbound webhook SSRF/DNS/redirect/egress and tenant-bound dispatch contract; finalized API/event versioning, pagination and safe logging; and approved accessibility criteria with manual/automated evidence.
 - All six remain PRELIMINARY PARTIAL/open. Webhook destination validation is security-critical. No requirement was upgraded to Approved, Implemented or Verified; no tests were run or authorized.
 - Scope and gates unchanged: 51 Accept / 3 Defer (EXT-001–EXT-003); all 32 P0 retained; EXT-004 cards accepted but blocked; money-out/refunds/reversals accepted intended scope but disabled pending authority and specialist gates; AR-022 OPEN; G1 NOT PASSED; G2 NOT APPROVED. No implementation, provider contact, credentials, live financial activity, merge or deployment authorized.
+
+
+### DOC-63 detailed criterion review — Batch 11 (2026-10-24)
+
+- Re-read DOC-31 acceptance criteria for OUT-001, OUT-003, OUT-004, OUT-006, EXT-004, FIN-004 and SUP-005 against DOC-28, DOC-48, DOC-64 and DOC-65.
+- Recorded explicit capability blockers: payout entitlement/funding/settlement and operational authority; method-specific refund support and accounting; provider-specific reversal/return finality and ledger treatment; beneficiary verification/change controls; card processor/acquirer permission and security scope; and unresolved case deadlines, ownership, reassignment and retention.
+- DOC-64 is acknowledged as a draft case-lifecycle proposal, not a closed gap. AR-022 remains OPEN. Money-out/refunds/reversals remain disabled; cards remain blocked pending processor/acquirer evidence. Case records do not authorize or execute financial operations.
+- No requirement was marked Approved, Implemented or Verified; no tests were run. G1 NOT PASSED; G2 NOT APPROVED. No implementation, provider contact, credentials, live financial activity, merge or deployment authorized.
