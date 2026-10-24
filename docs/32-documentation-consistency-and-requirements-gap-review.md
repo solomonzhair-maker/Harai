@@ -110,3 +110,16 @@ The ten gaps listed in Section 3 are now represented by SUP-001–SUP-010 in DOC
 - The 32-row count/ID comparison and the SUP-002 reference correction do not constitute the full closure of DOC-47 architecture findings AR-001–AR-021. AR-021 remains open; AR-019 remains closed only for indexing/cross-linking.
 
 **Gate result:** G1 remains NOT PASSED. G2 remains NOT APPROVED. No tests, implementation, provider contact, production credentials, live financial activity, merge or deployment were performed or authorized by this audit.
+
+
+## 10. Targeted architecture consistency audit — idempotency scope (2026-10-24)
+
+**Scope:** documentation-only comparison of the canonical idempotency-scope statements in DOC-40, DOC-42, DOC-48 and DOC-49, with the corresponding AR-021/G2 closure records.
+
+**Confirmed inconsistency found and corrected:** DOC-40 §4 previously required the idempotency key to be scoped to tenant + credential/actor + operation class. DOC-42 §6 and DOC-49 §7 instead propose authenticated tenant/merchant + environment + operation class, with endpoint-compatibility rules, and treat credential/actor as audit attributes rather than automatic uniqueness boundaries. DOC-40 has now been corrected to align with DOC-42/DOC-49 and to require one canonical contract. This prevents credential rotation or use of an alternate credential for the same tenant operation from being described as an automatic way to create a separate idempotency scope.
+
+**Cross-document follow-through:** DOC-47 AR-021 now records the DOC-40 inconsistency and its documentary correction; DOC-46 G2-01 and DOC-44's review summary also reflect the correction. The correction is a consistency repair, not an approved architecture decision.
+
+**Still unresolved:** DOC-48 and the wider architecture set still need one approved cross-layer contract for API requests, provider attempts, callbacks/events, ledger postings, reconciliation imports and restore/replay. Canonical request fingerprinting, same-key/different-payload behavior, atomic reservation/concurrency, retention horizon, provider-specific constraints, reference uniqueness and restore/replay safety need accountable decisions and eventual authorized verification. AR-021 remains OPEN.
+
+**Gate result:** G1 remains NOT PASSED; G2 remains NOT APPROVED. No tests, implementation, provider contact, credentials, live financial activity, merge or deployment were performed or authorized by this audit batch.
