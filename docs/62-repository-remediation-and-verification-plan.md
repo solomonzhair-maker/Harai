@@ -161,7 +161,7 @@ Stage A records preparation and validation of the remediation plan. The Stage B 
 
 7. **B-01:** The accountable requirements reviewer recorded the 54-ID decision on 2026-10-24: 51 Accept and EXT-001–EXT-003 Defer. Keep the decision reconciled across DOC-00, DOC-31, DOC-34, DOC-39, DOC-46 and DOC-47; the decision is not implementation or verification evidence.
 8. **B-02:** Completed on 2026-10-24: DOC-31, DOC-34 and DOC-46 have identical 32-ID P0 sets; DOC-39 supplemental requirement dispositions are reflected in the decision record. P0 closure evidence and gates remain open.
-9. **B-03:** The accountable reviewer approved retaining AR-001–AR-018 and AR-020–AR-021 as open and preserving AR-019's narrow indexing/cross-link closure. DOC-47/DOC-00 status reconciliation is still pending; do not treat the approval itself as closure evidence or architecture approval.
+9. **B-03:** Status reconciliation completed on 2026-10-24: re-fetched DOC-47 confirms AR-001–AR-018 and AR-020–AR-021 remain open and AR-019 is closed only for verified indexing/cross-links; DEC-047 in DOC-00 records the accountable reviewer's approval. The targeted AR-008 audit is recorded in DOC-47 and this plan. Finding closure, evidence work, and specialist review remain open; no architecture approval or G1/G2 pass is implied.
 10. **B-04:** Complete DOC-43/DOC-60/DOC-61 security traceability against DOC-31 and DOC-34 (RR-009).
 11. **B-05:** Resolve or explicitly retain external blockers (RR-010, RR-011): funds-flow model, provider terms/entitlement, qualified Uganda legal/compliance, finance/accounting, reconciliation/operations and independent security/requirements review. If evidence is unavailable, keep affected capability blocked.
 
@@ -202,7 +202,7 @@ Stage A records preparation and validation of the remediation plan. The Stage B 
 
 - G0 discovery/requirements preparation remains in progress.
 - G1 requirements approval is **NOT PASSED**; G2 architecture/security approval is **NOT APPROVED**.
-- All 54 requirement dispositions remain pending unless a later explicit accountable decision is recorded.
+- Requirement disposition decision is recorded: 51 Accept and EXT-001–EXT-003 Defer across the intended launch baseline; maintain the reconciliation record and preserve the 32 P0 requirements. The decision is not implementation or verification evidence.
 - Provider multi-merchant authority, production access, product entitlements, funds-flow model, settlement/account ownership, money-out funding authority and method-specific finality evidence are not established here.
 - Named technical, independent security, finance/accounting, operations/reconciliation and independent requirements reviewers remain unassigned unless formally recorded.
 - No executable app source, tests, CI, migrations or runtime configuration were present on any reviewed ref; the foundation branch contains only root workspace configuration and placeholder READMEs. No software behavior was verified.
