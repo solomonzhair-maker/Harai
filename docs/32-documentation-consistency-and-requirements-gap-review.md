@@ -145,3 +145,16 @@ The ten gaps listed in Section 3 are now represented by SUP-001–SUP-010 in DOC
 **Remaining design/evidence gaps:** AR-004 and AR-006 remain OPEN. The provider/product/operation-specific precedence and finality rules are not contractually established; the accountable owners have not approved the transition/dispatch model; cancellation-versus-dispatch races, worker crash windows, late success, conflicting callback/enquiry/settlement evidence and post-restore recovery have only planned scenario coverage. No test artifacts or execution evidence were checked or claimed in this pass. Do not close these findings on the basis of prose consistency alone.
 
 **Gate result:** G1 remains NOT PASSED; G2 remains NOT APPROVED. Provider permission, qualified legal/compliance and finance review, named operational ownership and later authorized verification remain separate gates. No tests, implementation, provider contact, credentials, live financial activity, merge or deployment were performed or authorized by this audit batch.
+
+
+## 13. Money-out safety-control sequence review (2026-10-24)
+
+**Scope:** documentation-only review of DOC-47 AR-008 against DOC-41, DOC-42, DOC-46 and DOC-48, focused on funding/balance authority, beneficiary lifecycle, approvals, dispatch uncertainty, ledger effects and reconciliation.
+
+**Finding:** existing sources consistently identify money-out as a separate, disabled-by-default capability, and no contradictory authorization claim was found. However, the safety controls were distributed across state-machine, adapter and ledger documents without one end-to-end control sequence and evidence checklist in the ledger proposal. DOC-42 now contains a proposed sequence covering eligibility and permission gates, funding/balance authority, beneficiary versioning, exact-operation approval, atomic idempotency/dispatch boundary, UNKNOWN recovery, finality, approved ledger effects, reconciliation and safe disablement.
+
+**Status of addition:** proposed design only. It does not choose the funds-flow model, determine who owns or holds funds, assert a provider balance endpoint is authoritative, appoint approvers, establish payout limits, confirm provider permission or approve an accounting treatment. The evidence checklist explicitly leaves those items open. AR-008 remains OPEN; AR-005 remains OPEN for the canonical cross-layer idempotency contract; G2-02 and G2-03 remain open/blocked.
+
+**Next required decisions/evidence:** written provider/product/operation/environment permission; approved source-of-funds and prefunding/reserve model; authoritative balance semantics; beneficiary verification and change policy; amount/velocity limits and separation-of-duties approvals; provider-specific finality, idempotency, return and ambiguous-outcome rules; finance-approved ledger/settlement treatment; named reconciliation/operations owners and authorized verification evidence.
+
+**Gate result:** G1 remains NOT PASSED and G2 remains NOT APPROVED. No tests, implementation, provider contact, credentials, live financial activity, merge or deployment were performed or authorized by this audit batch.
