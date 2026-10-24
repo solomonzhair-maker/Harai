@@ -348,3 +348,12 @@ The product owner confirmed that the two non-binding inquiries were manually sen
 **Finding:** Numeric rate-limit/recovery limits, beneficiary cooling-off/approval and money-out authority, provider-specific state/finality mapping, final API compatibility contracts, deployment-specific edge trust configuration, manual accessibility review, and end-to-end audit/retention evidence remain open. No row was upgraded to verified/closed; no direct contradiction was established in the bounded sections.
 
 **Scope/gate boundary:** 54 unique IDs, all 32 P0 IDs, and 51 Accept / 3 Defer remain unchanged. G1 NOT PASSED; G2 NOT APPROVED. No tests, implementation, provider outreach, credentials, financial activity, merge or deployment were performed or authorized.
+
+
+### DOC-63 detailed criterion review — Batch 8 (2026-10-24)
+
+**Completed — documentation-only, bounded review.** Reviewed COL-008, OUT-005, FIN-001, FIN-004, SUP-005 and deferred EXT-001–EXT-003 against DOC-28, DOC-30, DOC-31, DOC-40, DOC-42, DOC-45, DOC-48, DOC-49, DOC-56, DOC-57 and DOC-59. Refined rate-limit, audit evidence, currency/provider capability, case-handling gap and conditional future-scope references.
+
+**Finding:** Numeric API limits/recovery budgets, approved currency precision, financial audit retention/authority and attributable evidence remain open. FIN-004 and SUP-005 remain explicit MISSING design gaps: reconciliation exceptions do not constitute a full dispute/complaint case lifecycle with owner, deadlines, communications, escalation, retention and outcome. EXT-001–EXT-003 remain deferred and not ready for reconsideration without method/country-specific evidence and review. No row was upgraded to verified/closed; no direct contradiction was established in this bounded batch.
+
+**Scope/gate boundary:** 54 unique IDs, all 32 P0 IDs, and 51 Accept / 3 Defer remain unchanged. G1 NOT PASSED; G2 NOT APPROVED. No tests, implementation, provider outreach, credentials, financial activity, merge or deployment were performed or authorized.
