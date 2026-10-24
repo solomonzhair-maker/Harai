@@ -131,4 +131,4 @@ Next documentation batch:
 
 ## 9. Review boundary
 
-The portal inspection was performed read-only on 2026-10-19. No credentials, API keys, tokens or private transaction details were retained. No provider was contacted. No application, subscription, setting or transaction was changed. This comparison is internal research, not independent external certification, legal advice, or a provider commitment.
+The portal inspection was performed read-only on 2026-10-19. At that time, no provider was contacted through the inspection, and no application, subscription, setting or transaction was changed. No credentials, API keys, tokens or private transaction details were retained. The product owner later reported sending initial non-binding informational inquiries on 2026-10-24; delivery and replies are not independently verified (DOC-00 DEC-049 / DOC-62 §8). This comparison is internal research, not independent external certification, legal advice, or a provider commitment.
