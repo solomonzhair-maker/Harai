@@ -112,11 +112,11 @@ The following is a consolidated proposal to reconcile with DOC-41, DOC-48 and DO
 
 
 
-### 7.2 Decision-ready defaults and owner decisions — proposed, not approved
+### 7.2 Product-owner-approved internal defaults and outstanding owner decisions (2026-10-24)
 
-This section turns the cross-layer proposal into one reviewable decision package. It does not approve architecture, establish provider guarantees, or authorize implementation.
+The product owner approved the internal design defaults in this section on 2026-10-24. This approval establishes the intended HARAI design direction for subsequent technical review; it does not substitute for technical architecture approval, finance/accounting decisions, provider evidence, legal/compliance review, independent review, implementation, or verification. It does not authorize implementation.
 
-**Proposed internal defaults that can be reviewed as one coherent contract**
+**Approved internal design defaults**
 
 1. **Merchant request identity.** The uniqueness boundary is authenticated tenant/merchant + environment + operation class + idempotency key. Actor and credential IDs are audit context, not scope dimensions by default. A key reservation belongs to one logical operation and is committed before any provider side effect.
 2. **Operation classes and endpoint compatibility.** Collection creation, refund/return, reversal/void, and money-out are distinct classes with distinct operation IDs and authorization. Routes may share a compatibility class only when they create the same kind of logical operation and use the same semantic request fields. A route or API-version change must not silently bypass an existing reservation. If compatibility cannot be established deterministically, return a conflict or require retrieval of the existing operation; do not dispatch.
@@ -143,7 +143,7 @@ This section turns the cross-layer proposal into one reviewable decision package
 | Retention and tombstones | Technical owner + privacy/compliance adviser + finance reviewer | What periods and minimal retained identifiers are lawful and sufficient across retry, provider, accounting, dispute and restore horizons? | Do not expire uniqueness evidence or enable affected automated replay |
 | Restore resume authority | Operations owner + technical owner + finance reviewer | Who is the named authorizer and what evidence checklist is mandatory before each class of consequential work resumes? | Consequential workers/replay stay paused after restore |
 
-**Closure rule:** AR-005 and AR-021 remain OPEN until the accountable roles are assigned and decisions recorded in DOC-00/DOC-46, the canonical contract is reconciled across DOC-40/41/42/48/49, provider-specific unknowns are evidenced or explicitly blocked, and separately authorized implementation and verification later provide evidence. Documentation consistency alone is not closure.
+**Closure rule:** Product-owner approval records the intended internal design direction only. AR-005 and AR-021 remain OPEN until accountable technical/finance/operations/privacy roles are assigned, their outstanding decisions are recorded in DOC-00/DOC-46, the canonical contract is reconciled across DOC-40/41/42/48/49, provider-specific unknowns are evidenced or explicitly blocked, and separately authorized implementation and verification later provide evidence. Documentation consistency or product-owner approval alone is not closure.
 
 ## 8. Reconciliation cadence and operational controls
 
