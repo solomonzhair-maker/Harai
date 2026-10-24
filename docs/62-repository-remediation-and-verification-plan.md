@@ -294,3 +294,12 @@ The product owner confirmed that the two non-binding inquiries were manually sen
 **Structural/scope boundary:** 54 unique IDs, all 32 P0 IDs, and the approved 51 Accept / 3 Defer split (EXT-001–EXT-003) remain unchanged. G1 NOT PASSED; G2 NOT APPROVED. No tests, implementation, provider outreach, credentials, financial activity, merge or deployment were performed or authorized.
 
 **Next action:** Continue with the next criterion batch, inspect the exact cited sections against full DOC-31 wording, and record only evidence-supported mapping/status changes. Keep the crosswalk preliminary until all 54 rows have received detailed review.
+
+
+### DOC-63 detailed criterion review — Batch 2 (2026-10-24)
+
+**Completed — documentation-only, bounded review.** Compared the full DOC-31 criteria for MER-001, MER-002, IAM-001, IAM-002, MER-003 and MER-004 against DOC-42, DOC-44, DOC-46, DOC-48, DOC-50, DOC-51 and DOC-59. Refined six DOC-63 mappings to include role/permission/audit sources, provider capability evidence, credential scope/revocation, contradiction-resolution controls, privacy/retention and the explicit FIN-004/SUP-005 dispute/complaint gap.
+
+**Finding:** Onboarding and access-control designs remain proposals. Exact lifecycle transition permissions and audit-event completeness are not independently verified; live activation is blocked pending provider authority/capability evidence; MFA/session/revocation parameters and sensitive-action limits remain open; privacy/retention/expiry/reverification decisions remain open; and merchant suspension/closure cannot yet demonstrate complete handling for pending transactions, disputes, complaints and settlements. DOC-50's optional sandbox path is consistent with DOC-48's separate provider-entitlement gate. No row was upgraded to verified/closed.
+
+**Scope/gate boundary:** 54 unique IDs, all 32 P0 IDs, and 51 Accept / 3 Defer remain unchanged. G1 NOT PASSED; G2 NOT APPROVED. No tests, implementation, provider outreach, credentials, financial activity, merge or deployment were performed or authorized.
