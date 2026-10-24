@@ -103,7 +103,7 @@ A proposed workflow should separate checks into categories and record each as `N
 | Ownership/control | Assess ownership/control only to the extent required by approved policy | Sensitive data minimized and access restricted |
 | Sanctions/adverse-risk screening | Only if legally appropriate and operationally approved | Qualified compliance review, false-positive handling and documented escalation |
 | Settlement/funding details | Verify only when the approved funds-flow model requires them | Never collect or activate money-out destinations without stronger controls |
-| Provider eligibility | Record written provider permission and merchant-specific prerequisites | Public API docs or portal visibility are not permission |
+| Provider eligibility | Record reliable evidence of the actual account/subscription status, configured credential scope, applicable terms and merchant-specific prerequisites; seek explicit written confirmation when scope is unclear, required by the provider/contract, or needed to establish material multi-merchant authority | Public API docs, portal visibility or a credential alone do not establish every capability or HARAI's multi-merchant role |
 | Security/integration | Review webhook destination, credential custody and integration readiness | Use sandbox when useful; never request production secrets in chat or tickets |
 | Privacy/terms | Record applicable notices, consent/acknowledgement where required and policy version | Legal basis and retention must be reviewed |
 | Risk review | Assess unusual patterns and exceptions under approved policy | No invented numeric score/threshold; human escalation where required |
@@ -197,7 +197,7 @@ Production activation must be an explicit, evidence-backed decision. The propose
 | Merchant identity/eligibility | Approved verification results and accepted merchant-category policy | Block |
 | Representative authority | Verified authority and recorded reviewer | Block |
 | Legal/compliance | Qualified review of HARAI operating model and relevant merchant activity | Block |
-| Provider permission | Written, applicable provider/processor authority for HARAI's actual role and the specific capability | Block |
+| Provider authority and capability | Evidence applicable to HARAI's actual role and the specific capability: account/subscription state, configured credential scope, current terms and reliable capability evidence; explicit written confirmation where scope is unclear, required by provider/contract, or needed to establish material multi-merchant authority | Block |
 | Commercial terms | Applicable fees, settlement, reserves, limits, support and obligations documented | Block |
 | Funds-flow | Approved funds-flow model, funding source, settlement responsibility and financial-risk treatment | Block |
 | Finance/reconciliation | Approved ledger/accounting assumptions and reconciliations for the capability | Block |
@@ -337,7 +337,7 @@ Executed evidence must identify the actual test file/case, commit/build, environ
 ## 17. Traceability to existing requirements and gates
 
 - **DOC-31:** normative launch requirements; especially merchant onboarding, verification, access control, capability activation, tenant isolation, security and release gates.
-- **DOC-34:** requirement-level mapping; add explicit mapping from ONBOARD-* IDs to relevant requirement IDs and actual tests when implementation is authorized.
+- **DOC-34:** requirement-level mapping; §8.6 now provides proposed ONBOARD-* to DOC-31 requirement crosswalks. These are planning links, not proof of implementation or test coverage; refine against approved criteria and link actual test artifacts only when implementation and verification are separately authorized.
 - **DOC-43:** threat model; verify cross-tenant access, account takeover, support abuse, credential compromise and unsafe manual resolution.
 - **DOC-45:** evidence standards; decisions, checks and tests require reviewable records.
 - **DOC-46:** G2 gap closure; assign named accountable people and closure evidence.
