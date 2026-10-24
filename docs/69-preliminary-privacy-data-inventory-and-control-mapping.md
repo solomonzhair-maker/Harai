@@ -129,3 +129,10 @@ DOC-70 compares this preliminary inventory with DOC-41, DOC-42, DOC-43, DOC-49, 
 - No retention durations, legal bases, privacy notices, registration status, cross-border decisions or regulatory deadlines are approved here.
 - DOC-64 remains a draft proposal; DOC-65 remains preliminary; AR-022 remains open; FIN-004/SUP-005 remain unverified; G1 remains **NOT PASSED**; G2 remains **NOT APPROVED**.
 - No implementation, test execution, provider/regulator outreach, credentials, live financial activity, filing/submission, merge or deployment is authorized by this document.
+
+
+## 10. Intended V1 scope disposition cross-reference — 2026-10-24
+
+The accountable product owner's previously recorded launch direction is now translated into category-level intended V1 scope in **DOC-71 §2A**. Use that section as the current scope baseline: account/authentication, minimized merchant onboarding, collections, provider-attempt/callback evidence, developer API/webhook configuration, minimum async recovery metadata, limited transaction/reporting views, security/abuse telemetry, complaint/dispute and privacy-rights handling, and inventory governance are intended V1 areas. Financial integrity/reconciliation is required but depends on the selected funds-flow and approved accounting design. Money-out is intended V1; refunds/reversals are included where provider-supported, but execution remains blocked until provider permission, funding/settlement authority, the funds-flow model and qualified reviews are documented. Bulk exports and secondary systems are not assumed beyond evidenced need.
+
+This scope disposition resolves intended product direction only. It does not verify actual processing, approve specific fields, establish lawful basis or retention, prove provider capability, or authorize implementation or collection. EXT-001–EXT-003 remain deferred/conditional future scope. G1 remains **NOT PASSED**; G2 remains **NOT APPROVED**.
