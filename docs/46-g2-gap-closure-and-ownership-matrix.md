@@ -163,3 +163,18 @@ For each item, record:
 ## 7. Current assessment
 
 The accountable requirements reviewer accepted all 32 P0 requirements into the intended launch requirements baseline on 2026-10-24; the P0 ID set in this matrix matches DOC-31 and DOC-34 exactly (32/32, with no missing or extra IDs). This is a scope decision, not closure evidence. The immediate internal work remains to assign roles, review and reconcile design proposals, and prepare synthetic test specifications. External authority, qualified professional reviews and executed verification evidence are not replaceable by further prose. No named specialist or independent gate reviewer has been assigned; ChatGPT is appointed only for the internal documentation/design review. No P0 item is declared passed, no funds-flow model is selected, and G2 remains open.
+
+
+## 8. DOC-62 Stage C-01 checkpoint — 2026-10-24
+
+**State: Blocked — internal evidence comparison completed; external evidence and accountable specialist decisions absent.**
+
+| Closure item | Current state | Required evidence / accountable review | Blocking effect |
+|---|---|---|---|
+| Funds-flow model selection (DOC-28 / DOC-44 G2-DEC-07) | Blocked; Models A/B/C not selected | Evidence-backed comparison on equivalent criteria; written provider/partner authority and terms; qualified Uganda legal/compliance and finance/accounting reviews; explicit product-owner decision | No funds-flow-dependent capability may be treated as approved |
+| Provider permission and production entitlement (G2-D04; AR-003) | Blocked | Attributable written approval for HARAI's exact multi-merchant model and each product/rail; contracting entity and merchant roles; current production entitlements | Affected provider capabilities remain disabled |
+| Money-out funding and settlement (G2-D04; AR-008) | Blocked | Account ownership/control, destination, payout funding/prefunding/reserves, limits, timing, returns, fees and reconciliation evidence; specialist review | Money-out remains disabled |
+| Ledger, fees and reconciliation model (DOC-42; FIN-001/002/003; REC-001/002) | Open | Qualified finance/accounting approval of posting semantics, fees/tax/rounding, settlement mapping and exception ownership based on the chosen model | No approved accounting model or live reconciliation claim |
+| Independent gate reviewers | Unassigned | Named, appropriately qualified and independent technical/security, finance/accounting, legal/compliance, operations/reconciliation and requirements reviewers, with scope and conflicts recorded | G1/G2 cannot pass on self-review or document existence alone |
+
+This checkpoint does not assign names or invent external evidence. Role labels are not appointments. Provider outreach remains unauthorized absent separate explicit approval; no implementation, test execution, merge or deployment is authorized.
