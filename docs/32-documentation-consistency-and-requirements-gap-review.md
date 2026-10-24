@@ -90,3 +90,23 @@ No provider has been contacted by this audit. No production integration, live cr
 ## 8. Supplemental requirement coverage update (2026-10-19)
 
 The ten gaps listed in Section 3 are now represented by SUP-001–SUP-010 in DOC-31. DOC-34 maps all 54 unique requirement IDs and DOC-03 includes corresponding roadmap tasks. This resolves the gap at the documentation-definition and initial traceability level only. It does not close acceptance, numeric-threshold, named-owner, test-execution, provider, legal/compliance or G1 approval gates.
+
+
+## 9. Targeted P0 traceability audit (2026-10-24)
+
+**Scope:** documentation-only cross-check of the 32 P0 requirement rows in DOC-31 against DOC-34 and the companion closure rows in DOC-46. This is a bounded consistency audit, not an independent security review, requirements approval, test run, or gate decision.
+
+**Coverage result:** all 32 P0 IDs appear in DOC-31, DOC-34 and DOC-46, with the same set of identifiers: GOV-001, TEN-001, MER-002, IAM-001, IAM-002, MER-003, COL-003, COL-004, COL-005, COL-008, OUT-002, OUT-005, FIN-001, FIN-002, FIN-003, REC-001, REC-002, FIN-005, SEC-001, SEC-002, OPS-001, OPS-002, SEC-003, OPS-003, SUP-001, SUP-002, SUP-003, SUP-004, SUP-006, SUP-007, SUP-008 and SUP-010. DOC-31 and DOC-34 each continue to represent 54 unique requirement IDs overall.
+
+**Confirmed traceability correction:** the DOC-34 SUP-002 dependency list previously cited COL-007 and the state-machine design but omitted COL-001/COL-002, although the DOC-31 SUP-002 planning references include those collection-creation/checkout requirements. DOC-34 now lists COL-001/COL-002 as well as COL-007 and the state-machine design. This aligns traceability references; it does not approve a design or change any requirement's status.
+
+**Per-row review:** DOC-34 supplies a proposed role (not a named person), proposed test/evidence work, dependencies and a blocking/gate note for each P0 row. DOC-46 supplies a companion closure row with role-level accountability, control/closure expectation, dependencies/blocking context and status. Those are planning records only. The audit did not treat proposed tests as existing or executed, role labels as appointments, or documented controls as implemented.
+
+**Remaining closure limitations:**
+- All 32 P0 requirements remain Draft — not verified; none passes by virtue of traceability coverage.
+- Named accountable people and genuinely independent reviewers remain unassigned.
+- Provider permissions/status semantics, the Uganda legal/compliance position, the funds-flow model, finance/accounting acceptance, numeric operational targets and other owner decisions remain unresolved where their source documents say so.
+- Required evidence is not yet complete in DOC-45; summary dispositions are not substitutes for dated, located, owned and reviewed source artifacts.
+- The 32-row count/ID comparison and the SUP-002 reference correction do not constitute the full closure of DOC-47 architecture findings AR-001–AR-021. AR-021 remains open; AR-019 remains closed only for indexing/cross-linking.
+
+**Gate result:** G1 remains NOT PASSED. G2 remains NOT APPROVED. No tests, implementation, provider contact, production credentials, live financial activity, merge or deployment were performed or authorized by this audit.
