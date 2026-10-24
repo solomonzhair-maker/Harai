@@ -40,7 +40,7 @@ Every capability record needs its source, evidence class under DOC-45, capture/r
 Each adapter/product configuration must have a reviewed, versioned descriptor containing:
 
 - Provider code, exact product/API family and version.
-- Environment: test or production, explicit and never inferred from credentials alone.
+- Environment: identify test or production from provider account/subscription configuration and credential assignment; do not infer the environment solely from a credential's format or presence.
 - Allowed operation types: collection, status enquiry, refund, reversal/return, money-out, balance enquiry and reconciliation data as applicable.
 - Merchant relationship model: direct merchant, sub-merchant, aggregator or other documented arrangement.
 - Supported currencies and limits per operation and merchant relationship.
@@ -140,7 +140,7 @@ The following reflects evidence recorded in DOC-37/DOC-38 and the provider revie
 | Collection widget | Active test subscription observed | Equivalent capability not confirmed in reviewed evidence | MTN test observation only |
 | Refund | Disbursement refund variants/status documented; generic collection reversal not identified in reviewed pages | Collection API v2.0 documents full refund | Exact flow, partial support, eligibility, timing, funding and accounting remain unconfirmed |
 | Reversal, return, dispute | Exact capability and semantics not established for every flow | Reverse interops documentation exists; applicability to each product/merchant needs verification | Separate operation family; blocked until evidenced |
-| Money-out/disbursement | Transfer/deposit and balance/status documentation exists; no Disbursement subscription visible in reviewed portal | Disbursement API v2.0 documents B2B/B2C/direct transfers; no production activation visible | Blocked pending written permission, funding, beneficiary, limits and settlement evidence |
+| Money-out/disbursement | Transfer/deposit and balance/status documentation exists; no Disbursement subscription visible in reviewed portal | Disbursement API v2.0 documents B2B/B2C/direct transfers; no production activation visible | Blocked until the relevant account/subscription/credential entitlement and environment are verified, alongside funding, beneficiary, limits and settlement evidence; seek explicit written confirmation if entitlement is unclear or required |
 | Balance enquiry | Documentation exists; no live call made | Account API documentation exists; no live call made | Not a substitute for ledger or settlement reconciliation |
 | Settlement/reconciliation | Daily reconciliation recommended; actual schedule, reports and terms not established | Transactions Summary exposes transaction/service-charge fields; full settlement terms not established | Sources, cadence, fees and owner unresolved |
 | Multi-merchant/aggregator role | Aggregator guidance documented; written HARAI permission not visible | Merchant Collection documents relationship IDs; written HARAI permission not visible | External hard blocker; public docs do not establish authorization |
@@ -178,7 +178,7 @@ The following reflects evidence recorded in DOC-37/DOC-38 and the provider revie
 
 ### 6.4 Money-out
 
-Before enabling money-out, obtain written product permission and document source of funds, balance authority, prefunding/top-up if applicable, beneficiary verification/change controls, limits and approvals, returned payouts, provider idempotency, timeout recovery, fees, settlement, accounting, reconciliation and incident ownership. Refuse dispatch when a required prerequisite is missing or stale. A provider balance response does not authorize a payout.
+Before enabling money-out, verify the provider's enabled product/operation and environment using the account/subscription state, configured credentials, applicable terms and available capability evidence. Seek explicit written confirmation when those sources leave a material scope question or the provider/contract requires it. Also document source of funds, balance authority, prefunding/top-up if applicable, beneficiary verification/change controls, limits and approvals, returned payouts, provider idempotency, timeout recovery, fees, settlement, accounting, reconciliation and incident ownership. Refuse dispatch when a required prerequisite is missing or stale. A provider balance response does not authorize a payout.
 
 ### 6.5 HARAI outbound merchant webhooks
 
@@ -190,7 +190,7 @@ These are distinct from inbound provider callbacks. Proposed design: durable out
 |---|---|---|
 | VALIDATION_FAILED | Invalid amount, currency, reference or schema | Do not dispatch |
 | AUTHENTICATION_FAILED | Invalid credentials or callback authentication | No blind retry; use security/credential incident path |
-| PERMISSION_BLOCKED | Product, merchant or environment permission not established | Fail closed |
+| PERMISSION_BLOCKED | Product, merchant or environment entitlement is not established by available account/subscription configuration, credential scope, applicable terms or other reliable provider evidence | Fail closed |
 | UNSUPPORTED_CAPABILITY | Descriptor does not support operation | Do not dispatch |
 | LIMIT_OR_FUNDS_REJECTED | Explicit provider limit/insufficient-funds rejection | No automatic repeat; reconcile and apply approved policy |
 | DUPLICATE_REFERENCE | Provider duplicate or HARAI idempotency conflict | Resolve existing operation; no second effect |
