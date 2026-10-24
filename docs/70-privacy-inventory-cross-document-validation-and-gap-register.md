@@ -62,9 +62,17 @@ The following rules should be preserved across DOC-69 and any later revised inve
 6. Reconcile the resulting inventory with privacy notices, data-subject-rights handling, provider contracts, subprocessor records, incident response, complaint handling and applicable reporting duties.
 7. Only after the evidence is complete should a revised inventory be considered for approval. Implementation and tests require separate explicit authorization and their own verification plan.
 
+
+## 4A. Intended V1 scope reconciliation — 2026-10-24
+
+DOC-71 §2A now records intended V1 scope using the product owner's previously accepted direction: a comprehensive Uganda-first gateway; collections and money-out, plus refunds/reversals where provider-supported; Option 3 planning to compare provider-managed funds and direct integrations before choosing the funds-flow model; and 51 Accept / 3 Defer with EXT-001–EXT-003 deferred and all 32 P0 requirements retained.
+
+This closes the **intended product-category disposition step only**. It does not close the field-level evidence gaps in PIV-01–PIV-12. Money-out and supported refunds/reversals remain blocked from operation pending provider permission, selected funds-flow model, funding/settlement authority and qualified reviews. Merchant verification must be minimized; bulk exports are not assumed; actual providers, fields, systems, regions, retention and data roles remain unverified. DOC-64 remains draft and AR-022 remains open.
+
+
 ## 5. Current disposition and gates
 
-- DOC-69 was expanded after this audit to represent all 12 gap categories as candidate rows and to require row-level evidence/scope dispositions. This closes the documentation-representation step only; it does not close the underlying evidence gaps or verify production processing.
+- DOC-69 was expanded after this audit to represent all 12 gap categories as candidate rows and to require row-level evidence/scope dispositions. DOC-71 §2A now resolves intended V1 category scope; neither change closes the underlying field-level evidence gaps or verifies production processing.
 - No physical schema, provider payload, hosting location, subprocessor, retention period, legal basis, privacy notice, registration status or cross-border decision has been verified by this review.
 - DOC-64 remains a draft; FIN-004 and SUP-005 remain unverified/open for specialist review; AR-022 remains open.
 - G1 remains **NOT PASSED** and G2 remains **NOT APPROVED**. The funds-flow model remains unselected.
