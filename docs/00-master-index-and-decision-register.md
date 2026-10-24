@@ -90,6 +90,7 @@ This is a requirements and planning document set. It is not evidence that provid
 | DOC-60 | Security threat-to-control and acceptance evidence matrix | Draft assurance planning artifact — no control verified | Map security threats and proposed controls to requirements, evidence packets, reviewers and explicit closure conditions without implying implementation or test execution |
 | DOC-61 | Security requirements reconciliation and closure register | Draft reconciliation tracker — approved requirements wording recorded; source mapping and evidence remain open | RCP-01–RCP-08 were approved on 2026-10-23 and incorporated into DOC-31; DOC-34 and DOC-60 are reconciled to the approved wording. Keep threat/control evidence open and preserve independent review and G1/G2 gates |
 | DOC-62 | Repository-wide remediation and verification plan | Draft corrective-action plan — repository inventory only; no code or security verification claimed | Strict ordered remediation for repository truthfulness, document authority, requirements/security reconciliation, external blockers, and later separately authorized engineering work |
+| DOC-63 | Requirement-to-design, evidence and review crosswalk | Draft traceability audit — 54 requirement IDs mapped to normative DOC-31 criteria, candidate design/source references, proposed tests, evidence state and reviewer/gate; not verification or authorization | Row-level crosswalk preserving 51 Accept / 3 Defer and 32 P0; explicit gaps and next actions; see DOC-62 |
 
 ## 4. Reference boundary and product differentiation
 
