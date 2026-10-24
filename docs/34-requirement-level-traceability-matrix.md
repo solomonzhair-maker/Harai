@@ -116,6 +116,8 @@ A proposed test ID is not a test result. An API mock is not evidence that a prov
 
 ## 4. Current cross-cutting blockers
 
+- **Dispute/complaint case handling:** FIN-004 and SUP-005 are accepted in the intended launch baseline, but the DOC-63 criterion review found no complete case lifecycle with owner, deadlines, evidence, communication history, escalation, retention and outcome. Reconciliation exception handling does not satisfy these requirements; AR-022 remains open.
+
 - **People and accountability:** product owner must assign named technical, security, finance/reconciliation, operations and independent reviewers; qualified Ugandan legal/compliance review is still needed.
 - **Provider eligibility:** written evidence is needed for multi-merchant/aggregator permission, supported methods, payout capabilities, refunds/reversals, fees, limits, settlement and support.
 - **Funds flow:** account ownership, custody/control, settlement route, payout funding source, returns and reconciliation evidence remain unresolved.
@@ -155,7 +157,7 @@ The following are the next actions that can be completed without pretending deci
 
 ## 8.3 Detailed architecture review cross-reference
 
-DOC-47 records cross-cutting architecture findings AR-001–AR-021. These are review/closure findings, not additional requirement IDs and not proof that any requirement has passed. Use DOC-31 as the requirement source of truth, DOC-46 for P0 closure tracking, and DOC-45 for evidence-quality and test-execution rules. Close a finding only with its specified evidence and accountable review; preserve G1/G2 as open until their respective criteria are met.
+DOC-47 records cross-cutting architecture findings AR-001–AR-022, including AR-022 for the missing dispute/complaint case lifecycle under accepted requirements FIN-004/SUP-005. These are review/closure findings, not additional requirement IDs and not proof that any requirement has passed. Use DOC-31 as the requirement source of truth, DOC-46 for P0 closure tracking, and DOC-45 for evidence-quality and test-execution rules. Close a finding only with its specified evidence and accountable review; preserve G1/G2 as open until their respective criteria are met.
 
 
 ## 8.3 Detailed architecture review cross-reference
