@@ -157,12 +157,12 @@ The following are the next actions that can be completed without pretending deci
 
 ## 8.3 Detailed architecture review cross-reference
 
-DOC-47 records cross-cutting architecture findings AR-001–AR-022, including AR-022 for the missing dispute/complaint case lifecycle under accepted requirements FIN-004/SUP-005. These are review/closure findings, not additional requirement IDs and not proof that any requirement has passed. Use DOC-31 as the requirement source of truth, DOC-46 for P0 closure tracking, and DOC-45 for evidence-quality and test-execution rules. Close a finding only with its specified evidence and accountable review; preserve G1/G2 as open until their respective criteria are met.
+DOC-47 records cross-cutting architecture findings AR-001–AR-022, including AR-022, which remains open because accepted requirements FIN-004/SUP-005 have only a draft case-lifecycle proposal in DOC-64; specialist review and evidence remain pending. These are review/closure findings, not additional requirement IDs and not proof that any requirement has passed. Use DOC-31 as the requirement source of truth, DOC-46 for P0 closure tracking, and DOC-45 for evidence-quality and test-execution rules. Close a finding only with its specified evidence and accountable review; preserve G1/G2 as open until their respective criteria are met.
 
 
 ## 8.3 Detailed architecture review cross-reference
 
-DOC-47 records cross-cutting architecture findings AR-001–AR-022, including AR-022 for the missing dispute/complaint case lifecycle under accepted requirements FIN-004/SUP-005. These are review/closure findings, not additional requirement IDs and not proof that any requirement has passed. Use DOC-31 as the requirement source of truth, DOC-46 for P0 closure tracking, and DOC-45 for evidence-quality and test-execution rules. Close a finding only with its specified evidence and accountable review; preserve G1/G2 as open until their respective criteria are met.
+DOC-47 records cross-cutting architecture findings AR-001–AR-022, including AR-022, which remains open because accepted requirements FIN-004/SUP-005 have only a draft case-lifecycle proposal in DOC-64; specialist review and evidence remain pending. These are review/closure findings, not additional requirement IDs and not proof that any requirement has passed. Use DOC-31 as the requirement source of truth, DOC-46 for P0 closure tracking, and DOC-45 for evidence-quality and test-execution rules. Close a finding only with its specified evidence and accountable review; preserve G1/G2 as open until their respective criteria are met.
 
 ## 8.4 Security reconciliation cross-reference
 
