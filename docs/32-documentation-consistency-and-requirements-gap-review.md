@@ -134,3 +134,14 @@ The ten gaps listed in Section 3 are now represented by SUP-001–SUP-010 in DOC
 **Clarification applied:** DOC-33 previously described MTN/Airtel as candidates and bank/card methods as subject to verification without stating in that passage that both mobile-money providers and cards are already approved product intent. DOC-33 now separates intended method scope from provider/processor eligibility, contractual permission, integration status and production readiness. The clarification does not change requirement priorities or mark a capability approved for use.
 
 **Open gates:** G1 remains NOT PASSED. Detailed requirement dispositions, written provider/processor evidence, qualified Ugandan legal/compliance review, funds-flow selection, finance/accounting review and accountable reviewer evidence remain open. G2 remains NOT APPROVED. No tests, implementation, provider contact, credentials, live financial activity, merge or deployment were performed or authorized by this audit batch.
+
+
+## 12. Transaction lifecycle and cancellation/recovery consistency pass (2026-10-24)
+
+**Scope:** documentation-only comparison of DOC-40's canonical lifecycle, DOC-41's state machine and §5A transition guards, DOC-48's adapter dispatch-certainty/evidence-precedence rules, and DOC-49's merchant-facing status and cancellation proposal.
+
+**Result:** no new confirmed contradiction was identified in this bounded pass. The documents consistently distinguish intent state from provider-attempt state, preserve UNKNOWN when dispatch may have occurred, require provider-specific evidence before finality, retain in-flight attempts for reconciliation after cancellation/expiry, and prohibit blind retries or automatic refunds after ambiguous outcomes. DOC-41 §5A and DOC-48 §4.1 provide compatible proposed rules for dispatch uncertainty, late success and conflicting evidence; DOC-49 correctly leaves cancellation semantics unapproved.
+
+**Remaining design/evidence gaps:** AR-004 and AR-006 remain OPEN. The provider/product/operation-specific precedence and finality rules are not contractually established; the accountable owners have not approved the transition/dispatch model; cancellation-versus-dispatch races, worker crash windows, late success, conflicting callback/enquiry/settlement evidence and post-restore recovery have only planned scenario coverage. No test artifacts or execution evidence were checked or claimed in this pass. Do not close these findings on the basis of prose consistency alone.
+
+**Gate result:** G1 remains NOT PASSED; G2 remains NOT APPROVED. Provider permission, qualified legal/compliance and finance review, named operational ownership and later authorized verification remain separate gates. No tests, implementation, provider contact, credentials, live financial activity, merge or deployment were performed or authorized by this audit batch.
