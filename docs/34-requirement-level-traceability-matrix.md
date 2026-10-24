@@ -22,7 +22,7 @@
 
 The matrix contains 54 unique requirement IDs from the current DOC-31 catalogue, including the existing EXT-004 card requirement and ten supplemental requirements SUP-001–SUP-010 added in DOC-39. All requirement criteria remain as written in DOC-31; use the requirement ID to trace to the complete acceptance criterion.
 
-DOC-46 provides a companion closure view for all 32 current P0 requirements. DOC-49 proposes merchant API contracts and lists MERCHANT-API-* conformance-test planning IDs; DOC-50 proposes onboarding/activation controls and ONBOARD-* planning IDs. Following DEC-024, sandbox is optional and is not a universal prerequisite to production-access assessment; provider/processor authorization, business verification, security, finance, legal/compliance and operational gates remain applicable. These IDs must be mapped to relevant DOC-31 requirement IDs and actual test evidence before implementation or acceptance. It assigns proposed accountable roles, evidence expectations and blocking effects; role names are not people assignments, and every item remains open until evidence and review are recorded.
+DOC-46 provides a companion closure view for all 32 current P0 requirements. DOC-49 proposes merchant API contracts and lists MERCHANT-API-* conformance-test planning IDs; DOC-50 proposes onboarding/activation controls and ONBOARD-* planning IDs. Following DEC-024, sandbox is optional and is not a universal prerequisite to production-access assessment; provider/processor authorization, business verification, security, finance, legal/compliance and operational gates remain applicable. Section 8.6 now maps these planning IDs to relevant DOC-31 requirement IDs. Actual test evidence must be linked only when implementation and verification are separately authorized. It assigns proposed accountable roles, evidence expectations and blocking effects; role names are not people assignments, and every item remains open until evidence and review are recorded.
 
 | Requirement ID | Priority | Requirement | Proposed accountable role(s) | Proposed test IDs | Dependency / evidence reference from DOC-31 | Gate / disposition | Current status |
 |---|---|---|---|---|---|---|---|
@@ -189,3 +189,35 @@ On 2026-10-23, the product owner approved RCP-01–RCP-08 from DOC-61 section 4D
 All 54 unique DOC-31 requirement IDs remain represented in this matrix. The approved wording changes do not change any requirement to Implemented or Verified and do not close any DOC-43 threat. The 21 DOC-60 rows remain draft evidence plans; no test result is implied.
 
 **G1 remains NOT PASSED. G2 remains NOT APPROVED.** Named owners/reviewers, detailed design decisions, provider/legal evidence and authorized implementation/evidence collection remain open. No tests, provider contact, production credentials, real financial activity, merge or deployment are authorized by this requirements update.
+
+
+## 8.6 Merchant onboarding lifecycle planning crosswalk (DOC-50)
+
+The following crosswalk links DOC-50's proposed ONBOARD-* scenarios to existing normative DOC-31 requirement IDs. It adds traceability only; it does not create new requirements, approve the onboarding policy, or claim test execution. Where a scenario spans multiple requirements, the mapping is intentionally many-to-many. Refine the links against approved acceptance criteria before implementation, then attach actual test artifacts under DOC-45 evidence rules when testing is separately authorized.
+
+| DOC-50 planning ID | Proposed DOC-31 requirement linkage | Evidence status |
+|---|---|---|
+| ONBOARD-001 — incomplete application | MER-001, MER-002 | Proposed mapping; no execution evidence |
+| ONBOARD-002 — applicant self-approval | GOV-001, IAM-002, MER-002 | Proposed mapping; no execution evidence |
+| ONBOARD-003 — duplicate application privacy | MER-001, MER-003, TEN-001 | Proposed mapping; no execution evidence |
+| ONBOARD-004 — expired/missing verification outcome | MER-002, MER-003 | Proposed mapping; no execution evidence |
+| ONBOARD-005 — request for information | MER-001, MER-003 | Proposed mapping; no execution evidence |
+| ONBOARD-006 — conflicting evidence | MER-002, MER-003, IAM-002 | Proposed mapping; no execution evidence |
+| ONBOARD-007 — sandbox/production credential isolation | IAM-001, SEC-001, SEC-002 | Proposed mapping; no execution evidence |
+| ONBOARD-008 — collection-only merchant requests money-out | MER-002, OUT-001, OUT-005 | Proposed mapping; no execution evidence |
+| ONBOARD-009 — provider authority evidence absent | MER-002, OUT-001 | Proposed mapping; no execution evidence |
+| ONBOARD-010 — suspension with queued work | MER-004, OUT-002, OPS-003, FIN-002 | Proposed mapping; no execution evidence |
+| ONBOARD-011 — revoked credential | IAM-001, SEC-001 | Proposed mapping; no execution evidence |
+| ONBOARD-012 — cross-tenant verification-file access | TEN-001, MER-003 | Proposed mapping; no execution evidence |
+| ONBOARD-013 — material business change | MER-004, MER-002 | Proposed mapping; no execution evidence |
+| ONBOARD-014 — reinstatement after serious incident | MER-004, IAM-002, SEC-002 | Proposed mapping; no execution evidence |
+| ONBOARD-015 — closure with unknown payment outcome | MER-004, COL-004, FIN-002, REC-001 | Proposed mapping; no execution evidence |
+| ONBOARD-016 — closed merchant API access | MER-004, IAM-001 | Proposed mapping; no execution evidence |
+| ONBOARD-017 — unauthorized manual activation | GOV-001, IAM-002, MER-002 | Proposed mapping; no execution evidence |
+| ONBOARD-018 — expired exception | GOV-001, IAM-002 | Proposed mapping; no execution evidence |
+| ONBOARD-019 — unsafe verification upload | MER-003, SEC-002 | Proposed mapping; no execution evidence |
+| ONBOARD-020 — unauthorized audit-record alteration/deletion | GOV-001, FIN-002, SEC-002 | Proposed mapping; no execution evidence |
+
+The ONBOARD-* rows are scenario identifiers, not replacements for DOC-31 requirement IDs or the existing proposed T-* requirement-level test plans. Where an ONBOARD scenario and a T-* plan overlap, maintain one canonical executable test or clearly documented linked cases rather than creating duplicate tests with inconsistent expected behavior. DOC-50's sandbox-is-optional direction remains subject to the production gates; no scenario implies sandbox completion is required before production assessment.
+
+**Disposition:** Crosswalk added for documentation traceability. Requirement approval, final policy, named owners, provider/legal/finance/security/operations evidence, actual test design and execution remain open. G1 remains NOT PASSED; G2 remains NOT APPROVED.
