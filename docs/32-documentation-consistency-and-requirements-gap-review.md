@@ -1,14 +1,16 @@
 # DOC-32 — Documentation Consistency and Requirements Gap Review
 
-**Status:** Draft audit record — documentation review only  
-**Reviewed baseline:** DOC-00, DOC-02, DOC-03, DOC-28, DOC-29, DOC-30, DOC-31, DOC-37 and DOC-38 on the documentation branch  
-**Purpose:** Identify contradictions and missing decision/evidence links before the requirements baseline is presented for approval. This audit is not a legal opinion, provider confirmation, architecture approval or implementation authorization.
+**Status:** Draft audit record — documentation and repository-consistency review only  
+**Review date:** 2026-10-24  
+**Primary review ref:** `docs/julypay-discovery-and-requirements`  
+**Review scope:** The original review began with DOC-00, DOC-02, DOC-03, DOC-28–DOC-31 and DOC-37–DOC-38. Supplemental sections 8–24 record subsequent targeted reviews of the current requirements, architecture, security, onboarding and funds-flow documents through DOC-61, including the relevant cross-links to DOC-34, DOC-39–DOC-49 and DOC-50–DOC-61. The repository-wide branch inventory and remediation findings are recorded separately in DOC-62. This is not a claim that software source, executable tests, provider systems, or every external evidence source was verified.  
+**Purpose and limits:** Identify contradictions, stale statuses and missing decision/evidence links. This audit is not a legal opinion, provider confirmation, independent security certification, architecture approval or implementation authorization.
 
 ## 1. Executive result
 
-The documentation is directionally consistent on the central product intent: Uganda first, multiple merchants over time, a comprehensive launch package, collections plus a planned money-out workstream, refunds/reversals where supported, and an unresolved comparison between provider-managed funds and direct provider integrations.
+The current documents are directionally consistent on the central product intent: Uganda first, multiple merchants over time, a comprehensive launch ambition, collections plus a planned money-out workstream, refunds/reversals where supported, and an unresolved comparison between provider-managed funds and direct provider integrations. Supplemental reviews have clarified proposed controls for idempotency, provider finality, cancellation/dispatch races, money-out, API/events, reconciliation, tenant isolation, onboarding, and model-independent funds-flow safety. These are design/documentation proposals, not verified runtime behavior.
 
-**Gate status remains G0 — discovery and requirements in progress.** The documents do not yet constitute an approved, fully traceable requirements baseline. Provider eligibility, the legal/compliance position, funds flow, account ownership, funding source for money-out, currencies, settlement expectations, commercial viability and accountable review owners remain unresolved.
+**Current gate status:** G0 discovery/requirements preparation is IN PROGRESS; G1 requirements approval is **NOT PASSED**; G2 architecture/security approval is **NOT APPROVED**. DOC-34 proposes per-ID dispositions for all 54 requirements, but all dispositions remain pending accountable owner decisions. Provider eligibility, contractual authority, legal/compliance position, funds flow, account ownership, money-out funding source, currencies, settlement expectations, commercial viability, named accountable owners and independent review remain unresolved. DOC-62 is the controlling ordered remediation plan for repository-level corrections.
 
 ## 2. Consistency findings
 
