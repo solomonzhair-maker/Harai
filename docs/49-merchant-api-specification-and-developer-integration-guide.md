@@ -374,6 +374,23 @@ Evidence for executed tests must include the actual test file/case, commit/build
 | Card processing | Eligible processor/acquirer, contract and reviewed card-data boundary | Open / externally gated |
 | Production domains and operations | Approved DNS/TLS, secret management, SLOs, runbooks and release evidence | Open |
 
+
+
+### 14.1 Consolidated API/event contract rules — product-owner-approved direction, detailed decisions open
+
+The product owner has approved the following internal contract direction on 2026-10-24. This records product intent; it is not a final OpenAPI document, technical architecture approval, provider capability statement or implementation authorization.
+
+1. **Stable public contract:** publish versioned request/response schemas and machine-readable error codes. Keep public business resources separate from database models and provider-native payloads. Every response/error should carry a non-secret correlation identifier where appropriate.
+2. **Truthful lifecycle semantics:** HTTP acceptance is not proof of collection or payout completion. Expose `PENDING`/`UNKNOWN` distinctly from terminal success/failure. A final state is permitted only under the approved state machine and method-specific evidence rules in DOC-41/DOC-48. Never infer success from a redirect, initiation acknowledgement, timeout or callback receipt alone.
+3. **Consistent errors:** use the error envelope in §8 as the common proposed shape across merchant API endpoints. Error codes must be stable, bounded and non-sensitive; document retryability and client remediation. Authentication/authorization, validation, idempotency conflict, business-state conflict, rate limiting, provider rejection, unknown outcome and internal failure remain distinct categories. Exact code catalogue and HTTP mapping require technical/security review.
+4. **Bounded pagination:** list APIs must use a documented, opaque cursor and deterministic stable ordering; enforce page-size, time-range and filter limits. Cursor integrity, expiry, ordering fields and behavior when records change during traversal require technical review. Ordinary list endpoints must not become unbounded export APIs.
+5. **Versioning:** public API version and event schema version are explicit. Additive fields, enum evolution, deprecation, unknown-value handling, rolling deployment and rollback must be documented. Event schema evolution is independent of public API evolution where necessary. Persisted idempotency/fingerprint versions and queued task versions must remain interpretable during supported deployments and recovery.
+6. **Outbound event identity and delivery:** one durable event ID identifies the business event across retries; delivery attempts have separate IDs. Events are emitted only after the authoritative state transition commits. Signing must cover a precisely specified representation of the timestamp and raw body; final algorithm, headers, timestamp tolerance and rotation rules need security review. Delivery is at-least-once unless an approved contract states otherwise; consumers deduplicate. Retry cadence, maximum age, timeout, disablement, alerting and manual replay authorization remain open.
+7. **Replay and privacy:** manual replay is a privileged, audited action and preserves event identity/content under the approved contract. Never replay a financial operation merely by replaying a notification. Minimize event payload data and redact secrets, raw provider bodies and unnecessary personal information.
+8. **Authority boundary:** DOC-49 is the proposed merchant-facing contract source; DOC-41 owns lifecycle semantics, DOC-42 ledger/reconciliation semantics, DOC-48 provider capability/evidence, DOC-43 security requirements and DOC-58 internal operation-contract planning. Where these disagree, do not silently choose a local behavior: record a contradiction and resolve it before implementation.
+
+**Decisions still required:** exact route/schema catalogue, error-code mapping, cursor fields/limits, API and event compatibility policy, webhook signature test vectors/rotation, delivery retry numbers, replay authority, and requirement-level traceability. Product-owner approval does not substitute for technical/API, security, finance, operations or independent review. No tests are claimed as run.
+
 ## 15. Related-document traceability
 
 - **DOC-31:** normative launch requirements and acceptance criteria; this document does not replace them.
