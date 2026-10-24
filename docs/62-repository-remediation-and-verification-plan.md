@@ -283,3 +283,14 @@ The product owner confirmed that the two non-binding inquiries were manually sen
 **Structural verification after update:** DOC-63 has 54 unique requirement rows; all 54 carry a preliminary content-coverage status, including all 32 P0 rows. The disposition remains 51 Accept / 3 Defer (EXT-001–EXT-003). G1 NOT PASSED; G2 NOT APPROVED. No tests, implementation, provider contact, credentials, financial activity, merge or deployment were performed or authorized.
 
 **Next action:** deepen the criterion-by-criterion review across all 54 rows, validate each section's substantive sufficiency and contradiction status, and revisit preliminary classifications where full-section reading changes the result. Do not close findings merely because a design concept is mentioned in a draft.
+
+
+### DOC-63 detailed criterion review — Batch 1 (2026-10-24)
+
+**Completed — documentation-only, bounded review.** Compared the full normative DOC-31 criteria for GOV-001, TEN-001, IAM-002, COL-003–COL-005, OUT-002, FIN-002, REC-001, REC-002 and FIN-005 with relevant sections of DOC-00, DOC-41, DOC-42, DOC-43, DOC-44, DOC-48, DOC-49, DOC-51, DOC-56, DOC-57 and DOC-59. Refined six DOC-63 source mappings: TEN-001 now explicitly points to DOC-56 §15; COL-003 to DOC-42 §7.2 and DOC-49 §7.1; FIN-002 to DOC-42 §7.2 and DOC-57 §§10, 12; REC-001/REC-002 to the import-integrity and discrepancy-resolution sections; FIN-005 to DOC-42 §8.1 and DOC-48 §§4–5.
+
+**Finding:** The inspected source sections contain relevant draft design proposals, but they do not establish complete criterion satisfaction. Material open conditions include named decision/operation owners and independent reviewers; provider-specific finality and retry guarantees; authoritative provider transaction/settlement evidence; fully approved import-integrity and discrepancy-resolution rules; accountable operational thresholds/escalation; and implementation/negative-test evidence. DOC-41/42/48/49 defer to the shared idempotency/identity proposal in DOC-42 §7.2; DOC-56 §15, DOC-57 §20 and DOC-59 §16 align to the shared tenant-isolation direction. No direct contradiction was established in these inspected sections, but this is not a repository-wide contradiction clearance. No coverage label was upgraded to verified/closed.
+
+**Structural/scope boundary:** 54 unique IDs, all 32 P0 IDs, and the approved 51 Accept / 3 Defer split (EXT-001–EXT-003) remain unchanged. G1 NOT PASSED; G2 NOT APPROVED. No tests, implementation, provider outreach, credentials, financial activity, merge or deployment were performed or authorized.
+
+**Next action:** Continue with the next criterion batch, inspect the exact cited sections against full DOC-31 wording, and record only evidence-supported mapping/status changes. Keep the crosswalk preliminary until all 54 rows have received detailed review.
