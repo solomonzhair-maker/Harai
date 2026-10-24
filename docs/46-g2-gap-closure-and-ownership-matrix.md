@@ -5,7 +5,7 @@
 **Related documents:** DOC-00, DOC-28, DOC-30, DOC-31, DOC-34, DOC-37, DOC-38, DOC-40–DOC-45, DOC-48–DOC-50  
 **Purpose:** Convert unresolved architecture decisions and every P0 requirement in DOC-31 into actionable closure work, with role-level accountability, evidence expectations and blocking effects.
 
-> Roles are proposed, not assigned to named people. No provider contact, application, payment-engine implementation, merge or deployment is authorized by this tracker. A listed test plan is not a test result.
+> Roles are proposed, not assigned to named people. Only the initial non-binding informational inquiries recorded in DOC-00 DEC-049 were authorized and reported sent; no further provider contact, application, payment-engine implementation, merge or deployment is authorized by this tracker. A listed test plan is not a test result.
 
 ## 1. How to use this tracker
 
