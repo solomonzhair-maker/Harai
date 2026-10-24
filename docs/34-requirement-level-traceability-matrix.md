@@ -144,14 +144,14 @@ The following are the next actions that can be completed without pretending deci
 1. Review proposed role ownership and test IDs; change them to fit the eventual implementation architecture.
 2. Assign named reviewers and record availability/independence.
 3. Resolve the product-owner scope decisions in DOC-33, including merchant categories, currencies, fee/pricing approach and launch exclusions.
-4. Only after explicit authorization, obtain written provider responses and record evidence in controlled storage with redacted summaries in the repository.
+4. Await attributable written provider responses to the initial non-binding inquiries reported sent on 2026-10-24; delivery and replies remain unverified. Any follow-up outreach requires separate explicit authorization. If responses arrive, record evidence in controlled storage with redacted summaries in the repository.
 5. Arrange qualified Ugandan legal/compliance review of actual candidate funds-flow diagrams.
 6. Convert proposed test IDs to actual tests after requirements and architecture approval, then attach results only when tests are run.
 7. Reconcile this matrix with DOC-31 and DOC-00 after each decision batch.
 
 ## 7. Current disposition
 
-**G1 NOT PASSED.** DOC-39 adds ten supplemental requirements; the matrix maps all 54 DOC-31 IDs, including EXT-004. Role assignments and test IDs remain proposed and unverified. DOC-41–DOC-43 now provide design proposals for state handling, ledger/reconciliation and threats; none constitutes implementation or test evidence. Product defaults POD-01–POD-12 are approved, but accountable requirements disposition, named reviewers, provider evidence and qualified professional review remain open. Provider outreach and professional advice must not be represented as completed.
+**G1 NOT PASSED.** DOC-39 adds ten supplemental requirements; the matrix maps all 54 DOC-31 IDs, including EXT-004. The accountable requirements reviewer recorded the 51 Accept / 3 Defer scope disposition in §8.7 on 2026-10-24; cross-document reconciliation remains in progress. Role assignments and test IDs remain proposed and unverified. DOC-41–DOC-43 provide design proposals for state handling, ledger/reconciliation and threats; none constitutes implementation or test evidence. Product defaults POD-01–POD-12 are approved, but named reviewers, provider evidence and qualified professional review remain open. Initial non-binding MTN Uganda and Airtel Uganda inquiries were reported sent by the product owner on 2026-10-24; delivery, receipt and replies are not independently verified. No follow-up outreach is authorized.
 
 ## 8.3 Detailed architecture review cross-reference
 
