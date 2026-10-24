@@ -89,6 +89,7 @@ This is a requirements and planning document set. It is not evidence that provid
 | DOC-59 | API security, authentication, authorization and credential lifecycle specification | Draft security-policy proposal — not approved for implementation | Define credential classes/lifecycles, dashboard access, tenant isolation, configurable IP allowlisting, secret protection, abuse controls, audit and compromise response while leaving mechanisms and thresholds open |
 | DOC-60 | Security threat-to-control and acceptance evidence matrix | Draft assurance planning artifact — no control verified | Map security threats and proposed controls to requirements, evidence packets, reviewers and explicit closure conditions without implying implementation or test execution |
 | DOC-61 | Security requirements reconciliation and closure register | Draft reconciliation tracker — approved requirements wording recorded; source mapping and evidence remain open | RCP-01–RCP-08 were approved on 2026-10-23 and incorporated into DOC-31; DOC-34 and DOC-60 are reconciled to the approved wording. Keep threat/control evidence open and preserve independent review and G1/G2 gates |
+| DOC-62 | Repository-wide remediation and verification plan | Draft corrective-action plan — repository inventory only; no code or security verification claimed | Strict ordered remediation for repository truthfulness, document authority, requirements/security reconciliation, external blockers, and later separately authorized engineering work |
 
 ## 4. Reference boundary and product differentiation
 
