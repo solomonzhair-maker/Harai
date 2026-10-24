@@ -368,3 +368,8 @@ The product owner confirmed that the two non-binding inquiries were manually sen
 **Reconciliation status:** DOC-47 now contains 22 findings (16 P0, 6 P1); AR-019 remains closed only for its narrow index/cross-link verification task. AR-022 is open and newly recorded; no prior finding was silently closed. G1 remains NOT PASSED; G2 remains NOT APPROVED. No tests, implementation, provider outreach, credentials, financial activity, merge or deployment were performed or authorized.
 
 **Next action:** Continue with the remaining evidence and architecture-decision closure work in DOC-62 Stage B/C only as evidence arrives and approvals are recorded. Do not treat the completed documentation audit as permission to begin Stage C-04/G3 or engineering.
+
+
+### DOC-64 case-management proposal — 2026-10-24
+
+Created `docs/64-dispute-and-transaction-complaint-case-management-design-proposal.md` as a draft proposal for accepted requirements FIN-004 and SUP-005. It defines a candidate case lifecycle, ownership, deadline provenance, escalation, evidence and communication history, tenant-scoped access, resolution/reopen behavior, separation from financial operations, conceptual entities and 15 proposed acceptance criteria. No provider/legal deadlines, named destinations, retention periods or accounting rules were invented. The proposal requires support/operations, provider, qualified Uganda legal/compliance, finance/accounting, security/privacy and technical review as applicable. It is not approved, implemented or verified. AR-022 remains open; G1 NOT PASSED; G2 NOT APPROVED. No tests, implementation, provider outreach, credentials, financial activity, merge or deployment occurred.
