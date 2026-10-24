@@ -224,3 +224,12 @@ Stage A records preparation and validation of the remediation plan. The Stage B 
 Update this plan only with dated, evidence-backed status changes. If a blocker remains, preserve it as BLOCKED and identify the exact decision/evidence needed. Never mark a stage complete because the plan exists. Never lower a safety requirement or remove a blocker solely to meet a deadline or make a gate appear passed.
 
 **Final rule:** Correct repository truthfulness and document authority first, close owner/evidence decisions second, approve architecture third, and only then begin separately authorized engineering work.
+
+## 8. Stage C execution log — 2026-10-24
+
+| Action | Status | Evidence / remaining condition |
+|---|---|---|
+| C-01 — Record selected funds-flow model and model-specific financial/accounting rules | **Started; blocked — no model selected** | Added a preliminary evidence scorecard to DOC-28 §11, cross-checked with DOC-37/DOC-38, DOC-44 §4 and DOC-46. The existing evidence is not equivalent or sufficient to select Model A (provider-managed), Model B (direct), or Model C (conditional hybrid). Written multi-merchant permission, product-specific production entitlements, contracting/account/settlement roles, payout funding/prefunding/reserves, complete fees/limits/timing/support, and qualified Uganda legal/compliance and finance/accounting review remain absent. DEC-048 records the blocked status in DOC-00; DOC-44 and DOC-46 link the same outcome. G1 remains NOT PASSED; G2 remains NOT APPROVED. No provider contact, applications, credential access, implementation, tests, merge or deployment was performed or authorized. |
+| C-01 next action | **Pending separate owner authorization for external outreach** | Prepare only internal questions/evidence criteria until the product owner explicitly authorizes provider outreach. If outreach is not authorized or evidence cannot be obtained, retain C-01 as BLOCKED and keep affected capabilities disabled. Do not advance C-02/C-03 as approvals or begin C-04/G3 engineering authorization while prerequisite gates remain unmet. |
+
+This log records a preliminary internal evidence comparison only. It does not complete C-01, select a funds-flow model, pass G1/G2, appoint specialist reviewers, or authorize external engagement or engineering.
