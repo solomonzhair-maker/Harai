@@ -127,7 +127,7 @@ Next documentation batch:
 2. Add provider-specific acceptance/evidence requirements to DOC-31 where current IDs do not already cover them; avoid duplicate requirement IDs.
 3. Cross-check DOC-34 traceability and DOC-32 gap list against those changes.
 4. Keep DOC-36 product-owner decisions pending until the owner explicitly responds.
-5. Do not contact providers, register Airtel Enterprise, submit applications, generate live credentials, run transactions, merge or deploy without separate explicit authorization.
+5. Await the written replies to the initial owner-reported inquiries. Do not initiate follow-up provider contact, register Airtel Enterprise, submit applications, generate live credentials, run transactions, merge or deploy without separate explicit authorization.
 
 ## 9. Review boundary
 
