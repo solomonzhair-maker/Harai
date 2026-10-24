@@ -56,6 +56,19 @@ PR #1 (`feat/initial-foundation`) has been retargeted to this canonical branch a
 
 This log records completion of the canonical-branch documentation consistency work in Stage A. The working-branch README corrections, legacy index crosswalk, roadmap governance, audit scope and supplemental architecture review were re-fetched and checked. This does **not** mean PR #1 or PR #2 is accepted or mergeable, does not change `main`, and does not pass G1/G2. PR integration remains subject to the review and gate conditions recorded in A-08 and the findings register. No implementation or tests were authorized or performed.
 
+
+## 2.5 Stage B execution log — 2026-10-24
+
+| Action | Status | Evidence / remaining condition |
+|---|---|---|
+| B-01 Disposition all 54 DOC-31 requirements | **Prepared for accountable decision; pending** | DOC-34 §8.7 contains 54 unique proposed rows: 51 recommended for retention in the intended launch baseline and EXT-001, EXT-002 and EXT-003 recommended for deferral from core launch as conditional future scope. The 54 recommendations and the 51/3 split were re-counted against the current DOC-31 catalogue. All 54 owner dispositions remain **Pending**; the proposal is not approval. The product owner must explicitly accept, amend, defer or reject each ID (a recorded batch decision may reference the full DOC-34 table), and an accountable requirements reviewer must be appointed. ChatGPT's existing internal review role is not independent sign-off. Do not proceed to B-02 as complete until the B-01 decisions are recorded. G1 remains NOT PASSED. |
+| B-02 Reconcile all 32 P0 requirements | **Not started — sequenced after B-01** | Preserve all 32 P0 IDs; reconcile DOC-31, DOC-34, DOC-39 and DOC-46 after the owner dispositions are recorded. |
+| B-03 Disposition DOC-47 architecture findings | **Not started — sequenced after B-02** | Use source-backed evidence and accountable roles; prose edits alone do not close findings. |
+| B-04 Complete security traceability | **Not started — sequenced after B-03** | Reconcile DOC-43, DOC-60 and DOC-61 against exact DOC-31/DOC-34 rows; evidence remains absent unless actually authorized and collected. |
+| B-05 Resolve or retain external blockers | **Not started — sequenced after B-04** | Provider authority, funds flow, qualified Uganda legal/compliance, finance/accounting, operations/reconciliation and independent review remain open; unsupported capabilities stay blocked. |
+
+This log records preparation and validation of the existing recommendation set only. It does not approve any requirement, appoint a reviewer, pass G1/G2, authorize implementation or tests, or permit provider contact, credentials, live financial activity, merge or deployment.
+
 ## 3. Findings register
 
 | ID | Priority | Finding | Required correction | Acceptance evidence | Gate |
