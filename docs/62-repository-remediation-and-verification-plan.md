@@ -67,6 +67,37 @@ This log records completion of the canonical-branch documentation consistency wo
 | B-04 Complete security traceability | **Not started — sequenced after B-03** | Reconcile DOC-43, DOC-60 and DOC-61 against exact DOC-31/DOC-34 rows; evidence remains absent unless actually authorized and collected. |
 | B-05 Resolve or retain external blockers | **Not started — sequenced after B-04** | Provider authority, funds flow, qualified Uganda legal/compliance, finance/accounting, operations/reconciliation and independent review remain open; unsupported capabilities stay blocked. |
 
+
+### B-03 preliminary architecture-finding disposition recommendations — 2026-10-24
+
+These are proposed status treatments for accountable review, not new architecture approvals. DOC-47 remains the authority for finding status. The recorded requirement-scope decision does not close design, external-evidence, specialist-review or verification findings.
+
+| Finding | Recommended treatment | Remaining basis / closure condition |
+|---|---|---|
+| AR-001 | Retain open | The 51 Accept / 3 Defer scope decision is recorded, but requirement-to-design mapping, approved designs, actual test artifacts/evidence and reviewer/gate traceability remain incomplete. |
+| AR-002 | Retain open | Funds-flow model and model-specific accounting/posting rules require owner decision, qualified finance/accounting and Uganda legal/compliance review, and actual provider/partner evidence. |
+| AR-003 | Retain blocked | Written provider permission, product entitlements, merchant model, production status and account/settlement roles are unconfirmed. |
+| AR-004 | Retain open | Provider/product/operation/API-version finality and event/status precedence matrix needs dated source evidence, accountable review and later authorized verification. |
+| AR-005 | Retain open | Canonical cross-layer idempotency contract still needs accountable decisions for compatibility, fingerprints, retention, provider guarantees, imports, outbound events and restore authority. |
+| AR-006 | Retain open | Lifecycle race, cancellation/expiry, late-success and compensating-operation rules need accountable approval, provider/finance evidence and later execution evidence. |
+| AR-007 | Retain blocked | Provider-specific refund, reversal, return, dispute and money-out support, authority, funding, timing and finality remain unconfirmed. |
+| AR-008 | Retain blocked | Money-out funding/balance authority, beneficiary controls, limits, approvals, returns, settlement and reconciliation must be reviewed against the selected funds-flow model and provider terms. |
+| AR-009 | Retain open | Trusted proxy hops/CIDRs, forwarded-header handling, CORS/CSRF, allowlist recovery and environment configuration need approved deployment/security decisions and later negative tests. |
+| AR-010 | Retain open | Concrete tenant-enforcement choices across data access, workers, callbacks, caches, storage, exports, support and revocation remain undecided and require security review/evidence. |
+| AR-011 | Retain open | Numeric reliability, rate, pending-age, quota, RTO/RPO, backup and retention targets require owner/operations decisions grounded in provider limits and capacity. |
+| AR-012 | Retain open | Correlation schema, audit integrity/access, redaction, retention/deletion and privacy boundaries need accountable security/privacy/finance decisions. |
+| AR-013 | Retain blocked | Card processor/acquirer eligibility, written terms, card-data boundary, security/PCI scope, disputes, fees and settlement remain unestablished; card capability stays disabled. |
+| AR-014 | Retain open | Qualified independent security, finance/accounting and legal/compliance review plus required external evidence are not supplied by the internal documentation review. |
+| AR-015 | Retain open | Proposed test IDs are not execution evidence; artifacts, commit/build, environment, command/result, date and reviewer are absent until authorized testing occurs. |
+| AR-016 | Retain open | Exact public API/event schemas, error mapping, pagination/versioning, signing, retry/expiry and replay authority need named owners and accountable technical/security decisions. |
+| AR-017 | Retain open | Authoritative reconciliation sources, identifiers, cadence/targets, discrepancy ownership and stop conditions depend on selected funds flow, provider evidence and finance/operations review. |
+| AR-018 | Retain open | Support access, data classification, retention/deletion/legal hold, backup access/encryption and restore/replay policy need qualified privacy/security/operations decisions. |
+| AR-019 | Keep closed for its limited scope | Indexing and cross-links were verified. Do not expand this closure to architecture or control effectiveness. |
+| AR-020 | Retain open | Candidate deployment topology remains unselected; technical, operations/platform and independent security review plus cost/recovery rationale are required. |
+| AR-021 | Retain open | Canonical idempotency scope, retention/tombstones, collision handling, provider guarantees and restore-resume authority remain unapproved and unverified. |
+
+**Recommended B-03 outcome:** explicitly retain AR-001–AR-018 and AR-020–AR-021 as open (AR-003, AR-007, AR-008 and AR-013 remain capability blockers), while preserving AR-019's narrow existing closure. This is a conservative recommendation based on the current evidence; it does not close findings, approve architecture or change G1/G2. Accountable confirmation and required specialist reviews remain outstanding.
+
 Stage A records preparation and validation of the remediation plan. The Stage B batch disposition decision is now recorded below; it does not pass G1/G2, authorize implementation or tests, or permit provider contact, credentials, live financial activity, merge or deployment.
 
 
