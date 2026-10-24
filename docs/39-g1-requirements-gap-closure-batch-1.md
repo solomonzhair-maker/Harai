@@ -54,3 +54,14 @@ A consistency check found that the existing EXT-004 card-payment requirement in 
 ## Scope disposition reconciliation — 2026-10-24
 
 The accountable requirements reviewer accepted SUP-001–SUP-010 for retention in the intended launch requirements baseline as part of the 54-ID batch decision recorded in DOC-34 §8.7. This includes all eight P0 supplemental requirements (SUP-001–SUP-004, SUP-006–SUP-008 and SUP-010) and the two P1 supplemental requirements (SUP-005 and SUP-009). This decision does not set the still-open numeric parameters, close external dependencies, prove implementation or tests, or pass G1/G2.
+
+## 5. V1 feature disposition cross-reference — 2026-10-24
+
+DOC-34 §8.8 is the feature-level interpretation of DEC-042/DEC-046. It preserves 51 accepted requirements and three deferred requirements, and separates retained requirement scope from production enablement.
+
+- Collection/checkout requirements remain intended V1 scope, but each provider/method is blocked from live enablement until written authority, production entitlement and safe lifecycle/recovery evidence are accepted.
+- EXT-004 card acceptance is intended V1 scope, conditional on an eligible processor/acquirer and evidence; it is not among the three deferred IDs.
+- OUT-001–OUT-006 and SUP-003 remain accepted intended scope, but money-out/refund/reversal/beneficiary capabilities stay disabled until provider, funds-flow, funding, accounting, legal/compliance, security and operational gates close.
+- FIN-004/SUP-005 remain intended V1 case-management scope; AR-022 stays open pending specialist review and complete case lifecycle acceptance.
+- EXT-001–EXT-003 remain the only explicitly deferred requirements.
+- No document, test ID, or role assignment constitutes implementation, verification, G1 approval or G2 approval.
