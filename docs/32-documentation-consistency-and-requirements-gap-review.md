@@ -226,3 +226,13 @@ The sources consistently distinguish cancellation of a HARAI intent from cancell
 
 **Disposition:** DEC-039 records product direction. AR-017 and G2-03 remain OPEN/blocked until accountable finance, provider-integration and operations owners resolve the per-flow decisions with current evidence. No production SLA, automated matching capability, live posting or settlement is claimed. G1 remains NOT PASSED and G2 remains NOT APPROVED. No tests, implementation, provider contact, credentials, live financial activity, merge or deployment were performed or authorized.
 
+## 20. Tenant-isolation and authorization boundary review (2026-10-24)
+
+**Scope:** documentation-only reconciliation of DOC-43, DOC-56, DOC-57, DOC-59, DOC-46 G2-04 and DOC-47 AR-010.
+
+**Result:** DOC-56 §15 now provides one decision package; DOC-57 §20.1, DOC-59 §16.1 and DOC-43 §8 align to it. Product-owner-approved direction requires trusted server-derived tenant authority, resource ownership checks, asynchronous revalidation, provider callback binding to a persisted attempt, tenant-scoped derived artifacts, constrained privileged support, fail-closed mismatch handling and authorization-aware recovery.
+
+**Remaining decisions:** database enforcement mechanism and bypass analysis; parent/child constraints; queue/task fencing and stale-job behavior; callback correlation per provider; cache, read-model, object-storage and export authorization; revocation propagation/consistency; support elevation and audit; and named post-restore resume authority. PostgreSQL RLS is not selected by this review. No test or implementation evidence is claimed.
+
+**Disposition:** DEC-040 records the approved product direction. AR-010 and G2-04 remain OPEN until named technical/security owners decide concrete enforcement, required independent review occurs, and separately authorized negative tests later provide evidence. G1 remains NOT PASSED and G2 remains NOT APPROVED. No tests, implementation, provider contact, credentials, live financial activity, merge or deployment were performed or authorized.
+
