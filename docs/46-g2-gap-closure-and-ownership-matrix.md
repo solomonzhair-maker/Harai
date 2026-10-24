@@ -178,3 +178,20 @@ The accountable requirements reviewer accepted all 32 P0 requirements into the i
 | Independent gate reviewers | Unassigned | Named, appropriately qualified and independent technical/security, finance/accounting, legal/compliance, operations/reconciliation and requirements reviewers, with scope and conflicts recorded | G1/G2 cannot pass on self-review or document existence alone |
 
 This checkpoint does not assign names or invent external evidence. Role labels are not appointments. On 2026-10-24, the product owner reported manually sending the initial non-binding informational inquiries to MTN Uganda and Airtel Uganda; this is not proof of delivery, provider response, permission or entitlement. No follow-up outreach, implementation, test execution, merge or deployment is authorized by this checkpoint.
+
+## 10. Intended V1 feature-scope crosswalk — 2026-10-24
+
+Use DOC-34 §8.8 as the canonical disposition for the 54 DOC-31 requirement IDs. The 32-P0 closure matrix remains a safety/evidence checklist, not a feature-priority list or enablement decision.
+
+| Capability group | Intended V1 treatment | Current gate effect |
+|---|---|---|
+| Governance, tenancy, identity/access, merchant lifecycle | V1 core mandatory baseline | Design, named owners, specialist reviews and authorized verification remain open |
+| Collections, hosted checkout, collection links/sessions, provider events and recovery | V1 core | Live enablement blocked per provider/product/method until written eligibility, production access and lifecycle/recovery evidence are accepted |
+| Cards | Accepted V1 requirement EXT-004 | Conditional/blocked pending eligible processor/acquirer, terms, security/settlement evidence and review |
+| Money-out, payouts, refunds, reversals/returns and destination management | Accepted intended V1 scope | Disabled/blocked until funds-flow, provider authority, funding, limits, approvals, accounting and legal/security/operations gates close |
+| Ledger, fees, reconciliation and financial-state integrity | V1 core | Finance/accounting review and model-specific evidence remain open |
+| Complaints and disputes | V1 core via FIN-004/SUP-005 | AR-022 open; DOC-64/65 are not approved or verified |
+| Developer API, credentials, webhooks, reports, privacy/security, incident response, recovery and accessibility | V1 core | Contract/design reviews, owners and later authorized evidence remain open |
+| EXT-001 additional methods/currencies; EXT-002 scheduling/split settlement/marketplace payouts; EXT-003 regional expansion | Deferred | Excluded from core launch unless an explicit later scope-change decision is recorded |
+
+Do not reduce accepted scope by treating blocked capability as deferred. If a blocked capability cannot be authorized by launch, obtain an explicit, documented scope-change decision and impact analysis. G1 remains NOT PASSED and G2 remains NOT APPROVED.
