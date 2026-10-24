@@ -61,13 +61,13 @@ This log records completion of the canonical-branch documentation consistency wo
 
 | Action | Status | Evidence / remaining condition |
 |---|---|---|
-| B-01 Disposition all 54 DOC-31 requirements | **Prepared for accountable decision; pending** | DOC-34 §8.7 contains 54 unique proposed rows: 51 recommended for retention in the intended launch baseline and EXT-001, EXT-002 and EXT-003 recommended for deferral from core launch as conditional future scope. The 54 recommendations and the 51/3 split were re-counted against the current DOC-31 catalogue. All 54 owner dispositions remain **Pending**; the proposal is not approval. The user has explicitly designated themselves as the accountable requirements reviewer (2026-10-24). Record the user's actual accept/amend/defer/reject decision for each ID (a recorded batch decision may reference the full DOC-34 table); reviewer appointment is no longer an open prerequisite. ChatGPT provides supporting analysis only and is not the independent accountable reviewer. Specialist legal, finance/accounting, security, provider and operations reviews remain required wherever the applicable gates demand them. Do not proceed to B-02 as complete until the B-01 decisions are recorded. G1 remains NOT PASSED. |
-| B-02 Reconcile all 32 P0 requirements | **Not started — sequenced after B-01** | Preserve all 32 P0 IDs; reconcile DOC-31, DOC-34, DOC-39 and DOC-46 after the owner dispositions are recorded. |
+| B-01 Disposition all 54 DOC-31 requirements | **Batch decision recorded; reconciliation required** | On 2026-10-24, the accountable requirements reviewer approved the full 54-ID batch split recorded in DOC-34 §8.7: 51 Accept (retain in the intended launch requirements baseline) and defer EXT-001, EXT-002 and EXT-003 from core launch as conditional future scope. The decision is recorded in DOC-00 DEC-042/DEC-046 and DOC-34 §8.7. This is a scope/disposition decision, not evidence of implementation or feasibility. Reconcile the decision across DOC-31, DOC-34, DOC-39, DOC-46 and DOC-47; retain all 32 P0 requirements. ChatGPT provides supporting analysis only and is not the accountable reviewer. Specialist legal, finance/accounting, security, provider and operations reviews remain required wherever gates demand them. G1 remains NOT PASSED; G2 remains NOT APPROVED. |
+| B-02 Reconcile all 32 P0 requirements | **In progress — following recorded B-01 decision** | Preserve all 32 P0 IDs; reconcile DOC-31, DOC-34, DOC-39 and DOC-46 against the approved 51/3 disposition decision. Record exact ID/count results and any mismatches; do not imply implementation or test evidence. |
 | B-03 Disposition DOC-47 architecture findings | **Not started — sequenced after B-02** | Use source-backed evidence and accountable roles; prose edits alone do not close findings. |
 | B-04 Complete security traceability | **Not started — sequenced after B-03** | Reconcile DOC-43, DOC-60 and DOC-61 against exact DOC-31/DOC-34 rows; evidence remains absent unless actually authorized and collected. |
 | B-05 Resolve or retain external blockers | **Not started — sequenced after B-04** | Provider authority, funds flow, qualified Uganda legal/compliance, finance/accounting, operations/reconciliation and independent review remain open; unsupported capabilities stay blocked. |
 
-This log records preparation and validation of the existing recommendation set only. It does not approve any requirement, appoint a reviewer, pass G1/G2, authorize implementation or tests, or permit provider contact, credentials, live financial activity, merge or deployment.
+Stage A records preparation and validation of the remediation plan. The Stage B batch disposition decision is now recorded below; it does not pass G1/G2, authorize implementation or tests, or permit provider contact, credentials, live financial activity, merge or deployment.
 
 
 ### Reviewer appointment record — 2026-10-24
@@ -75,7 +75,7 @@ This log records preparation and validation of the existing recommendation set o
 - **Accountable requirements reviewer:** User (self-designated in conversation on 2026-10-24).
 - **Scope:** Review and decide DOC-34's 54 proposed requirement dispositions, including proposed amendments and rationale.
 - **Assistant role:** Supporting traceability, consistency checks and evidence preparation; not the accountable reviewer or a substitute for specialist sign-off.
-- **Current decision status:** Appointment recorded; all 54 requirement dispositions remain **Pending** until the reviewer decides them. This appointment alone does not pass G1 or G2.
+- **Current decision status:** The 54-ID batch decision was recorded on 2026-10-24 (51 Accept / 3 Defer). Cross-document reconciliation and required specialist reviews remain open; this decision alone does not pass G1 or G2.
 
 ## 3. Findings register
 
