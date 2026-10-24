@@ -184,6 +184,21 @@ Webhook event versions and public API versions should be explicit and independen
 
 Do not expose internal database models directly as public response schemas. Public contracts should be designed around stable business concepts and reviewed for data minimization and tenant leakage.
 
+
+
+### 10.1 Public API/event contract authority and compatibility — product-owner-approved direction
+
+DOC-49 §14.1 is the proposed merchant-facing API/event contract source and records the product owner's internal direction for versioned schemas, truthful lifecycle semantics, stable errors, bounded cursor pagination, explicit API/event versions, durable event IDs, authenticated signatures, at-least-once delivery, audited replay and data minimization. This blueprint remains the planning source for internal operation envelopes, worker/task versioning and service-to-service authorization; it must not introduce conflicting public wire semantics.
+
+For every operation family, reconcile:
+- the public request/response and error contract in DOC-49;
+- canonical operation/attempt semantics in DOC-41 and provider evidence in DOC-48;
+- ledger/reconciliation effects in DOC-42;
+- threat/control requirements in DOC-43;
+- requirement/test traceability in DOC-31/DOC-34 and evidence handling in DOC-45.
+
+**Still open:** final schemas/routes, stable error catalogue and HTTP mapping, cursor integrity/limits, API/event compatibility and deprecation policy, task-envelope migration/rollback, webhook signing test vectors and key rotation, delivery retry/expiry values, replay authority, and requirement-level traceability. These need technical/API, security, finance/operations and any required independent review. Product-owner direction does not approve a physical architecture or authorize coding/tests.
+
 ## 11. Security and privacy requirements
 
 - Never return provider credentials, API secret material, internal signing keys or full authentication headers.
