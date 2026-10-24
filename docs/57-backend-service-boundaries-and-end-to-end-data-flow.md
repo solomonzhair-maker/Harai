@@ -317,3 +317,8 @@ Apply one consistent tenant-binding rule across the data-flow diagrams:
 - **Recovery and replay:** after restore or queue redrive, keep consequential workers paused until ownership, idempotency, provider-attempt state and pending-operation reconciliation checks are complete. Replayed work re-enters the same authorization and idempotency gates.
 
 The above are proposed requirements for later architecture decisions and tests, not claims that the current system implements them. Database row-level security, specific queue products, storage paths and deployment topology remain unresolved. G1 remains NOT PASSED; G2 remains NOT APPROVED.
+
+### 20.1 Tenant-isolation decision reference
+
+DOC-56 §15 is the consolidated tenant-isolation decision package. This data-flow document supplies the boundary-by-boundary flow interpretation, while DOC-59 §16 supplies the credential/session/authorization interpretation and DOC-43 supplies threat and future verification coverage. The product-owner-approved control direction is consistent across them; database enforcement, queue fencing, revocation propagation, derived-artifact policy and support privilege details remain technical/security decisions. Do not treat the cross-document alignment as implementation evidence or independent sign-off.
+
