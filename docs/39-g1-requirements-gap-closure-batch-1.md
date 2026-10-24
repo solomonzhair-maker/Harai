@@ -1,6 +1,6 @@
 # DOC-39 — G1 Requirements Gap Closure Batch 1
 
-**Status:** Draft working package — ten supplemental requirements added to DOC-31; G1 remains open  
+**Status:** Draft working package — ten supplemental requirements added and scope dispositions recorded 2026-10-24; G1 remains open  
 **Date:** 2026-10-19  
 **Related documents:** DOC-00, DOC-03, DOC-31, DOC-32, DOC-33, DOC-34, DOC-35, DOC-38  
 **Purpose:** Convert identified internal requirements gaps into stable, testable requirements so the project can progress without waiting for external provider, commercial or legal answers. This document records work completed and the remaining controlled follow-through; it is not implementation authorization or evidence of tests.
@@ -31,7 +31,7 @@ The team can now review these gaps as explicit requirements rather than informal
 |---|---|---|---|
 | Keep DOC-34 requirement-level matrix aligned to all 54 IDs | Requirements owner / technical lead | Every ID has proposed role owner, test/evidence reference, dependency and gate | Open |
 | Cross-map SUP-001–SUP-010 to DOC-03 phases | Technical lead / delivery owner | Roadmap links each requirement to design, authorized implementation, verification and release gate | Open |
-| Review and disposition each supplemental requirement | Product owner and accountable reviewers | Explicit accepted/amended/deferred/rejected status with rationale | Open |
+| Review and disposition each supplemental requirement | Product owner and accountable reviewers | DOC-34 §8.7 records all ten SUP-001–SUP-010 as accepted for retention in the intended launch baseline; normative criteria unchanged | Disposition recorded; verification and specialist review open |
 | Set numeric rate limits, expiry behavior, RTO/RPO, reliability and retention targets | Product owner with technical, operations, risk and privacy reviewers | Recorded decisions with rationale and measurable acceptance criteria | Open |
 | Review funds-flow, provider and legal dependencies separately | Product owner and qualified external/accountable reviewers | Written evidence or explicitly blocked disposition | Open |
 | Preserve implementation, provider-contact, merge and deployment gates | Product owner / repository governance | No consequential action without separate explicit authorization | Ongoing |
@@ -50,3 +50,7 @@ Follow-through: keep DOC-34 and DOC-03 aligned as requirements change, conduct a
 ## Traceability correction
 
 A consistency check found that the existing EXT-004 card-payment requirement in DOC-31 had not been represented in DOC-34. The matrix now includes EXT-004 as blocked pending eligible processor/acquirer selection, written permission, security-scope review and sandbox evidence. The consistent count is therefore 54 unique IDs: 44 existing requirements including EXT-004, plus SUP-001–SUP-010.
+
+## Scope disposition reconciliation — 2026-10-24
+
+The accountable requirements reviewer accepted SUP-001–SUP-010 for retention in the intended launch requirements baseline as part of the 54-ID batch decision recorded in DOC-34 §8.7. This includes all eight P0 supplemental requirements (SUP-001–SUP-004, SUP-006–SUP-008 and SUP-010) and the two P1 supplemental requirements (SUP-005 and SUP-009). This decision does not set the still-open numeric parameters, close external dependencies, prove implementation or tests, or pass G1/G2.
