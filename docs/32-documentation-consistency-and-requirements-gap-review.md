@@ -184,3 +184,12 @@ The ten gaps listed in Section 3 are now represented by SUP-001–SUP-010 in DOC
 **Still unresolved:** per provider/product/operation and API version, the authoritative finality rules; evidence precedence at initiation, pending recovery, final status and settlement; status freshness and enquiry limits; event identity/order semantics; expiry/cancellation semantics; retry guarantees; settlement data meaning; and the authorized owner and evidence required to resolve conflicts. DOC-45 requires dated source artifacts, scope, owner, reviewer outcome, retention location and revalidation trigger. Existing portal observations and public documentation do not by themselves establish all of these facts or HARAI's contractual eligibility.
 
 **Disposition:** AR-004 remains OPEN. DOC-41/DOC-48 are clarified proposals, not approved provider mappings or executed conformance tests. AR-006 remains OPEN for dispatch/cancellation races and later execution evidence. G1 remains NOT PASSED; G2 remains NOT APPROVED. No tests, implementation, provider contact, credentials, live financial activity, merge or deployment were performed or authorized.
+
+
+## 16. Cancellation-versus-dispatch race review (2026-10-24)
+
+**Scope/result:** Documentation-only comparison of DOC-41 §5A, DOC-42, DOC-48, DOC-49, DOC-46 G2-02 and DOC-47 AR-006. No new confirmed contradiction was identified.
+
+The sources consistently distinguish cancellation of a HARAI intent from cancellation at the provider. HARAI can prevent dispatch only if its durable cancellation guard wins before dispatch. If dispatch may have occurred, the provider attempt remains PENDING/UNKNOWN and must be recovered; cancellation alone is not proof that payment stopped. Provider-side cancel/void/reversal is a separate capability requiring provider-specific support and confirmation evidence.
+
+**Still open:** implementation of durable claims and atomic transitions; exact API response semantics; provider cancellation capabilities; late-success accounting; authorized case-resolution roles; and later approved race/crash/replay tests. DOC-41 and DOC-49 contain proposed wording only. AR-006 remains OPEN; AR-004 remains OPEN for provider-specific finality. G1 remains NOT PASSED and G2 remains NOT APPROVED. No tests, implementation, provider contact, credentials, live financial activity, merge or deployment were performed or authorized.
