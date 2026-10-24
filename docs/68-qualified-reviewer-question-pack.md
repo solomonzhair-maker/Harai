@@ -88,7 +88,7 @@ Keep these categories distinct:
 ## 7. Unresolved source-retrieval list
 
 1. Confirm whether a later standalone BoU Consumer Protection Guidelines instrument exists beyond the retrieved 2011 PDF; record current status, version/date, covered institutions, effective provisions and exact complaint-related clauses.
-2. Review DOC-67 §17.1's partial comparison of the official January 2024 and November 2023 PDFs; retrieve/inspect the missing November printed page 5, complete the redline, and confirm supersession/amendment status.
+2. Review DOC-67 §17.1's updated comparison: the previously missing November printed page 5 is now inspected and shows the same auditor prequalification and approval provisions as January. Confirm whether either PDF legally supersedes/amends the other, and request a full textual redline if that distinction affects advice.
 3. Obtain a qualified counsel's current-law reconciliation of NPS Regulations 2021, S.I. 102 of 2022 and any subsequent amendments, circulars and licence conditions.
 4. Complete clause-by-clause review of DPPA Regulations 2021 for registration, annual compliance reporting, breach procedures, retention and any assessment obligations relevant to the actual data flows.
 5. Confirm the PDPO notice's current filing template/channel and whether the 23 November 2026 deadline applies to HARAI; do not assume registration or submit a report.
