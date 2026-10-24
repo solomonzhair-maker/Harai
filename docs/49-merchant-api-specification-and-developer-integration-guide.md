@@ -114,6 +114,8 @@ All paths below are **proposed, unimplemented contract examples**.
 
 Do not infer that cancellation, refunds, list filters, or endpoint names are supported by a live service. Refunds and money-out need separate operation models and permissions; they must not be hidden side effects of payment-intent creation.
 
+**Cancellation semantics — proposed, not approved:** the merchant cancellation endpoint means HARAI will stop accepting a new initiation for that intent when the cancellation guard wins before dispatch. It does not, by itself, mean a provider-side operation has been cancelled or that funds cannot move. If dispatch is already claimed or may have reached the provider, retain the attempt as PENDING/UNKNOWN and continue status recovery/reconciliation. A provider-side cancellation, void or reversal is a distinct provider-specific capability and must be represented as a separate request/result with its own evidence; do not return a terminal “payment stopped” result until the applicable contract's confirmation criteria are met. If cancellation races with dispatch, report the intent cancellation decision separately from the unresolved attempt outcome.
+
 ## 6. Create payment intent: proposed contract
 
 ### Request
