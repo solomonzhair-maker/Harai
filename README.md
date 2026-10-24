@@ -51,8 +51,8 @@ A proposed stack and placeholder files are not evidence that build, lint, typech
 
 ## Source-of-truth documents
 
-- [Master index and decision register](docs/00-master-index-and-decision-register.md)
-- [End-to-end implementation roadmap](docs/03-end-to-end-implementation-roadmap.md)
-- [Repository-wide remediation and verification plan (DOC-62)](docs/62-repository-remediation-and-verification-plan.md)
+- [Master index and decision register](https://github.com/solomonzhair-maker/Harai/blob/docs/julypay-discovery-and-requirements/docs/00-master-index-and-decision-register.md)
+- [End-to-end implementation roadmap](https://github.com/solomonzhair-maker/Harai/blob/docs/julypay-discovery-and-requirements/docs/03-end-to-end-implementation-roadmap.md)
+- [Repository-wide remediation and verification plan (DOC-62)](https://github.com/solomonzhair-maker/Harai/blob/docs/julypay-discovery-and-requirements/docs/62-repository-remediation-and-verification-plan.md)
 
 Follow DOC-62 in order. Record unresolved decisions and blockers rather than assuming they are approved.
