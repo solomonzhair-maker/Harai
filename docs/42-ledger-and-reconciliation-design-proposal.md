@@ -159,6 +159,40 @@ Proposed operational model:
 
 Exact cadence, age thresholds, report sources, settlement cutoffs, RTO/RPO and case SLAs remain unapproved.
 
+
+
+### 8.1 Reconciliation decision package — product-owner-approved control direction, operational parameters open
+
+The product owner approves the following internal control direction on 2026-10-24: reconciliation must be layered, evidence-led, idempotent, owned and auditable; no unmatched or disputed financial record may be silently discarded, rewritten or balanced with an unexplained adjustment. This is not approval of a funds-flow model, provider settlement assumptions, production cadence/SLA or finance accounting treatment.
+
+**Minimum per-flow reconciliation specification**
+
+For each provider/product/operation/environment and each funds-flow model under consideration, the accountable owner must record:
+
+1. **Authoritative sources:** source of truth for operation outcome, provider transaction, fees, settlement batch/line, destination/value date and internal obligation. Separate transaction-status evidence from settlement evidence; a source that proves one does not automatically prove the other.
+2. **Source evidence packet:** report/API name and version, source owner, access method, observed and effective dates, covered period, timezone/cutoff, stable source/report/line identifiers, completeness limitations, content hash, retention location and revalidation trigger. Preserve source versions where a report is amended.
+3. **Matching contract:** exact normalized IDs and corroborating fields for each layer (operation-to-provider, transaction-to-settlement, ledger-to-obligation, fees/net amounts). State how missing IDs, reused/truncated merchant references, multiple candidates, partial settlements, reversals and amended reports are handled. Amount-only matching is prohibited.
+4. **Run control:** trigger/cadence, covered window, watermark/cursor, duplicate-run protection, late-arriving data, rerun semantics, failed-run recovery, completeness checks and accountable operator. Do not call a run complete merely because the job finished.
+5. **Exception ownership:** each discrepancy class must have an assigned accountable role, severity/materiality rule, age/escalation threshold, evidence requirements, permitted actions and closure authority. Named owners and numeric thresholds must be recorded before a production SLA is claimed.
+6. **No-silent-adjustment rule:** missing settlement, amount/currency/fee mismatch, conflicting finality evidence, duplicate or altered import, unexplained ledger imbalance and unknown outcome must create a durable discrepancy/case. No plug entry, silent status overwrite, automatic write-off or unapproved compensation.
+7. **Financial stop conditions:** define which unresolved cases block provider dispatch, payout release, merchant settlement, ledger close or case closure for each funds-flow model. If the model/evidence does not allow safe determination, hold the affected consequential action and escalate rather than inventing a result.
+8. **Corrections and closure:** preserve original source and posting history; link correction/compensating entries to a case, reason, evidence, approver and audit trail. Separate the person who proposes a material correction from its required approver where policy requires maker-checker.
+9. **Monitoring and reporting:** define reconciliation freshness/completeness, unmatched count and age, amount at risk, duplicate/import conflict, settlement delay and case backlog metrics. Each alert needs a real responder, runbook and escalation path.
+10. **Operational proof:** later, separately authorized tests/drills must cover duplicate and amended imports, missing/late reports, cutoff/timezone edges, partial settlement, duplicate/missing settlement lines, provider/internal conflict, rerun after crash, restore/replay, case correction and tenant-isolation boundaries. A planning ID is not execution evidence.
+
+**Exact owner decisions still required**
+
+| Decision | Accountable role | Required answer | Blocker |
+|---|---|---|---|
+| Funds-flow-specific authoritative sources | Finance/accounting reviewer + provider integration owner | Which current provider reports/APIs and internal records prove transaction status, fees, settlement, destination and obligations for each selected flow? | No automated financial reconciliation for unsupported or ambiguous source layers |
+| Report identity and amendment policy | Reconciliation/operations owner + finance reviewer | Which stable report/line identifiers exist, how periods/cutoffs are defined, and how revised files are preserved and compared? | Ambiguous imports remain manual/review-only |
+| Matching and partial-settlement rules | Finance/accounting reviewer + technical owner | What exact IDs, corroborating fields, fee/rounding/tax rules and partial/reversal mappings apply? | No automated match or posting based on unapproved rules |
+| Cadence, completeness and service targets | Operations owner + finance reviewer | How often must each layer run, what proves completeness, and what are approved age/escalation/SLA thresholds given actual source availability and staffing? | Do not claim a production SLA or silently mark overdue cases resolved |
+| Exception authority and stop conditions | Finance/accounting reviewer + operations owner + product owner | Who owns each case class, who may approve corrections/write-offs, and which actions remain blocked while unresolved? | No material correction, release or settlement action without authority |
+| Evidence retention and audit | Privacy/data owner + finance reviewer + security reviewer | What source artifacts and case records must be retained, for how long, under which access/legal-hold controls? | Do not purge required evidence or enable uncontrolled exports |
+
+**Disposition:** These controls are approved as internal product direction; the funds-flow model, accounting semantics, actual provider source availability, numeric cadence/thresholds, named owners and production controls remain open. AR-017 and G2-03 remain OPEN until decisions and evidence are recorded; no live reconciliation or settlement authorization follows from this section.
+
 ## 9. Required metrics and alerts
 
 Candidate metrics: pending/unknown count and age by provider/product; callback authentication failures; duplicate event rate; unmatched provider events; unmatched internal operations; settlement missing/mismatch amount; duplicate posting attempts; refund aging; payout/return exceptions; reconciliation-run freshness; import failure; case backlog and aging.
