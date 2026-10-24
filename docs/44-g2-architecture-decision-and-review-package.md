@@ -136,3 +136,10 @@ G2 is **not approved**. The material design proposals are now sufficiently organ
 ## 10. Detailed architecture review register
 
 DOC-47 records findings AR-001–AR-021. AR-019 is closed only for indexing/cross-linking. AR-005 and AR-021 remain open. DOC-42 §7.2 now provides a consolidated decision-ready proposal, and DOC-40/41/48/49 defer to it for the shared identity contract. The proposed defaults are clearer, but accountable named owners must still decide route compatibility, canonicalizer migration, provider-specific guarantees, lawful retention/tombstones, finance-approved posting/source taxonomy, reconciliation identity and restore-resume authority. No arbitrary retention period or provider guarantee is assumed. These documentary changes do not approve architecture or provide implementation/test evidence. Use DOC-46 for role ownership and evidence tracking and DOC-45 for evidence quality and later test-result discipline; G2 remains NOT APPROVED.
+
+
+## 11. DOC-62 Stage C-01 checkpoint — 2026-10-24
+
+The preliminary evidence scorecard in DOC-28 §11 was reviewed against the decision protocol in DOC-44 §4 and the external evidence boundaries in DOC-37/DOC-38. **Outcome: BLOCKED — no funds-flow model selected.** Models A (provider-managed), B (direct integrations), and C (conditional hybrid) cannot be compared to a decision-ready standard because written multi-merchant authority, exact account/settlement roles, production entitlements, funding/prefunding, complete commercial terms, and qualified Uganda legal/compliance and finance/accounting reviews remain absent.
+
+This is a status checkpoint, not a new architecture decision. Keep G1 **NOT PASSED**, G2 **NOT APPROVED**, and affected money-out/unapproved capabilities disabled. No provider contact, application, credentials, implementation, tests, merge or deployment occurred or is authorized by this checkpoint. See DOC-28 §11, DOC-46 §8 and DOC-62 Stage C log.
