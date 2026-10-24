@@ -25,7 +25,7 @@ The following summarizes current direction. It is not a substitute for explicit 
 - Uganda-first, with regional expansion treated as a separate market-by-market decision.
 - Multi-merchant platform, not limited to ISPs. Launch merchant categories and prohibited/restricted categories remain undecided.
 - Comprehensive launch ambition, delivered only to the extent each capability passes its own gates.
-- Proposed candidates include MTN MoMo and Airtel Money. Public product pages are not proof of HARAI eligibility or permission. Bank/card methods remain subject to separate verification.
+- **Approved product direction:** the intended package includes both MTN MoMo and Airtel Money, plus cards through an eligible processor/acquirer and additional suitable methods. These are intended methods, not confirmed integrations or permissions. Public product pages and portal observations do not prove HARAI eligibility; each provider/product and the card processor/acquirer require separate evidence and approval.
 
 ### 2.2 Intended capability groups
 
@@ -61,7 +61,7 @@ The table below proposes decision owners by role, not by invented name. Roles re
 |---|---|---|---|---|---|
 | G1-01 | Launch merchant categories and exclusions | Start with an explicit allowlist of merchant categories and prohibited/restricted activity; do not accept “all businesses” without eligibility rules | Product owner + compliance reviewer | Target customers, provider eligibility and applicable rules | Open |
 | G1-02 | Launch currencies and precision | Enable only currencies supported by each contracted provider and approved settlement flow; define minor-unit and rounding rules per currency | Product owner + finance reviewer | Provider contract/fee schedules, settlement evidence and finance review | Open |
-| G1-03 | Collection methods and providers | Treat MTN MoMo and Airtel Money as candidates, not confirmed integrations; assess each product separately | Product owner + technical lead | Written provider response, sandbox/production access terms and contract | Blocked on evidence |
+| G1-03 | Collection methods and providers | Preserve the approved intent to support both MTN MoMo and Airtel Money; verify each product separately. Card processing is also intended but requires a separately eligible processor/acquirer. Product intent must not be represented as confirmed integration, permission or production readiness | Product owner + technical lead | Written provider/processor response, access terms, contract, capability and settlement evidence | Blocked on evidence |
 | G1-04 | Multi-merchant permission and contracting route | Require explicit written permission for the intended gateway/aggregator model before live use | Product owner + compliance reviewer | Provider terms, contract, required licenses/approvals | Blocked on evidence |
 | G1-05 | Funds-flow model | Compare provider-managed funds, direct provider integrations and a conditional hybrid only against verified evidence; select no model by assumption | Product owner + finance + compliance | DOC-28 scorecard, provider responses, funds-flow diagrams and legal review | Open / evidence blocked |
 | G1-06 | Account ownership and custody responsibilities | Explicitly identify whose account receives collections, who controls funds, who settles merchants and whether HARAI ever holds or controls funds | Product owner + finance + compliance | Contractual structure and qualified Ugandan review | Blocked |
